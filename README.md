@@ -1,8 +1,3 @@
 # gatsby-starter-blog
-Gatsby starter for creating a blog
-
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
-
-## Running in development
-`gatsby develop`
+这是一个使用 Gatsby 构建的 blog, 这个 blog 系统基于 React 来构建, 可以说是提升自己的前端
+技能的绝好机会啊, hhh

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { Container } from 'react-responsive-grid'
+import 'prismjs/themes/prism-okaidia.css';
 
 import { rhythm, scale } from '../utils/typography'
 
@@ -31,7 +32,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            Thomas's Blog
           </Link>
         </h1>
       )
@@ -52,7 +53,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            Thomas' Blog
           </Link>
         </h3>
       )
