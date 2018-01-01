@@ -18,17 +18,16 @@ class Bio extends React.Component {
       >
         <img
           src={profilePic}
-          alt={`Kyle Mathews`}
+          alt={`A cat named musa`}
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
             width: rhythm(2),
             height: rhythm(2),
-            borderRadius: '50%'
           }}
         />
         <p>
-           由杨魁创作, 博客的目的一个分享一些个人的总结,
+          博客的目的一是分享一些个人的总结,
           二是翻译一些国内不能正常访问的文章, 比如 Medium 下的.
         </p>
       </div>
