@@ -21,12 +21,16 @@
       "component---src-layouts-index-js-3396ad3b64d776f86883.js.map"
     ],
     "path---index": [
-      "path---index-5e7fa17e61455b6dfaab.js",
-      "path---index-5e7fa17e61455b6dfaab.js.map"
+      "path---index-199512c8278ec469f13e.js",
+      "path---index-199512c8278ec469f13e.js.map"
     ],
     "path---hello-world": [
       "path---hello-world-39cb2a9e5fa9af4f4ba4.js",
       "path---hello-world-39cb2a9e5fa9af4f4ba4.js.map"
+    ],
+    "path---react-component-and-element": [
+      "path---react-component-and-element-3386f9c34e45ade3408f.js",
+      "path---react-component-and-element-3386f9c34e45ade3408f.js.map"
     ],
     "commons": [
       "commons-3f8cdb987559d31a3a4e.js",
@@ -39,10 +43,14 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-ee95cdcd170492c9d809.js",
+      "app-c10aa15a46412a023ac8.js",
       "build-js-styles.css",
-      "app-ee95cdcd170492c9d809.js.map",
+      "app-c10aa15a46412a023ac8.js.map",
       "build-js-styles.css.map"
+    ],
+    "path---反转字符串": [
+      "path---反转字符串-72169d1710b297049c8a.js",
+      "path---反转字符串-72169d1710b297049c8a.js.map"
     ]
   }
 }

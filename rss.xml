@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Mon, 01 Jan 2018 10:50:24 GMT</lastBuildDate><item><title><![CDATA[Hello World]]></title><description><![CDATA[作为个人博客的第一篇文章, 没有太多的意义, 就当为自己终于开通了博客做一个喝彩 🎉🎈
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Sun, 14 Jan 2018 15:52:03 GMT</lastBuildDate><item><title><![CDATA[Element 和 Component 的区别]]></title><description><![CDATA[原文章 一句话概括就是， Element  是  Component  的子集， Element  是  Component  的返回值.
+Element 其实就是一个纯对象，找个对象定义了一些对于 React 来说很重要的属性，比如  type，children，props…]]></description><link>https://github.com/thoamsy/blogs.git/react-component-and-element/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/react-component-and-element/</guid><pubDate>Sun, 14 Jan 2018 12:12:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html&quot;&gt;原文章&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一句话概括就是，&lt;code&gt;Element&lt;/code&gt; 是 &lt;code&gt;Component&lt;/code&gt; 的子集，&lt;code&gt;Element&lt;/code&gt; 是 &lt;code&gt;Component&lt;/code&gt; 的返回值.
+Element 其实就是一个纯对象，找个对象定义了一些对于 React 来说很重要的属性，比如 &lt;code&gt;type，children，props，key，type&lt;/code&gt; 这些的。比如&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    className&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button button-blue&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    children&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;b&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        children&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;OK!&apos;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;上面的 type 就是这个 element 的核心之一。React 通过判断 type 是字符串还是函数来决定如何 &lt;code&gt;mount&lt;/code&gt; 这个 element。如果是字符串就说明是普通 DOM，称为 &lt;code&gt;DOM Element&lt;/code&gt;，如果是 &lt;code&gt;function&lt;/code&gt; 就是自己定义的，称为为 &lt;code&gt;Component Element&lt;/code&gt;。
+所以换句话说，用户自己写出来的组件的才算的上是一个 &lt;code&gt;Component&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;创建组件的常用方法有两种，一种是纯函数组件，或者说 &lt;code&gt;Stateless Component&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;Button&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; color&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+	&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;button style&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;background&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; color&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;button&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;通过这种方式创建的话，使用 &lt;code&gt;Button(props)&lt;/code&gt; 就能得到我们定义的 element。不过这仅仅是因为 JSX 给了我们一种语法糖，如果没有 JSX 的话，应该类似于&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;background&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; color&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;而这个函数的作用也仅仅只是生成一个&lt;strong&gt;对象而已&lt;/strong&gt;，就像最上面那个对象一样：&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		style&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;background&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; color&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		children&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			…
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;这就是 Element 的真面目了。所以可以看到，JSX 也好，&lt;code&gt;createElement&lt;/code&gt; 也好，不过是提供一种抽象帮我们不要写这个无聊的对象定义，要知道，如果再多几个 children 的话，整个对象定义应该就有几十行！&lt;/p&gt;
+&lt;p&gt;同样的，如果换成 &lt;code&gt;Stateful Component&lt;/code&gt; 的话，其实模式差不多，只不过，它们需要一个 &lt;code&gt;render&lt;/code&gt; 方法，并且拥有一个被称为 &lt;code&gt;instance&lt;/code&gt; 的变量。render 的目的其实也就是定义一个 element，而 instance 就是 &lt;code&gt;this&lt;/code&gt; 了。&lt;/p&gt;
+&lt;p&gt;所以，一个 Element 出现的步骤此时是，&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; instance &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// type 就是该组件的 type&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; element &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; instance&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// render 不就是 Component.prototype 的方法吗&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;综上所述，我们自己写的是 Component，Element 是 Component 的返回值，可以分为三类&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;host（浏览器自带的）&lt;/li&gt;
+&lt;li&gt;function&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;class
+host 类型，React 会根据对应 type，生成真正的 &lt;strong&gt;DOM node&lt;/strong&gt;，并将它所带的 &lt;code&gt;props&lt;/code&gt; 写入 node 的 &lt;code&gt;attribute&lt;/code&gt; 中，接着对 &lt;code&gt;children&lt;/code&gt; 递归这些操作。
+比如 &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Button&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Banner&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;就需要对它的 children 继续处理。
+Function 的返回值就是 element
+class 的 render 函数的返回值就是 element。
+当然 element 中又可以包括 Component，这个过程也是递归的，不停的重复，直到碰到没有子节点的 host 为止。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[反转字符串]]></title><description><![CDATA[这个问题可能非常老，写过代码的都知道使用 但是，需要注意的是，因为 JS 默认使用的是 UCS-2 来编码的，对于中文支持也貌似没问题。可是到了 Unicode 环境下，大量的 emoji，就会出问题咯。 
+就像上面显示的这样。那改怎么解决呢？
+在 ES…]]></description><link>https://github.com/thoamsy/blogs.git/反转字符串/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/反转字符串/</guid><pubDate>Fri, 12 Jan 2018 23:33:00 GMT</pubDate><content:encoded>&lt;p&gt;这个问题可能非常老，写过代码的都知道使用&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;str&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;但是，需要注意的是，因为 JS 默认使用的是 UCS-2 来编码的，对于中文支持也貌似没问题。可是到了 Unicode 环境下，大量的 emoji，就会出问题咯。&lt;/p&gt;
+&lt;p&gt;
+就像上面显示的这样。那改怎么解决呢？
+在 ES6 之前，可能需要通过对 Unicode 内部编码的了解来特别规定某个范围改做什么。但是 ES6 支持了 &lt;code&gt;codePoint&lt;/code&gt;，我们就不要这种复杂的方式了！
+&lt;/p&gt;
+&lt;p&gt;简单粗暴。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[作为个人博客的第一篇文章, 没有太多的意义, 就当为自己终于开通了博客做一个喝彩 🎉🎈
 在一年左右的前端学习时间中, 能构建出一个属于自己的博客, 也算是十分满足了.
 感谢  GitHub  和  Google  成为我的前端老师, 另外一个前端老师就是 MDN…]]></description><link>https://github.com/thoamsy/blogs.git/hello-world/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/hello-world/</guid><pubDate>Sun, 31 Dec 2017 13:13:18 GMT</pubDate><content:encoded>&lt;p&gt;作为个人博客的第一篇文章, 没有太多的意义, 就当为自己终于开通了博客做一个喝彩 🎉🎈
 在一年左右的前端学习时间中, 能构建出一个属于自己的博客, 也算是十分满足了.
