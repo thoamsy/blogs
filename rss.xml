@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Tue, 16 Jan 2018 15:03:36 GMT</lastBuildDate><item><title><![CDATA[我进入编程世界的第一步（翻译）]]></title><description><![CDATA[原文, 需要翻墙 作为一个刚毕业的计算机科学学生，在课堂上学到的东西和你在真实世界看到的东西会存在 断层 。各种循环操作： for, while, do while  不在话下。你可以不费吹灰之力写一个基于命令行的井字棋(Tic-Tac-Toe)游戏. 你还可以在 X8…]]></description><link>https://github.com/thoamsy/blogs.git/first-step-software-world/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/first-step-software-world/</guid><pubDate>Tue, 16 Jan 2018 07:28:39 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://medium.freecodecamp.org/my-first-steps-into-the-world-of-software-development-and-what-they-taught-me-6ee748cffb8f&quot;&gt;原文, 需要翻墙&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Tue, 16 Jan 2018 15:06:19 GMT</lastBuildDate><item><title><![CDATA[我进入编程世界的第一步（翻译）]]></title><description><![CDATA[原文, 需要翻墙 作为一个刚毕业的计算机科学学生，在课堂上学到的东西和你在真实世界看到的东西会存在 断层 。各种循环操作： for, while, do while  不在话下。你可以不费吹灰之力写一个基于命令行的井字棋(Tic-Tac-Toe)游戏. 你还可以在 X8…]]></description><link>https://github.com/thoamsy/blogs.git/first-step-software-world/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/first-step-software-world/</guid><pubDate>Tue, 16 Jan 2018 07:28:39 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://medium.freecodecamp.org/my-first-steps-into-the-world-of-software-development-and-what-they-taught-me-6ee748cffb8f&quot;&gt;原文, 需要翻墙&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -710,7 +710,7 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/hh-022920d1f164284d9cbe54f3e630674d-4a705.jpg&quot;
+    href=&quot;/blogs/static/good-022920d1f164284d9cbe54f3e630674d-4a705.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -727,16 +727,16 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;hh&quot;
+        alt=&quot;good&quot;
         title=&quot;&quot;
-        src=&quot;/static/hh-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg&quot;
-        srcset=&quot;/static/hh-022920d1f164284d9cbe54f3e630674d-e8976.jpg 148w,
-/static/hh-022920d1f164284d9cbe54f3e630674d-63df2.jpg 295w,
-/static/hh-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg 590w,
-/static/hh-022920d1f164284d9cbe54f3e630674d-85e3d.jpg 885w,
-/static/hh-022920d1f164284d9cbe54f3e630674d-d1924.jpg 1180w,
-/static/hh-022920d1f164284d9cbe54f3e630674d-9452e.jpg 1770w,
-/static/hh-022920d1f164284d9cbe54f3e630674d-4a705.jpg 5214w&quot;
+        src=&quot;/blogs/static/good-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg&quot;
+        srcset=&quot;/blogs/static/good-022920d1f164284d9cbe54f3e630674d-e8976.jpg 148w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-63df2.jpg 295w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg 590w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-85e3d.jpg 885w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-d1924.jpg 1180w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-9452e.jpg 1770w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-4a705.jpg 5214w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
