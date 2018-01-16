@@ -4,8 +4,6 @@ title: Element 和 Component 的区别
 date: "2018-01-14T12:12Z"
 ---
 
-# Element 和 Component 的区别
-
 本文的出现离不开 Dan 的一篇卓越的 blog。
 [原文章](https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html)
 
@@ -21,12 +19,12 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 	props: {
 		className: 'button button-blue',
 		children: {
-			type: 'b',
-			props: {
-				children: 'OK!'
-			}
-		}
-	}
+		type: 'b',
+		props: {
+        children: 'OK!'
+      }
+    }
+  }
 }
 ```
 
@@ -76,9 +74,10 @@ const Element = instance.render(); // render 不就是 React.Component.prototype
 1. host（常见 DOM 节点）
 2. function
 3. class
-   host 类型，React 会根据对应 type，生成真正的 DOM node，并将它所带的 props 写入 node 的 `attribute` 中，而对 `children` 继续递归，直到碰到没有 children 的 host Element 为止。
-   Function 的返回值就是 Element
-   class 的 render 函数的返回值就是 Element。
+
+host 类型，React 会根据对应 type，生成真正的 DOM node，并将它所带的 props 写入 node 的 `attribute` 中，而对 `children` 继续递归，直到碰到没有 children 的 host Element 为止。
+
+Function 的返回值是 Element, class 的 render 函数的返回值是 Element
 
 ## 一个常见问题
 
@@ -94,7 +93,7 @@ const C = () => E;
 ```js
 render() {
 	return (
-		<div><E/><div>
+	  <div><E/><div>
 	);
 }
 ```
@@ -106,15 +105,27 @@ render() {
 ```js
 render() {
 	return (
-		<div>{E}</div>
+	  <div>{E}</div>
 	);
 }
 ```
 
 那么为什么上面一种可以下面不可呢？
 
-首先，分析一下上面报错的原因，根据上面说的，我们知道，`<E/>` 就是一个语法糖，也就是 `React.createElement(type, props, children)` 其中 type 就是 E。那么，根据我们的定义 E 也是一个 `React.createElement('p', {}, '123')` 这样的表达式，其实就是一个对象。那么，显然这个时候 `<E/>` 得到的值，其实是一个对象！！ 而 React 内部是通过 type 属于 string 来确定这是 host Element，type 属于 function/class 来判断这是一个组件。所以，这样就报错了。
+首先，分析一下上面报错的原因，根据上面说的，我们知道，`<E/>` 就是一个语法糖，也就是 `React.createElement(type, props, children)`
+
+其中 type 就是 E。那么，根据我们的定义 E 也是一个 `React.createElement('p', {}, '123')` 这样的表达式，其实就是一个对象。那么，显然这个时候 `<E/>` 得到的值，其实是一个对象！！ 而 React 内部是通过 type 属于 string 来确定这是 host Element，type 属于 function/class 来判断这是一个组件。所以，这样就报错了。
 
 而，`{E}` 为什么可以呢？还记得我们最常在 `{}` 中写什么吗？
-`js { this.props.names.map(name => <li key={name.id}>{name}</li>); }`
-而上面这个显然就是一个 `Array of Element`，再加上 render 的目的不就是定义一个 Element 吗？显然这样是可以的。所以，总结过来可以发现一个规律，**`<A />` 整个表达式是一个 Element，而 A 是一个 Component，而 Component 要么是 function（class 也是 function），要么是纯 DOM**。
+
+```js
+{
+  this.props.names.map(name => <li key={name.id}>{name}</li>);
+}
+```
+
+而上面这个是一个 `Array of Element`，再加上 render 的目的不就是定义一个 Element 吗？
+
+显然这样是可以的。所以，总结过来可以发现一个规律，
+
+> `<A />` 整个表达式是一个 Element，而 A 是一个 Component， Component 要么是 function（class 也是 function），要么是纯 DOM
