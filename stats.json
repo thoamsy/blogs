@@ -1,9 +1,5 @@
 {
   "assetsByChunkName": {
-    "path---parcel-parcel-📦-和-react-⚛️-的使用": [
-      "path---parcel-parcel-📦-和-react-⚛️-的使用-9b9926ca5015c09fe2ab.js",
-      "path---parcel-parcel-📦-和-react-⚛️-的使用-9b9926ca5015c09fe2ab.js.map"
-    ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-27bc1a07d5cce946c9d3.js",
       "component---src-pages-index-js-27bc1a07d5cce946c9d3.js.map"
@@ -11,10 +7,6 @@
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
-    ],
-    "path---uuid-uuid": [
-      "path---uuid-uuid-71bc98aee5b2f07804ce.js",
-      "path---uuid-uuid-71bc98aee5b2f07804ce.js.map"
     ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
@@ -24,25 +16,17 @@
       "component---src-templates-blog-post-js-d05d0748710ff35b932e.js",
       "component---src-templates-blog-post-js-d05d0748710ff35b932e.js.map"
     ],
-    "path---base-64-base-64-编码的简单尝试": [
-      "path---base-64-base-64-编码的简单尝试-6c87670de69d138af5dc.js",
-      "path---base-64-base-64-编码的简单尝试-6c87670de69d138af5dc.js.map"
-    ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-03143aa0b13b8ea42d89.js",
       "component---src-layouts-index-js-03143aa0b13b8ea42d89.js.map"
     ],
     "path---index": [
-      "path---index-1c35a012a1995ee6ed1d.js",
-      "path---index-1c35a012a1995ee6ed1d.js.map"
+      "path---index-5e7fa17e61455b6dfaab.js",
+      "path---index-5e7fa17e61455b6dfaab.js.map"
     ],
     "path---hello-world": [
       "path---hello-world-02c22eb1d624d6e9fabb.js",
       "path---hello-world-02c22eb1d624d6e9fabb.js.map"
-    ],
-    "path---react-component-and-element": [
-      "path---react-component-and-element-f11273114f28633eb143.js",
-      "path---react-component-and-element-f11273114f28633eb143.js.map"
     ],
     "commons": [
       "commons-3f8cdb987559d31a3a4e.js",
@@ -54,19 +38,11 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
-    "path---first-step-software-world": [
-      "path---first-step-software-world-8dfeb1e6c2f01460a7a5.js",
-      "path---first-step-software-world-8dfeb1e6c2f01460a7a5.js.map"
-    ],
     "app": [
-      "app-7990c9535a9b2fcfd5c9.js",
+      "app-ee95cdcd170492c9d809.js",
       "build-js-styles.css",
-      "app-7990c9535a9b2fcfd5c9.js.map",
+      "app-ee95cdcd170492c9d809.js.map",
       "build-js-styles.css.map"
-    ],
-    "path---反转字符串": [
-      "path---反转字符串-339a833aa99fc89d3120.js",
-      "path---反转字符串-339a833aa99fc89d3120.js.map"
     ]
   }
 }
