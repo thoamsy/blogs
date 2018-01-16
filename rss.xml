@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Tue, 16 Jan 2018 05:03:15 GMT</lastBuildDate><item><title><![CDATA[Element 和 Component 的区别]]></title><description><![CDATA[Element 和 Component 的区别 本文的出现离不开 Dan 的一篇卓越的 blog。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Tue, 16 Jan 2018 05:14:26 GMT</lastBuildDate><item><title><![CDATA[Element 和 Component 的区别]]></title><description><![CDATA[本文的出现离不开 Dan 的一篇卓越的 blog。
  原文章 一句话概括就是， Element  是  Component  的子集， Element  是  Component  的返回值
-Element…]]></description><link>https://github.com/thoamsy/blogs.git/react-component-and-element/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/react-component-and-element/</guid><pubDate>Sun, 14 Jan 2018 12:12:00 GMT</pubDate><content:encoded>&lt;h1&gt;Element 和 Component 的区别&lt;/h1&gt;
-&lt;p&gt;本文的出现离不开 Dan 的一篇卓越的 blog。
+Element 其实就是一个纯对象，找个对象定义了一些对于 React…]]></description><link>https://github.com/thoamsy/blogs.git/react-component-and-element/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/react-component-and-element/</guid><pubDate>Sun, 14 Jan 2018 12:12:00 GMT</pubDate><content:encoded>&lt;p&gt;本文的出现离不开 Dan 的一篇卓越的 blog。
 &lt;a href=&quot;https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html&quot;&gt;原文章&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;一句话概括就是，&lt;code&gt;Element&lt;/code&gt; 是 &lt;code&gt;Component&lt;/code&gt; 的子集，&lt;code&gt;Element&lt;/code&gt; 是 &lt;code&gt;Component&lt;/code&gt; 的返回值
 Element 其实就是一个纯对象，找个对象定义了一些对于 React 来说很重要的属性，比如 &lt;code&gt;type，children，props，key，type&lt;/code&gt; 这些的。比如&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 	$$&lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Symbol&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;react&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;element&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
 	key&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
 	ref&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    className&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button button-blue&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    children&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;b&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-      props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		className&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button button-blue&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		children&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;b&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
         children&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;OK!&apos;&lt;/span&gt;
       &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
@@ -61,11 +60,10 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 &lt;ol&gt;
 &lt;li&gt;host（常见 DOM 节点）&lt;/li&gt;
 &lt;li&gt;function&lt;/li&gt;
-&lt;li&gt;class
-host 类型，React 会根据对应 type，生成真正的 DOM node，并将它所带的 props 写入 node 的 &lt;code&gt;attribute&lt;/code&gt; 中，而对 &lt;code&gt;children&lt;/code&gt; 继续递归，直到碰到没有 children 的 host Element 为止。
-Function 的返回值就是 Element
-class 的 render 函数的返回值就是 Element。&lt;/li&gt;
+&lt;li&gt;class&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;host 类型，React 会根据对应 type，生成真正的 DOM node，并将它所带的 props 写入 node 的 &lt;code&gt;attribute&lt;/code&gt; 中，而对 &lt;code&gt;children&lt;/code&gt; 继续递归，直到碰到没有 children 的 host Element 为止。&lt;/p&gt;
+&lt;p&gt;Function 的返回值是 Element, class 的 render 函数的返回值是 Element&lt;/p&gt;
 &lt;h2&gt;一个常见问题&lt;/h2&gt;
 &lt;p&gt;假设有下面的两个变量&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
@@ -86,7 +84,7 @@ class 的 render 函数的返回值就是 Element。&lt;/li&gt;
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png&quot;
+    href=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -105,13 +103,13 @@ class 的 render 函数的返回值就是 Element。&lt;/li&gt;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;96FFC213 7B8B 46A4 817B 2F13D2342247&quot;
         title=&quot;&quot;
-        src=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png&quot;
-        srcset=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-1a291.png 148w,
-/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-2bc4a.png 295w,
-/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png 590w,
-/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-526de.png 885w,
-/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fa2eb.png 1180w,
-/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png 1640w&quot;
+        src=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png&quot;
+        srcset=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-1a291.png 148w,
+/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-2bc4a.png 295w,
+/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png 590w,
+/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-526de.png 885w,
+/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fa2eb.png 1180w,
+/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png 1640w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -129,7 +127,8 @@ class 的 render 函数的返回值就是 Element。&lt;/li&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;p&gt;那么为什么上面一种可以下面不可呢？&lt;/p&gt;
-&lt;p&gt;首先，分析一下上面报错的原因，根据上面说的，我们知道，&lt;code&gt;&amp;#x3C;E/&gt;&lt;/code&gt; 就是一个语法糖，也就是 &lt;code&gt;React.createElement(type, props, children)&lt;/code&gt; 其中 type 就是 E。那么，根据我们的定义 E 也是一个 &lt;code&gt;React.createElement(&apos;p&apos;, {}, &apos;123&apos;)&lt;/code&gt; 这样的表达式，其实就是一个对象。那么，显然这个时候 &lt;code&gt;&amp;#x3C;E/&gt;&lt;/code&gt; 得到的值，其实是一个对象！！ 而 React 内部是通过 type 属于 string 来确定这是 host Element，type 属于 function/class 来判断这是一个组件。所以，这样就报错了。&lt;/p&gt;
+&lt;p&gt;首先，分析一下上面报错的原因，根据上面说的，我们知道，&lt;code&gt;&amp;#x3C;E/&gt;&lt;/code&gt; 就是一个语法糖，也就是 &lt;code&gt;React.createElement(type, props, children)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中 type 就是 E。那么，根据我们的定义 E 也是一个 &lt;code&gt;React.createElement(&apos;p&apos;, {}, &apos;123&apos;)&lt;/code&gt; 这样的表达式，其实就是一个对象。那么，显然这个时候 &lt;code&gt;&amp;#x3C;E/&gt;&lt;/code&gt; 得到的值，其实是一个对象！！ 而 React 内部是通过 type 属于 string 来确定这是 host Element，type 属于 function/class 来判断这是一个组件。所以，这样就报错了。&lt;/p&gt;
 &lt;p&gt;而，&lt;code&gt;{E}&lt;/code&gt; 为什么可以呢？还记得我们最常在 &lt;code&gt;{}&lt;/code&gt; 中写什么吗？&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -137,7 +136,11 @@ class 的 render 函数的返回值就是 Element。&lt;/li&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;而上面这个显然就是一个 &lt;code&gt;Array of Element&lt;/code&gt;，再加上 render 的目的不就是定义一个 Element 吗？显然这样是可以的。所以，总结过来可以发现一个规律，&lt;strong&gt;&lt;code&gt;&amp;#x3C;A /&gt;&lt;/code&gt; 整个表达式是一个 Element，而 A 是一个 Component，而 Component 要么是 function（class 也是 function），要么是纯 DOM&lt;/strong&gt;。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[反转字符串]]></title><description><![CDATA[这个问题可能非常老，写过代码的都知道使用 但是，需要注意的是，因为 JS 默认使用的是 UCS-2 来编码的，对于中文支持也貌似没问题。可是到了 Unicode 环境下，大量的 emoji，就会出问题咯。
+&lt;p&gt;而上面这个是一个 &lt;code&gt;Array of Element&lt;/code&gt;，再加上 render 的目的不就是定义一个 Element 吗？&lt;/p&gt;
+&lt;p&gt;显然这样是可以的。所以，总结过来可以发现一个规律，&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;&amp;#x3C;A /&gt;&lt;/code&gt; 整个表达式是一个 Element，而 A 是一个 Component， Component 要么是 function（class 也是 function），要么是纯 DOM&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[反转字符串]]></title><description><![CDATA[这个问题可能非常老，写过代码的都知道使用 但是，需要注意的是，因为 JS 默认使用的是 UCS-2 来编码的，对于中文支持也貌似没问题。可是到了 Unicode 环境下，大量的 emoji，就会出问题咯。
  
 就像上面显示的这样。那改怎么解决呢？
 在 ES…]]></description><link>https://github.com/thoamsy/blogs.git/反转字符串/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/反转字符串/</guid><pubDate>Fri, 12 Jan 2018 23:33:00 GMT</pubDate><content:encoded>&lt;p&gt;这个问题可能非常老，写过代码的都知道使用&lt;/p&gt;
