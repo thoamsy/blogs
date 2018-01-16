@@ -1,3 +1,10 @@
+---
+
+title: Element 和 Component 的区别
+date: "2018-01-14T12:12Z"
+
+---
+
 # Element 和 Component 的区别
 
 本文的出现离不开 Dan 的一篇卓越的 blog。
