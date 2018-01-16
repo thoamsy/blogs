@@ -1,164 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Tue, 16 Jan 2018 08:09:37 GMT</lastBuildDate><item><title><![CDATA[我进入编程世界的第一步（翻译）]]></title><description><![CDATA[原文, 需要翻墙 作为一个刚毕业的计算机科学学生，在课堂上学到的东西和你在真实世界看到的东西会存在 断层 。各种循环操作： for, while, do while  不在话下。你可以不费吹灰之力写一个基于命令行的井字棋(Tic-Tac-Toe)游戏. 你还可以在 X8…]]></description><link>https://github.com/thoamsy/blogs.git/first-step-software-world/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/first-step-software-world/</guid><pubDate>Tue, 16 Jan 2018 07:28:39 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://medium.freecodecamp.org/my-first-steps-into-the-world-of-software-development-and-what-they-taught-me-6ee748cffb8f&quot;&gt;原文, 需要翻墙&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAACpklEQVQoz2PYvvXE/XNHi2qLUuICErztEkOdM0I8chPd9vRPePnq3te/n5DR9zfHP59L3jbNrT7TOjlEjWHloi2Xdm1tmtIRF+kX5mAY4WIS7mJRUxhzZOasW9dOfv39+csfEPr659PLl3de3dz97Xb3yYVeHZkqRZGKDJWFbTvmzZo8qyc/NdrNzMDexNDNxDA9MXJ1W2dmlP+Xr29ePb976eSBF28enzq0+fjOhV//fNy3orUuyXhKjjZDrGdQmH9wWlZqaHigqZmFqoqsobGZs6NddGCwnoLE7P7q2XlRyY76npb6LdWZJflxB4/s7u0qSw/Xqw1hZ8j28U/w9Guoqzh7bKW5gY6ctKSRiUluYqSPu4OPq01lnPuedrlZqWyxVjy5cZ556eEpyaGBwfZWNoYu+rwMUS5uVcFBeWnx8zZOtbe2sDEzdba1So0OTYv083M0SwhxvbvRZEGueHcYR36cT3ykY7C3jaurqYezuZu9PoO7lU1RdFiwp6tDgLeHi3OgryeQ7WZvH+Rmb6IpH+difKtWZUaCZlmodWqos4a6uJqWuJ6eooOtcWiwO4OXtXWct7u7va2po4OzlVWAi4Ofo621qZmXlbGqkuLd4/mHJ5jYmpmmBtramxhIaJmqKAl72Bm42hk72BgxyKqaaZi5qhvbaVs7qhja6Vu5GZnZW1o6WlnZmdk6H56o3BXI1WrM2u4tF2MuJ2/hK6OhoWlpK29qLapvysAmbcKuYMmtbCli6MilbKls5mnjHGho7q6saytraN+fbN0QaZfnolkYaJ7tprWlWdrW3YBP345VzZRRVpeBRcKARdqYTc6YT92MQ95E0dhFzdxT1cRJWN1MWN+hzluzWo4lWEXSXowjVoV9VZ2AjqWuorWriIUbo6gqAEz68UW99+kyAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;Nervous laugh&quot;
-        title=&quot;&quot;
-        src=&quot;/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png&quot;
-        srcset=&quot;/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-1a291.png 148w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-2bc4a.png 295w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png 590w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-526de.png 885w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fa2eb.png 1180w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png 1280w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;作为一个刚毕业的计算机科学学生，在课堂上学到的东西和你在真实世界看到的东西会存在&lt;strong&gt;断层&lt;/strong&gt;。各种循环操作：&lt;code&gt;for, while, do while&lt;/code&gt; 不在话下。你可以不费吹灰之力写一个基于命令行的井字棋(Tic-Tac-Toe)游戏. 你还可以在 X86 上直接写汇编代码!&lt;/p&gt;
-&lt;p&gt;但是, 你对于 Facebook, YouTube 或者 Reddit(美国最知名的论坛) 是怎么工作的完全没有头绪. 你甚至连怎么开始都不知道. 因为你只知道一门 Python 语言, 当你 Google &lt;em&gt;哪些公司用 Python&lt;/em&gt; 的时候, 你发现一些人说的: &lt;em&gt;“Reddit…use python for their backend.”&lt;/em&gt; Backend(后端)? 这他妈是什么?&lt;/p&gt;
-&lt;p&gt;这就是在用命令行写井字棋游戏和构建一个真实的应用程序中, 存在的巨大的空缺, 而且没人会告诉你该怎么填补这个空缺. 即使你已经学会了如何像计算机一样思考, 你还是不知道如何将你学会的东西, 用来构建一个你想构建的东西。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;只有主动才能让你成为你想成为的人. 不会总是有老师或者教授, 将他的模板和样例给你, 而你只需要填补这些空白. 也不总是有一个课程会教你 “下一步你该学什么”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;Takeaway #1:&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;没有人比你更能影响你自己&lt;/strong&gt;.
-你想学什么取决于你, 而不是有人拿着勺子一点一点的喂着你下一步该学什么, 应该自主学习, &lt;a href=&quot;https://danluu.com/learning-to-program/&quot;&gt;Dan Luu 称这个为 meta-skill&lt;/a&gt;, 这也是你在决定成为一个软件工程师之后最重要的技能之一.&lt;/p&gt;
-&lt;p&gt;幸运的是, Google 可以帮助我们! 当你搜索 &lt;em&gt;How to build a website using python&lt;/em&gt;, 你找到了这个—&lt;a href=&quot;http://flask.pocoo.org/docs/0.12/&quot;&gt;一个精巧的小型 Web 框架&lt;/a&gt;, 于是你打算一探究竟. 即使你还不知道什么是框架(framework). 你尝试去阅读初学者文档, 但是不知道什么是 &lt;strong&gt;database abstraction layer(数据库抽象层)&lt;/strong&gt;, 于是你跳过这个直接找到了&lt;a href=&quot;http://flask.pocoo.org/docs/0.12/installation/&quot;&gt;安装那一步&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;最后, 你发现了那些可以自己操作的步骤 🎉! 你复制这些命令到你的终端中(terminal). 这里出现了叫做 &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;virtualenv&lt;/code&gt; 的东东, 管它呢, 先复制. 你花了几分钟观察到了输入这些后会发生什么, 你也终于对你的机器是怎么工作的有了一个大概的认识.&lt;/p&gt;
-&lt;h2&gt;takeaway #2&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;我们通过理解学习, 而不是无脑的跟着教程.&lt;/strong&gt; 当碰到你完全不理解的东西的时候, 尝试去学习而不是放弃, 这样你将会发现这些看上去不可能完成任务是一个能让你快速成长的绝佳机会—只不过你可能要花很长时间解决它罢了 🌚&lt;/p&gt;
-&lt;p&gt;Okay, 现在看上去 &lt;code&gt;pip&lt;/code&gt; 好像是一个用来安装 &lt;code&gt;packages(包)&lt;/code&gt; 的工具, 这样你就可以 &lt;code&gt;import&lt;/code&gt;(Python 通过这条语句导入外部函数) 它们. &lt;code&gt;virtualenv&lt;/code&gt; 看上去好像是一个关联你安装好的包和指定项目的方式. 你现在除了 &lt;code&gt;cd&lt;/code&gt; 和 &lt;code&gt;mkdir&lt;/code&gt; 外, 其他的命令行你一个都看不懂, 但是至少不再是&lt;strong&gt;一无所知&lt;/strong&gt;. 到了去往&lt;a href=&quot;http://flask.pocoo.org/docs/0.12/quickstart/&quot;&gt;快速指导&lt;/a&gt;的时间了.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 65.30014641288433%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsSAAALEgHS3X78AAADJElEQVQozwEZA+b8AD8xJUM0J0M0KEAyJjgsIjAmHiceGjEdHz4sLzszL2RXUVQ+PnRbTYZyYa6Zmr2lk6uVe6CKcZ+Jcq2ZgQA5LCJIOCtIOCtLOixHOSw9MSczKSInIBsxJyRpXFeynZSEbFh5aVtsWEjHsLXAqZKvmHuehmyZhGufinIAQjMoSzstTz4vSzosRTUpTEA2U0pERT87OTEuZlJKjXpzjnlnfWxeeWZXiXhytZ1+o45ziXNeaVhJcV9QAC8lHjgtJDswJkQ2KU07LY6JhsfP2bnDzrTB0ZiUmM7Gxrm8wcbKzeLn7+nt89fW1KielWVURHpmU4NsVwA7LyY5LyUmJB5MST5qUTqKhIC9x8/Hz9jBzNfGzdTb4OLBytHCzNLd5OqNmaOdo6uRiIF9aFGFa1NtV0YAQzYsPjMpPzMpUUEzXEk5Xlpao6q0z9Xe0tri2d7l5ObrxMrRyNLa3uPkb3l+SExTjYN3iG5Tdl9JaVdFADYsJDguJj02MVVYXWRfX2FkaG1rbOHm7eDl69/i6eTn7s7U3srP1uXo68zU2Li/yYqAd2BMO3ZfSZB2WQA4LSQyLChwaWaPh4VxZ28+NzZbW17b3ePe4unk5+7h5OvW2uXL0dvi5+vOycrY3OKGeW9oTzt3YU1/Zk4ATD0xSDktUUtIYV9hVFRVW1xeRkZIrq+z4ubt2dzkuLnAzsvO0dnh2eHmycrR1dnghHVsWkQze2xgblxLADswJ2lfV1xPRGRlZk1OUE5PUJaWmMPDxNzd5srO2Hl0e5uIfdfX4NXd48rQ08nQ1F5ZVTktJXNbRotsTwBhW1fOzc+ilo+AfXuurq/f39/a2dmup6GFeG1tY11gU1BsUkLn3de5r6qAcWNnXVUnIyEWFhRoZ12dgl4AMyojl5WVvbaybmdguLWxhntzWUY3XkYzUz8uMiUcqIhzqJJ+wqmV8PDv1s7KbFE8VT8saFM8j3dWoYdiADQnI0w9NFhGNkw7LU49LVZCMFZALVlDMEk4Kk0+NLiqnru0qIpnTvLv7M3AuW1QN3VZPYRoSJV7WJ+GYbwze0oqssYJAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;Just follow along and try to keep up.&quot;
-        title=&quot;&quot;
-        src=&quot;/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png&quot;
-        srcset=&quot;/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-1a291.png 148w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-2bc4a.png 295w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png 590w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-526de.png 885w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fa2eb.png 1180w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png 1366w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;你跟着教程, 运行你的程序, 感觉当你的浏览器第一次出现了 &lt;strong&gt;Hello, World&lt;/strong&gt; 的时候, 你的心中会涌入一种爽到吸大麻的. 你对自己说, 这就我想要的哈哈! 滚吧, 傻逼命令行! 这确实是一小步, 但那是你第一次让浏览器听你的话, 这才是历史性的一刻.&lt;/p&gt;
-&lt;p&gt;你继续, 又出现了一大堆你不理解的概念. Routes(路由)? HTTP? GET? POST? 什么是 rendering template(渲染模板)? 这些概念听上去好像有那么一点点印象, 但是你不确定到底是什么意思, 所以你停止你手头的工作去搜一下它们是什么. 就像你刚学会 &lt;code&gt;pip&lt;/code&gt; 和 &lt;code&gt;virtualenv&lt;/code&gt; 一样, 渐渐的你开始对你的程序怎么运行有了一个模糊的概念.&lt;/p&gt;
-&lt;h2&gt;Takeaway #3&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;学习不断地练习.&lt;/strong&gt; 就像任何其他的技能, 它们是需要打磨的, 熟能生巧. 抓住每一个学习的机会. 记住: success begets success.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;让学习成为一种习惯, 你的求知欲望应该和你的年龄身体一起成长&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;你可以用模板来显示内容, 和其他的 HTML 和 CSS 页面一样, 只不过它们是动态的. 你可以通过定义不同的路由来控制在不同的 URL 下该显示什么. 你甚至可以用你自己的程序来抓取其他网站上的内容!&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;译者注: 当然现在是通过前端来渲染模板了, 后端仅在要求性能的时候服务器渲染&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;随着你渐渐地变得更加轻松, 你开始对独立学习有一种控制感和自豪感. 这可能是你在完成课堂任务的时候从未体验过的(不敢想象国外的教育 🙂). 你开始飘起来, 谁还需要学校, ╭(╯^╰)╮?&lt;/p&gt;
-&lt;p&gt;随着你获得自信, 这个指导开始看上去有点…基础了. 确实, 毕竟, 这只是一个 quick start… “我可以做更酷 😎 的事情”, 你想着.&lt;/p&gt;
-&lt;p&gt;于是你开始自己搞定这些. 你想之前做的一样, 用 &lt;code&gt;pip&lt;/code&gt; 和 &lt;code&gt;virtualenv&lt;/code&gt; 设置你的项目, 因为那是你仅仅知道的方式. 你知道如何设置模板; 你知道如何设置路由, HTTP 请求, 什么是 GET 什么是 POST. 你可能开始尝试使用第三方 API, 并且开始阅读更多的文档. 你并不是什么都懂, 但是你正在学习. 一点一点的.&lt;/p&gt;
-&lt;p&gt;最后, 你终于构建了你自己的第一个独立的项目 🎉. 不是那个已经有很多年轻的开发者跟着教程走的项目, 也不是很多学生在课堂上做的项目. 而是一个, 真实的, 可以感知到的, &lt;em&gt;honest-to-goodness&lt;/em&gt; 的程序, 在你构建之前, 它从未存在过. &lt;strong&gt;这是一中超凡的感觉!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 41.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsSAAALEgHS3X78AAAB80lEQVQY0wHoARf+ADA8RiU6SyI1Qis6RFdXWlFNU2BtgJuRjripnsy2pd7AqerIre3LrevIqeK/ota1nMirl7+llLiimrWelgA/TmIgQWUPQ3tKaJRXXnFAS1s0cLJacpPRtqLrxqvowKb62bT73bfz1rnvzrTtxKfbtabIrK7Co6nKoI8AX2aCX3GYTF1/UGOFVGqTYXWgUnSpUYbBjqHI7sepvoyA5MKf9uTB4Nzi39fZ8tG908jOybnB3qeP3aGJADw+UDQ/Vic9XCtdjwk8gAhGmTJXjkdchE15t9SknN2fjdmdhvnq0PLr5Ojr7Nrr9c7n/cLV8eCxreWlmwBAPVJDSWImSn4mbLEHP4QNTp0gZrBUdqx7hbSuh530pYL8567978z87dnt8u3q9PTe4+rexb/tp4vum3oASDo5Sz4+HUNxCU6TEDtsFEN8KlqQWFhsRmmeh5vH3nxs8ppr4MK+9sy/0cG8oNDmu9fdm6eueF1hjGhmAEM4NT83Nyk3Two6cQg4bRQ3Yj1BTWJhem12mGmHq8B0ZcJrSZOEnGxylNxkHa5hSXx/k0tjf002N0k4PQBFODU7NDU2NDgvN0I6P0U1NjYoKy9HPzxCNDVWUF+LQC52S06VW1C8TijUiVuGT1lYMzFLNTc2KSswKCsjm/mwggtB6wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;You are a master builder.&quot;
-        title=&quot;&quot;
-        src=&quot;/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png&quot;
-        srcset=&quot;/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-1a291.png 148w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-2bc4a.png 295w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png 590w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-526de.png 885w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fa2eb.png 1180w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-08f6a.png 1770w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png 1920w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;所以接下来呢? 现在你做好了一个应用, 怎样才能让每个人都能用到它? 到底什么是 &lt;code&gt;back-end&lt;/code&gt;, 什么是 &lt;code&gt;front-end&lt;/code&gt;?&lt;/p&gt;
-&lt;p&gt;这是一个很好的机会，用来培养学习的渴望: 总是有更多的东西.
-有点像一个十分棒的电视节目, 你从来都觉得看都不够爽, 更重要的是: &lt;strong&gt;它从来不会结束!&lt;/strong&gt; 显然, 除了不断地学习就没有其他东西能像这样了. 软件开放的每一个分支, 都是一个需要深入的全新的世界, 而且你学的更多, 就会有更多的世界为你开放.&lt;/p&gt;
-&lt;p&gt;你应该意识到, 没有一个所谓的权威的方式来让你成为一个 “real” 开发者. 也没有足够的时间去精通每一个方面. 每个人成功的道路和方式都是不同的. &lt;strong&gt;你如何修出一条到达你想到达的地方, 那完全取决于你自己.&lt;/strong&gt;
-&lt;/p&gt;
-&lt;p&gt;这就是我第一次踏入软件开发世界的故事. 如果你还想看我第一次到底做了什么, &lt;a href=&quot;https://github.com/thetimothyp/Where2Eat&quot;&gt;你可以查看这个.&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Element 和 Component 的区别]]></title><description><![CDATA[本文的出现离不开 Dan 的一篇卓越的 blog。
- 原文章 一句话概括就是， Element  是  Component  的子集， Element  是  Component  的返回值
-Element 其实就是一个纯对象，找个对象定义了一些对于 React…]]></description><link>https://github.com/thoamsy/blogs.git/react-component-and-element/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/react-component-and-element/</guid><pubDate>Sun, 14 Jan 2018 12:12:00 GMT</pubDate><content:encoded>&lt;p&gt;本文的出现离不开 Dan 的一篇卓越的 blog。
-&lt;a href=&quot;https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html&quot;&gt;原文章&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;一句话概括就是，&lt;code&gt;Element&lt;/code&gt; 是 &lt;code&gt;Component&lt;/code&gt; 的子集，&lt;code&gt;Element&lt;/code&gt; 是 &lt;code&gt;Component&lt;/code&gt; 的返回值
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Tue, 16 Jan 2018 14:39:21 GMT</lastBuildDate><item><title><![CDATA[Element 和 Component 的区别]]></title><description><![CDATA[原文章 一句话概括就是， Element  是  Component  的子集， Element  是  Component  的返回值.
+Element 其实就是一个纯对象，找个对象定义了一些对于 React 来说很重要的属性，比如  type，children，props…]]></description><link>https://github.com/thoamsy/blogs.git/react-component-and-element/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/react-component-and-element/</guid><pubDate>Sun, 14 Jan 2018 12:12:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html&quot;&gt;原文章&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一句话概括就是，&lt;code&gt;Element&lt;/code&gt; 是 &lt;code&gt;Component&lt;/code&gt; 的子集，&lt;code&gt;Element&lt;/code&gt; 是 &lt;code&gt;Component&lt;/code&gt; 的返回值.
 Element 其实就是一个纯对象，找个对象定义了一些对于 React 来说很重要的属性，比如 &lt;code&gt;type，children，props，key，type&lt;/code&gt; 这些的。比如&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	$$&lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Symbol&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;react&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;element&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-	type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-	key&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-	ref&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-	props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-		className&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button button-blue&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-		children&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-		type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;b&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-		props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    className&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button button-blue&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    children&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;b&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
         children&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;OK!&apos;&lt;/span&gt;
       &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
@@ -166,17 +17,18 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;上面的 type 就是这个 Element 的核心之一。React 通过判断 type 是字符串还是函数来决定如何 &lt;code&gt;mount&lt;/code&gt; 这个 Element。如果是字符串就说明是普通 DOM，称为 &lt;code&gt;DOM Element&lt;/code&gt;，如果是 &lt;code&gt;function&lt;/code&gt; 就是自己定义的，称为为 &lt;code&gt;Component Element&lt;/code&gt;。所以换句话说，用户自己写出来的组件的才算的上是一个 &lt;code&gt;Component&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;创建组件的常用方法有两种，一种是纯函数组件，或者说 &lt;code&gt;stateless Component&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;上面的 type 就是这个 element 的核心之一。React 通过判断 type 是字符串还是函数来决定如何 &lt;code&gt;mount&lt;/code&gt; 这个 element。如果是字符串就说明是普通 DOM，称为 &lt;code&gt;DOM Element&lt;/code&gt;，如果是 &lt;code&gt;function&lt;/code&gt; 就是自己定义的，称为为 &lt;code&gt;Component Element&lt;/code&gt;。
+所以换句话说，用户自己写出来的组件的才算的上是一个 &lt;code&gt;Component&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;创建组件的常用方法有两种，一种是纯函数组件，或者说 &lt;code&gt;Stateless Component&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;Button&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; color&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;button style&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; background&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; color &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;button&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+	&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;button style&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;background&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; color&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;button&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;通过这种方式创建, 它的返回值就是定义 Element 的过程了，使用 &lt;code&gt;Button(props)&lt;/code&gt; 就能得到我们定义的 Element。不过这仅仅是因为 JSX 给了我们一种语法糖，如果没有 JSX 的话，应该类似于&lt;/p&gt;
+&lt;p&gt;通过这种方式创建的话，使用 &lt;code&gt;Button(props)&lt;/code&gt; 就能得到我们定义的 element。不过这仅仅是因为 JSX 给了我们一种语法糖，如果没有 JSX 的话，应该类似于&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; style&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; background&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; color &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;background&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; color&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;p&gt;而这个函数的作用也仅仅只是生成一个&lt;strong&gt;对象而已&lt;/strong&gt;，就像最上面那个对象一样：&lt;/p&gt;
@@ -193,98 +45,34 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;p&gt;这就是 Element 的真面目了。所以可以看到，JSX 也好，&lt;code&gt;createElement&lt;/code&gt; 也好，不过是提供一种抽象帮我们不要写这个无聊的对象定义，要知道，如果再多几个 children 的话，整个对象定义应该就有几十行！&lt;/p&gt;
-&lt;p&gt;同样的，如果换成 &lt;code&gt;Stateful Component&lt;/code&gt; 的话，其实模式差不多，只不过，它们需要一个 &lt;code&gt;render&lt;/code&gt; 方法，并且拥有一个被称为 &lt;code&gt;instance&lt;/code&gt; 的变量。render 的目的其实也就是定义一个 Element，而 instance 就是 &lt;code&gt;this&lt;/code&gt; 了。&lt;/p&gt;
+&lt;p&gt;同样的，如果换成 &lt;code&gt;Stateful Component&lt;/code&gt; 的话，其实模式差不多，只不过，它们需要一个 &lt;code&gt;render&lt;/code&gt; 方法，并且拥有一个被称为 &lt;code&gt;instance&lt;/code&gt; 的变量。render 的目的其实也就是定义一个 element，而 instance 就是 &lt;code&gt;this&lt;/code&gt; 了。&lt;/p&gt;
 &lt;p&gt;所以，一个 Element 出现的步骤此时是，&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; instance &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// type 就是该组件的 type&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Element &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; instance&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// render 不就是 React.Component.prototype 的方法吗&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; element &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; instance&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// render 不就是 Component.prototype 的方法吗&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;综上所述，我们最常写的是 Component，Component 分为三种：&lt;/p&gt;
+&lt;p&gt;综上所述，我们自己写的是 Component，Element 是 Component 的返回值，可以分为三类&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;host（常见 DOM 节点）&lt;/li&gt;
+&lt;li&gt;host（浏览器自带的）&lt;/li&gt;
 &lt;li&gt;function&lt;/li&gt;
-&lt;li&gt;class&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;host 类型，React 会根据对应 type，生成真正的 DOM node，并将它所带的 props 写入 node 的 &lt;code&gt;attribute&lt;/code&gt; 中，而对 &lt;code&gt;children&lt;/code&gt; 继续递归，直到碰到没有 children 的 host Element 为止。&lt;/p&gt;
-&lt;p&gt;Function 的返回值是 Element, class 的 render 函数的返回值是 Element&lt;/p&gt;
-&lt;h2&gt;一个常见问题&lt;/h2&gt;
-&lt;p&gt;假设有下面的两个变量&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;class
+host 类型，React 会根据对应 type，生成真正的 &lt;strong&gt;DOM node&lt;/strong&gt;，并将它所带的 &lt;code&gt;props&lt;/code&gt; 写入 node 的 &lt;code&gt;attribute&lt;/code&gt; 中，接着对 &lt;code&gt;children&lt;/code&gt; 递归这些操作。
+比如 &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; E &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Wow&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;p&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;C&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; E&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;pre class=&quot;language-jsx&quot;&gt;&lt;code&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Button&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Banner&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;这两个的区别是什么呢？刚开始很容易写出这样的代码&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-	  &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;E&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-	&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
-&lt;p&gt;但是如果真这样写的话，铁定是会报错的。
-
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 11.829268292682926%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsSAAALEgHS3X78AAAAWklEQVQI122OSw6AMAhEe/97KqVft0LiOLRxJwnhN29CslxgZ4Ypq1Z4HzDhnJV7gbe++9iVxqRmzD0HJwqfFx53RCSrbR9puOCAaHwfsuoHhXmYxQNLR+YvXjnGmSzduH1XAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;96FFC213 7B8B 46A4 817B 2F13D2342247&quot;
-        title=&quot;&quot;
-        src=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png&quot;
-        srcset=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-1a291.png 148w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-2bc4a.png 295w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png 590w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-526de.png 885w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fa2eb.png 1180w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png 1640w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    
-于是我又发现可以这样写&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-	  &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;E&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-	&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
-&lt;p&gt;那么为什么上面一种可以下面不可呢？&lt;/p&gt;
-&lt;p&gt;首先，分析一下上面报错的原因，根据上面说的，我们知道，&lt;code&gt;&amp;#x3C;E/&gt;&lt;/code&gt; 就是一个语法糖，也就是 &lt;code&gt;React.createElement(type, props, children)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;其中 type 就是 E。那么，根据我们的定义 E 也是一个 &lt;code&gt;React.createElement(&apos;p&apos;, {}, &apos;123&apos;)&lt;/code&gt; 这样的表达式，其实就是一个对象。那么，显然这个时候 &lt;code&gt;&amp;#x3C;E/&gt;&lt;/code&gt; 得到的值，其实是一个对象！！ 而 React 内部是通过 type 属于 string 来确定这是 host Element，type 属于 function/class 来判断这是一个组件。所以，这样就报错了。&lt;/p&gt;
-&lt;p&gt;而，&lt;code&gt;{E}&lt;/code&gt; 为什么可以呢？还记得我们最常在 &lt;code&gt;{}&lt;/code&gt; 中写什么吗？&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;names&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;li key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;li&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
-&lt;p&gt;而上面这个是一个 &lt;code&gt;Array of Element&lt;/code&gt;，再加上 render 的目的不就是定义一个 Element 吗？&lt;/p&gt;
-&lt;p&gt;显然这样是可以的。所以，总结过来可以发现一个规律，&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;&amp;#x3C;A /&gt;&lt;/code&gt; 整个表达式是一个 Element，而 A 是一个 Component， Component 要么是 function（class 也是 function），要么是纯 DOM&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[反转字符串]]></title><description><![CDATA[这个问题可能非常老，写过代码的都知道使用 但是，需要注意的是，因为 JS 默认使用的是 UCS-2 来编码的，对于中文支持也貌似没问题。可是到了 Unicode 环境下，大量的 emoji，就会出问题咯。
+&lt;p&gt;就需要对它的 children 继续处理。
+Function 的返回值就是 element
+class 的 render 函数的返回值就是 element。
+当然 element 中又可以包括 Component，这个过程也是递归的，不停的重复，直到碰到没有子节点的 host 为止。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[反转字符串]]></title><description><![CDATA[这个问题可能非常老，写过代码的都知道使用 但是，需要注意的是，因为 JS 默认使用的是 UCS-2 来编码的，对于中文支持也貌似没问题。可是到了 Unicode 环境下，大量的 emoji，就会出问题咯。
  
 就像上面显示的这样。那改怎么解决呢？
 在 ES…]]></description><link>https://github.com/thoamsy/blogs.git/反转字符串/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/反转字符串/</guid><pubDate>Fri, 12 Jan 2018 23:33:00 GMT</pubDate><content:encoded>&lt;p&gt;这个问题可能非常老，写过代码的都知道使用&lt;/p&gt;
@@ -411,38 +199,6 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 &lt;h3&gt;babelrc&lt;/h3&gt;
 &lt;p&gt;配置 babel 依赖于一个叫做 &lt;code&gt;.babelrc&lt;/code&gt;文件, 在 VS Code 中, 如果安装了&lt;strong&gt;文件图标主题&lt;/strong&gt;的话, 一旦创建, 会有一个特定的 logo 图标来告诉我们, 没有拼错. &lt;/p&gt;
 &lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; ; max-width: 350px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 34.85714285714286%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAAAh0lEQVQoz2NQUNX5T03MACLklbVoa6Cpifp/RTVt6hjo7qj8PzZQHs63snP5r2dk+d/MygGMDUyt/xuZ2/43NLP5b2hqQ9jAokSp/1H+EAPVtA3/W9u7/nd29/3v7h3439HV+7+rp/9/S1vn/7aO7v+NgQYT4WVtysJQXkX7v5yy5n8QTQ0MAK32zv1xbPOCAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;F82820D6 9363 4A17 B637 C84FE7E037CE&quot;
-        title=&quot;&quot;
-        src=&quot;/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png&quot;
-        srcset=&quot;/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-e7b32.png 148w,
-/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-627a4.png 295w,
-/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png 350w&quot;
-        sizes=&quot;(max-width: 350px) 100vw, 350px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    
 配置 react 的方式, 其实十分简单. 首先需要转译 JSX, 但是 JSX 的转移又依赖于 es2015, 所以我们两个都需要转译. 我并没有多长 babel 使用经验, 反正现在有了 &lt;code&gt;presets&lt;/code&gt;, 而且淘汰了 ES2015, ES2016 这些 presets, 统一使用 &lt;code&gt;env&lt;/code&gt; preset, 所以 babel 的配置变成了下面这样&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-json&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;

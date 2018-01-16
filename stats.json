@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "path---parcel-parcel-📦-和-react-⚛️-的使用": [
-      "path---parcel-parcel-📦-和-react-⚛️-的使用-910aa79457a5741ccdb2.js",
-      "path---parcel-parcel-📦-和-react-⚛️-的使用-910aa79457a5741ccdb2.js.map"
+      "path---parcel-parcel-📦-和-react-⚛️-的使用-533b84c77577b2d4ed92.js",
+      "path---parcel-parcel-📦-和-react-⚛️-的使用-533b84c77577b2d4ed92.js.map"
     ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-27bc1a07d5cce946c9d3.js",
@@ -33,16 +33,16 @@
       "component---src-layouts-index-js-3396ad3b64d776f86883.js.map"
     ],
     "path---index": [
-      "path---index-1c35a012a1995ee6ed1d.js",
-      "path---index-1c35a012a1995ee6ed1d.js.map"
+      "path---index-a5b76c16796656109ed6.js",
+      "path---index-a5b76c16796656109ed6.js.map"
     ],
     "path---hello-world": [
       "path---hello-world-39cb2a9e5fa9af4f4ba4.js",
       "path---hello-world-39cb2a9e5fa9af4f4ba4.js.map"
     ],
     "path---react-component-and-element": [
-      "path---react-component-and-element-6a0a16c4de244827c98f.js",
-      "path---react-component-and-element-6a0a16c4de244827c98f.js.map"
+      "path---react-component-and-element-3386f9c34e45ade3408f.js",
+      "path---react-component-and-element-3386f9c34e45ade3408f.js.map"
     ],
     "commons": [
       "commons-3f8cdb987559d31a3a4e.js",
@@ -54,14 +54,10 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
-    "path---first-step-software-world": [
-      "path---first-step-software-world-fb555088edd0f1981be9.js",
-      "path---first-step-software-world-fb555088edd0f1981be9.js.map"
-    ],
     "app": [
-      "app-057b6d539eeff81f75ba.js",
+      "app-f05fbb87611b25b3bca2.js",
       "build-js-styles.css",
-      "app-057b6d539eeff81f75ba.js.map",
+      "app-f05fbb87611b25b3bca2.js.map",
       "build-js-styles.css.map"
     ],
     "path---反转字符串": [
