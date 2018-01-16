@@ -1,9 +1,713 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Tue, 16 Jan 2018 15:07:41 GMT</lastBuildDate><item><title><![CDATA[Hello World]]></title><description><![CDATA[作为个人博客的第一篇文章, 没有太多的意义, 就当为自己终于开通了博客做一个喝彩 🎉🎈
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Tue, 16 Jan 2018 15:09:34 GMT</lastBuildDate><item><title><![CDATA[我进入编程世界的第一步（翻译）]]></title><description><![CDATA[原文, 需要翻墙 作为一个刚毕业的计算机科学学生，在课堂上学到的东西和你在真实世界看到的东西会存在 断层 。各种循环操作： for, while, do while  不在话下。你可以不费吹灰之力写一个基于命令行的井字棋(Tic-Tac-Toe)游戏. 你还可以在 X8…]]></description><link>https://github.com/thoamsy/blogs.git/first-step-software-world/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/first-step-software-world/</guid><pubDate>Tue, 16 Jan 2018 07:28:39 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://medium.freecodecamp.org/my-first-steps-into-the-world-of-software-development-and-what-they-taught-me-6ee748cffb8f&quot;&gt;原文, 需要翻墙&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAACpklEQVQoz2PYvvXE/XNHi2qLUuICErztEkOdM0I8chPd9vRPePnq3te/n5DR9zfHP59L3jbNrT7TOjlEjWHloi2Xdm1tmtIRF+kX5mAY4WIS7mJRUxhzZOasW9dOfv39+csfEPr659PLl3de3dz97Xb3yYVeHZkqRZGKDJWFbTvmzZo8qyc/NdrNzMDexNDNxDA9MXJ1W2dmlP+Xr29ePb976eSBF28enzq0+fjOhV//fNy3orUuyXhKjjZDrGdQmH9wWlZqaHigqZmFqoqsobGZs6NddGCwnoLE7P7q2XlRyY76npb6LdWZJflxB4/s7u0qSw/Xqw1hZ8j28U/w9Guoqzh7bKW5gY6ctKSRiUluYqSPu4OPq01lnPuedrlZqWyxVjy5cZ556eEpyaGBwfZWNoYu+rwMUS5uVcFBeWnx8zZOtbe2sDEzdba1So0OTYv083M0SwhxvbvRZEGueHcYR36cT3ykY7C3jaurqYezuZu9PoO7lU1RdFiwp6tDgLeHi3OgryeQ7WZvH+Rmb6IpH+difKtWZUaCZlmodWqos4a6uJqWuJ6eooOtcWiwO4OXtXWct7u7va2po4OzlVWAi4Ofo621qZmXlbGqkuLd4/mHJ5jYmpmmBtramxhIaJmqKAl72Bm42hk72BgxyKqaaZi5qhvbaVs7qhja6Vu5GZnZW1o6WlnZmdk6H56o3BXI1WrM2u4tF2MuJ2/hK6OhoWlpK29qLapvysAmbcKuYMmtbCli6MilbKls5mnjHGho7q6saytraN+fbN0QaZfnolkYaJ7tprWlWdrW3YBP345VzZRRVpeBRcKARdqYTc6YT92MQ95E0dhFzdxT1cRJWN1MWN+hzluzWo4lWEXSXowjVoV9VZ2AjqWuorWriIUbo6gqAEz68UW99+kyAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Nervous laugh&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-1a291.png 148w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-2bc4a.png 295w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png 590w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-526de.png 885w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fa2eb.png 1180w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png 1280w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;作为一个刚毕业的计算机科学学生，在课堂上学到的东西和你在真实世界看到的东西会存在&lt;strong&gt;断层&lt;/strong&gt;。各种循环操作：&lt;code&gt;for, while, do while&lt;/code&gt; 不在话下。你可以不费吹灰之力写一个基于命令行的井字棋(Tic-Tac-Toe)游戏. 你还可以在 X86 上直接写汇编代码!&lt;/p&gt;
+&lt;p&gt;但是, 你对于 Facebook, YouTube 或者 Reddit(美国最知名的论坛) 是怎么工作的完全没有头绪. 你甚至连怎么开始都不知道. 因为你只知道一门 Python 语言, 当你 Google &lt;em&gt;哪些公司用 Python&lt;/em&gt; 的时候, 你发现一些人说的: &lt;em&gt;“Reddit…use python for their backend.”&lt;/em&gt; Backend(后端)? 这他妈是什么?&lt;/p&gt;
+&lt;p&gt;这就是在用命令行写井字棋游戏和构建一个真实的应用程序中, 存在的巨大的空缺, 而且没人会告诉你该怎么填补这个空缺. 即使你已经学会了如何像计算机一样思考, 你还是不知道如何将你学会的东西, 用来构建一个你想构建的东西。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;只有主动才能让你成为你想成为的人. 不会总是有老师或者教授, 将他的模板和样例给你, 而你只需要填补这些空白. 也不总是有一个课程会教你 “下一步你该学什么”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Takeaway #1:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;没有人比你更能影响你自己&lt;/strong&gt;.
+你想学什么取决于你, 而不是有人拿着勺子一点一点的喂着你下一步该学什么, 应该自主学习, &lt;a href=&quot;https://danluu.com/learning-to-program/&quot;&gt;Dan Luu 称这个为 meta-skill&lt;/a&gt;, 这也是你在决定成为一个软件工程师之后最重要的技能之一.&lt;/p&gt;
+&lt;p&gt;幸运的是, Google 可以帮助我们! 当你搜索 &lt;em&gt;How to build a website using python&lt;/em&gt;, 你找到了这个—&lt;a href=&quot;http://flask.pocoo.org/docs/0.12/&quot;&gt;一个精巧的小型 Web 框架&lt;/a&gt;, 于是你打算一探究竟. 即使你还不知道什么是框架(framework). 你尝试去阅读初学者文档, 但是不知道什么是 &lt;strong&gt;database abstraction layer(数据库抽象层)&lt;/strong&gt;, 于是你跳过这个直接找到了&lt;a href=&quot;http://flask.pocoo.org/docs/0.12/installation/&quot;&gt;安装那一步&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;最后, 你发现了那些可以自己操作的步骤 🎉! 你复制这些命令到你的终端中(terminal). 这里出现了叫做 &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;virtualenv&lt;/code&gt; 的东东, 管它呢, 先复制. 你花了几分钟观察到了输入这些后会发生什么, 你也终于对你的机器是怎么工作的有了一个大概的认识.&lt;/p&gt;
+&lt;h2&gt;takeaway #2&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;我们通过理解学习, 而不是无脑的跟着教程.&lt;/strong&gt; 当碰到你完全不理解的东西的时候, 尝试去学习而不是放弃, 这样你将会发现这些看上去不可能完成任务是一个能让你快速成长的绝佳机会—只不过你可能要花很长时间解决它罢了 🌚&lt;/p&gt;
+&lt;p&gt;Okay, 现在看上去 &lt;code&gt;pip&lt;/code&gt; 好像是一个用来安装 &lt;code&gt;packages(包)&lt;/code&gt; 的工具, 这样你就可以 &lt;code&gt;import&lt;/code&gt;(Python 通过这条语句导入外部函数) 它们. &lt;code&gt;virtualenv&lt;/code&gt; 看上去好像是一个关联你安装好的包和指定项目的方式. 你现在除了 &lt;code&gt;cd&lt;/code&gt; 和 &lt;code&gt;mkdir&lt;/code&gt; 外, 其他的命令行你一个都看不懂, 但是至少不再是&lt;strong&gt;一无所知&lt;/strong&gt;. 到了去往&lt;a href=&quot;http://flask.pocoo.org/docs/0.12/quickstart/&quot;&gt;快速指导&lt;/a&gt;的时间了.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 65.30014641288433%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsSAAALEgHS3X78AAADJElEQVQozwEZA+b8AD8xJUM0J0M0KEAyJjgsIjAmHiceGjEdHz4sLzszL2RXUVQ+PnRbTYZyYa6Zmr2lk6uVe6CKcZ+Jcq2ZgQA5LCJIOCtIOCtLOixHOSw9MSczKSInIBsxJyRpXFeynZSEbFh5aVtsWEjHsLXAqZKvmHuehmyZhGufinIAQjMoSzstTz4vSzosRTUpTEA2U0pERT87OTEuZlJKjXpzjnlnfWxeeWZXiXhytZ1+o45ziXNeaVhJcV9QAC8lHjgtJDswJkQ2KU07LY6JhsfP2bnDzrTB0ZiUmM7Gxrm8wcbKzeLn7+nt89fW1KielWVURHpmU4NsVwA7LyY5LyUmJB5MST5qUTqKhIC9x8/Hz9jBzNfGzdTb4OLBytHCzNLd5OqNmaOdo6uRiIF9aFGFa1NtV0YAQzYsPjMpPzMpUUEzXEk5Xlpao6q0z9Xe0tri2d7l5ObrxMrRyNLa3uPkb3l+SExTjYN3iG5Tdl9JaVdFADYsJDguJj02MVVYXWRfX2FkaG1rbOHm7eDl69/i6eTn7s7U3srP1uXo68zU2Li/yYqAd2BMO3ZfSZB2WQA4LSQyLChwaWaPh4VxZ28+NzZbW17b3ePe4unk5+7h5OvW2uXL0dvi5+vOycrY3OKGeW9oTzt3YU1/Zk4ATD0xSDktUUtIYV9hVFRVW1xeRkZIrq+z4ubt2dzkuLnAzsvO0dnh2eHmycrR1dnghHVsWkQze2xgblxLADswJ2lfV1xPRGRlZk1OUE5PUJaWmMPDxNzd5srO2Hl0e5uIfdfX4NXd48rQ08nQ1F5ZVTktJXNbRotsTwBhW1fOzc+ilo+AfXuurq/f39/a2dmup6GFeG1tY11gU1BsUkLn3de5r6qAcWNnXVUnIyEWFhRoZ12dgl4AMyojl5WVvbaybmdguLWxhntzWUY3XkYzUz8uMiUcqIhzqJJ+wqmV8PDv1s7KbFE8VT8saFM8j3dWoYdiADQnI0w9NFhGNkw7LU49LVZCMFZALVlDMEk4Kk0+NLiqnru0qIpnTvLv7M3AuW1QN3VZPYRoSJV7WJ+GYbwze0oqssYJAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Just follow along and try to keep up.&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-1a291.png 148w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-2bc4a.png 295w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png 590w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-526de.png 885w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fa2eb.png 1180w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png 1366w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;你跟着教程, 运行你的程序, 感觉当你的浏览器第一次出现了 &lt;strong&gt;Hello, World&lt;/strong&gt; 的时候, 你的心中会涌入一种爽到吸大麻的. 你对自己说, 这就我想要的哈哈! 滚吧, 傻逼命令行! 这确实是一小步, 但那是你第一次让浏览器听你的话, 这才是历史性的一刻.&lt;/p&gt;
+&lt;p&gt;你继续, 又出现了一大堆你不理解的概念. Routes(路由)? HTTP? GET? POST? 什么是 rendering template(渲染模板)? 这些概念听上去好像有那么一点点印象, 但是你不确定到底是什么意思, 所以你停止你手头的工作去搜一下它们是什么. 就像你刚学会 &lt;code&gt;pip&lt;/code&gt; 和 &lt;code&gt;virtualenv&lt;/code&gt; 一样, 渐渐的你开始对你的程序怎么运行有了一个模糊的概念.&lt;/p&gt;
+&lt;h2&gt;Takeaway #3&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;学习不断地练习.&lt;/strong&gt; 就像任何其他的技能, 它们是需要打磨的, 熟能生巧. 抓住每一个学习的机会. 记住: success begets success.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;让学习成为一种习惯, 你的求知欲望应该和你的年龄身体一起成长&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你可以用模板来显示内容, 和其他的 HTML 和 CSS 页面一样, 只不过它们是动态的. 你可以通过定义不同的路由来控制在不同的 URL 下该显示什么. 你甚至可以用你自己的程序来抓取其他网站上的内容!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;译者注: 当然现在是通过前端来渲染模板了, 后端仅在要求性能的时候服务器渲染&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;随着你渐渐地变得更加轻松, 你开始对独立学习有一种控制感和自豪感. 这可能是你在完成课堂任务的时候从未体验过的(不敢想象国外的教育 🙂). 你开始飘起来, 谁还需要学校, ╭(╯^╰)╮?&lt;/p&gt;
+&lt;p&gt;随着你获得自信, 这个指导开始看上去有点…基础了. 确实, 毕竟, 这只是一个 quick start… “我可以做更酷 😎 的事情”, 你想着.&lt;/p&gt;
+&lt;p&gt;于是你开始自己搞定这些. 你想之前做的一样, 用 &lt;code&gt;pip&lt;/code&gt; 和 &lt;code&gt;virtualenv&lt;/code&gt; 设置你的项目, 因为那是你仅仅知道的方式. 你知道如何设置模板; 你知道如何设置路由, HTTP 请求, 什么是 GET 什么是 POST. 你可能开始尝试使用第三方 API, 并且开始阅读更多的文档. 你并不是什么都懂, 但是你正在学习. 一点一点的.&lt;/p&gt;
+&lt;p&gt;最后, 你终于构建了你自己的第一个独立的项目 🎉. 不是那个已经有很多年轻的开发者跟着教程走的项目, 也不是很多学生在课堂上做的项目. 而是一个, 真实的, 可以感知到的, &lt;em&gt;honest-to-goodness&lt;/em&gt; 的程序, 在你构建之前, 它从未存在过. &lt;strong&gt;这是一中超凡的感觉!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 41.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsSAAALEgHS3X78AAAB80lEQVQY0wHoARf+ADA8RiU6SyI1Qis6RFdXWlFNU2BtgJuRjripnsy2pd7AqerIre3LrevIqeK/ota1nMirl7+llLiimrWelgA/TmIgQWUPQ3tKaJRXXnFAS1s0cLJacpPRtqLrxqvowKb62bT73bfz1rnvzrTtxKfbtabIrK7Co6nKoI8AX2aCX3GYTF1/UGOFVGqTYXWgUnSpUYbBjqHI7sepvoyA5MKf9uTB4Nzi39fZ8tG908jOybnB3qeP3aGJADw+UDQ/Vic9XCtdjwk8gAhGmTJXjkdchE15t9SknN2fjdmdhvnq0PLr5Ojr7Nrr9c7n/cLV8eCxreWlmwBAPVJDSWImSn4mbLEHP4QNTp0gZrBUdqx7hbSuh530pYL8567978z87dnt8u3q9PTe4+rexb/tp4vum3oASDo5Sz4+HUNxCU6TEDtsFEN8KlqQWFhsRmmeh5vH3nxs8ppr4MK+9sy/0cG8oNDmu9fdm6eueF1hjGhmAEM4NT83Nyk3Two6cQg4bRQ3Yj1BTWJhem12mGmHq8B0ZcJrSZOEnGxylNxkHa5hSXx/k0tjf002N0k4PQBFODU7NDU2NDgvN0I6P0U1NjYoKy9HPzxCNDVWUF+LQC52S06VW1C8TijUiVuGT1lYMzFLNTc2KSswKCsjm/mwggtB6wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;You are a master builder.&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-1a291.png 148w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-2bc4a.png 295w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png 590w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-526de.png 885w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fa2eb.png 1180w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-08f6a.png 1770w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png 1920w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;所以接下来呢? 现在你做好了一个应用, 怎样才能让每个人都能用到它? 到底什么是 &lt;code&gt;back-end&lt;/code&gt;, 什么是 &lt;code&gt;front-end&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;这是一个很好的机会，用来培养学习的渴望: 总是有更多的东西.
+有点像一个十分棒的电视节目, 你从来都觉得看都不够爽, 更重要的是: &lt;strong&gt;它从来不会结束!&lt;/strong&gt; 显然, 除了不断地学习就没有其他东西能像这样了. 软件开放的每一个分支, 都是一个需要深入的全新的世界, 而且你学的更多, 就会有更多的世界为你开放.&lt;/p&gt;
+&lt;p&gt;你应该意识到, 没有一个所谓的权威的方式来让你成为一个 “real” 开发者. 也没有足够的时间去精通每一个方面. 每个人成功的道路和方式都是不同的. &lt;strong&gt;你如何修出一条到达你想到达的地方, 那完全取决于你自己.&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p&gt;这就是我第一次踏入软件开发世界的故事. 如果你还想看我第一次到底做了什么, &lt;a href=&quot;https://github.com/thetimothyp/Where2Eat&quot;&gt;你可以查看这个.&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Element 和 Component 的区别]]></title><description><![CDATA[本文的出现离不开 Dan 的一篇卓越的 blog。
+ 原文章 一句话概括就是， Element  是  Component  的子集， Element  是  Component  的返回值
+Element 其实就是一个纯对象，找个对象定义了一些对于 React…]]></description><link>https://github.com/thoamsy/blogs.git/react-component-and-element/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/react-component-and-element/</guid><pubDate>Sun, 14 Jan 2018 12:12:00 GMT</pubDate><content:encoded>&lt;p&gt;本文的出现离不开 Dan 的一篇卓越的 blog。
+&lt;a href=&quot;https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html&quot;&gt;原文章&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一句话概括就是，&lt;code&gt;Element&lt;/code&gt; 是 &lt;code&gt;Component&lt;/code&gt; 的子集，&lt;code&gt;Element&lt;/code&gt; 是 &lt;code&gt;Component&lt;/code&gt; 的返回值
+Element 其实就是一个纯对象，找个对象定义了一些对于 React 来说很重要的属性，比如 &lt;code&gt;type，children，props，key，type&lt;/code&gt; 这些的。比如&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	$$&lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Symbol&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;react&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;element&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	key&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	ref&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		className&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button button-blue&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		children&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;b&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        children&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;OK!&apos;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;上面的 type 就是这个 Element 的核心之一。React 通过判断 type 是字符串还是函数来决定如何 &lt;code&gt;mount&lt;/code&gt; 这个 Element。如果是字符串就说明是普通 DOM，称为 &lt;code&gt;DOM Element&lt;/code&gt;，如果是 &lt;code&gt;function&lt;/code&gt; 就是自己定义的，称为为 &lt;code&gt;Component Element&lt;/code&gt;。所以换句话说，用户自己写出来的组件的才算的上是一个 &lt;code&gt;Component&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;创建组件的常用方法有两种，一种是纯函数组件，或者说 &lt;code&gt;stateless Component&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;Button&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; color&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;button style&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; background&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; color &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;button&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;通过这种方式创建, 它的返回值就是定义 Element 的过程了，使用 &lt;code&gt;Button(props)&lt;/code&gt; 就能得到我们定义的 Element。不过这仅仅是因为 JSX 给了我们一种语法糖，如果没有 JSX 的话，应该类似于&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; style&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; background&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; color &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;而这个函数的作用也仅仅只是生成一个&lt;strong&gt;对象而已&lt;/strong&gt;，就像最上面那个对象一样：&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		style&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;background&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; color&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		children&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			…
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;这就是 Element 的真面目了。所以可以看到，JSX 也好，&lt;code&gt;createElement&lt;/code&gt; 也好，不过是提供一种抽象帮我们不要写这个无聊的对象定义，要知道，如果再多几个 children 的话，整个对象定义应该就有几十行！&lt;/p&gt;
+&lt;p&gt;同样的，如果换成 &lt;code&gt;Stateful Component&lt;/code&gt; 的话，其实模式差不多，只不过，它们需要一个 &lt;code&gt;render&lt;/code&gt; 方法，并且拥有一个被称为 &lt;code&gt;instance&lt;/code&gt; 的变量。render 的目的其实也就是定义一个 Element，而 instance 就是 &lt;code&gt;this&lt;/code&gt; 了。&lt;/p&gt;
+&lt;p&gt;所以，一个 Element 出现的步骤此时是，&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; instance &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// type 就是该组件的 type&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Element &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; instance&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// render 不就是 React.Component.prototype 的方法吗&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;综上所述，我们最常写的是 Component，Component 分为三种：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;host（常见 DOM 节点）&lt;/li&gt;
+&lt;li&gt;function&lt;/li&gt;
+&lt;li&gt;class&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;host 类型，React 会根据对应 type，生成真正的 DOM node，并将它所带的 props 写入 node 的 &lt;code&gt;attribute&lt;/code&gt; 中，而对 &lt;code&gt;children&lt;/code&gt; 继续递归，直到碰到没有 children 的 host Element 为止。&lt;/p&gt;
+&lt;p&gt;Function 的返回值是 Element, class 的 render 函数的返回值是 Element&lt;/p&gt;
+&lt;h2&gt;一个常见问题&lt;/h2&gt;
+&lt;p&gt;假设有下面的两个变量&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; E &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Wow&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;p&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;C&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; E&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;这两个的区别是什么呢？刚开始很容易写出这样的代码&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+	  &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;E&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;但是如果真这样写的话，铁定是会报错的。
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 11.829268292682926%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsSAAALEgHS3X78AAAAWklEQVQI122OSw6AMAhEe/97KqVft0LiOLRxJwnhN29CslxgZ4Ypq1Z4HzDhnJV7gbe++9iVxqRmzD0HJwqfFx53RCSrbR9puOCAaHwfsuoHhXmYxQNLR+YvXjnGmSzduH1XAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;96FFC213 7B8B 46A4 817B 2F13D2342247&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-1a291.png 148w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-2bc4a.png 295w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png 590w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-526de.png 885w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fa2eb.png 1180w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png 1640w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+于是我又发现可以这样写&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+	  &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;E&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;那么为什么上面一种可以下面不可呢？&lt;/p&gt;
+&lt;p&gt;首先，分析一下上面报错的原因，根据上面说的，我们知道，&lt;code&gt;&amp;#x3C;E/&gt;&lt;/code&gt; 就是一个语法糖，也就是 &lt;code&gt;React.createElement(type, props, children)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中 type 就是 E。那么，根据我们的定义 E 也是一个 &lt;code&gt;React.createElement(&apos;p&apos;, {}, &apos;123&apos;)&lt;/code&gt; 这样的表达式，其实就是一个对象。那么，显然这个时候 &lt;code&gt;&amp;#x3C;E/&gt;&lt;/code&gt; 得到的值，其实是一个对象！！ 而 React 内部是通过 type 属于 string 来确定这是 host Element，type 属于 function/class 来判断这是一个组件。所以，这样就报错了。&lt;/p&gt;
+&lt;p&gt;而，&lt;code&gt;{E}&lt;/code&gt; 为什么可以呢？还记得我们最常在 &lt;code&gt;{}&lt;/code&gt; 中写什么吗？&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;names&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;li key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;li&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;而上面这个是一个 &lt;code&gt;Array of Element&lt;/code&gt;，再加上 render 的目的不就是定义一个 Element 吗？&lt;/p&gt;
+&lt;p&gt;显然这样是可以的。所以，总结过来可以发现一个规律，&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;&amp;#x3C;A /&gt;&lt;/code&gt; 整个表达式是一个 Element，而 A 是一个 Component， Component 要么是 function（class 也是 function），要么是纯 DOM&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[反转字符串]]></title><description><![CDATA[这个问题可能非常老，写过代码的都知道使用 但是，需要注意的是，因为 JS 默认使用的是 UCS-2 来编码的，对于中文支持也貌似没问题。可是到了 Unicode 环境下，大量的 emoji，就会出问题咯。
+ 
+就像上面显示的这样。那改怎么解决呢？
+在 ES…]]></description><link>https://github.com/thoamsy/blogs.git/反转字符串/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/反转字符串/</guid><pubDate>Fri, 12 Jan 2018 23:33:00 GMT</pubDate><content:encoded>&lt;p&gt;这个问题可能非常老，写过代码的都知道使用&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;str&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;但是，需要注意的是，因为 JS 默认使用的是 UCS-2 来编码的，对于中文支持也貌似没问题。可是到了 Unicode 环境下，大量的 emoji，就会出问题咯。
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 10.35294117647059%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsSAAALEgHS3X78AAAAbklEQVQI102LTQrCMBgFvyRkkYBp/hfShUK2gojoDbz/jcZSa+lieAPDkykWxhjknPHe83o+6L1znq983oXWGimltcUYKaVQayWEsK5zDmstIvLDTwG5LXJf6BsXQVeDPQlKqZ3/SWuNMWb3Y/sC87wtcdu7vzUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;A20289F2 4515 4E5E 9C91 1BF74DF84328&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-1a291.png 148w,
+/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-2bc4a.png 295w,
+/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png 590w,
+/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png 850w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+就像上面显示的这样。那改怎么解决呢？
+在 ES6 之前，可能需要通过对 Unicode 内部编码的了解来特别规定某个范围改做什么。但是 ES6 支持了 &lt;code&gt;codePoint&lt;/code&gt;，我们就不要这种复杂的方式了！
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 12.520064205457466%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAAhUlEQVQI15WKywrCMBQFg7lpkuaFtiooBbFqEd249f//ayQBN+5cDHMYjrLZ4rMnbTOn28QwDjyXieMuolcKpf5keVzYziPTPPN+HVgXj7UO5xwxRkopeO8bIYTmlFLr1Tln+r5vu/6V3Viu9zNhH5AgiBG01ohIwxhD13Vt116p7Zfv9wPX70L18+n2LQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;3C5A8FC8 2D99 4F4E 907C 89276B8A33BF&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-1a291.png 148w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-2bc4a.png 295w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png 590w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-526de.png 885w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fa2eb.png 1180w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png 1246w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;简单粗暴。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Parcel 📦 和 React ⚛️ 的使用]]></title><description><![CDATA[Parcel 这种工具虽然号称零配置, 但是在 React 相关开关的时候还需要一些必要的配置才能让整个代码真的跑起来. 特别是如果需要  Hot Reloader  的时候. 如果使用  create-react-app…]]></description><link>https://github.com/thoamsy/blogs.git/parcel/Parcel 📦 和 React ⚛️ 的使用/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/parcel/Parcel 📦 和 React ⚛️ 的使用/</guid><pubDate>Sun, 07 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Parcel 这种工具虽然号称零配置, 但是在 React 相关开关的时候还需要一些必要的配置才能让整个代码真的跑起来. 特别是如果需要 &lt;strong&gt;Hot Reloader&lt;/strong&gt; 的时候. 如果使用 &lt;a href=&quot;https://github.com/facebookincubator/create-react-app&quot;&gt;create-react-app&lt;/a&gt; 确实很方便, 这也是入门和新项目首选. 但是呢, 想上面提到的 &lt;code&gt;hot reloader&lt;/code&gt; 默认是不支持的, 除非自己先 &lt;code&gt;yarn eject&lt;/code&gt; &lt;strong&gt;弹射&lt;/strong&gt; 出去, 再手动配置 webpack 文件才行! 这个虽然文档上也有详细的记载, 但是感觉就没有那份纯粹性了.
+所以使用 parcel 自己手动来配置的话, 更有一种成就感.&lt;/p&gt;
+&lt;p&gt;Parcel 基本教程在之前的文章 [[Parcel 的使用]] 中有简单的介绍, 下面直接进入使用环节.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Babel 的基本配置&lt;/h2&gt;
+&lt;h3&gt;一些背景介绍&lt;/h3&gt;
+&lt;p&gt;我们知道, React 和 Babel 是互相离不开的, 首先 &lt;code&gt;JSX&lt;/code&gt; 需要 Babel 来转译, 比如 &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;App &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;creataElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;App&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;除了这个, React 对新语法的依赖也蛮大的, 比如 &lt;code&gt;Object Spread&lt;/code&gt; 语法, 这个在最新的浏览器和 Node 环境已经支持了, 但是还没有完全成为标准, 应该会在今年的 ES9 成为标准, 所以我们还是要依赖 Babel.
+还有 React 组件中大量的 &lt;code&gt;this.setState&lt;/code&gt;, 在 JS 中 &lt;code&gt;this&lt;/code&gt; 很容易丢失, 所以我们需要依赖箭头函数, 但是在 &lt;code&gt;render&lt;/code&gt; 大量使用箭头函数又不是一个好习惯, 一是每次 render 都会生成新的函数, 这又导致依赖这个函数作为 &lt;code&gt;props&lt;/code&gt; 的组件又一次被渲染.
+一个妥协的方法是在 &lt;code&gt;constructor&lt;/code&gt; 中&lt;strong&gt;不厌其烦&lt;/strong&gt;的写 &lt;code&gt;this.foo = this.foo.bind(this)&lt;/code&gt;
+先解释一下这样可行的原因, 在 &lt;code&gt;class&lt;/code&gt; 中, 我们定义一个函数比如&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;这个 foo 其实是属于 &lt;code&gt;A.prototype&lt;/code&gt; 的, 如果转译成 ES5 语法, 大概类似于&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;defineProperty&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;A&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;foo&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	value&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; …&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	writeable&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	configurable&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	enumerable&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;所以说, 等号右边的 &lt;code&gt;this.foo&lt;/code&gt; 其实引用的是原型的 foo, 这个时候再赋值给 &lt;code&gt;this.foo&lt;/code&gt; 其实是没毛病的, 因为这个时候才是赋给 &lt;code&gt;this&lt;/code&gt; 自己.&lt;/p&gt;
+&lt;p&gt;但是, 如果要我们写这个无聊的代码几百次的话, 就再也不想写了. 于是乎有一种新的语法, 英文似乎叫做 &lt;code&gt;Class Properties&lt;/code&gt;, 支持直接使用 class 语法定义属性, 而不在属于 prototype. 这样就可以写出&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;的语法. 于是我们不仅干掉了, 无聊的 &lt;code&gt;bind&lt;/code&gt;, 还干掉了整个 &lt;code&gt;constructor&lt;/code&gt;, 多酷!!!
+还有一种语法, &lt;code&gt;::&lt;/code&gt;, 这里不介绍.&lt;/p&gt;
+&lt;h3&gt;babelrc&lt;/h3&gt;
+&lt;p&gt;配置 babel 依赖于一个叫做 &lt;code&gt;.babelrc&lt;/code&gt;文件, 在 VS Code 中, 如果安装了&lt;strong&gt;文件图标主题&lt;/strong&gt;的话, 一旦创建, 会有一个特定的 logo 图标来告诉我们, 没有拼错. &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 350px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 34.85714285714286%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAAAh0lEQVQoz2NQUNX5T03MACLklbVoa6Cpifp/RTVt6hjo7qj8PzZQHs63snP5r2dk+d/MygGMDUyt/xuZ2/43NLP5b2hqQ9jAokSp/1H+EAPVtA3/W9u7/nd29/3v7h3439HV+7+rp/9/S1vn/7aO7v+NgQYT4WVtysJQXkX7v5yy5n8QTQ0MAK32zv1xbPOCAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;F82820D6 9363 4A17 B637 C84FE7E037CE&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png&quot;
+        srcset=&quot;/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-e7b32.png 148w,
+/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-627a4.png 295w,
+/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png 350w&quot;
+        sizes=&quot;(max-width: 350px) 100vw, 350px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+配置 react 的方式, 其实十分简单. 首先需要转译 JSX, 但是 JSX 的转移又依赖于 es2015, 所以我们两个都需要转译. 我并没有多长 babel 使用经验, 反正现在有了 &lt;code&gt;presets&lt;/code&gt;, 而且淘汰了 ES2015, ES2016 这些 presets, 统一使用 &lt;code&gt;env&lt;/code&gt; preset, 所以 babel 的配置变成了下面这样&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-json&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;presets&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;env&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;如果有影响的话, 其实还有一个 &lt;code&gt;babel-preset-react-app&lt;/code&gt;, 它和上面的 react 的区别就是: react-app 是使用在 &lt;code&gt;create-react-app&lt;/code&gt;中的配置, 相比 react 会有一些加成, 下面会讲到. &lt;/p&gt;
+&lt;p&gt;OK, 其实有了这两个就能写 react 了. 自己写好必要的组件, 和之前一样使用 parcel 就能启动. 但是, 我们还不能使用刚刚提到的那些新语法. 甚至连 React 大量依赖的 &lt;code&gt;{...obj}&lt;/code&gt; 也不行. 这个时候就还需要安装新的 preset: &lt;code&gt;stage-2 stage-3&lt;/code&gt;
+于是乎, 为了安装这些, 我们需要运行&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code&gt;yarn add -D babel-preset-env babel-preset-react babel-preset-stage-2 babel-preset-stage-3
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;那这样就能开心的写 React 代码了吗🧐 还不行, 我目前也搞不清楚为什么, 写 &lt;code&gt;async await&lt;/code&gt;话, 还是会报错, 尽管这个主流浏览器已经都支持了. 所以, 我在 Google 了一番后, 发现还需要安装一个 babel plugin. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code&gt;yarn add -D babel-plugin-transform-runtime
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;而且这个 runtime 的配置蛮复杂的, 这里不详细介绍了, 大概是这样. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-json&quot;&gt;&lt;code&gt;&lt;span class=&quot;token property&quot;&gt;&quot;plugins&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;transform-runtime&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;polyfill&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;helpers&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;注意, 这段代码紧跟 babelrc 中的 presets 之后另起一行. &lt;/p&gt;
+&lt;p&gt;当完全了这些之后我们就可以没有任何问题的写 React ⚛️了😎😎&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;热加载&lt;/h2&gt;
+&lt;p&gt;当我确定我要使用热加载的时候, 是因为我看了 Dan 的视频, 以及他说的一段话&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I want to encourage you to actually spend time working on developer tools because before you can optimize your app, you should optimize your workflow so you have more time to spend working on your app. Because once enough frustration is gone, your programming actually feels fun again just like it used to do when the tools were simple.   &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最重要的意思就是, 花点时间研究🔧能为我们省下更多的时间提高自己. 于是乎, 我就花了一点时间, 嗯, 也不是一点, 三个小时吧. 终于搞明白, 怎么在 parcel 中使用了. 因为和官方文档有点区别, parcel 的文档介绍的又十分简陋, 再加上 parcel 缓存的问题, 所以被坑了很久.  不过终于还是搞定了. 下面总结一下热加载的配置.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/gaearon/react-hot-loader&quot;&gt;react-hot-loader&lt;/a&gt; 由 &lt;em&gt;Dan gaearon&lt;/em&gt; 开发并开源, 对, 就是 redux 的作者, 是一个特别帅的英国佬. 当然这不是我们讨论的重点, 目前使用的是 V3 版本, V4 在配置上有非常大的提升, 但是因为 parcel 不兼容这个. 所以我们还是使用主流的配置. &lt;/p&gt;
+&lt;p&gt;文档该说的都说了, 下面只针对在 parcel 上该怎么用来解释.
+还是安装它&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code&gt;yarn add -D react-hot-loader
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;之后在 &lt;code&gt;babelrc&lt;/code&gt; 中的 plugins 中配置. 最终的版本为:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-json&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;presets&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;env&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;stage-2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;stage-3&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;plugins&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;transform-runtime&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;polyfill&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;helpers&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;react-hot-loader/babel&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;还没完, 接下来只要在 &lt;code&gt;index.js&lt;/code&gt; 做一些小操作, 就可以开始了.
+&lt;code&gt;index.js&lt;/code&gt; 一般作为入口点, 换句话话, 这里应该是你整个项目配置的地方, 也是 &lt;code&gt;ReactDOM.render&lt;/code&gt;调用的地方, 同时也是你的 html 文件, 应该引用的 JS 文件.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; App &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./App&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; AppContainer &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react-hot-loader&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react-hot-loader/patch&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Component &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;AppContainer&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+      &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Component &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;AppContainer&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;#root&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;App&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hot&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;App&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;这是代码的必备成分, &lt;code&gt;App&lt;/code&gt; 就是你所有代码的合成的组件,  render 函数无非就是一个小小的包装. 而 &lt;code&gt;AppContainer&lt;/code&gt; 就是整个热加载的&lt;strong&gt;能量源泉&lt;/strong&gt;. 而 &lt;code&gt;module.hot.accept&lt;/code&gt; 里的回调, 就是整个源泉的能量使用者.
+和文档中不一样的是, 文档中 &lt;code&gt;accept&lt;/code&gt; 接受两个参数, 第二个才是回调. 也是我一直被坑的地方, 可能是因为 parcel 针对这个做了某些小小的优化吧. &lt;/p&gt;
+&lt;p&gt;这些都写好了, 就可以开始&lt;strong&gt;热加载&lt;/strong&gt;之旅了!
+那怎么知道自己的热加载是否成功了呢? 之前提到过, 热加载的前提是不用刷新界面, 因为刷新的话就会丢失所有的状态咯. 所以成功的关键就是&lt;strong&gt;状态没有丢失&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;不过这句话不是那么的明显🙂, 其实比较的明显的检测方法就是:
+有一个 input 和任意的 label. 如果我们 input 中填写了某些信息, 再去 label 中修改, input 中的数据没有丢失的话, 就说明热加载成功了. 这真的很重要, 在写表单类似的程序的时候, 我们需要不断的输入然后刷新, 光光这个时间就不知道被浪费了多少. &lt;/p&gt;
+&lt;p&gt;补充：这个热加载似乎会引入一个 bug&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;无法在 &lt;code&gt;async&lt;/code&gt; 函数中找到 &lt;code&gt;this&lt;/code&gt;&lt;br&gt;
+我不太清楚这是什么原因，在不需要重度依赖 async 的情况下，还是可以接受的。另外，估计 v4 版本已经解决了这个问题吧。
+感谢开源让生活更美好, 也让我们知道牛逼的程序员到处都是. &lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[UUID]]></title><description><![CDATA[花了一个晚上看了一下 UUID 的实现源码. 发现 UUID 有 5 个版本, 其中的特点分别为:
+V1: 以 机子的网卡和时间戳 以及一些其他的东西作为因子来生成一个唯一的标识符
+V2: 没有提及
+V3: 为了方便同样的标识符生成同样的 uuid, 用 MD5 来 hash…]]></description><link>https://github.com/thoamsy/blogs.git/uuid/UUID/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/uuid/UUID/</guid><pubDate>Fri, 05 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;花了一个晚上看了一下 UUID 的实现源码. 发现 UUID 有 5 个版本, 其中的特点分别为:
+V1: 以&lt;strong&gt;机子的网卡和时间戳&lt;/strong&gt;以及一些其他的东西作为因子来生成一个唯一的标识符
+V2: 没有提及
+V3: 为了方便同样的标识符生成同样的 uuid, 用 MD5 来 hash 标识符和命名空间
+V4: 生成一个 128 位的随机数来作为唯一标识符
+V5: 和 V3 相似, 不过使用 sha-1 算法, 让标识符更难被预测.&lt;/p&gt;
+&lt;p&gt;如果我们仅仅只是为了生成一个唯一的标识符, 就用 V1 和 V4. 但是 V1 其实容易被预测, 所以现在已经不怎么用了, 更多的用 V4 的. 关于到底使用哪个, 可以看 &lt;a href=&quot;https://stackoverflow.com/questions/20342058/which-uuid-version-to-use&quot;&gt;stackoverflow&lt;/a&gt; 的一个帖子.
+那么, UUID 的特点主要是分成:
+&lt;code&gt;8-4-4-4-12&lt;/code&gt; 的 16 进制表示来展现的, 对应的字节应该是 16(8+4+4+4+12 &gt;&gt; 1) 个. 当然最后会转化成字符串的话, 就变成 16 * 2 + 4(四个短横) 个了.
+其中, 第三部分的第一个字符用来表示算法的版本号, 所以 v4 的版本是 4. 而第四部分的第一位用来表示变种, 我没太搞懂这是什么鬼, 但是可能的取值只能为 &lt;code&gt;9 0 a b&lt;/code&gt;, 这可以通过 &lt;code&gt;bit &amp;#x26; 0x3f | 0x80&lt;/code&gt; 来做到的.&lt;/p&gt;
+&lt;p&gt;我只看了 4 和 5 两个版本的实现, 除去 &lt;code&gt;sha-1&lt;/code&gt; 和 随机数生成器算法的话, 还是蛮简单的.😎&lt;/p&gt;
+&lt;h2&gt;V4&lt;/h2&gt;
+&lt;p&gt;V4 就是要求生成一个 128 位的伪随机数. 但是因为有 6 个 位会被强制使用(版本 4 位, 变种 2 位), 就剩下 122 位. 不过光是 122 位, 也就是 &lt;code&gt;2 ^ 122&lt;/code&gt; 次方, 再根据&lt;strong&gt;生日悖论&lt;/strong&gt;, 我们大概知道, 这个世界上有 50% 的几率发生碰撞的概率大概是多少. 反正就是很小. 但是, 这就要求随机数代码的高质量了, 显然这个是交给数学家去实现的咯, 而 nodejs 也内置了相应的代码.
+所以说, V4 版本的实现就是, 使用 nodejs 生成一个 128 位的随机数. 再给固定的位置设置那 6 个 bit, 最后转成我们需要的字符串形式就可以咯!
+那么在 nodejs 这个平台上又会出现哪些问题呢?
+首先, 它的随机数发生器生成的是一个 Buffer 对象, 但是它还是能和数组一样取下标, 并不妨碍我们的正常使用.
+接下来就是 &lt;em&gt;特定位设置&lt;/em&gt;, 代码如下&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token comment&quot;&gt;// 6 就是第 7 个字节&lt;/span&gt;
+rnds&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;rnds&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x0f&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x40&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// 同理第九个字节&lt;/span&gt;
+rnds&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;rnds&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x3f&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x80&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;接下来就是将整个 Buffer 转成我们需要的字符串咯! 不过, 就和今天写颜色的代码碰到的问题一样, 对于小于 16 的数, 如果我们直接用 &lt;code&gt;toString&lt;/code&gt; 的话, 是不会自动补 0 的! 所以我们只能自己手动撸代码来保证 0 的出现. 显然, 只能使用字符串来填充这个 0 呢.
+这个库的实现很暴力, 但是也很巧妙&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; byteToHex &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;256&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  byteToHex&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;通过强制让数变成 3 位的十六进制, 这样就保证 0 时存在的, 然后不取高位, 真的棒!
+最后一步, 就是根据随机数里的值, 对应到这个 byteToHex 中来, 并在合适的位置插入 -, 整个 UUID 就生成咯!
+另外值得一提的是, 其实浏览器也支持一个 &lt;code&gt;crypto&lt;/code&gt; 的包了, 虽然只有一个函数, 叫做 &lt;code&gt;getRandomValues&lt;/code&gt;, 这个函数接受一个 &lt;code&gt;TypedArray&lt;/code&gt; 数组, 并且没有返回值, 属于&lt;strong&gt;mutable&lt;/strong&gt;. 我们需要多大的尺寸, 多大的范围, 就传递相应的进去就行咯.&lt;/p&gt;
+&lt;p&gt;这样的话, 似乎我也能自己写一个浏览器能用的 V4 版本的 UUID 咯😎&lt;/p&gt;
+&lt;h2&gt;V5&lt;/h2&gt;
+&lt;p&gt;V5 要求必须有两个参数提供, &lt;code&gt;name, namespace&lt;/code&gt;. name 就是你想生成 uuid 的值, 而 namespace 则是一个 16 进制表示的, 16 个字节字符串.
+比如，我们相对我的名字进行解码，就可以 &lt;code&gt;v5(&apos;YangKui&apos;, &apos;thisisanamespace&apos;)&lt;/code&gt;;
+不过为了方便, 我们干脆用 V4 版本来生成. 但是，单纯的 UUID 是 36 个字节，所以需要先转成 bytes 形式。 可以使用正则表达式来替换.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; bytes &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;/[a-zA-Z0-9]{2}/g&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; hex &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; bytes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hex&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;同样的，我们还需要对 name 进行编码, 我们可以这样实现:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;stringToBytes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;str&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  str &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;unescape&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;encodeURLComponent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;str&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// UTF8 escapse&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; Uint8Array&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;str&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;charCodeAt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;第一行的目的是生成一个都小于 255 的 UTF-8 编码, 像下面这样。&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 344px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 12.790697674418606%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAApklEQVQI13XMuw6CQBBAUT/FRBRk2d2B5SW+EIMxNtoZPsDC+P/1dcXKwuLkZiaZmbiy4qNu1mz2LVlRUlQ1lZ/LekWWF2gRxOV+14wV51BWeD0fDMMdZSyzRTiazKOYSCmMaC/BFYbUGV/rq0eJUUiWYFPNYhkTxuqn82hJEEbfh5dLRrPWbHeG8zml64TuKJxOKX0v7FvLobPcro7N1jANwvH4nzdxlV8uJHcv6QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;A38A178D 6DAC 4F8E 9EEC 001450B372AC&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
+        srcset=&quot;/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e143d.png 148w,
+/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-359a8.png 295w,
+/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png 344w&quot;
+        sizes=&quot;(max-width: 344px) 100vw, 344px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;最后, 获得了 name 和 namespace 的编码值后, 只需要对 &lt;code&gt;namespace.concat(name)&lt;/code&gt; 调用 sha1, 就成了我们需要的 uuid 值， 然后和 v4 一样设置版本号和变种信息.
+至于 sha1 实现原理, 我不太明白, 不过 nodejs 提供了代码. 在它的 &lt;code&gt;crypto&lt;/code&gt; 模块中, 可以这样使用:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;crypto&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createHash&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;sha1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;bytes&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;digest&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;hex&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;其中 bytes 就是我们要hash的部分. 所以为什么能提供一样的 UUID? 因为 name 和 namespace 都一样, 所以生成的就是一样的啦!
+不过, 我在看了 SHA-1 的源码后, 发现它本身就会对传进来的数据做同样的操作来保证都是 Uint8 类型, 所以说上面的 &lt;code&gt;stringToBytes&lt;/code&gt; 其实是可以去掉的.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Base64 编码的简单尝试]]></title><description><![CDATA[这几天不务正业, 在看 HTTP 以及 express 的服务端应用. 关于认证就有很多技巧. 什么基本认证, 记号认证, Passport 认证. 虽然其它认证都是通过 md5 或者 UUID…]]></description><link>https://github.com/thoamsy/blogs.git/base64/Base64 编码的简单尝试/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/base64/Base64 编码的简单尝试/</guid><pubDate>Wed, 03 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这几天不务正业, 在看 HTTP 以及 express 的服务端应用. 关于认证就有很多技巧. 什么基本认证, 记号认证, Passport 认证. 虽然其它认证都是通过 md5 或者 UUID 来实现一种不可逆且唯一的识别码. 换句话说, 我也不会实现这些东西.
+不过, Base64 虽然作为最基本的操作, 安全性基本没有(因为是对称的),所以可以作为一个很好的练练手的代码.&lt;/p&gt;
+&lt;h2&gt;Base64&lt;/h2&gt;
+&lt;p&gt;Base64 的基本思路就是, &lt;em&gt;3/4&lt;/em&gt;. 每三个字节为一组, 将 24 bits 分为 4 份, 每份 6bits. 然后在一个大小为 64 的索引表中找到对应的字符.
+针对不能整除 3 的情况, 就将补 0. 之后这些 0 使用 = 来填充. 但是在实现中, 索引表中的第 0 个是 A, 所以如果我们要提前填充的话, 就要去掉多余的字符. 但是在 JS 中, 如果数组不存在某个下标, 会返回 &lt;code&gt;undefined&lt;/code&gt;, 而对 &lt;code&gt;undefined&lt;/code&gt; 进行操作会得到 0. 所以, 我们就不需要提前填充.&lt;/p&gt;
+&lt;h2&gt;实现&lt;/h2&gt;
+&lt;p&gt;作为一个合格的程序员, 当然不能傻逼到自己去一个个写索引表, &lt;em&gt;其实复制粘贴很快!&lt;/em&gt; 所以我就用 map 函数来生成这些. 代码很简单&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; temp &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; index &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;fromCharCode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;temp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;_&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; idx&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; idx &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; idx &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x41&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; idx&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;idx &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;26&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; idx &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;52&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x61&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; idx &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;idx &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;52&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; idx &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;62&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x30&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; idx &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;52&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; idx &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;62&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;43&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;47&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;接下来就是关于 3 / 4 的具体操作咯. 其实很好理解, 每 6 个一份, 通过位操作就能将每个部分分离出来.
+当然, 因为 JS 中的数字都是 4 个字节起步的, 所以有点浪费内存, 应该使用 &lt;code&gt;Uint8Array&lt;/code&gt; 来减少内存的消耗.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; first &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; two &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; three &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0xf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; four &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x3f&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;first&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;two&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;three&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;four&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;代码很简单, 就像上面一样. 不过需要注意的就是优先级问题. 位移动操作在大多数语言中, 优先级都是高于其它的位操作, 低于 + - 运算. 除了 Swift.  所以这里的 () 主要还是避免歧义.&lt;/p&gt;
+&lt;p&gt;好了, 轮子都找好了, 剩下的就是修车咯! &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// 将 data 转化成 Uint8Array 转成能接受的值&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; transfer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Uint8Array&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;c &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; c&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;charCodeAt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; base64 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; startPoint&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;startPoint &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; startPoint &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; startPoint &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    base64&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;threeToFour&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;transfer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;slice&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;startPoint&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; startPoint &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;token comment&quot;&gt;// 因为 threeFour 会假设传入的就是 3 个字节, 但是如果不是 3 个的话, 就会出现问题.&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// 比如 data[2] 就会是 undefined. 对 undefined 进行位操作会被当成 0, 所以多出来的字母肯定会有一个 0.&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// 再根据 Base64 的规则, 加上相应的等号&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;startPoint &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 说明 % 3 余 2, 简单的算一下就知道咯.&lt;/span&gt;
+    base64&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    base64&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;=&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;startPoint &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    base64&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    base64&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    base64&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;==&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; base64&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;需要注意的是那个循环. 所以我们知道要分辨能不能整除 3. 但是, 仔细想一下, 我用 3, 4, 5 作为🌰的话, 就能看出来.
+3 的时候, 从 0 开始, 最后跳出循环的 startPoint 就等于 3. 所以没有任何需要另外处理的情况.
+4 的时候, 就会在 6 结束, 这个时候 6 - 4 等于 2, 所以需要补两个字节. 但是因为我的 &lt;code&gt;threeToFour&lt;/code&gt; 函数没有专门处理这种情况, 最后总会返回 4 个字符, 所以我们需要将多出来的字节替换成 =. 当然, 你也可以使用 splice 做到一次完成这种操作.
+5 的时候和上面相似.&lt;/p&gt;
+&lt;p&gt;最后这就是整个代码的实现咯. 不得不说, 对于那种需要频繁增加减少的操作, 我还是喜欢用数组, 然后 &lt;code&gt;join&lt;/code&gt; 起来. 不过, 浏览器对于 += 运算符应该是做了大量的优化的, 所以到底哪个性能高, 我还真的不确定…… &lt;/p&gt;
+&lt;h3&gt;总结&lt;/h3&gt;
+&lt;p&gt;这种题目整个做出来, 对于自己的思维还是很有锻炼的. 虽然, 不可能一次就能编对, 特别是那个位操作的一段很容易出现问题, 这个时候一定要保持冷静才行. 哦, 对了, 你们会位运算?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[作为个人博客的第一篇文章, 没有太多的意义, 就当为自己终于开通了博客做一个喝彩 🎉🎈
 在一年左右的前端学习时间中, 能构建出一个属于自己的博客, 也算是十分满足了.
 感谢  GitHub  和  Google  成为我的前端老师, 另外一个前端老师就是 MDN…]]></description><link>https://github.com/thoamsy/blogs.git/hello-world/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/hello-world/</guid><pubDate>Sun, 31 Dec 2017 13:13:18 GMT</pubDate><content:encoded>&lt;p&gt;作为个人博客的第一篇文章, 没有太多的意义, 就当为自己终于开通了博客做一个喝彩 🎉🎈
 在一年左右的前端学习时间中, 能构建出一个属于自己的博客, 也算是十分满足了.
-感谢 &lt;code&gt;GitHub&lt;/code&gt; 和 &lt;code&gt;Google&lt;/code&gt; 成为我的前端老师, 另外一个前端老师就是 MDN.&lt;/p&gt;
-&lt;p&gt;
+感谢 &lt;code&gt;GitHub&lt;/code&gt; 和 &lt;code&gt;Google&lt;/code&gt; 成为我的前端老师, 另外一个前端老师就是 MDN.
+
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/blogs/static/good-022920d1f164284d9cbe54f3e630674d-4a705.jpg&quot;
