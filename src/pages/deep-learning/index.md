@@ -1,9 +1,9 @@
 ---
-title: Deep Learning Quick Guide (翻译)
+title: Deep Learning Quick Guide
 date: "2018-01-28"
 ---
 
-![](./imgs/1*1mpE6fsq5LNxH31xeTWi5w.jpeg)
+![](./1*1mpE6fsq5LNxH31xeTWi5w.jpeg)
 
 **AI(Artificial Intelligence)** 和 ML(Machine Learning) 是当下最热的话题.
 
@@ -44,7 +44,7 @@ date: "2018-01-28"
 
 取而代之的是, 它会对输入数据创建自己的分类, 它会告诉你哪种用于最可能买的东西.
 
-## 那么, 深度数学呢
+## 那么, 深度学习呢
 你要开始准备理解深度学习, 和它工作的方式咯.
 
 深度学习是一种**机器学习的方法**, 它让你训练 AI 来针对输入给出对应的输出. 无论监督性学习还是非监督性学习都可以用来训练.
@@ -62,7 +62,7 @@ date: "2018-01-28"
 
 就像动物一样,我们的预测 AI 的大脑拥有神经元. 用圆来表示它们. 这些神经元是互相连接的.
 
-![](./imgs/1*LaEgAU-vdsR_pClMcgbikQ.jpeg)
+![](./1*LaEgAU-vdsR_pClMcgbikQ.jpeg)
 
 这些神经元被分成三种不同的层:
 1. 输入层
@@ -79,7 +79,7 @@ date: "2018-01-28"
 
 输出层就会返回输出的数据. 在我们的案例下, 它会告诉我们价格预测.
 
-![](./imgs/1*6PjhO0kPciY_f5XbghnZsQ.png)
+![](./1*6PjhO0kPciY_f5XbghnZsQ.png)
 
 所以, 这个价格预测是怎么算出来的呢?
 这就是深度学习的**黑魔法**
@@ -87,7 +87,7 @@ date: "2018-01-28"
 每一个神经元都是以**权重**来连接的. 权重指的就是某一个输入值的重要性. 初始权重是随机的.
 
 当我们预测飞机票的价格的时候, 出发时间是一个重要的影响因素, 所以和出发时间相连接的神经元, 都会获得一个很高的权重.
-![](./imgs/1*_kudSKDXEScysTpYYowqFg.jpeg)
+![](./1*_kudSKDXEScysTpYYowqFg.jpeg)
 
 每一个神经元都有一个[激励函数](https://en.wikipedia.org/wiki/Activation_function), 这些函数没有数学基础的话很难解释.
 简单地说, 它的一个用处就是标准化这些神经元的输出值.
@@ -116,7 +116,7 @@ date: "2018-01-28"
 
 它的工作方式是**在每次遍历数据后**, 一点一点的**修改权重**. 通过计算在某一特定数据集下, 开销和对应权重的函数的斜率, 我们可以知道哪个方向可以得到最小值.
 
-![](./imgs/1*HrFZV7pKPcc5dzLaWvngtQ.png)
+![](./1*HrFZV7pKPcc5dzLaWvngtQ.png)
 
 为了最小我们的开销, 需要遍历数据集很多次. 这也是为什么你需要非常庞大的计算力.
 使用梯度下降的方法来更新权重是**全自动**的, 这也是深度学习的黑魔法.
