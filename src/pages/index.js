@@ -2,7 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
- 
+import './style.css';
+
 import Bio from '../components/Bio'
 import { rhythm } from '../utils/typography'
 
