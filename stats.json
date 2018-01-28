@@ -1,20 +1,20 @@
 {
   "assetsByChunkName": {
     "path---parcel-parcel-📦-和-react-⚛️-的使用": [
-      "path---parcel-parcel-📦-和-react-⚛️-的使用-9b9926ca5015c09fe2ab.js",
-      "path---parcel-parcel-📦-和-react-⚛️-的使用-9b9926ca5015c09fe2ab.js.map"
+      "path---parcel-parcel-📦-和-react-⚛️-的使用-4f6ef7a57d8fdb0e470e.js",
+      "path---parcel-parcel-📦-和-react-⚛️-的使用-4f6ef7a57d8fdb0e470e.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-27bc1a07d5cce946c9d3.js",
-      "component---src-pages-index-js-27bc1a07d5cce946c9d3.js.map"
+      "component---src-pages-index-js-ccc678e57e64e5e2a678.js",
+      "component---src-pages-index-js-ccc678e57e64e5e2a678.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
     ],
     "path---uuid-uuid": [
-      "path---uuid-uuid-71bc98aee5b2f07804ce.js",
-      "path---uuid-uuid-71bc98aee5b2f07804ce.js.map"
+      "path---uuid-uuid-398b1df75b8cdba96791.js",
+      "path---uuid-uuid-398b1df75b8cdba96791.js.map"
     ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
@@ -29,20 +29,24 @@
       "path---base-64-base-64-编码的简单尝试-6c87670de69d138af5dc.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-03143aa0b13b8ea42d89.js",
-      "component---src-layouts-index-js-03143aa0b13b8ea42d89.js.map"
+      "component---src-layouts-index-js-3396ad3b64d776f86883.js",
+      "component---src-layouts-index-js-3396ad3b64d776f86883.js.map"
     ],
     "path---index": [
-      "path---index-1c35a012a1995ee6ed1d.js",
-      "path---index-1c35a012a1995ee6ed1d.js.map"
+      "path---index-eae5a9b410394b9d7c59.js",
+      "path---index-eae5a9b410394b9d7c59.js.map"
     ],
     "path---hello-world": [
-      "path---hello-world-52f14a7bd4f1eb86b2d8.js",
-      "path---hello-world-52f14a7bd4f1eb86b2d8.js.map"
+      "path---hello-world-4e4f55a3e7a2c8ead292.js",
+      "path---hello-world-4e4f55a3e7a2c8ead292.js.map"
+    ],
+    "path---deep-learning": [
+      "path---deep-learning-5cc7aabc6b967e150e33.js",
+      "path---deep-learning-5cc7aabc6b967e150e33.js.map"
     ],
     "path---react-component-and-element": [
-      "path---react-component-and-element-f11273114f28633eb143.js",
-      "path---react-component-and-element-f11273114f28633eb143.js.map"
+      "path---react-component-and-element-6a0a16c4de244827c98f.js",
+      "path---react-component-and-element-6a0a16c4de244827c98f.js.map"
     ],
     "commons": [
       "commons-3f8cdb987559d31a3a4e.js",
@@ -55,18 +59,18 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---first-step-software-world": [
-      "path---first-step-software-world-8dfeb1e6c2f01460a7a5.js",
-      "path---first-step-software-world-8dfeb1e6c2f01460a7a5.js.map"
+      "path---first-step-software-world-fb555088edd0f1981be9.js",
+      "path---first-step-software-world-fb555088edd0f1981be9.js.map"
     ],
     "app": [
-      "app-7990c9535a9b2fcfd5c9.js",
+      "app-8f3ad85dfd7584922c18.js",
       "build-js-styles.css",
-      "app-7990c9535a9b2fcfd5c9.js.map",
+      "app-8f3ad85dfd7584922c18.js.map",
       "build-js-styles.css.map"
     ],
     "path---反转字符串": [
-      "path---反转字符串-339a833aa99fc89d3120.js",
-      "path---反转字符串-339a833aa99fc89d3120.js.map"
+      "path---反转字符串-4b1f706938b050317817.js",
+      "path---反转字符串-4b1f706938b050317817.js.map"
     ]
   }
 }

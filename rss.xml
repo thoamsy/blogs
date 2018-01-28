@@ -1,8 +1,277 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Tue, 16 Jan 2018 15:03:36 GMT</lastBuildDate><item><title><![CDATA[我进入编程世界的第一步（翻译）]]></title><description><![CDATA[原文, 需要翻墙 作为一个刚毕业的计算机科学学生，在课堂上学到的东西和你在真实世界看到的东西会存在 断层 。各种循环操作： for, while, do while  不在话下。你可以不费吹灰之力写一个基于命令行的井字棋(Tic-Tac-Toe)游戏. 你还可以在 X8…]]></description><link>https://github.com/thoamsy/blogs.git/first-step-software-world/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/first-step-software-world/</guid><pubDate>Tue, 16 Jan 2018 07:28:39 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://medium.freecodecamp.org/my-first-steps-into-the-world-of-software-development-and-what-they-taught-me-6ee748cffb8f&quot;&gt;原文, 需要翻墙&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Sun, 28 Jan 2018 05:21:36 GMT</lastBuildDate><item><title><![CDATA[Deep Learning Quick Guide (翻译)]]></title><description><![CDATA[AI(Artificial Intelligence)  和 ML(Machine Learning) 是当下最热的话题. 我们每天都能看到 AI 的字眼, 那些有抱负的程序员都说自己想学点 AI. 你也听到高层说他们想在服务中集成 AI. 但是, 大多数人其实不理解什么是 AI…]]></description><link>https://github.com/thoamsy/blogs.git/deep-learning/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/deep-learning/</guid><pubDate>Sun, 28 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-0b287.jpeg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.64999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBAwX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHXqZXGSQ//xAAYEAADAQEAAAAAAAAAAAAAAAAAAQIREv/aAAgBAQABBQKrafbJejjSZ0Sw/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFhAAAwAAAAAAAAAAAAAAAAAAECCB/9oACAEBAAY/Akg//8QAGRABAAMBAQAAAAAAAAAAAAAAAQARYVFx/9oACAEBAAE/IfIMO7yKF2Er2CjbQbVP/9oADAMBAAIAAwAAABCQz//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABwQAQACAwEBAQAAAAAAAAAAAAEAESExYUFRkf/aAAgBAQABPxBkH4bKhFNXt7uMjyhjhLsd2cch5aOR24SFhb8+T//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;1 1mpE6fsq5LNxH31xeTWi5w&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-f8fb9.jpeg&quot;
+        srcset=&quot;/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-e8976.jpeg 148w,
+/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-63df2.jpeg 295w,
+/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-f8fb9.jpeg 590w,
+/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-85e3d.jpeg 885w,
+/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-d1924.jpeg 1180w,
+/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-9452e.jpeg 1770w,
+/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-0b287.jpeg 2000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AI(Artificial Intelligence)&lt;/strong&gt; 和 ML(Machine Learning) 是当下最热的话题.&lt;/p&gt;
+&lt;p&gt;我们每天都能看到 AI 的字眼, 那些有抱负的程序员都说自己想学点 AI. 你也听到高层说他们想在服务中集成 AI. 但是, 大多数人其实不理解什么是 AI.&lt;/p&gt;
+&lt;p&gt;一旦你读过了这篇文章, 你就会理解基础的 AI 和 ML 知识. 最重要的是, 你将会理解什么是 &lt;em&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Deep_learning&quot;&gt;深度学习&lt;/a&gt;&lt;/em&gt;—最流行的 ML 方法, 是怎么工作的.&lt;/p&gt;
+&lt;p&gt;这篇介绍面向所有人, 所以不需要任何数学基础.&lt;/p&gt;
+&lt;h2&gt;背景&lt;/h2&gt;
+&lt;p&gt;理解深度学习的第一步是分清两个重要术语的区别.&lt;/p&gt;
+&lt;h3&gt;人工智能 VS 机器学习&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;人工智能&lt;/strong&gt; 是人类智能在计算机中的模拟&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当 AI 研究首次开始的时候, 研究者会尝试去复制人类在特定行为下的思考方式—比如玩游戏&lt;/p&gt;
+&lt;p&gt;他们会描述出计算机需要遵守的大量规则. 计算机有一个特定的动作集, 并且根据这些动作集作出决策.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;机器学习指的是机器具有一种在大规模数据集下学习的能力, 而不再需要提前规定各种规则&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; ML 允许计算机自主学习. 这种学习方式充分利用了现代计算机的处理力, 能够轻松的处理&lt;strong&gt;大规模&lt;/strong&gt;数据集.&lt;/p&gt;
+&lt;h3&gt;监督性学习 VS 非监督性学习&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;监督性学习需要使用标记过的数据&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当你使用监督性学习训练 AI 的时候, 你需要给它一个输入和希望得到的结果(输出)&lt;/p&gt;
+&lt;p&gt;如果 AI 得到的结果是错的.它会自动调整它的计算方式. 这个过程通过不断地遍历数据集, 指导 AI 得到的结果和期望输出值没有任何出入后, 才停止.&lt;/p&gt;
+&lt;p&gt;一个监督性学习的例子是天气预测 AI. 它会使用历史数据来学习预测. 训练数据包括了输入(气压, 潮湿度, 风速)和输出(气温)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;非监督性学习是使用没有特定结构的数据的一种训练方式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当你打算使用非监督性学习来训练 AI 的时候, 你需要让 AI 自己决定如何对数据分类.&lt;/p&gt;
+&lt;p&gt;一个监督性学习的例子是电商网站的行为预测 AI. 它不能用标记过的数据来训练.&lt;/p&gt;
+&lt;p&gt;取而代之的是, 它会对输入数据创建自己的分类, 它会告诉你哪种用于最可能买的东西.&lt;/p&gt;
+&lt;h2&gt;那么, 深度数学呢&lt;/h2&gt;
+&lt;p&gt;你要开始准备理解深度学习, 和它工作的方式咯.&lt;/p&gt;
+&lt;p&gt;深度学习是一种&lt;strong&gt;机器学习的方法&lt;/strong&gt;, 它让你训练 AI 来针对输入给出对应的输出. 无论监督性学习还是非监督性学习都可以用来训练.&lt;/p&gt;
+&lt;p&gt;我们通过假象一个&lt;strong&gt;飞机票预测服务&lt;/strong&gt;来学习深度学习的公粥方式. 我们使用监督性学习来训练它.&lt;/p&gt;
+&lt;p&gt;我们希望我们的机票预测器能够使用下面的输入(去掉了剩余票来保证简单)来预测价格:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;出发地&lt;/li&gt;
+&lt;li&gt;目的地&lt;/li&gt;
+&lt;li&gt;出发时间&lt;/li&gt;
+&lt;li&gt;航空公司&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;神经网络&lt;/h3&gt;
+&lt;p&gt;让我们来深入我们 AI 的大脑.&lt;/p&gt;
+&lt;p&gt;就像动物一样,我们的预测 AI 的大脑拥有神经元. 用圆来表示它们. 这些神经元是互相连接的.&lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png&quot;
+    href=&quot;/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-b1e96.jpeg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 49.05183312262958%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBf/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAB7C4rRbL/xAAYEAADAQEAAAAAAAAAAAAAAAAAAREQIf/aAAgBAQABBQKs7aPf/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BJ//EABYQAQEBAAAAAAAAAAAAAAAAAAEQAP/aAAgBAQAGPwLFJ//EABsQAAICAwEAAAAAAAAAAAAAAAABESEQQVFh/9oACAEBAAE/IXA+SJ2CXhVV0be2sf/aAAwDAQACAAMAAAAQ2+//xAAWEQADAAAAAAAAAAAAAAAAAAABEDH/2gAIAQMBAT8QNX//xAAWEQEBAQAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8QGk//xAAbEAABBQEBAAAAAAAAAAAAAAABABEhMUEQYf/aAAgBAQABPxAwBJgR0igyG6RaPJlqKb7z/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;1 LaEgAU vdsR pClMcgbikQ&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-f8fb9.jpeg&quot;
+        srcset=&quot;/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-e8976.jpeg 148w,
+/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-63df2.jpeg 295w,
+/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-f8fb9.jpeg 590w,
+/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-b1e96.jpeg 791w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;这些神经元被分成三种不同的层:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;输入层&lt;/li&gt;
+&lt;li&gt;隐藏层&lt;/li&gt;
+&lt;li&gt;输出层&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;译者注: 就是因为隐藏层的行为是黑盒的, 连创造这个 AI 的人都不知道为什么会这样. 这也就是为什么有些大佬针对 AI 会有一些担心. 虽然目前的 AI 还处于比较弱智的阶段, 但是就像互联网的发展一样, 没人能预测到 20 年后的 AI 会到怎样的程度.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;输入层&lt;/strong&gt;接受输入数据. 在我们的场景下, 我们的输入层有四个神经元: 出发地, 目的地, 出发时间, 航空公司. 输入层将这些输入传给第一个隐藏层.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;隐藏层&lt;/strong&gt;会对输入的数据执行数学运算. 一大挑战是: 决定使用多少层隐藏层以及每一层有多少个神经元(越多越慢, 但是效果也越好)&lt;/p&gt;
+&lt;p&gt;深度学习中的 &lt;strong&gt;Deep&lt;/strong&gt; 指的就是多于一层的隐藏层.&lt;/p&gt;
+&lt;p&gt;输出层就会返回输出的数据. 在我们的案例下, 它会告诉我们价格预测.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-efba4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 47.61904761904761%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABvklEQVQoz2NgwAP8qyayWltbs/h2LCv0bpzjyUAkYAYRV7dECYPo0ClbOfx7VvOYmJiIBk7ZNtvIyEjJLiJV0dLdT8bY2JgDaLgoIQPlzc3Nmd6fiG9xczKX96yZFuRVPzsJqFk6YNJmDaCBJp61MwrcCtpCzB3dDIGWtADFBIKmbJf361zOic1ACSDmfXYw1tzUxFjeJadBE4hNgZr0AiZvrQDSHm5FnWZOScWaxqZmxkHTdpoCLZPyaV+a6lk7XRObgUIgF745FpdoY2Vq7Fbc5epe3h8INMgQaGAAkPb1qp0R7JLd4GRiZesOFEsCiqn6ti918W1ZKDExxkf6TX28AxMTEwfQLEaQgeJcQPD2WHy0taWJsVtRh5N7WZ8vsoGe1VMDXLLr7U2sbOAGAl3o4tM4R7Ij3EP2RW2cIwsLCwcsPkAMhldH4mzMzUzkXfOadVzzWyxQvFzSbeWUUqYD8fIOuJe962drYPWymZkZ07sT8XUYkTIREileyJEydXsHUE7Af8JGBWCMc+KM6mtbIqUgyWYLRwAw2QANEgO6cAZysgEmJQ7ftiUCDOQC79ppnDY2NtCEPZeohA0Ab7OlvPwkSF4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;1 6PjhO0kPciY f5XbghnZsQ&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-fb8a0.png&quot;
+        srcset=&quot;/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-1a291.png 148w,
+/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-2bc4a.png 295w,
+/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-fb8a0.png 590w,
+/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-efba4.png 630w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;所以, 这个价格预测是怎么算出来的呢?
+这就是深度学习的&lt;strong&gt;黑魔法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;每一个神经元都是以&lt;strong&gt;权重&lt;/strong&gt;来连接的. 权重指的就是某一个输入值的重要性. 初始权重是随机的.&lt;/p&gt;
+&lt;p&gt;当我们预测飞机票的价格的时候, 出发时间是一个重要的影响因素, 所以和出发时间相连接的神经元, 都会获得一个很高的权重.
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-aca4d.jpeg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 532px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 62.96992481203007%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB3pRQf//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAQUCX//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CX//EABcQAQEBAQAAAAAAAAAAAAAAAAARARD/2gAIAQEAAT8hrFRnP//aAAwDAQACAAMAAAAQQM//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAADAAEFAAAAAAAAAAAAAAAAARExECFhcYH/2gAIAQEAAT8QbWNPwaK7nUcc14EeLp//2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;1  kudSKDXEScysTpYYowqFg&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-aca4d.jpeg&quot;
+        srcset=&quot;/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-bbc2d.jpeg 148w,
+/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-b5c5f.jpeg 295w,
+/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-aca4d.jpeg 532w&quot;
+        sizes=&quot;(max-width: 532px) 100vw, 532px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;每一个神经元都有一个&lt;a href=&quot;https://en.wikipedia.org/wiki/Activation_function&quot;&gt;激励函数&lt;/a&gt;, 这些函数没有数学基础的话很难解释.
+简单地说, 它的一个用处就是标准化这些神经元的输出值.&lt;/p&gt;
+&lt;p&gt;一旦这些输入数据通过了所有的神经网络后, 它们就会通过输出层被返回出来.
+一点都不难, 对吧?&lt;/p&gt;
+&lt;h3&gt;训练神经网络&lt;/h3&gt;
+&lt;p&gt;训练 AI 是深度学习最难的部分. 为什么?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;你需要有大量的数据&lt;/li&gt;
+&lt;li&gt;你需要有庞大的算力&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对于我们的机票价格预测系统, 我们需要寻找历史机票价格的数据. 因为机场和出发时间又有大量的组合, 我们就需要非常庞大的数据集.&lt;/p&gt;
+&lt;p&gt;为了训练 AI, 我们需要给他输入值, 然后将它的输出值和数据集中的输出值进行比较. 因为 AI 还没有训练完成, 这个输出肯定是错的.&lt;/p&gt;
+&lt;p&gt;一旦我们遍历过一次所有的数据集后, 我们创造一个用来暂时 AI 的输出和预期输出之间的差别. 这个函数被称为&lt;strong&gt;开销函数&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;理想情况下, 我希望我们的开销函数是 0. 也就是 AI 的输出和数据集的输出完全一致.&lt;/p&gt;
+&lt;h3&gt;怎么降低开销&lt;/h3&gt;
+&lt;p&gt;我们需要修改神经元之间的权重. 我们可以随机的改变他们直到开销很低. 但是这个方法显然不怎么高效.
+相反, 我们会使用一个叫做 &lt;a href=&quot;https://en.wikipedia.org/wiki/Gradient_descent&quot;&gt;梯度下降&lt;/a&gt; 的方法.&lt;/p&gt;
+&lt;p&gt;深度下降是一种让我们能找到函数最小值的方法. 在我们的场景下, 我们需要寻找开销函数的最小值.&lt;/p&gt;
+&lt;p&gt;它的工作方式是&lt;strong&gt;在每次遍历数据后&lt;/strong&gt;, 一点一点的&lt;strong&gt;修改权重&lt;/strong&gt;. 通过计算在某一特定数据集下, 开销和对应权重的函数的斜率, 我们可以知道哪个方向可以得到最小值.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-417af.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 54.1875%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAABDElEQVQoz5WRXWuDMBSG+zu7f7jLwQbbLnYxRmEMtNNlFqMxWoOo8zNaIn7sdLKMWof0hYTknPOcN+SshmEoiqKu6+FyrZqmiaJoAnueB8FlmFJKCKmqyg6qMdT3vaqqiqLAi7qug8irRg4/gqthGLqu+75/hGElSQLOJuOypRCCcw5d4jiGfbMl885/sF/OVqzXV5+YLsC7fXGebtv2+uYRzBfgg2itgE/SjkMfXrR/P0zCx9KgTMpG5rBl3W+MLMvgzBhDCMHXmqbpui7sGOMTeOSRm7FU3D693T2/h9EXwHmeQ41t22EYTp3TNIU2+1/BkNEOa/oHTFEGHceZfzaoOxX4jFOVguGdw9/bMnaZrztA5gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;1 HrFZV7pKPcc5dzLaWvngtQ&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-fb8a0.png&quot;
+        srcset=&quot;/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-1a291.png 148w,
+/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-2bc4a.png 295w,
+/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-fb8a0.png 590w,
+/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-526de.png 885w,
+/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-fa2eb.png 1180w,
+/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-417af.png 1600w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;为了最小我们的开销, 需要遍历数据集很多次. 这也是为什么你需要非常庞大的计算力.
+使用梯度下降的方法来更新权重是&lt;strong&gt;全自动&lt;/strong&gt;的, 这也是深度学习的黑魔法.&lt;/p&gt;
+&lt;p&gt;一旦我们训练好我们的 AI, 就能用来预测未来的机票价格了.&lt;/p&gt;
+&lt;h2&gt;在哪可以学到更多&lt;/h2&gt;
+&lt;p&gt;还有很多其他类型的神经网络: 计算机视觉使用&lt;a href=&quot;https://en.wikipedia.org/wiki/Convolutional_neural_network&quot;&gt;卷积神经网络&lt;/a&gt;, 自然语言处理使用&lt;a href=&quot;https://en.wikipedia.org/wiki/Recurrent_neural_network&quot;&gt;递归神经网络&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;如果你想学习深度学习, 我建议还是去找在线课程.
+当前最好的课程之一就是吴恩达的&lt;a href=&quot;https://www.coursera.org/specializations/deep-learning&quot;&gt;深度学习标准&lt;/a&gt;. 如果你对证书没兴趣的话, 可以不需要为这门课程付费. 你可以免费旁听.&lt;/p&gt;
+&lt;h2&gt;总结&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;深度学习使用神经网络来模仿动物的智能&lt;/li&gt;
+&lt;li&gt;神经网络有三种层: 输入层(Input Layer), 隐藏层(Hidden Layer) 和 输出层(Output Layer)&lt;/li&gt;
+&lt;li&gt;神经元之间通过权重连接, 展现了输入数据的重要程度.&lt;/li&gt;
+&lt;li&gt;神经元使用对数据使用激励函数来标准化输出&lt;/li&gt;
+&lt;li&gt;为了训练神经网络, 你需要大量的数据&lt;/li&gt;
+&lt;li&gt;遍历数据并且比较, 会有一个开销函数. 它表明了当前 AI 离可以用还差多远&lt;/li&gt;
+&lt;li&gt;每次遍历数据后, 通过梯度下降来降低开销, 以调整神经元之间的权重&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[我进入编程世界的第一步（翻译）]]></title><description><![CDATA[原文, 需要翻墙 作为一个刚毕业的计算机科学学生，在课堂上学到的东西和你在真实世界看到的东西会存在 断层 。各种循环操作： for, while, do while  不在话下。你可以不费吹灰之力写一个基于命令行的井字棋(Tic-Tac-Toe)游戏. 你还可以在 X8…]]></description><link>https://github.com/thoamsy/blogs.git/first-step-software-world/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/first-step-software-world/</guid><pubDate>Tue, 16 Jan 2018 07:28:39 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://medium.freecodecamp.org/my-first-steps-into-the-world-of-software-development-and-what-they-taught-me-6ee748cffb8f&quot;&gt;原文, 需要翻墙&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -21,13 +290,13 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Nervous laugh&quot;
         title=&quot;&quot;
-        src=&quot;/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png&quot;
-        srcset=&quot;/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-1a291.png 148w,
-/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-2bc4a.png 295w,
-/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png 590w,
-/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-526de.png 885w,
-/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fa2eb.png 1180w,
-/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png 1280w&quot;
+        src=&quot;/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png&quot;
+        srcset=&quot;/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-1a291.png 148w,
+/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-2bc4a.png 295w,
+/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png 590w,
+/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-526de.png 885w,
+/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fa2eb.png 1180w,
+/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png 1280w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -52,7 +321,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png&quot;
+    href=&quot;/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -71,13 +340,13 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Just follow along and try to keep up.&quot;
         title=&quot;&quot;
-        src=&quot;/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png&quot;
-        srcset=&quot;/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-1a291.png 148w,
-/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-2bc4a.png 295w,
-/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png 590w,
-/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-526de.png 885w,
-/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fa2eb.png 1180w,
-/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png 1366w&quot;
+        src=&quot;/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png&quot;
+        srcset=&quot;/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-1a291.png 148w,
+/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-2bc4a.png 295w,
+/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png 590w,
+/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-526de.png 885w,
+/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fa2eb.png 1180w,
+/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png 1366w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -103,7 +372,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png&quot;
+    href=&quot;/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -122,14 +391,14 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;You are a master builder.&quot;
         title=&quot;&quot;
-        src=&quot;/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png&quot;
-        srcset=&quot;/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-1a291.png 148w,
-/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-2bc4a.png 295w,
-/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png 590w,
-/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-526de.png 885w,
-/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fa2eb.png 1180w,
-/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-08f6a.png 1770w,
-/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png 1920w&quot;
+        src=&quot;/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png&quot;
+        srcset=&quot;/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-1a291.png 148w,
+/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-2bc4a.png 295w,
+/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png 590w,
+/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-526de.png 885w,
+/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fa2eb.png 1180w,
+/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-08f6a.png 1770w,
+/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png 1920w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -228,7 +497,7 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png&quot;
+    href=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -247,13 +516,13 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;96FFC213 7B8B 46A4 817B 2F13D2342247&quot;
         title=&quot;&quot;
-        src=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png&quot;
-        srcset=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-1a291.png 148w,
-/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-2bc4a.png 295w,
-/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png 590w,
-/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-526de.png 885w,
-/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fa2eb.png 1180w,
-/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png 1640w&quot;
+        src=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png&quot;
+        srcset=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-1a291.png 148w,
+/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-2bc4a.png 295w,
+/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png 590w,
+/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-526de.png 885w,
+/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fa2eb.png 1180w,
+/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png 1640w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -296,7 +565,7 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png&quot;
+    href=&quot;/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -315,11 +584,11 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;A20289F2 4515 4E5E 9C91 1BF74DF84328&quot;
         title=&quot;&quot;
-        src=&quot;/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png&quot;
-        srcset=&quot;/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-1a291.png 148w,
-/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-2bc4a.png 295w,
-/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png 590w,
-/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png 850w&quot;
+        src=&quot;/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png&quot;
+        srcset=&quot;/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-1a291.png 148w,
+/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-2bc4a.png 295w,
+/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png 590w,
+/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png 850w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -332,7 +601,7 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png&quot;
+    href=&quot;/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -351,13 +620,13 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;3C5A8FC8 2D99 4F4E 907C 89276B8A33BF&quot;
         title=&quot;&quot;
-        src=&quot;/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png&quot;
-        srcset=&quot;/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-1a291.png 148w,
-/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-2bc4a.png 295w,
-/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png 590w,
-/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-526de.png 885w,
-/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fa2eb.png 1180w,
-/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png 1246w&quot;
+        src=&quot;/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png&quot;
+        srcset=&quot;/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-1a291.png 148w,
+/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-2bc4a.png 295w,
+/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png 590w,
+/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-526de.png 885w,
+/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fa2eb.png 1180w,
+/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png 1246w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -371,7 +640,7 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 &lt;hr&gt;
 &lt;h2&gt;Babel 的基本配置&lt;/h2&gt;
 &lt;h3&gt;一些背景介绍&lt;/h3&gt;
-&lt;p&gt;我们知道, React 和 Babel 是互相离不开的, 首先 &lt;code&gt;JSX&lt;/code&gt; 需要 Babel 来转译, 比如 &lt;/p&gt;
+&lt;p&gt;我们知道, React 和 Babel 是互相离不开的, 首先 &lt;code&gt;JSX&lt;/code&gt; 需要 Babel 来转译, 比如&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;App &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;creataElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;App&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -409,40 +678,8 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 &lt;p&gt;的语法. 于是我们不仅干掉了, 无聊的 &lt;code&gt;bind&lt;/code&gt;, 还干掉了整个 &lt;code&gt;constructor&lt;/code&gt;, 多酷!!!
 还有一种语法, &lt;code&gt;::&lt;/code&gt;, 这里不介绍.&lt;/p&gt;
 &lt;h3&gt;babelrc&lt;/h3&gt;
-&lt;p&gt;配置 babel 依赖于一个叫做 &lt;code&gt;.babelrc&lt;/code&gt;文件, 在 VS Code 中, 如果安装了&lt;strong&gt;文件图标主题&lt;/strong&gt;的话, 一旦创建, 会有一个特定的 logo 图标来告诉我们, 没有拼错. &lt;/p&gt;
+&lt;p&gt;配置 babel 依赖于一个叫做 &lt;code&gt;.babelrc&lt;/code&gt;文件, 在 VS Code 中, 如果安装了&lt;strong&gt;文件图标主题&lt;/strong&gt;的话, 一旦创建, 会有一个特定的 logo 图标来告诉我们, 没有拼错.&lt;/p&gt;
 &lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; ; max-width: 350px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 34.85714285714286%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAAAh0lEQVQoz2NQUNX5T03MACLklbVoa6Cpifp/RTVt6hjo7qj8PzZQHs63snP5r2dk+d/MygGMDUyt/xuZ2/43NLP5b2hqQ9jAokSp/1H+EAPVtA3/W9u7/nd29/3v7h3439HV+7+rp/9/S1vn/7aO7v+NgQYT4WVtysJQXkX7v5yy5n8QTQ0MAK32zv1xbPOCAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;F82820D6 9363 4A17 B637 C84FE7E037CE&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png&quot;
-        srcset=&quot;/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-e7b32.png 148w,
-/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-627a4.png 295w,
-/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png 350w&quot;
-        sizes=&quot;(max-width: 350px) 100vw, 350px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    
 配置 react 的方式, 其实十分简单. 首先需要转译 JSX, 但是 JSX 的转移又依赖于 es2015, 所以我们两个都需要转译. 我并没有多长 babel 使用经验, 反正现在有了 &lt;code&gt;presets&lt;/code&gt;, 而且淘汰了 ES2015, ES2016 这些 presets, 统一使用 &lt;code&gt;env&lt;/code&gt; preset, 所以 babel 的配置变成了下面这样&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-json&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -450,19 +687,19 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;如果有影响的话, 其实还有一个 &lt;code&gt;babel-preset-react-app&lt;/code&gt;, 它和上面的 react 的区别就是: react-app 是使用在 &lt;code&gt;create-react-app&lt;/code&gt;中的配置, 相比 react 会有一些加成, 下面会讲到. &lt;/p&gt;
+&lt;p&gt;如果有影响的话, 其实还有一个 &lt;code&gt;babel-preset-react-app&lt;/code&gt;, 它和上面的 react 的区别就是: react-app 是使用在 &lt;code&gt;create-react-app&lt;/code&gt;中的配置, 相比 react 会有一些加成, 下面会讲到.&lt;/p&gt;
 &lt;p&gt;OK, 其实有了这两个就能写 react 了. 自己写好必要的组件, 和之前一样使用 parcel 就能启动. 但是, 我们还不能使用刚刚提到的那些新语法. 甚至连 React 大量依赖的 &lt;code&gt;{...obj}&lt;/code&gt; 也不行. 这个时候就还需要安装新的 preset: &lt;code&gt;stage-2 stage-3&lt;/code&gt;
 于是乎, 为了安装这些, 我们需要运行&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-bash&quot;&gt;&lt;code&gt;yarn add -D babel-preset-env babel-preset-react babel-preset-stage-2 babel-preset-stage-3
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;那这样就能开心的写 React 代码了吗🧐 还不行, 我目前也搞不清楚为什么, 写 &lt;code&gt;async await&lt;/code&gt;话, 还是会报错, 尽管这个主流浏览器已经都支持了. 所以, 我在 Google 了一番后, 发现还需要安装一个 babel plugin. &lt;/p&gt;
+&lt;p&gt;那这样就能开心的写 React 代码了吗🧐 还不行, 我目前也搞不清楚为什么, 写 &lt;code&gt;async await&lt;/code&gt;话, 还是会报错, 尽管这个主流浏览器已经都支持了. 所以, 我在 Google 了一番后, 发现还需要安装一个 babel plugin.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-bash&quot;&gt;&lt;code&gt;yarn add -D babel-plugin-transform-runtime
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;而且这个 runtime 的配置蛮复杂的, 这里不详细介绍了, 大概是这样. &lt;/p&gt;
+&lt;p&gt;而且这个 runtime 的配置蛮复杂的, 这里不详细介绍了, 大概是这样.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-json&quot;&gt;&lt;code&gt;&lt;span class=&quot;token property&quot;&gt;&quot;plugins&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;transform-runtime&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token property&quot;&gt;&quot;polyfill&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
@@ -470,16 +707,16 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;注意, 这段代码紧跟 babelrc 中的 presets 之后另起一行. &lt;/p&gt;
+&lt;p&gt;注意, 这段代码紧跟 babelrc 中的 presets 之后另起一行.&lt;/p&gt;
 &lt;p&gt;当完全了这些之后我们就可以没有任何问题的写 React ⚛️了😎😎&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;热加载&lt;/h2&gt;
 &lt;p&gt;当我确定我要使用热加载的时候, 是因为我看了 Dan 的视频, 以及他说的一段话&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;I want to encourage you to actually spend time working on developer tools because before you can optimize your app, you should optimize your workflow so you have more time to spend working on your app. Because once enough frustration is gone, your programming actually feels fun again just like it used to do when the tools were simple.   &lt;/p&gt;
+&lt;p&gt;I want to encourage you to actually spend time working on developer tools because before you can optimize your app, you should optimize your workflow so you have more time to spend working on your app. Because once enough frustration is gone, your programming actually feels fun again just like it used to do when the tools were simple.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;最重要的意思就是, 花点时间研究🔧能为我们省下更多的时间提高自己. 于是乎, 我就花了一点时间, 嗯, 也不是一点, 三个小时吧. 终于搞明白, 怎么在 parcel 中使用了. 因为和官方文档有点区别, parcel 的文档介绍的又十分简陋, 再加上 parcel 缓存的问题, 所以被坑了很久.  不过终于还是搞定了. 下面总结一下热加载的配置.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/gaearon/react-hot-loader&quot;&gt;react-hot-loader&lt;/a&gt; 由 &lt;em&gt;Dan gaearon&lt;/em&gt; 开发并开源, 对, 就是 redux 的作者, 是一个特别帅的英国佬. 当然这不是我们讨论的重点, 目前使用的是 V3 版本, V4 在配置上有非常大的提升, 但是因为 parcel 不兼容这个. 所以我们还是使用主流的配置. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/gaearon/react-hot-loader&quot;&gt;react-hot-loader&lt;/a&gt; 由 &lt;em&gt;Dan gaearon&lt;/em&gt; 开发并开源, 对, 就是 redux 的作者, 是一个特别帅的英国佬. 当然这不是我们讨论的重点, 目前使用的是 V3 版本, V4 在配置上有非常大的提升, 但是因为 parcel 不兼容这个. 所以我们还是使用主流的配置.&lt;/p&gt;
 &lt;p&gt;文档该说的都说了, 下面只针对在 parcel 上该怎么用来解释.
 还是安装它&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
@@ -525,16 +762,16 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hot&lt;span 
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;p&gt;这是代码的必备成分, &lt;code&gt;App&lt;/code&gt; 就是你所有代码的合成的组件,  render 函数无非就是一个小小的包装. 而 &lt;code&gt;AppContainer&lt;/code&gt; 就是整个热加载的&lt;strong&gt;能量源泉&lt;/strong&gt;. 而 &lt;code&gt;module.hot.accept&lt;/code&gt; 里的回调, 就是整个源泉的能量使用者.
-和文档中不一样的是, 文档中 &lt;code&gt;accept&lt;/code&gt; 接受两个参数, 第二个才是回调. 也是我一直被坑的地方, 可能是因为 parcel 针对这个做了某些小小的优化吧. &lt;/p&gt;
+和文档中不一样的是, 文档中 &lt;code&gt;accept&lt;/code&gt; 接受两个参数, 第二个才是回调. 也是我一直被坑的地方, 可能是因为 parcel 针对这个做了某些小小的优化吧.&lt;/p&gt;
 &lt;p&gt;这些都写好了, 就可以开始&lt;strong&gt;热加载&lt;/strong&gt;之旅了!
 那怎么知道自己的热加载是否成功了呢? 之前提到过, 热加载的前提是不用刷新界面, 因为刷新的话就会丢失所有的状态咯. 所以成功的关键就是&lt;strong&gt;状态没有丢失&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;不过这句话不是那么的明显🙂, 其实比较的明显的检测方法就是:
-有一个 input 和任意的 label. 如果我们 input 中填写了某些信息, 再去 label 中修改, input 中的数据没有丢失的话, 就说明热加载成功了. 这真的很重要, 在写表单类似的程序的时候, 我们需要不断的输入然后刷新, 光光这个时间就不知道被浪费了多少. &lt;/p&gt;
+有一个 input 和任意的 label. 如果我们 input 中填写了某些信息, 再去 label 中修改, input 中的数据没有丢失的话, 就说明热加载成功了. 这真的很重要, 在写表单类似的程序的时候, 我们需要不断的输入然后刷新, 光光这个时间就不知道被浪费了多少.&lt;/p&gt;
 &lt;p&gt;补充：这个热加载似乎会引入一个 bug&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;无法在 &lt;code&gt;async&lt;/code&gt; 函数中找到 &lt;code&gt;this&lt;/code&gt;&lt;br&gt;
+&lt;p&gt;无法在 &lt;code&gt;async&lt;/code&gt; 函数中找到 &lt;code&gt;this&lt;/code&gt;
 我不太清楚这是什么原因，在不需要重度依赖 async 的情况下，还是可以接受的。另外，估计 v4 版本已经解决了这个问题吧。
-感谢开源让生活更美好, 也让我们知道牛逼的程序员到处都是. &lt;/p&gt;
+感谢开源让生活更美好, 也让我们知道牛逼的程序员到处都是.&lt;/p&gt;
 &lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[UUID]]></title><description><![CDATA[花了一个晚上看了一下 UUID 的实现源码. 发现 UUID 有 5 个版本, 其中的特点分别为:
 V1: 以 机子的网卡和时间戳 以及一些其他的东西作为因子来生成一个唯一的标识符
 V2: 没有提及
@@ -596,7 +833,7 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
+    href=&quot;/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -615,10 +852,10 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;A38A178D 6DAC 4F8E 9EEC 001450B372AC&quot;
         title=&quot;&quot;
-        src=&quot;/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
-        srcset=&quot;/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e143d.png 148w,
-/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-359a8.png 295w,
-/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png 344w&quot;
+        src=&quot;/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
+        srcset=&quot;/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e143d.png 148w,
+/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-359a8.png 295w,
+/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png 344w&quot;
         sizes=&quot;(max-width: 344px) 100vw, 344px&quot;
       /&gt;
     &lt;/span&gt;
@@ -706,11 +943,11 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
 在一年左右的前端学习时间中, 能构建出一个属于自己的博客, 也算是十分满足了.
 感谢  GitHub  和  Google  成为我的前端老师, 另外一个前端老师就是 MDN…]]></description><link>https://github.com/thoamsy/blogs.git/hello-world/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/hello-world/</guid><pubDate>Sun, 31 Dec 2017 13:13:18 GMT</pubDate><content:encoded>&lt;p&gt;作为个人博客的第一篇文章, 没有太多的意义, 就当为自己终于开通了博客做一个喝彩 🎉🎈
 在一年左右的前端学习时间中, 能构建出一个属于自己的博客, 也算是十分满足了.
-感谢 &lt;code&gt;GitHub&lt;/code&gt; 和 &lt;code&gt;Google&lt;/code&gt; 成为我的前端老师, 另外一个前端老师就是 MDN.&lt;/p&gt;
-&lt;p&gt;
+感谢 &lt;code&gt;GitHub&lt;/code&gt; 和 &lt;code&gt;Google&lt;/code&gt; 成为我的前端老师, 另外一个前端老师就是 MDN.
+
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/hh-022920d1f164284d9cbe54f3e630674d-4a705.jpg&quot;
+    href=&quot;/static/good-022920d1f164284d9cbe54f3e630674d-4a705.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -727,16 +964,16 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;hh&quot;
+        alt=&quot;good&quot;
         title=&quot;&quot;
-        src=&quot;/static/hh-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg&quot;
-        srcset=&quot;/static/hh-022920d1f164284d9cbe54f3e630674d-e8976.jpg 148w,
-/static/hh-022920d1f164284d9cbe54f3e630674d-63df2.jpg 295w,
-/static/hh-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg 590w,
-/static/hh-022920d1f164284d9cbe54f3e630674d-85e3d.jpg 885w,
-/static/hh-022920d1f164284d9cbe54f3e630674d-d1924.jpg 1180w,
-/static/hh-022920d1f164284d9cbe54f3e630674d-9452e.jpg 1770w,
-/static/hh-022920d1f164284d9cbe54f3e630674d-4a705.jpg 5214w&quot;
+        src=&quot;/static/good-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg&quot;
+        srcset=&quot;/static/good-022920d1f164284d9cbe54f3e630674d-e8976.jpg 148w,
+/static/good-022920d1f164284d9cbe54f3e630674d-63df2.jpg 295w,
+/static/good-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg 590w,
+/static/good-022920d1f164284d9cbe54f3e630674d-85e3d.jpg 885w,
+/static/good-022920d1f164284d9cbe54f3e630674d-d1924.jpg 1180w,
+/static/good-022920d1f164284d9cbe54f3e630674d-9452e.jpg 1770w,
+/static/good-022920d1f164284d9cbe54f3e630674d-4a705.jpg 5214w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
