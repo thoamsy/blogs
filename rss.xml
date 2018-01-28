@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Sun, 28 Jan 2018 05:52:15 GMT</lastBuildDate><item><title><![CDATA[Deep Learning Quick Guide (翻译)]]></title><description><![CDATA[AI(Artificial Intelligence)  和 ML(Machine Learning) 是当下最热的话题. 我们每天都能看到 AI 的字眼, 那些有抱负的程序员都说自己想学点 AI. 你也听到高层说他们想在服务中集成 AI. 但是, 大多数人其实不理解什么是 AI…]]></description><link>https://github.com/thoamsy/blogs.git/deep-learning/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/deep-learning/</guid><pubDate>Sun, 28 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Sun, 28 Jan 2018 06:06:12 GMT</lastBuildDate><item><title><![CDATA[Deep Learning Quick Guide (翻译)]]></title><description><![CDATA[AI(Artificial Intelligence)  和 ML(Machine Learning) 是当下最热的话题. 我们每天都能看到 AI 的字眼, 那些有抱负的程序员都说自己想学点 AI. 你也听到高层说他们想在服务中集成 AI. 但是, 大多数人其实不理解什么是 AI…]]></description><link>https://github.com/thoamsy/blogs.git/deep-learning/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/deep-learning/</guid><pubDate>Sun, 28 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-0b287.jpeg&quot;
+    href=&quot;/blogs/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-0b287.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -20,14 +20,14 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;1 1mpE6fsq5LNxH31xeTWi5w&quot;
         title=&quot;&quot;
-        src=&quot;/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-f8fb9.jpeg&quot;
-        srcset=&quot;/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-e8976.jpeg 148w,
-/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-63df2.jpeg 295w,
-/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-f8fb9.jpeg 590w,
-/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-85e3d.jpeg 885w,
-/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-d1924.jpeg 1180w,
-/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-9452e.jpeg 1770w,
-/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-0b287.jpeg 2000w&quot;
+        src=&quot;/blogs/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-f8fb9.jpeg&quot;
+        srcset=&quot;/blogs/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-e8976.jpeg 148w,
+/blogs/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-63df2.jpeg 295w,
+/blogs/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-f8fb9.jpeg 590w,
+/blogs/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-85e3d.jpeg 885w,
+/blogs/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-d1924.jpeg 1180w,
+/blogs/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-9452e.jpeg 1770w,
+/blogs/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-0b287.jpeg 2000w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -81,7 +81,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-b1e96.jpeg&quot;
+    href=&quot;/blogs/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-b1e96.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -100,11 +100,11 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;1 LaEgAU vdsR pClMcgbikQ&quot;
         title=&quot;&quot;
-        src=&quot;/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-f8fb9.jpeg&quot;
-        srcset=&quot;/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-e8976.jpeg 148w,
-/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-63df2.jpeg 295w,
-/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-f8fb9.jpeg 590w,
-/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-b1e96.jpeg 791w&quot;
+        src=&quot;/blogs/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-f8fb9.jpeg&quot;
+        srcset=&quot;/blogs/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-e8976.jpeg 148w,
+/blogs/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-63df2.jpeg 295w,
+/blogs/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-f8fb9.jpeg 590w,
+/blogs/static/1*LaEgAU-vdsR_pClMcgbikQ-35eee33de47a56b9757fd77ba4b2c6f1-b1e96.jpeg 791w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -128,7 +128,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-efba4.png&quot;
+    href=&quot;/blogs/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-efba4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -147,11 +147,11 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;1 6PjhO0kPciY f5XbghnZsQ&quot;
         title=&quot;&quot;
-        src=&quot;/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-fb8a0.png&quot;
-        srcset=&quot;/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-1a291.png 148w,
-/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-2bc4a.png 295w,
-/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-fb8a0.png 590w,
-/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-efba4.png 630w&quot;
+        src=&quot;/blogs/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-1a291.png 148w,
+/blogs/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-2bc4a.png 295w,
+/blogs/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-fb8a0.png 590w,
+/blogs/static/1*6PjhO0kPciY_f5XbghnZsQ-5cc5d0c872bf7934abe030f7acfa5fec-efba4.png 630w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -166,7 +166,7 @@
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-aca4d.jpeg&quot;
+    href=&quot;/blogs/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-aca4d.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -185,10 +185,10 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;1  kudSKDXEScysTpYYowqFg&quot;
         title=&quot;&quot;
-        src=&quot;/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-aca4d.jpeg&quot;
-        srcset=&quot;/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-bbc2d.jpeg 148w,
-/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-b5c5f.jpeg 295w,
-/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-aca4d.jpeg 532w&quot;
+        src=&quot;/blogs/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-aca4d.jpeg&quot;
+        srcset=&quot;/blogs/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-bbc2d.jpeg 148w,
+/blogs/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-b5c5f.jpeg 295w,
+/blogs/static/1*_kudSKDXEScysTpYYowqFg-b2fe0db64884470d524228d265952875-aca4d.jpeg 532w&quot;
         sizes=&quot;(max-width: 532px) 100vw, 532px&quot;
       /&gt;
     &lt;/span&gt;
@@ -218,7 +218,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-417af.png&quot;
+    href=&quot;/blogs/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-417af.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -237,13 +237,13 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;1 HrFZV7pKPcc5dzLaWvngtQ&quot;
         title=&quot;&quot;
-        src=&quot;/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-fb8a0.png&quot;
-        srcset=&quot;/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-1a291.png 148w,
-/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-2bc4a.png 295w,
-/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-fb8a0.png 590w,
-/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-526de.png 885w,
-/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-fa2eb.png 1180w,
-/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-417af.png 1600w&quot;
+        src=&quot;/blogs/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-1a291.png 148w,
+/blogs/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-2bc4a.png 295w,
+/blogs/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-fb8a0.png 590w,
+/blogs/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-526de.png 885w,
+/blogs/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-fa2eb.png 1180w,
+/blogs/static/1*HrFZV7pKPcc5dzLaWvngtQ-3fc5856380fb326d45c3303623ce7207-417af.png 1600w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -271,7 +271,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png&quot;
+    href=&quot;/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -290,13 +290,13 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Nervous laugh&quot;
         title=&quot;&quot;
-        src=&quot;/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png&quot;
-        srcset=&quot;/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-1a291.png 148w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-2bc4a.png 295w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png 590w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-526de.png 885w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fa2eb.png 1180w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png 1280w&quot;
+        src=&quot;/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-1a291.png 148w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-2bc4a.png 295w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png 590w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-526de.png 885w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fa2eb.png 1180w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png 1280w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -321,7 +321,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png&quot;
+    href=&quot;/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -340,13 +340,13 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Just follow along and try to keep up.&quot;
         title=&quot;&quot;
-        src=&quot;/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png&quot;
-        srcset=&quot;/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-1a291.png 148w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-2bc4a.png 295w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png 590w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-526de.png 885w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fa2eb.png 1180w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png 1366w&quot;
+        src=&quot;/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-1a291.png 148w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-2bc4a.png 295w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png 590w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-526de.png 885w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fa2eb.png 1180w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png 1366w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -372,7 +372,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png&quot;
+    href=&quot;/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -391,14 +391,14 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;You are a master builder.&quot;
         title=&quot;&quot;
-        src=&quot;/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png&quot;
-        srcset=&quot;/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-1a291.png 148w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-2bc4a.png 295w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png 590w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-526de.png 885w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fa2eb.png 1180w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-08f6a.png 1770w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png 1920w&quot;
+        src=&quot;/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-1a291.png 148w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-2bc4a.png 295w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png 590w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-526de.png 885w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fa2eb.png 1180w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-08f6a.png 1770w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png 1920w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -497,7 +497,7 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png&quot;
+    href=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -516,13 +516,13 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;96FFC213 7B8B 46A4 817B 2F13D2342247&quot;
         title=&quot;&quot;
-        src=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png&quot;
-        srcset=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-1a291.png 148w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-2bc4a.png 295w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png 590w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-526de.png 885w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fa2eb.png 1180w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png 1640w&quot;
+        src=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-1a291.png 148w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-2bc4a.png 295w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png 590w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-526de.png 885w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fa2eb.png 1180w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png 1640w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -565,7 +565,7 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png&quot;
+    href=&quot;/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -584,11 +584,11 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;A20289F2 4515 4E5E 9C91 1BF74DF84328&quot;
         title=&quot;&quot;
-        src=&quot;/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png&quot;
-        srcset=&quot;/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-1a291.png 148w,
-/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-2bc4a.png 295w,
-/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png 590w,
-/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png 850w&quot;
+        src=&quot;/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-1a291.png 148w,
+/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-2bc4a.png 295w,
+/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png 590w,
+/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png 850w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -601,7 +601,7 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png&quot;
+    href=&quot;/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -620,13 +620,13 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;3C5A8FC8 2D99 4F4E 907C 89276B8A33BF&quot;
         title=&quot;&quot;
-        src=&quot;/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png&quot;
-        srcset=&quot;/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-1a291.png 148w,
-/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-2bc4a.png 295w,
-/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png 590w,
-/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-526de.png 885w,
-/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fa2eb.png 1180w,
-/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png 1246w&quot;
+        src=&quot;/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-1a291.png 148w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-2bc4a.png 295w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png 590w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-526de.png 885w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fa2eb.png 1180w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png 1246w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -682,7 +682,7 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png&quot;
+    href=&quot;/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -701,10 +701,10 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;F82820D6 9363 4A17 B637 C84FE7E037CE&quot;
         title=&quot;&quot;
-        src=&quot;/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png&quot;
-        srcset=&quot;/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-e7b32.png 148w,
-/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-627a4.png 295w,
-/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png 350w&quot;
+        src=&quot;/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png&quot;
+        srcset=&quot;/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-e7b32.png 148w,
+/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-627a4.png 295w,
+/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png 350w&quot;
         sizes=&quot;(max-width: 350px) 100vw, 350px&quot;
       /&gt;
     &lt;/span&gt;
@@ -865,7 +865,7 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
+    href=&quot;/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -884,10 +884,10 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;A38A178D 6DAC 4F8E 9EEC 001450B372AC&quot;
         title=&quot;&quot;
-        src=&quot;/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
-        srcset=&quot;/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e143d.png 148w,
-/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-359a8.png 295w,
-/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png 344w&quot;
+        src=&quot;/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
+        srcset=&quot;/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e143d.png 148w,
+/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-359a8.png 295w,
+/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png 344w&quot;
         sizes=&quot;(max-width: 344px) 100vw, 344px&quot;
       /&gt;
     &lt;/span&gt;
@@ -979,7 +979,7 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/good-022920d1f164284d9cbe54f3e630674d-4a705.jpg&quot;
+    href=&quot;/blogs/static/good-022920d1f164284d9cbe54f3e630674d-4a705.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -998,14 +998,14 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;good&quot;
         title=&quot;&quot;
-        src=&quot;/static/good-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg&quot;
-        srcset=&quot;/static/good-022920d1f164284d9cbe54f3e630674d-e8976.jpg 148w,
-/static/good-022920d1f164284d9cbe54f3e630674d-63df2.jpg 295w,
-/static/good-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg 590w,
-/static/good-022920d1f164284d9cbe54f3e630674d-85e3d.jpg 885w,
-/static/good-022920d1f164284d9cbe54f3e630674d-d1924.jpg 1180w,
-/static/good-022920d1f164284d9cbe54f3e630674d-9452e.jpg 1770w,
-/static/good-022920d1f164284d9cbe54f3e630674d-4a705.jpg 5214w&quot;
+        src=&quot;/blogs/static/good-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg&quot;
+        srcset=&quot;/blogs/static/good-022920d1f164284d9cbe54f3e630674d-e8976.jpg 148w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-63df2.jpg 295w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg 590w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-85e3d.jpg 885w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-d1924.jpg 1180w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-9452e.jpg 1770w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-4a705.jpg 5214w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
