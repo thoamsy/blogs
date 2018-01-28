@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Sun, 28 Jan 2018 05:21:36 GMT</lastBuildDate><item><title><![CDATA[Deep Learning Quick Guide (翻译)]]></title><description><![CDATA[AI(Artificial Intelligence)  和 ML(Machine Learning) 是当下最热的话题. 我们每天都能看到 AI 的字眼, 那些有抱负的程序员都说自己想学点 AI. 你也听到高层说他们想在服务中集成 AI. 但是, 大多数人其实不理解什么是 AI…]]></description><link>https://github.com/thoamsy/blogs.git/deep-learning/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/deep-learning/</guid><pubDate>Sun, 28 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Sun, 28 Jan 2018 05:33:59 GMT</lastBuildDate><item><title><![CDATA[Deep Learning Quick Guide (翻译)]]></title><description><![CDATA[AI(Artificial Intelligence)  和 ML(Machine Learning) 是当下最热的话题. 我们每天都能看到 AI 的字眼, 那些有抱负的程序员都说自己想学点 AI. 你也听到高层说他们想在服务中集成 AI. 但是, 大多数人其实不理解什么是 AI…]]></description><link>https://github.com/thoamsy/blogs.git/deep-learning/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/deep-learning/</guid><pubDate>Sun, 28 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-0b287.jpeg&quot;
@@ -271,7 +271,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png&quot;
+    href=&quot;/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -290,13 +290,13 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Nervous laugh&quot;
         title=&quot;&quot;
-        src=&quot;/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png&quot;
-        srcset=&quot;/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-1a291.png 148w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-2bc4a.png 295w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png 590w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-526de.png 885w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fa2eb.png 1180w,
-/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png 1280w&quot;
+        src=&quot;/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-1a291.png 148w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-2bc4a.png 295w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fb8a0.png 590w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-526de.png 885w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-fa2eb.png 1180w,
+/blogs/static/1*xNwbQ2Ec0xoq_DMPbxR5yw-3725ce2ac53789957ff83556bc0368b6-275c2.png 1280w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -321,7 +321,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png&quot;
+    href=&quot;/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -340,13 +340,13 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Just follow along and try to keep up.&quot;
         title=&quot;&quot;
-        src=&quot;/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png&quot;
-        srcset=&quot;/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-1a291.png 148w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-2bc4a.png 295w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png 590w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-526de.png 885w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fa2eb.png 1180w,
-/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png 1366w&quot;
+        src=&quot;/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-1a291.png 148w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-2bc4a.png 295w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fb8a0.png 590w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-526de.png 885w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-fa2eb.png 1180w,
+/blogs/static/41FC0083-5066-4AAE-8BFE-EC3432EF6AC8-0a68018bffc8ae99d678c36d6c218803-f64ac.png 1366w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -372,7 +372,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png&quot;
+    href=&quot;/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -391,14 +391,14 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;You are a master builder.&quot;
         title=&quot;&quot;
-        src=&quot;/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png&quot;
-        srcset=&quot;/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-1a291.png 148w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-2bc4a.png 295w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png 590w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-526de.png 885w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fa2eb.png 1180w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-08f6a.png 1770w,
-/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png 1920w&quot;
+        src=&quot;/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-1a291.png 148w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-2bc4a.png 295w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fb8a0.png 590w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-526de.png 885w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-fa2eb.png 1180w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-08f6a.png 1770w,
+/blogs/static/5498D1B1-A326-4044-9362-F2B1BA3A7BAE-c16ff7fb3d74162cf7ee97cd9ce8ca0f-ef9ea.png 1920w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -497,7 +497,7 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png&quot;
+    href=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -516,13 +516,13 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;96FFC213 7B8B 46A4 817B 2F13D2342247&quot;
         title=&quot;&quot;
-        src=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png&quot;
-        srcset=&quot;/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-1a291.png 148w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-2bc4a.png 295w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png 590w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-526de.png 885w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fa2eb.png 1180w,
-/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png 1640w&quot;
+        src=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-1a291.png 148w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-2bc4a.png 295w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fb8a0.png 590w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-526de.png 885w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-fa2eb.png 1180w,
+/blogs/static/96FFC213-7B8B-46A4-817B-2F13D2342247-9515e6ae68bc85573af4f70969701083-6a7ea.png 1640w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -565,7 +565,7 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png&quot;
+    href=&quot;/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -584,11 +584,11 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;A20289F2 4515 4E5E 9C91 1BF74DF84328&quot;
         title=&quot;&quot;
-        src=&quot;/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png&quot;
-        srcset=&quot;/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-1a291.png 148w,
-/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-2bc4a.png 295w,
-/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png 590w,
-/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png 850w&quot;
+        src=&quot;/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-1a291.png 148w,
+/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-2bc4a.png 295w,
+/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fb8a0.png 590w,
+/blogs/static/A20289F2-4515-4E5E-9C91-1BF74DF84328-51b4d8cf4e13a6267e5cf72a02662488-fc90f.png 850w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -601,7 +601,7 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png&quot;
+    href=&quot;/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -620,13 +620,13 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;3C5A8FC8 2D99 4F4E 907C 89276B8A33BF&quot;
         title=&quot;&quot;
-        src=&quot;/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png&quot;
-        srcset=&quot;/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-1a291.png 148w,
-/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-2bc4a.png 295w,
-/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png 590w,
-/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-526de.png 885w,
-/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fa2eb.png 1180w,
-/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png 1246w&quot;
+        src=&quot;/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-1a291.png 148w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-2bc4a.png 295w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fb8a0.png 590w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-526de.png 885w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-fa2eb.png 1180w,
+/blogs/static/3C5A8FC8-2D99-4F4E-907C-89276B8A33BF-d6f147eaaf32b6c07bc00e9b8b362ce8-db317.png 1246w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -640,7 +640,7 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 &lt;hr&gt;
 &lt;h2&gt;Babel 的基本配置&lt;/h2&gt;
 &lt;h3&gt;一些背景介绍&lt;/h3&gt;
-&lt;p&gt;我们知道, React 和 Babel 是互相离不开的, 首先 &lt;code&gt;JSX&lt;/code&gt; 需要 Babel 来转译, 比如&lt;/p&gt;
+&lt;p&gt;我们知道, React 和 Babel 是互相离不开的, 首先 &lt;code&gt;JSX&lt;/code&gt; 需要 Babel 来转译, 比如 &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;App &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;creataElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;App&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -678,8 +678,40 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 &lt;p&gt;的语法. 于是我们不仅干掉了, 无聊的 &lt;code&gt;bind&lt;/code&gt;, 还干掉了整个 &lt;code&gt;constructor&lt;/code&gt;, 多酷!!!
 还有一种语法, &lt;code&gt;::&lt;/code&gt;, 这里不介绍.&lt;/p&gt;
 &lt;h3&gt;babelrc&lt;/h3&gt;
-&lt;p&gt;配置 babel 依赖于一个叫做 &lt;code&gt;.babelrc&lt;/code&gt;文件, 在 VS Code 中, 如果安装了&lt;strong&gt;文件图标主题&lt;/strong&gt;的话, 一旦创建, 会有一个特定的 logo 图标来告诉我们, 没有拼错.&lt;/p&gt;
+&lt;p&gt;配置 babel 依赖于一个叫做 &lt;code&gt;.babelrc&lt;/code&gt;文件, 在 VS Code 中, 如果安装了&lt;strong&gt;文件图标主题&lt;/strong&gt;的话, 一旦创建, 会有一个特定的 logo 图标来告诉我们, 没有拼错. &lt;/p&gt;
 &lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 350px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 34.85714285714286%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAAAh0lEQVQoz2NQUNX5T03MACLklbVoa6Cpifp/RTVt6hjo7qj8PzZQHs63snP5r2dk+d/MygGMDUyt/xuZ2/43NLP5b2hqQ9jAokSp/1H+EAPVtA3/W9u7/nd29/3v7h3439HV+7+rp/9/S1vn/7aO7v+NgQYT4WVtysJQXkX7v5yy5n8QTQ0MAK32zv1xbPOCAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;F82820D6 9363 4A17 B637 C84FE7E037CE&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png&quot;
+        srcset=&quot;/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-e7b32.png 148w,
+/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-627a4.png 295w,
+/blogs/static/F82820D6-9363-4A17-B637-C84FE7E037CE-6e66289750658579d27318a94e357528-83253.png 350w&quot;
+        sizes=&quot;(max-width: 350px) 100vw, 350px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
 配置 react 的方式, 其实十分简单. 首先需要转译 JSX, 但是 JSX 的转移又依赖于 es2015, 所以我们两个都需要转译. 我并没有多长 babel 使用经验, 反正现在有了 &lt;code&gt;presets&lt;/code&gt;, 而且淘汰了 ES2015, ES2016 这些 presets, 统一使用 &lt;code&gt;env&lt;/code&gt; preset, 所以 babel 的配置变成了下面这样&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-json&quot;&gt;&lt;code&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -687,19 +719,19 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;如果有影响的话, 其实还有一个 &lt;code&gt;babel-preset-react-app&lt;/code&gt;, 它和上面的 react 的区别就是: react-app 是使用在 &lt;code&gt;create-react-app&lt;/code&gt;中的配置, 相比 react 会有一些加成, 下面会讲到.&lt;/p&gt;
+&lt;p&gt;如果有影响的话, 其实还有一个 &lt;code&gt;babel-preset-react-app&lt;/code&gt;, 它和上面的 react 的区别就是: react-app 是使用在 &lt;code&gt;create-react-app&lt;/code&gt;中的配置, 相比 react 会有一些加成, 下面会讲到. &lt;/p&gt;
 &lt;p&gt;OK, 其实有了这两个就能写 react 了. 自己写好必要的组件, 和之前一样使用 parcel 就能启动. 但是, 我们还不能使用刚刚提到的那些新语法. 甚至连 React 大量依赖的 &lt;code&gt;{...obj}&lt;/code&gt; 也不行. 这个时候就还需要安装新的 preset: &lt;code&gt;stage-2 stage-3&lt;/code&gt;
 于是乎, 为了安装这些, 我们需要运行&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-bash&quot;&gt;&lt;code&gt;yarn add -D babel-preset-env babel-preset-react babel-preset-stage-2 babel-preset-stage-3
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;那这样就能开心的写 React 代码了吗🧐 还不行, 我目前也搞不清楚为什么, 写 &lt;code&gt;async await&lt;/code&gt;话, 还是会报错, 尽管这个主流浏览器已经都支持了. 所以, 我在 Google 了一番后, 发现还需要安装一个 babel plugin.&lt;/p&gt;
+&lt;p&gt;那这样就能开心的写 React 代码了吗🧐 还不行, 我目前也搞不清楚为什么, 写 &lt;code&gt;async await&lt;/code&gt;话, 还是会报错, 尽管这个主流浏览器已经都支持了. 所以, 我在 Google 了一番后, 发现还需要安装一个 babel plugin. &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-bash&quot;&gt;&lt;code&gt;yarn add -D babel-plugin-transform-runtime
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;而且这个 runtime 的配置蛮复杂的, 这里不详细介绍了, 大概是这样.&lt;/p&gt;
+&lt;p&gt;而且这个 runtime 的配置蛮复杂的, 这里不详细介绍了, 大概是这样. &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-json&quot;&gt;&lt;code&gt;&lt;span class=&quot;token property&quot;&gt;&quot;plugins&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;transform-runtime&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token property&quot;&gt;&quot;polyfill&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
@@ -707,16 +739,16 @@ Element 其实就是一个纯对象，找个对象定义了一些对于 React �
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;注意, 这段代码紧跟 babelrc 中的 presets 之后另起一行.&lt;/p&gt;
+&lt;p&gt;注意, 这段代码紧跟 babelrc 中的 presets 之后另起一行. &lt;/p&gt;
 &lt;p&gt;当完全了这些之后我们就可以没有任何问题的写 React ⚛️了😎😎&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;热加载&lt;/h2&gt;
 &lt;p&gt;当我确定我要使用热加载的时候, 是因为我看了 Dan 的视频, 以及他说的一段话&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;I want to encourage you to actually spend time working on developer tools because before you can optimize your app, you should optimize your workflow so you have more time to spend working on your app. Because once enough frustration is gone, your programming actually feels fun again just like it used to do when the tools were simple.&lt;/p&gt;
+&lt;p&gt;I want to encourage you to actually spend time working on developer tools because before you can optimize your app, you should optimize your workflow so you have more time to spend working on your app. Because once enough frustration is gone, your programming actually feels fun again just like it used to do when the tools were simple.   &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;最重要的意思就是, 花点时间研究🔧能为我们省下更多的时间提高自己. 于是乎, 我就花了一点时间, 嗯, 也不是一点, 三个小时吧. 终于搞明白, 怎么在 parcel 中使用了. 因为和官方文档有点区别, parcel 的文档介绍的又十分简陋, 再加上 parcel 缓存的问题, 所以被坑了很久.  不过终于还是搞定了. 下面总结一下热加载的配置.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/gaearon/react-hot-loader&quot;&gt;react-hot-loader&lt;/a&gt; 由 &lt;em&gt;Dan gaearon&lt;/em&gt; 开发并开源, 对, 就是 redux 的作者, 是一个特别帅的英国佬. 当然这不是我们讨论的重点, 目前使用的是 V3 版本, V4 在配置上有非常大的提升, 但是因为 parcel 不兼容这个. 所以我们还是使用主流的配置.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/gaearon/react-hot-loader&quot;&gt;react-hot-loader&lt;/a&gt; 由 &lt;em&gt;Dan gaearon&lt;/em&gt; 开发并开源, 对, 就是 redux 的作者, 是一个特别帅的英国佬. 当然这不是我们讨论的重点, 目前使用的是 V3 版本, V4 在配置上有非常大的提升, 但是因为 parcel 不兼容这个. 所以我们还是使用主流的配置. &lt;/p&gt;
 &lt;p&gt;文档该说的都说了, 下面只针对在 parcel 上该怎么用来解释.
 还是安装它&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
@@ -762,16 +794,16 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hot&lt;span 
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;p&gt;这是代码的必备成分, &lt;code&gt;App&lt;/code&gt; 就是你所有代码的合成的组件,  render 函数无非就是一个小小的包装. 而 &lt;code&gt;AppContainer&lt;/code&gt; 就是整个热加载的&lt;strong&gt;能量源泉&lt;/strong&gt;. 而 &lt;code&gt;module.hot.accept&lt;/code&gt; 里的回调, 就是整个源泉的能量使用者.
-和文档中不一样的是, 文档中 &lt;code&gt;accept&lt;/code&gt; 接受两个参数, 第二个才是回调. 也是我一直被坑的地方, 可能是因为 parcel 针对这个做了某些小小的优化吧.&lt;/p&gt;
+和文档中不一样的是, 文档中 &lt;code&gt;accept&lt;/code&gt; 接受两个参数, 第二个才是回调. 也是我一直被坑的地方, 可能是因为 parcel 针对这个做了某些小小的优化吧. &lt;/p&gt;
 &lt;p&gt;这些都写好了, 就可以开始&lt;strong&gt;热加载&lt;/strong&gt;之旅了!
 那怎么知道自己的热加载是否成功了呢? 之前提到过, 热加载的前提是不用刷新界面, 因为刷新的话就会丢失所有的状态咯. 所以成功的关键就是&lt;strong&gt;状态没有丢失&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;不过这句话不是那么的明显🙂, 其实比较的明显的检测方法就是:
-有一个 input 和任意的 label. 如果我们 input 中填写了某些信息, 再去 label 中修改, input 中的数据没有丢失的话, 就说明热加载成功了. 这真的很重要, 在写表单类似的程序的时候, 我们需要不断的输入然后刷新, 光光这个时间就不知道被浪费了多少.&lt;/p&gt;
+有一个 input 和任意的 label. 如果我们 input 中填写了某些信息, 再去 label 中修改, input 中的数据没有丢失的话, 就说明热加载成功了. 这真的很重要, 在写表单类似的程序的时候, 我们需要不断的输入然后刷新, 光光这个时间就不知道被浪费了多少. &lt;/p&gt;
 &lt;p&gt;补充：这个热加载似乎会引入一个 bug&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;无法在 &lt;code&gt;async&lt;/code&gt; 函数中找到 &lt;code&gt;this&lt;/code&gt;
+&lt;p&gt;无法在 &lt;code&gt;async&lt;/code&gt; 函数中找到 &lt;code&gt;this&lt;/code&gt;&lt;br&gt;
 我不太清楚这是什么原因，在不需要重度依赖 async 的情况下，还是可以接受的。另外，估计 v4 版本已经解决了这个问题吧。
-感谢开源让生活更美好, 也让我们知道牛逼的程序员到处都是.&lt;/p&gt;
+感谢开源让生活更美好, 也让我们知道牛逼的程序员到处都是. &lt;/p&gt;
 &lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[UUID]]></title><description><![CDATA[花了一个晚上看了一下 UUID 的实现源码. 发现 UUID 有 5 个版本, 其中的特点分别为:
 V1: 以 机子的网卡和时间戳 以及一些其他的东西作为因子来生成一个唯一的标识符
 V2: 没有提及
@@ -833,7 +865,7 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
+    href=&quot;/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -852,10 +884,10 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;A38A178D 6DAC 4F8E 9EEC 001450B372AC&quot;
         title=&quot;&quot;
-        src=&quot;/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
-        srcset=&quot;/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e143d.png 148w,
-/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-359a8.png 295w,
-/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png 344w&quot;
+        src=&quot;/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png&quot;
+        srcset=&quot;/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e143d.png 148w,
+/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-359a8.png 295w,
+/blogs/static/A38A178D-6DAC-4F8E-9EEC-001450B372AC-cb0e531a417dd01a2c6a222ff45b732a-e4ad5.png 344w&quot;
         sizes=&quot;(max-width: 344px) 100vw, 344px&quot;
       /&gt;
     &lt;/span&gt;
@@ -947,7 +979,7 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/good-022920d1f164284d9cbe54f3e630674d-4a705.jpg&quot;
+    href=&quot;/blogs/static/good-022920d1f164284d9cbe54f3e630674d-4a705.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -966,14 +998,14 @@ uuid&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;good&quot;
         title=&quot;&quot;
-        src=&quot;/static/good-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg&quot;
-        srcset=&quot;/static/good-022920d1f164284d9cbe54f3e630674d-e8976.jpg 148w,
-/static/good-022920d1f164284d9cbe54f3e630674d-63df2.jpg 295w,
-/static/good-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg 590w,
-/static/good-022920d1f164284d9cbe54f3e630674d-85e3d.jpg 885w,
-/static/good-022920d1f164284d9cbe54f3e630674d-d1924.jpg 1180w,
-/static/good-022920d1f164284d9cbe54f3e630674d-9452e.jpg 1770w,
-/static/good-022920d1f164284d9cbe54f3e630674d-4a705.jpg 5214w&quot;
+        src=&quot;/blogs/static/good-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg&quot;
+        srcset=&quot;/blogs/static/good-022920d1f164284d9cbe54f3e630674d-e8976.jpg 148w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-63df2.jpg 295w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-f8fb9.jpg 590w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-85e3d.jpg 885w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-d1924.jpg 1180w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-9452e.jpg 1770w,
+/blogs/static/good-022920d1f164284d9cbe54f3e630674d-4a705.jpg 5214w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
