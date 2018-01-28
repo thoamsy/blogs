@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Sun, 28 Jan 2018 06:06:12 GMT</lastBuildDate><item><title><![CDATA[Deep Learning Quick Guide (翻译)]]></title><description><![CDATA[AI(Artificial Intelligence)  和 ML(Machine Learning) 是当下最热的话题. 我们每天都能看到 AI 的字眼, 那些有抱负的程序员都说自己想学点 AI. 你也听到高层说他们想在服务中集成 AI. 但是, 大多数人其实不理解什么是 AI…]]></description><link>https://github.com/thoamsy/blogs.git/deep-learning/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/deep-learning/</guid><pubDate>Sun, 28 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Sun, 28 Jan 2018 06:16:05 GMT</lastBuildDate><item><title><![CDATA[Deep Learning Quick Guide]]></title><description><![CDATA[AI(Artificial Intelligence)  和 ML(Machine Learning) 是当下最热的话题. 我们每天都能看到 AI 的字眼, 那些有抱负的程序员都说自己想学点 AI. 你也听到高层说他们想在服务中集成 AI. 但是, 大多数人其实不理解什么是 AI…]]></description><link>https://github.com/thoamsy/blogs.git/deep-learning/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/deep-learning/</guid><pubDate>Sun, 28 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/blogs/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-0b287.jpeg&quot;
@@ -64,7 +64,7 @@
 &lt;p&gt;当你打算使用非监督性学习来训练 AI 的时候, 你需要让 AI 自己决定如何对数据分类.&lt;/p&gt;
 &lt;p&gt;一个监督性学习的例子是电商网站的行为预测 AI. 它不能用标记过的数据来训练.&lt;/p&gt;
 &lt;p&gt;取而代之的是, 它会对输入数据创建自己的分类, 它会告诉你哪种用于最可能买的东西.&lt;/p&gt;
-&lt;h2&gt;那么, 深度数学呢&lt;/h2&gt;
+&lt;h2&gt;那么, 深度学习呢&lt;/h2&gt;
 &lt;p&gt;你要开始准备理解深度学习, 和它工作的方式咯.&lt;/p&gt;
 &lt;p&gt;深度学习是一种&lt;strong&gt;机器学习的方法&lt;/strong&gt;, 它让你训练 AI 来针对输入给出对应的输出. 无论监督性学习还是非监督性学习都可以用来训练.&lt;/p&gt;
 &lt;p&gt;我们通过假象一个&lt;strong&gt;飞机票预测服务&lt;/strong&gt;来学习深度学习的公粥方式. 我们使用监督性学习来训练它.&lt;/p&gt;
