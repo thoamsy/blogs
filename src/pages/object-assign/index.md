@@ -44,7 +44,9 @@ Object.getOwnPropertyDescriptors(shadow)
 ```
 
 ![](./pics/06FE5C2C-8A1B-45EE-B45D-D3DB0774F9FA.png)
+
 注意到, 这个时候 hh 只是一个普通的属性, 而不再属于 get set. 作为对比, 我们看下 obj 会输出什么.
+
 ![](./pics/336C40D7-A962-48C0-B485-B81EDD28B4EA.png)
 
 所以结论就是, 普通属性和 Symbol 会被 Copy. 至于 Symbol 时候还是原来那个, 自己测试一下可以发现肯定是的.
@@ -82,7 +84,8 @@ console.log(Reflect.ownKeys(aha))
 会出现下面的结果.
 
 ![](./pics/7F67AD27-E0D9-42B7-AB4C-D67D9A4C7241.png)
-注意, GET 和 SET 都被调用了一次, 分别是 source 和 target 调用的. 而这个时候 a 变成 12 也不难解释.
+
+在这里, GET 和 SET 都被调用了一次, 分别是 source 和 target 调用的. 而这个时候 a 变成 12 也不难解释.
 因为 `obj.a` 目前是 3. 当 assign 被调用的时候, 内部会有一个 `obj.a = obj.a` 的过程.  先 GET, 就让 `obj.a` 变成了 4, 然后是 GET, 也就是 `obj.a += obj.a * 4` 就成了 12.
 
 不过, 值得注意的是, 这里 hh 还是 GET 和 SET, 并没有被替换成普通的属性. 不知道这是不是有意为之.
@@ -92,9 +95,11 @@ const realShadow = Object.create(Object.getPrototypeOf(obj), Object.getOwnProper
 ```
 
 ![](./pics/1A25BA7A-053A-42D7-91AB-2184F28CFAA5.png)
+
 这里 a 的值还是 3, 说明这个 get 根本没有被执行, 完成没有副作用. 这才是真正的浅拷贝嘛!
 
 OK, 那么这里可以得出一个结论: 对于普通的纯对象, 比如 redux 里保存的那些, 使用 `assign` 没有任何问题. 但如果是自己定义的复杂对象, 带了很多 get 的话, 最好的方式还是采用下面这种最安全的方式吧.
+
 值得一提的是, 这也是 MDN 推荐的方式:
 > Whereas the Object.assign() method will only copy enumerable and own properties from a source object to a target object, you are able to use this method and Object.create() for a shallow copy between two unknown objects
 ```js

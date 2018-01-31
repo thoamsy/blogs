@@ -5,3 +5,10 @@ code {
   background-color: rgba(27, 31, 35, 0.05);
   border-radius: 3px;
 }
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+p, small, span, strong, em {
+  font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+}

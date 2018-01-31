@@ -5,6 +5,8 @@ date: "2018-01-28"
 
 ![](./1*1mpE6fsq5LNxH31xeTWi5w.jpeg)
 
+[原文](https://medium.freecodecamp.org/want-to-know-how-deep-learning-works-heres-a-quick-guide-for-everyone-1aedeca88076)
+
 **AI(Artificial Intelligence)** 和 ML(Machine Learning) 是当下最热的话题.
 
 我们每天都能看到 AI 的字眼, 那些有抱负的程序员都说自己想学点 AI. 你也听到高层说他们想在服务中集成 AI. 但是, 大多数人其实不理解什么是 AI.
