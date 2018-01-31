@@ -1,4 +1,242 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Sun, 28 Jan 2018 06:16:05 GMT</lastBuildDate><item><title><![CDATA[Deep Learning Quick Guide]]></title><description><![CDATA[AI(Artificial Intelligence)  和 ML(Machine Learning) 是当下最热的话题. 我们每天都能看到 AI 的字眼, 那些有抱负的程序员都说自己想学点 AI. 你也听到高层说他们想在服务中集成 AI. 但是, 大多数人其实不理解什么是 AI…]]></description><link>https://github.com/thoamsy/blogs.git/deep-learning/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/deep-learning/</guid><pubDate>Sun, 28 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Wed, 31 Jan 2018 08:15:36 GMT</lastBuildDate><item><title><![CDATA[Object.assign 的一些问题]]></title><description><![CDATA[在  immutable struct  或者说  functional programming  的影响下,  Object.assign  和  Object Spread  是我们离不开的操作. 不过它的功能真的是  shadow copy…]]></description><link>https://github.com/thoamsy/blogs.git/object-assign/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/object-assign/</guid><pubDate>Wed, 31 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在 &lt;em&gt;immutable struct&lt;/em&gt; 或者说 &lt;em&gt;functional programming&lt;/em&gt; 的影响下, &lt;code&gt;Object.assign&lt;/code&gt; 和 &lt;a href=&quot;https://github.com/tc39/proposal-object-rest-spread&quot;&gt;Object Spread&lt;/a&gt; 是我们离不开的操作. 不过它的功能真的是 &lt;em&gt;shadow copy&lt;/em&gt; 吗? 这里我列出一个例子来记录这个问题, 以防以后碰到坑.&lt;/p&gt;
+&lt;p&gt;下面是一个对象, 包括了几种典型的属性:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;普通属性&lt;/li&gt;
+&lt;li&gt;get 属性&lt;/li&gt;
+&lt;li&gt;set 属性&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Symbol&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; obj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+a&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;hh&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;__GETTER__&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;a &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;hh&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;val&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;__SETTER__&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;a &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; val &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Symbol&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;cool&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;good&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;先提出问题, 哪种类型的属性会被成功 copy? &lt;code&gt;get 和 set&lt;/code&gt; 时候会被运行呢?&lt;/p&gt;
+&lt;p&gt;首先可以确定的是, 连续两次打印 &lt;code&gt;obj.hh&lt;/code&gt; 的话, 一定会得到 &lt;code&gt;2, 3&lt;/code&gt;. 因为每次 &lt;code&gt;hh&lt;/code&gt; 都会被运行对吧.&lt;/p&gt;
+&lt;p&gt;OK, 现在开始对它 &lt;code&gt;assign&lt;/code&gt;, 有下面代码&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; shadow &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;shadow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hh&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;shadow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hh&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;这个时候得到的值是多少呢(假设这串代码紧接上面的代码)
+最后的结果是 &lt;code&gt;4, 4&lt;/code&gt;
+这说明什么? 说明 GET 只被运行了一次后, 就再也没有运行了.
+那我们打印一下 shadow 的内部看看,&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getOwnPropertyDescriptors&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;shadow&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/06FE5C2C-8A1B-45EE-B45D-D3DB0774F9FA-b0dd709a206bcde06de0b0ffc0157ef2-89bbd.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 27.54491017964072%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAAAl0lEQVQY052RwQqGIBCEfROz6KSUEaloUQS+/yPNzyzUocMPdRhWZvWbXVTTNME5B2MMmqYRaa3v81spgi7Ys/4LuLznXcXpYozIOWMcR4QQcByHeNQ8z1jXFbVW7PsufXrs0T/PE9u2yXv6qpSClBKWZZHa972kf11bJmQqNQwDvPfouu4zVPFTuArFCQkm1FqLtm1fQ3/LTa6jhPDc2QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;06FE5C2C 8A1B 45EE B45D D3DB0774F9FA&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/06FE5C2C-8A1B-45EE-B45D-D3DB0774F9FA-b0dd709a206bcde06de0b0ffc0157ef2-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/06FE5C2C-8A1B-45EE-B45D-D3DB0774F9FA-b0dd709a206bcde06de0b0ffc0157ef2-1a291.png 148w,
+/blogs/static/06FE5C2C-8A1B-45EE-B45D-D3DB0774F9FA-b0dd709a206bcde06de0b0ffc0157ef2-2bc4a.png 295w,
+/blogs/static/06FE5C2C-8A1B-45EE-B45D-D3DB0774F9FA-b0dd709a206bcde06de0b0ffc0157ef2-fb8a0.png 590w,
+/blogs/static/06FE5C2C-8A1B-45EE-B45D-D3DB0774F9FA-b0dd709a206bcde06de0b0ffc0157ef2-526de.png 885w,
+/blogs/static/06FE5C2C-8A1B-45EE-B45D-D3DB0774F9FA-b0dd709a206bcde06de0b0ffc0157ef2-fa2eb.png 1180w,
+/blogs/static/06FE5C2C-8A1B-45EE-B45D-D3DB0774F9FA-b0dd709a206bcde06de0b0ffc0157ef2-89bbd.png 1336w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+注意到, 这个时候 hh 只是一个普通的属性, 而不再属于 get set. 作为对比, 我们看下 obj 会输出什么.
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/336C40D7-A962-48C0-B485-B81EDD28B4EA-73ccd330d70754382a3ed1d85ee766e1-ca8a9.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 26.794871794871796%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsSAAALEgHS3X78AAAAgUlEQVQY052POw7EIAxEOQoQRRASQAgIn2Jz/1PNChco260oxrYs+3nMvPfQWuM8T+z7Tvm6LuoNWWtJSqk555yj2hiDbdvAOZ9iUkrknBFC+Mlj6T34r9gI932j946UEmKMdH0FRsDjONBaI1ApBcPxKmw6rLXi+Tzz3QEVQiwBvz0wj4W+EaSVAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;336C40D7 A962 48C0 B485 B81EDD28B4EA&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/336C40D7-A962-48C0-B485-B81EDD28B4EA-73ccd330d70754382a3ed1d85ee766e1-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/336C40D7-A962-48C0-B485-B81EDD28B4EA-73ccd330d70754382a3ed1d85ee766e1-1a291.png 148w,
+/blogs/static/336C40D7-A962-48C0-B485-B81EDD28B4EA-73ccd330d70754382a3ed1d85ee766e1-2bc4a.png 295w,
+/blogs/static/336C40D7-A962-48C0-B485-B81EDD28B4EA-73ccd330d70754382a3ed1d85ee766e1-fb8a0.png 590w,
+/blogs/static/336C40D7-A962-48C0-B485-B81EDD28B4EA-73ccd330d70754382a3ed1d85ee766e1-526de.png 885w,
+/blogs/static/336C40D7-A962-48C0-B485-B81EDD28B4EA-73ccd330d70754382a3ed1d85ee766e1-fa2eb.png 1180w,
+/blogs/static/336C40D7-A962-48C0-B485-B81EDD28B4EA-73ccd330d70754382a3ed1d85ee766e1-ca8a9.png 1560w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;所以结论就是, 普通属性和 Symbol 会被 Copy. 至于 Symbol 时候还是原来那个, 自己测试一下可以发现肯定是的.&lt;/p&gt;
+&lt;p&gt;那么, 另外一个问题. 这些 GET 和 SET 是在什么情况下被执行的呢? 我们可以看到, 上面只打印出了 &lt;strong&gt;&lt;em&gt;GETTER&lt;/em&gt;&lt;/strong&gt; 而没有 &lt;strong&gt;&lt;em&gt;SETTER&lt;/em&gt;&lt;/strong&gt;, 先引用 MDN 的文档&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Object.assign() method only copies enumerable and own properties from a source object to a target object. It uses [[Get]] on the source and [[Set]] on the target, so it will invoke getters and setters.
+也就是说, 第二个参数的 GET 会被调用, 第一个参数的 SET 会被调用. 而因为 &lt;code&gt;{…obj}&lt;/code&gt; 就相当于 &lt;code&gt;Object.assign({},obj)&lt;/code&gt;, 所以只有 obj 会被调用.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;那怎么证明 SET 会被调用呢? 这个简单, 使用 &lt;code&gt;Object.assign(obj, obj)&lt;/code&gt; 就行.
+如果现在的代码是这样的&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; symbol &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Symbol&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;cool&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; obj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  a&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;hh&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;__GETTER__&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;a &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;hh&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;val&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;__SETTER__&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;a &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; val &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;symbol&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;good&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hh&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hh&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; aha &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; obj&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getOwnPropertyDescriptors&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Reflect&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;ownKeys&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;aha&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;会出现下面的结果.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/7F67AD27-E0D9-42B7-AB4C-D67D9A4C7241-306e2f20608f2abb12380067efc28b5f-e4609.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 538px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 115.98513011152416%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAAAsSAAALEgHS3X78AAACeUlEQVQ4y53VZ04rQRAE4D0FEphksk0y0WQcwIBAFve/TD99LTXCgocQP0aTtquranpmm62trdjb24vT09O4urqKi4uLODg4iNXV1T+15vDwMG5vbxPw7OwsQS8vL8P6nwA7nU6MRqN4fHyM19fXmE6ncX9/H9vb2/nByspKtl8Dkojd5uZmLC4uZmu32zn/DPRb0EZgt9uNXq8X6+vryazb6QZvgVCwv7+f4+Xl5VhaWvoRvClJgs7Pz1P+cDiMt7e3nPf7/WySSiYBBf8DbWog+8nJSYKMx+O4vr5OUAlUgQNzWE9PTzkH+p0VzeeJ7Erm6Ogojo+PY2dnJ4Gc+O7ubrRarbTGnu/Mi8wMIF80H2KGhVLClHwsrbMFoINUCRIjwe8ZQNl5hAm/BJAFiA1A9dgKBqwy7u7uElA8luQnoE1AVTo2MC72CwsLsba2lmPe6X03Pz+f69Y2Njayb8pYnmChkWJTEmNrpFJgjBUF9rEr3zH/AFQSfCKTFCwmk0kMBoPsXUnSjQVTpQpKevk8UzYOReDNzU1mBcB8B6RksDTXF2Pe+9Yc6w9AEm1WgTsYZUOWD63zDAiG+rm5uYzlMU+R+igbCwIxRJ+Ul5eXnD8/P2cvETZ6TCmQSJspGwsYqTuvjTrEQv/w8JAeCbbmVFVDXQKnaz4DaBNgXb1iQpbaq7qjQHA9EiXzy02psqmXu25MBXsrHZSEfP3xtSlAUjDjFanj0TgfXHKdoFN22sDrZvz42gDFTCAQwVjylWz+YVy/i/rvFNvqv7w2spefykhwvT5Y2Te2DqQehupnAAXW6yLg/f09vSNdj3EBUuHWmDtptsD4B/1ettyM7j3pAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;7F67AD27 E0D9 42B7 AB4C D67D9A4C7241&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/7F67AD27-E0D9-42B7-AB4C-D67D9A4C7241-306e2f20608f2abb12380067efc28b5f-e4609.png&quot;
+        srcset=&quot;/blogs/static/7F67AD27-E0D9-42B7-AB4C-D67D9A4C7241-306e2f20608f2abb12380067efc28b5f-8da5a.png 148w,
+/blogs/static/7F67AD27-E0D9-42B7-AB4C-D67D9A4C7241-306e2f20608f2abb12380067efc28b5f-ca340.png 295w,
+/blogs/static/7F67AD27-E0D9-42B7-AB4C-D67D9A4C7241-306e2f20608f2abb12380067efc28b5f-e4609.png 538w&quot;
+        sizes=&quot;(max-width: 538px) 100vw, 538px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+注意, GET 和 SET 都被调用了一次, 分别是 source 和 target 调用的. 而这个时候 a 变成 12 也不难解释.
+因为 &lt;code&gt;obj.a&lt;/code&gt; 目前是 3. 当 assign 被调用的时候, 内部会有一个 &lt;code&gt;obj.a = obj.a&lt;/code&gt; 的过程.  先 GET, 就让 &lt;code&gt;obj.a&lt;/code&gt; 变成了 4, 然后是 GET, 也就是 &lt;code&gt;obj.a += obj.a * 4&lt;/code&gt; 就成了 12.&lt;/p&gt;
+&lt;p&gt;不过, 值得注意的是, 这里 hh 还是 GET 和 SET, 并没有被替换成普通的属性. 不知道这是不是有意为之.
+那么如果对象中存在 get 和 set 的时候该怎么复制的呢? 如果用到 ES7 的特性的话, 会很简单&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; realShadow &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getPrototypeOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getOwnPropertyDescriptors&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/1A25BA7A-053A-42D7-91AB-2184F28CFAA5-af279db6c89a2d5d7aa85a971678507a-07a60.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 26.848249027237355%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsSAAALEgHS3X78AAAAiklEQVQY052PzQrEIAyEfRRbi4rWtv4rFHz/p5rdeCh7XHqYhEnCx4Sd5wmtNfZ9x7ZtsNbCOQel1Jwfx/F4Eu1pRp32Ukpwzh+xdV2RUoL3HrVWXNeFnMv0v4f/ilEh4H3fKKUghABjzCvYBFLs3vuEttZAid/CnoSUbIyBGOP33QwhBJZleQX8AGNYj6u+BZNSAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;1A25BA7A 053A 42D7 91AB 2184F28CFAA5&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/1A25BA7A-053A-42D7-91AB-2184F28CFAA5-af279db6c89a2d5d7aa85a971678507a-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/1A25BA7A-053A-42D7-91AB-2184F28CFAA5-af279db6c89a2d5d7aa85a971678507a-1a291.png 148w,
+/blogs/static/1A25BA7A-053A-42D7-91AB-2184F28CFAA5-af279db6c89a2d5d7aa85a971678507a-2bc4a.png 295w,
+/blogs/static/1A25BA7A-053A-42D7-91AB-2184F28CFAA5-af279db6c89a2d5d7aa85a971678507a-fb8a0.png 590w,
+/blogs/static/1A25BA7A-053A-42D7-91AB-2184F28CFAA5-af279db6c89a2d5d7aa85a971678507a-526de.png 885w,
+/blogs/static/1A25BA7A-053A-42D7-91AB-2184F28CFAA5-af279db6c89a2d5d7aa85a971678507a-fa2eb.png 1180w,
+/blogs/static/1A25BA7A-053A-42D7-91AB-2184F28CFAA5-af279db6c89a2d5d7aa85a971678507a-07a60.png 1542w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+这里 a 的值还是 3, 说明这个 get 根本没有被执行, 完成没有副作用. 这才是真正的浅拷贝嘛!&lt;/p&gt;
+&lt;p&gt;OK, 那么这里可以得出一个结论: 对于普通的纯对象, 比如 redux 里保存的那些, 使用 &lt;code&gt;assign&lt;/code&gt; 没有任何问题. 但如果是自己定义的复杂对象, 带了很多 get 的话, 最好的方式还是采用下面这种最安全的方式吧.
+值得一提的是, 这也是 MDN 推荐的方式:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Whereas the Object.assign() method will only copy enumerable and own properties from a source object to a target object, you are able to use this method and Object.create() for a shallow copy between two unknown objects&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getPrototypeOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getOwnPropertyDescriptors&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Deep Learning Quick Guide]]></title><description><![CDATA[AI(Artificial Intelligence)  和 ML(Machine Learning) 是当下最热的话题. 我们每天都能看到 AI 的字眼, 那些有抱负的程序员都说自己想学点 AI. 你也听到高层说他们想在服务中集成 AI. 但是, 大多数人其实不理解什么是 AI…]]></description><link>https://github.com/thoamsy/blogs.git/deep-learning/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/deep-learning/</guid><pubDate>Sun, 28 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/blogs/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-0b287.jpeg&quot;
