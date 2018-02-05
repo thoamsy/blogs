@@ -78,6 +78,9 @@ const Element = instance.render() // render 不就是 React.Component.prototype 
 host 类型，React 会根据对应 type，生成真正的 DOM node，并将它所带的 props 写入 node 的 `attribute` 中，而对 `children` 继续递归，直到碰到没有 children 的 host Element 为止。
 
 Function 的返回值是 Element, class 的 render 函数的返回值是 Element
+不过这里还有一个问题，function 和 class 的 `typeof` 都是 `function`，这两个是怎么判断的呢？
+因为 class 定义的组件，继承于 `React.Component`，它拥有一个特定属性，只需要检测是否拥有这个属性就能确定是 class 还是 function。
+
 
 ## 一个常见问题
 
