@@ -9,7 +9,8 @@ code {
 h1,h2,h3,h4,h5,h6 {
   font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
-p, small, strong, em {
+
+p, small, strong, em, li {
   font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
