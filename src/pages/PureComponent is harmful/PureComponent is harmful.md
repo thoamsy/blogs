@@ -17,14 +17,20 @@ shouldComponentUpdate(nextProps, nextState) {
 
 现在有一个能组件, 能在不需要更新的时候, 自动帮我们做出这个判断, 不是很好嘛?
 先想象一个很常见的场景. 比如下面的界面
-![](PureComponent%20is%20harmful/88C8D2C2-A934-41FF-BAAE-830CB990718A.png)
+
+![](./88C8D2C2-A934-41FF-BAAE-830CB990718A.png)
+
 假设上面的搜索框和下面的内容是**同胞组件**, 理想情况下, 每一次修改输入框的值都会调用 `setState`, 也就会导致整个页面重新渲染. 对于下面庞大的组件来说, 显然是很浪费的.
 如果让下面的组件继承 PureComponent 的话, 很大程度的解决了这个问题.
 
 ## shadowEquals 不是免费的
 
-这仅仅只是 PureComponent 美好的一面，我们在享受这种美好的时候，很容易被忽略的它的副作用：**每一次 setState 所有的组件都会进行一次 shadowEquals。**换句话说，在期望它更新的时候，这些计算都是不可避免的。我做了一个 [demo](https://codesandbox.io/s/v6y1m1yjk7)，仅仅一个组件，它的 props 是一个有 3000 个字段的对象, 并且保证真正需要更新的 prop 会在最后才被比较到，将 shadowEquals 的优化完全抵销。可以看到，通过 `componentDidUpdate` 每次更新花在 shadowEquals 的时间, 在我的 16 年 13 寸 MacBook Pro 上平均每次需要花费 1.5ms. 当我尝试降低速度四倍的时候, 你猜怎么着? 平均花费的时间达到了 7ms. 可能你会觉得 7ms 似乎也不是多恐怖, 而且我这里是故意捏造了一个 3000 字段的对象.
+这仅仅只是 PureComponent 美好的一面，我们在享受这种美好的时候，很容易被忽略的它的副作用：**每一次 setState 所有的组件都会进行一次 shadowEquals。**
+换句话说，在期望它更新的时候，这些计算都是不可避免的。我做了一个 [demo](https://codesandbox.io/s/v6y1m1yjk7)，仅仅一个组件，它的 props 是一个有 3000 个字段的对象, 并且保证真正需要更新的 prop 会在最后才被比较到，将 shadowEquals 的优化完全抵销。
+
+可以看到，通过 `componentDidUpdate` 每次更新花在 shadowEquals 的时间, 在我的 16 年 13 寸 MacBook Pro 上平均每次需要花费 1.5ms. 当我尝试降低速度四倍的时候, 你猜怎么着? 平均花费的时间达到了 7ms. 可能你会觉得 7ms 似乎也不是多恐怖, 而且我这里是故意捏造了一个 3000 字段的对象.
 不过, 在现实情况中, 大量的组件在一次 _reconciliation_ 后, 发生 re-render, 它们的 props 和 state 的字段长度之和应该有 3000 的数量级.
+
 再考虑下动画, 要达到 60FPS. 至少要求每一帧能在 17ms 之内运行完毕, 那么仅仅一个 `showComponentUpdate` 方法就会占据 7ms 的时间, 剩下的解析代码, 生成 V-DOM, DOM 的一系列更新操作要在 10ms 之内完成的话, 实在太难. 所以很容易出现动画掉帧的情况.
 
 这里还有几个佐证: Reactjs 团队的成员建议不要大量使用 PureComponent 的警告 ⚠️.
@@ -32,10 +38,14 @@ shouldComponentUpdate(nextProps, nextState) {
 
 > 不要到处使用 PureComponent, 如果我们建议这种行为的话, 为什么不让这是默认选项呢?
 > 那么 15.3 推出 PureComponent 的原因到底是什么呢?
-> [Dan Abramov](https://twitter.com/dan_abramov) 在 Github 中解释了这个原因
+
+[Dan Abramov](https://twitter.com/dan_abramov) 在 Github 中解释了这个原因
+
 > We added a base class because we wanted an official way of marking component as compatible with shadow equality checks, with using mixins.
-> 下面是这段话的完整截图. 这段话具体出自哪个 issue 我并不清楚, 这个截图其实是由 Dan 在 Twitter 中发出来的. 这个[推](https://twitter.com/dan_abramov/status/759383530120110080)发布于 2016 年 6 月底
-> ![](PureComponent%20is%20harmful/ConfSkDXEAAleG5.jpg-large.jpeg)
+
+下面是这段话的完整截图. 这段话具体出自哪个 issue 我并不清楚, 这个截图其实是由 Dan 在 Twitter 中发出来的. 这个[推](https://twitter.com/dan_abramov/status/759383530120110080)发布于 2016 年 6 月底
+
+![](./ConfSkDXEAAleG5.jpg-large.jpeg)
 
 接着在 2017 年 1 月, Dan 又发了[一条](https://twitter.com/dan_abramov/status/820668074223353858) 来强调这个观点. 所以, 可以确定的是, **任何地方都是用 PureComponent 被认为是有害的.**
 
@@ -51,8 +61,8 @@ shouldComponentUpdate(nextProps, nextState) {
 但是如果 Button 是 PureComponent 的话, 那么这样写的话每次都会带来一次无用的 `shadowEquals`. 所以要写成
 
 ```jsx
-const style = { marginTop: 20 }
-;<Button style={style}>This is a PureComponent</Button>
+const style = { marginTop: 20 };
+<Button style={style}>This is a PureComponent</Button>;
 ```
 
 这样的话, 确实会有一些好处. 因为 style 作为 props 没有变化, `shouldComponentUpdate` 会返回 false, 连 render 都不会发生, 在性能上**可能**会有点提升. 可是每一次这种小小的变化, 都需要想一个名字, 作为一个常量真的不痛苦吗?
