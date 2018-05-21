@@ -1,18 +1,18 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import { Container } from 'react-responsive-grid'
-import 'prismjs/themes/prism-okaidia.css'
+import React from 'react';
+import Link from 'gatsby-link';
+import { Container } from 'react-responsive-grid';
+import 'prismjs/themes/prism-okaidia.css';
 
-import { rhythm, scale } from '../utils/typography'
+import { rhythm, scale } from '../utils/typography';
 
 class Template extends React.Component {
   render() {
-    const { location, children } = this.props
-    let header
+    const { location, children } = this.props;
+    let header;
 
-    let rootPath = `/`
+    let rootPath = `/`;
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
-      rootPath = __PATH_PREFIX__ + `/`
+      rootPath = __PATH_PREFIX__ + `/`;
     }
 
     if (location.pathname === rootPath) {
@@ -35,7 +35,7 @@ class Template extends React.Component {
             Thomas's Blog
           </Link>
         </h1>
-      )
+      );
     } else {
       header = (
         <h3
@@ -56,7 +56,7 @@ class Template extends React.Component {
             Thomas' Blog
           </Link>
         </h3>
-      )
+      );
     }
     return (
       <Container
@@ -68,8 +68,8 @@ class Template extends React.Component {
         {header}
         {children()}
       </Container>
-    )
+    );
   }
 }
 
-export default Template
+export default Template;
