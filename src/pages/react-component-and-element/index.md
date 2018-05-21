@@ -39,9 +39,7 @@ const Button = ({ color, text }) => (
 )
 ```
 
-通过这种方式创建, 它的返回值就是定义了一个 Element。
-直接使用 `<Button {...props} />` 就能得到我们定义的 Element。
-不过这仅仅是因为 JSX 给了我们一种语法糖，如果没有 JSX 的话，应该类似于
+通过这种方式创建, 它的返回值就是定义了一个 Element。直接使用 `<Button {...props} />` 就能得到我们定义的 Element。不过这仅仅是因为 JSX 给了我们一种语法糖，如果没有 JSX 的话，应该类似于
 
 ```js
 React.createElement('button', { style: { background: color } }, text)
@@ -63,8 +61,7 @@ React.createElement('button', { style: { background: color } }, text)
 
 这就是 Element 的真面目了。所以可以看到，JSX 也好，`createElement` 也好，不过是提供一种抽象帮我们不要写这个无聊的对象定义，要知道，如果再多几个 children 的话，整个对象定义应该就有几十行(当然，这个对象还会有其他作用，这里不展开)
 
-同样的，如果换成 `Stateful Component` 的话，其实模式差不多。
-只不过，它们需要一个 `render` 方法，并且拥有一个被称为 `instance` 的变量。render 的目的就是定义一个 Element，而 instance 就是 在 render 中使用的 `this` 了。
+同样的，如果换成 `Stateful Component` 的话，其实模式差不多。只不过，它们需要一个 `render` 方法，并且拥有一个被称为 `instance` 的变量。render 的目的就是定义一个 Element，而 instance 就是 在 render 中使用的 `this` 了。
 
 所以，一个 Element 出现的步骤此时是，
 
@@ -75,17 +72,15 @@ const Element = instance.render() // render 不就是 React.Component.prototype 
 
 综上所述，我们最常写的是 Component，Component 分为三种：
 
-1. host（常见 DOM 节点）
-2. function
-3. class
+1.  host（常见 DOM 节点）
+2.  function
+3.  class
 
 host 类型，React 会根据对应 type，生成真正的 DOM node，并将它所带的 props 写入 node 的 `attribute` 中，而对 `children` 继续递归，直到碰到没有 children 的 host Element 为止。
 
 Function 的返回值是 Element, class 的 render 函数的返回值是 Element
 
-不过这里还有一个问题，function 和 class 的 `typeof` 都是 `function`，这两个是怎么判断的呢？
-因为 class 定义的组件，继承于 `React.Component`，它拥有一个特定属性，只需要检测是否拥有这个属性就能确定是 class 还是 function。
-
+不过这里还有一个问题，function 和 class 的 `typeof` 都是 `function`，这两个是怎么判断的呢？因为 class 定义的组件，继承于 `React.Component`，它拥有一个特定属性，只需要检测是否拥有这个属性就能确定是 class 还是 function。
 
 ## 一个常见问题
 
@@ -122,8 +117,7 @@ render() {
 
 首先，分析一下上面报错的原因，根据上面说的，我们知道，`<E />` 就是一个语法糖，也就是 `React.createElement(type, props, children)`
 
-其中 type 就是 E。那么，根据我们的定义 E 也是一个 `React.createElement('p', {}, '123')` 这样的表达式，其实就是一个对象。
-显然这个时候 `<E/>` 得到的值，其实是一个对象！！ 而 React 内部是通过 type 属于 string 来确定这是 host Element，type 属于 function/class 来判断这是一个组件。因为此时 type 是一个对象，自然就会报错。
+其中 type 就是 E。那么，根据我们的定义 E 也是一个 `React.createElement('p', {}, '123')` 这样的表达式，其实就是一个对象。显然这个时候 `<E/>` 得到的值，其实是一个对象！！ 而 React 内部是通过 type 属于 string 来确定这是 host Element，type 属于 function/class 来判断这是一个组件。因为此时 type 是一个对象，自然就会报错。
 
 而，`{E}` 为什么可以呢？还记得我们最常在 `{}` 中写什么吗？
 

@@ -7,25 +7,25 @@ date: "2018-01-31"
 
 下面是一个对象, 包括了几种典型的属性:
 
-1. 普通属性
-2. get 属性
-3. set 属性
-4. Symbol
+1.  普通属性
+2.  get 属性
+3.  set 属性
+4.  Symbol
 
 ```js
 const obj = {
   a: 1,
   get hh() {
-    console.log('__GETTER__');
-    this.a += 1;
-    return this.a;
+    console.log('__GETTER__')
+    this.a += 1
+    return this.a
   },
   set hh(val) {
-    console.log('__SETTER__');
-    this.a += val * 2;
+    console.log('__SETTER__')
+    this.a += val * 2
   },
   [Symbol('cool')]: 'good',
-};
+}
 ```
 
 先提出问题, 哪种类型的属性会被成功 copy? `get 和 set` 时候会被运行呢?
@@ -35,9 +35,9 @@ const obj = {
 OK, 现在开始对它 `assign`, 有下面代码
 
 ```js
-const shadow = { ...obj };
-console.log(shadow.hh);
-console.log(shadow.hh);
+const shadow = { ...obj }
+console.log(shadow.hh)
+console.log(shadow.hh)
 ```
 
 这个时候得到的值是多少呢(假设这串代码紧接上面的代码)
@@ -46,7 +46,7 @@ console.log(shadow.hh);
 那我们打印一下 shadow 的内部看看,
 
 ```js
-Object.getOwnPropertyDescriptors(shadow);
+Object.getOwnPropertyDescriptors(shadow)
 ```
 
 ![](./pics/06FE5C2C-8A1B-45EE-B45D-D3DB0774F9FA.png)
@@ -67,27 +67,27 @@ Object.getOwnPropertyDescriptors(shadow);
 如果现在的代码是这样的
 
 ```js
-const symbol = Symbol('cool');
+const symbol = Symbol('cool')
 const obj = {
   a: 1,
   get hh() {
-    console.log('__GETTER__');
-    this.a += 1;
-    return this.a;
+    console.log('__GETTER__')
+    this.a += 1
+    return this.a
   },
   set hh(val) {
-    console.log('__SETTER__');
-    this.a += val * 2;
+    console.log('__SETTER__')
+    this.a += val * 2
   },
   [symbol]: 'good',
-};
+}
 
-console.log(obj.hh);
-console.log(obj.hh);
+console.log(obj.hh)
+console.log(obj.hh)
 
-const aha = Object.assign(obj, obj);
-console.log(Object.getOwnPropertyDescriptors(obj));
-console.log(Reflect.ownKeys(aha));
+const aha = Object.assign(obj, obj)
+console.log(Object.getOwnPropertyDescriptors(obj))
+console.log(Reflect.ownKeys(aha))
 ```
 
 会出现下面的结果.
@@ -106,7 +106,7 @@ console.log(Reflect.ownKeys(aha));
 const realShadow = Object.create(
   Object.getPrototypeOf(obj),
   Object.getOwnPropertyDescriptors(obj)
-);
+)
 ```
 
 ![](./pics/1A25BA7A-053A-42D7-91AB-2184F28CFAA5.png)
@@ -120,8 +120,5 @@ OK, 那么这里可以得出一个结论: 对于普通的纯对象, 比如 redux
 > Whereas the Object.assign() method will only copy enumerable and own properties from a source object to a target object, you are able to use this method and Object.create() for a shallow copy between two unknown objects
 
 ```js
-Object.create(
-  Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
-);
+Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj))
 ```
