@@ -1,0 +1,990 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/blogs/component---src-layouts-index-js-3396ad3b64d776f86883.js" as="script"/><link rel="preload" href="/blogs/component---src-templates-blog-post-js-67fb1056b29307632efb.js" as="script"/><link rel="preload" href="/blogs/path---vs-code-695a6697b333c43008a9.js" as="script"/><link rel="preload" href="/blogs/app-12fd34cec34fa1cfd7a2.js" as="script"/><link rel="preload" href="/blogs/commons-b473c4ddef8d57bfbb89.js" as="script"/><link rel="alternate" type="application/rss+xml" href="/blogs/rss.xml"/><title data-react-helmet="true">使用 VSCode 搭建一个很爽的前端环境 | Yangkui&#x27;s Blog</title><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link href="//fonts.googleapis.com/css?family=Montserrat:700|Merriweather:400,400i,700,700i,900,900i" rel="stylesheet" type="text/css"/><style id="gatsby-inlined-css">code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/blogs/static/montserrat-latin-100.50d27986.woff2) format("woff2"),url(/blogs/static/montserrat-latin-100.5e334eff.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/blogs/static/montserrat-latin-100italic.8c070533.woff2) format("woff2"),url(/blogs/static/montserrat-latin-100italic.03e19243.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/blogs/static/montserrat-latin-200.4343d3d9.woff2) format("woff2"),url(/blogs/static/montserrat-latin-200.f2022ecd.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/blogs/static/montserrat-latin-200italic.116c4c4b.woff2) format("woff2"),url(/blogs/static/montserrat-latin-200italic.89614a60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/blogs/static/montserrat-latin-300.d2ad295b.woff2) format("woff2"),url(/blogs/static/montserrat-latin-300.3a371ee0.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/blogs/static/montserrat-latin-300italic.f6b6bf24.woff2) format("woff2"),url(/blogs/static/montserrat-latin-300italic.16521668.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/blogs/static/montserrat-latin-400.240a8444.woff2) format("woff2"),url(/blogs/static/montserrat-latin-400.b20cc131.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/blogs/static/montserrat-latin-400italic.86172bb8.woff2) format("woff2"),url(/blogs/static/montserrat-latin-400italic.9405e787.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/blogs/static/montserrat-latin-500.fb8d6b71.woff2) format("woff2"),url(/blogs/static/montserrat-latin-500.50825d47.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/blogs/static/montserrat-latin-500italic.c0a555a4.woff2) format("woff2"),url(/blogs/static/montserrat-latin-500italic.635de59c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/blogs/static/montserrat-latin-600.d5615136.woff2) format("woff2"),url(/blogs/static/montserrat-latin-600.f300da4f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/blogs/static/montserrat-latin-600italic.10f29d13.woff2) format("woff2"),url(/blogs/static/montserrat-latin-600italic.2bc37d86.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/blogs/static/montserrat-latin-700.7d77e1f0.woff2) format("woff2"),url(/blogs/static/montserrat-latin-700.81826529.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/blogs/static/montserrat-latin-700italic.1dd2b53f.woff2) format("woff2"),url(/blogs/static/montserrat-latin-700italic.c162d257.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/blogs/static/montserrat-latin-800.d4e7bf86.woff2) format("woff2"),url(/blogs/static/montserrat-latin-800.895aadbf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/blogs/static/montserrat-latin-800italic.fc0cbe44.woff2) format("woff2"),url(/blogs/static/montserrat-latin-800italic.b3362875.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/blogs/static/montserrat-latin-900.c8bdd772.woff2) format("woff2"),url(/blogs/static/montserrat-latin-900.1b99ef78.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/blogs/static/montserrat-latin-900italic.cb72c1f9.woff2) format("woff2"),url(/blogs/static/montserrat-latin-900italic.b78bb9f8.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/blogs/static/merriweather-latin-300.f015f1e9.woff2) format("woff2"),url(/blogs/static/merriweather-latin-300.92dfe81b.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/blogs/static/merriweather-latin-300italic.7fd86b32.woff2) format("woff2"),url(/blogs/static/merriweather-latin-300italic.878b76f5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/blogs/static/merriweather-latin-400.12dbf4c0.woff2) format("woff2"),url(/blogs/static/merriweather-latin-400.1fffad22.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/blogs/static/merriweather-latin-400italic.1e0d3e81.woff2) format("woff2"),url(/blogs/static/merriweather-latin-400italic.de18d4c4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/blogs/static/merriweather-latin-700.dc8fec81.woff2) format("woff2"),url(/blogs/static/merriweather-latin-700.d7d2ed8e.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/blogs/static/merriweather-latin-700italic.b7b7e5da.woff2) format("woff2"),url(/blogs/static/merriweather-latin-700italic.6210a5fc.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/blogs/static/merriweather-latin-900.43f870d5.woff2) format("woff2"),url(/blogs/static/merriweather-latin-900.8f3806df.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/blogs/static/merriweather-latin-900italic.168c1ab2.woff2) format("woff2"),url(/blogs/static/merriweather-latin-900italic.ae7778f0.woff) format("woff")}code{padding:.2em .4em;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px}h1,h2,h3,h4,h5,h6{font-family:SF Pro SC,SF Pro Display,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif}em,li,p,small,strong{font-family:SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif}</style></head><body><div id="___gatsby"><div style="max-width:42rem;margin-left:auto;margin-right:auto;padding:2.625rem 1.3125rem;" data-reactroot="" data-reactid="1" data-react-checksum="340190179"><h3 style="font-family:Montserrat, sans-serif;margin-top:0;margin-bottom:-1.75rem;" data-reactid="2"><a style="box-shadow:none;text-decoration:none;color:inherit;" href="/blogs/" data-reactid="3">Thomas&#x27; Blog</a></h3><div data-reactid="4"><!-- react-empty: 5 --><h1 data-reactid="6">使用 VSCode 搭建一个很爽的前端环境</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem;" data-reactid="7">2018/06/04</p><div data-reactid="8"><p>这篇文章主要是针对打算学习前端的小白，和想学点前端的后端大佬，为了提升你们的编码幸福感。</p>
+<blockquote>
+<p>工欲善其功，必先利其器</p>
+</blockquote>
+<p>简单介绍下背景，VSCode 是目前前端界最为流行的一款<strong>编辑器</strong>，每月一次的更新，强大的插件生态和 TypeScript 的整合，让这款编辑器瞬间风靡世界。像之前的 Sublime 和 GitHub 的 Atom，都无法与它抗衡。比如 <a href="https://vuejs.org">Vue</a> 的作者 Evan You 也是用它作为主力开发工具。</p>
+<h2>准备工作</h2>
+<p>第一步当然是下载 <a href="https://code.visualstudio.com/">VSCode</a> 并安装。Window 用户印象中还需要下载一个 Git 的工具，无论你知不知道的 Git，以及 Git 和 GitHub 的区别，反正去<a href="https://git-scm.com/">官网</a> 下载好这个并安装。如果你在终端（命令行）中输入</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash"><span class="token function">git</span> --version</code></pre>
+      </div>
+<p>会有一个版本号输出的话，就说明下载成功了。
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-1e245.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 7.00218818380744%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAVklEQVQI1xXGKxKAIABAQQJDkWDzHDYZqA5SxOAYLX6iRcEbeO2npl1hTYMxBuscIQS87xj3xHw9DFumXy7imonb/f33ZEot8agpqwIpJVprlFIIIXgB9H8jk7lhonkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage"
+        title=""
+        src="/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-fb8a0.png"
+        srcset="/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-1a291.png 148w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-2bc4a.png 295w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-fb8a0.png 590w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-526de.png 885w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-fa2eb.png 1180w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-08f6a.png 1770w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-1e245.png 1828w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+Mac 用户只要安装过 Xcode 或者开发者工具套件的话，就内置了 Git 的功能。之所以要安装 git 是因为 VS Code 的插件基于 Git 的支持。</p>
+<p>接着还需要安装，<a href="nodejs.org">node</a>，<a href="https://yarnpkg.com/lang/en/">yarn</a> 英文不好的同学也不要管那么多，看到 <strong>Install, Download</strong> 这种单词就点，下版本最高的就行。Window 用户的 node 需要下载的是一个 <code class="language-text">.msi</code> 文件不是 <code class="language-text">.exe</code> 文件，<code class="language-text">msi</code> 文件能给 Window 环境写入一个二进制文件，而 <code class="language-text">exe</code> 仅仅是一个 node 的 REPL 环境。</p>
+<blockquote>
+<p>因为作者本人对 Window 不够熟悉，很多描述是靠之前碰到过的坑，如果碰到问题的话，还请自己使用搜索引擎解决</p>
+</blockquote>
+<p>还是和之前一样，输入几个命令测试是否安装成功。</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">node -v
+yarn why</code></pre>
+      </div>
+<p>在这两个都确定安装好后，继续输入</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">yarn global add eslint</code></pre>
+      </div>
+<p>Window 用户如果 Yarn 没有安装成功的话，就使用 npm 安装作为 B 计划</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g eslint</code></pre>
+      </div>
+<p>安装好后，就会有打印出安装成功的 eslint 版本。<a href="http://eslint.cn/">eslint</a> 是一个 JS 的静态分析器，它可以解决一些写 JS 经常遇到的问题：</p>
+<ol>
+<li>变量名写错了，但是没有报错。</li>
+<li>自己不想写分号，让它自动加</li>
+<li>强制要求格式的规范</li>
+<li>等等</li>
+</ol>
+<p>还有 <a href="https://www.typescriptlang.org/">TypeScript</a> 这是微软开发的一个 JS 超集，安装它的目的主要是它能够为 VS Code 赋予更强的能力，让开发更爽。</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">yarn global add typescript
+// or
+<span class="token function">npm</span> <span class="token function">install</span> -g typescript</code></pre>
+      </div>
+<p>和上面一样，如果 yarn 没安装成功的话就是用 npm。在本文写作的时候，typescript 的版本为 <code class="language-text">2.9.1</code>
+接下来就进入 VSCode 的流程。</p>
+<h2>安装插件</h2>
+<p>最基本的 VSCode 的侧边栏有五项
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-1-3acbbb2f132d7f0b2efc67f5e1a65f70-b1b8a.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 102px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 525.4901960784314%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAABpCAYAAAA6NQMSAAAACXBIWXMAABYlAAAWJQFJUiTwAAAID0lEQVRo3u1ZaU9UZxTmJzRp2qSmdR12kEV2EHBlU8R9AcUVFRVxx11UBBdEK/vqvmsVUHGppn7RWq2K2miqH0zT2JiYmCb9YNLm6fuc4eKdYe5wh5K2aSU5ucPc9z73vO855znLuPXq7Yvukt59/ODWPzAO3SEBwfHoZwmAW2hEIv6qhIQnIiwyGRb3ILgNCBuO7hAC93MPhFtIeAIcCRfxGhaZhPAoJW1XPqjd06+1AgY5BtQ/4OkTA3evKJF+HhHoHzS4A6hTQG1hcOgwBA4Ygn2lVTj71XmRy1euYFJ6Fnz8Y0Vzba1pDUePm46N+UXYuq0YWfOW4tGjB3j79jXiBo+Wl2maOgXkmz19olFeWYuHrfdx6sxZfH39Ou59fxfJI6fg+fNn+ObmTXj7xbZZuBMNefAWz0hcvNSCGbNy0OOLQAxPmgD+3bp9Cykj0/Hd3TvtmpkD9IrEufNNmJu9DB7e0UhMmYym5gt49ctPyFuzGc0XLpo/Qw3wfGMz5sxdqrY2EBFRyfjkMz9U1TSgcHsJGpuaFWCiq4BNmJe9HL4B8YiJSxXgQ4ePoaCwGFevXXNdQ2oxYfIcfNrDH16+MfjoY09UVNVhW9FubN6608APA42Ncu58o2ybGu35skJAWpXbLF6yBn0sYbJlDUwDtDjSMFRJQPAQpI2djr0KiGAle8vFwQkaNXCkzVb1V2+fUONIYYj1dQ9vlz5KGH6MIPvwbAf0DTWOFG5BSMFO7MFMAboq/2dAn27XMKxzQHuLGls5EZ7eIc4B9XnFyuBD2zOd6dCzB+OVFBYRnaKYOk1Iwj9wkA2o09Czzyv8XL//EJ4++0HJE9xUbJ2aNhV+ioVMpYD2mFYLqA2J9ts7tzF2/AwkKaKtqm7Ay5cvMHjYWGteMZOkeJMajJ80G89fPBNmIYXxDHv0DMKllsuort0vrKTxolNALVGtWp2P6zeuw907SrHMCETGpEieZha81NIieZrxbUJDK9uMGpOJx09aEa0oi0zD7z7vFaxecgPlFbXmNORNLuLD1Oj165/R2voA06YvwGjFkceOn8KPz59iYPwoBIUMNU4BemvRLcJVYqJ2b968Qk3dAdx/cA9Pnz6RrQ5PmmjjOk41DAoZhlj19kePH+Ldu18lr/TqFyoPRUQni0+S0R35YQdAbtVDGeP4idP44/ffMG7iLGXdgeLUfIh+yTUuFUt8+xjlc2nKIPZFkbNYNjxDfub59A8aZJPMO4t5p1Z2RABdBuwqH34AdE79eg8wum+qxnaWT1zuAsh9WnQEtTG3NackCLHqNe9UQz5AAli/cRtW5m1CTGyqAC/MyUP+lh0SkowoUxryhm//OAEiaMa0bGTOXKTq7ElYtnw9Bqg1bDVMb1kj1wmK/teu36qkAAnJE4UgWLCvXbdV1d5LHGpocWZl5pSjx05g+869kk88lcydvwxXrl4VBud52vOoYV6mltQgJ3e1FO/pU+erLDdOveCk1Nj2bqRVDh6eA4ytrLEOz/LkqTM4cvQEdhXva7e8Ixfy8gnvvBulgbjtAwePtDG61XUclcRePp0USzwXGqho+x407D8sPbMzZzfUUJ/seX7sRJn06Yd+gfHtTaPLgDzDiSpJsTeZNSdXOqsuA2pCA2RMmy++F95W1hm1FU4B9Q9QKxrHiDRMa6gtfD9OSei6UYx4zxnBWjy6nbED/ws5peOcK8G1yZKejhi3dBfWON5K+Jl+aLpYeq+VlWk48GF0kGhXr92iomWx1I1GbUUHo1hvWMGmqoq1rKIGmzZvx6ysXGQvXIktBbtQWV2vOoKZDgtOi331ZY3feAG7qpiZ1/ghY6R4Z53Iday76xsOSbnHCk0DFQ0tdhryzNgtlSvNZmctQWVVnbrmyuwhJTVdyJYPT06fi31lVe2NUUi4g16Pb/Dxj8P8BSuwbkOB9COpo6ehRvUjGzYVorqmAadOn8VsRRLMJzsVe4+boG09oWM3agWMlczGLc6cnSOzr+UrN8hEZIdi7cKiEiSNmCyANBINxmc0d7LplzVAgq3My5e0uUalzBMnT8u1rLxGrE1DLcxZhRWrNkkWtAH0tQOkn81UrrGlYCd69g0RLTiWYrZbtDgPVTX1mDQlS7oqniubSKYIDaPDiICHTD/j0IxWZCrl1nmuTAEjR2XI9qlx0Y49umTvYOagb3roZw2qpSX991Y9CgeRBORAiGUIjRMvU86hzmcOelD6W2lZNXaXlElyz1cOvndfpWhGsIDgwTaObThz0EDptDwCugbzCd2FZ8ZtaqOCDoneaOaggfJKbWlJit4AXZ452NCXK53Uh7ai+wDNNoz29eHfA6ifKDES6MS8Wv8fAn/l7PRLfqcHMwTUwo6MXFFZZ50OK2ZOV9VXcUkpqmsbZJZNKuOUyRp+TmcOihMVhTHU+NsJa+vDR45jamY2ausOYMmydVikCnnOuPnTiD5RGWpITiRTc5xCgMwZC+UFJNURqRkyyj946KjMcEwDkgNbLl9WpLpafldpbGxGU1MzineXynck3bSxma4DshQmhZH/zpw9J9TFapZMPmjoGBs+NK0hjcDm58LFi9ix60tJr2Rt9oEaY5s+w9ylazFdNY6s/lk5sCNg9XBNbXmUSrGdbllvZWrIwdmRo8dFM76E/zML8tcfMrqpM2SBPiVjniR4bq22bj+2FRZLoVRXf0C+Y0WRPGJK5374PlJU967KEhHVjLNE0X7n42eKqUj595PDhxTwAfAfAvwTKMDnbWBoVMQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 1"
+        title=""
+        src="/blogs/static/DraggedImage-1-3acbbb2f132d7f0b2efc67f5e1a65f70-b1b8a.png"
+        srcset="/blogs/static/DraggedImage-1-3acbbb2f132d7f0b2efc67f5e1a65f70-b1b8a.png 102w"
+        sizes="(max-width: 102px) 100vw, 102px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+其中第五个就是安装插件的一个 Tab，点开来，选择常用的拓展，就能看到根据安装量排序的拓展工具。
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-b76b9.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 99.75550122249389%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAErklEQVQ4y1VVaU9bRxT1j2iaD2Hzhnc/288GY7ywh12EsARCwpJQlERV2qrhS0BR2RKRQMCsNhgKBgwhbIHYmDWsbVqoKqWpqv6Z0ztDqdQPV3fGb955995zzlgiswlQKsxQqS1QKE2Qygz/iwSpgZ4bIVcIkMmNiE/QQ6/V0PriWYJUz7NUpqdzekjkUgEW0QlHaiYEUwquxajoJS0d0vHDMXEauOxuGIVkKBPpgwRaVSilfQo0ehf/UHyCjp8XjSpIFIkWCGb3f2EW02AQnFBpknmotXZIFRYUFlejp3cELa2daH3WjaeUn7Z0oL2zB96BMfjGg2hs+hYSpcqKVFcBnO5CHumZJbDZc6A1OHnoBTdkCisa7j9GZHMfo74pTAffYIwAfP4phBZWsX/4ER/PP6Hr1RABJpqRlp4Pl/s6dPokqDVWJKosiIvX8WDzufKlDJW36rGyGkG/14+h4QC8g2MYHApg8sd5RLYOsH/0C9qoAwkjIjunCJmZVKUzG5lZhfSBPCQlp/G52lMyINKMHzz8jgA3MTA4zlv0Uh4cnsDk9BtEto/w4eQcP3QPXgCKoosDmMwOYlqARmvlrLPqE1VmxMSqcffuV9hYD2N4yA/f6DgGvCO0HsNMcAG7e0f46eczdPZQy4wlsyUVekMyl42cJBIXr/23ZS1n+upVGUrKGzC5uIuuvik8p3jhDaJ7cBbewAqCaydY3P4dTzqHqUI5ycbi5PNjoGZaG4x2aHU2ng2CAzq1ETJPE9wdf6Gi9xMqXn/Grf7PKO/7E/kv/oC++TcYWv6GqXEaEpmWZGNxwEBgrFUmXhaXwma/sVk+/LoZq5FjzC9vY35lBwuru5R3+XpuaQeRvXO0vvRBItQWw52eC48nlzMtWl1ItqfD6cqB1ebmlcaTaKuqGxCN7iEQmMZEIIhQaAkzM4tYWQmTnPZwenqGrn4/yUYroiD/JoqKy5GbV0LVZCE9owB5+Tco5/O9jkDr6h5g7d0WevtG8LpvlDQYRD+x/XY5guj2MQ6Pz9DGWSYmbfY0JCUxllM5MZcsJ6pElJXXo7SsDt8/eYZwZA9zoWXMzi1haTmMtbUthEns4c0POCBxt70iUoT6Yngy8mCzeaAkiTDAWPJvTKyGZ5Xayi+EmjtNeLceJfsNUYUjmJldwvrGDpZJ7Ovvd3F8coZ2BijXW6jlUmqxlAubzY5dFiyYNm1JHnKPiHv3HxHAFrxeH7dcX/8ohQ8TkyFqO4yT03O09zCnKEyw8RfTuCsEk4O3y9pmsmF7ptU7JOzN6D4WyLvzFEEiJDS/ip3dE0SiBzg6/hVtL4fYDE2c1VSqLsVBVrNnEKDIXcKEfS1GjS+uJKCiso4q3OY+Hg/M0gWxiMDEHL8s/GNBLL7dQEfv6AUpzMtZ2UVcNszLrG235zqXDaua6bKq+h4iREo/b3maQGfgp7xB89sI7+GQLofnff4LLydTy6LVzefGACzkbaY/FuwiZWeYAh5/04wbpbdxs7wWZRX1KK9sQPXtRtTUNKG27hFySREc0OnKvriBaW6XfwOXfo6N03KWL33N9lIZeV5JZ1VJiJcZoZRbaC9Cn1GCfwC3AkIyaVCR3wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 2"
+        title=""
+        src="/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-fb8a0.png"
+        srcset="/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-1a291.png 148w,
+/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-2bc4a.png 295w,
+/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-fb8a0.png 590w,
+/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-b76b9.png 818w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+如果真的想要好好运用 VSCode 的话，还是要自己多花费点时间在这些拓展上，找出几个真正适合你的。</p>
+<hr>
+<p>先看看，需要配置的插件</p>
+<h3>ESLint</h3>
+<p>现在没有 ESLint 已经没法写 JS 代码了，我们不需要花太多时间在找自己的拼写错误导致的 bug 上。下载 VSCode 的 ESLint 插件后，重载 VSCode，打开设置，搜索 <em>eslint</em>。
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-d3efd.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 26.344086021505376%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA/klEQVQY02WQSUvEQBCF5884SSa9ZOskbRYTs4wJEQkyoIcRBBFv4v8/PKtbDANzKF71o/iqXu/2roJzyMCjBomeEecT/KCBSEbyOoi4x3r6wPn9G7qcwQPywnuwoIUvanq3OLACjpfCJc7O8RRunATlsOL18wfT8xuYHiHvFohqhqwXSKPFA5iskIQjVHQkiN4gpjagudAapHuHrvWybcg1vRm0Xm6TmPJ8DY/dbqB/mFELNE2UjajHE3TzBJ70EOkRPB0gMlI1QFLMIOwRRAN8Xtm4dskF7CKygm4fsZ6/0C0v8NMOnGKznP6xmMCyHoyXiGSHmKB/AHUV19Qvukmh/+Kzg0oAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 3"
+        title=""
+        src="/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-fb8a0.png"
+        srcset="/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-1a291.png 148w,
+/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-2bc4a.png 295w,
+/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-fb8a0.png 590w,
+/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-526de.png 885w,
+/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-d3efd.png 1116w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+这里主要需要修改的几个配置。</p>
+<ul>
+<li>
+<p><code class="language-text">eslint.autoFixOnSave</code></p>
+</li>
+<li>
+<p><code class="language-text">eslint.packageManager</code></p>
+<p>其中第一个设置是可以在每次保存的时候，自动修复一些<strong>能自动修复</strong>的错误，比如少了冒号，缩进不对等等… 注意 VSCode 的设置不能直接修改，需要复制到右边的用户设置区，来修改。通过点击左侧的那个 edit 图标就能复制到右侧，接着修改后再保存就能生效。
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-448c3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 13.904761904761905%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAuElEQVQI103OSU7DQBBGYZ8GYvdAd2cwbjuecIiJIoSsIBbgLQskLsDlH4WzYfGpSvo3L7lZbVllBamKaNugTE2myuuvq0UmmzJ7tGtJTSVKlK0xvifTJbfpVuwWSR5HyvaFaf5m/vrhdPlk170Sx5n74Y3i+E4xfpDXE8XmzLCfaeKFzfpICI8EP+DdgxgWiQstft1Ttc+0h4k8PmGkxIYe67vrld24BiOV7q4XHcZKsdTrv/J/fgEJo2QNkocmwAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 4"
+        title=""
+        src="/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-fb8a0.png"
+        srcset="/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-1a291.png 148w,
+/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-2bc4a.png 295w,
+/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-fb8a0.png 590w,
+/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-526de.png 885w,
+/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-448c3.png 1050w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+第二个设置是根据你使用 yarn 还是 npm 安装 eslint 来确定的。如果使用的是 yarn，就改成 yarn；npm 保存不变。</p>
+</li>
+</ul>
+<p>eslint 通过一个<strong>规则文件</strong>驱动，可以叫做 <code class="language-text">.eslintrc, .eslintrc.json, .eslintrc.js</code> 等等，刚开始的时候，你可能不知道 eslint 有哪些规则，这该怎么办？如果你之前成功使用 yarn 或者 npm 安装了 eslint 的话，可以通过</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">eslint --init</code></pre>
+      </div>
+<p>接着会需要你回答一些和偏好有关的问题</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code class="language-bash">How would you like to configure ESLint?
+<span class="token operator">></span> Answer questions about your style
+  Use a popular style guide
+  Inspect your JavaScript file<span class="token punctuation">(</span>s<span class="token punctuation">)</span></code></pre>
+      </div>
+<p>类似于这样的问题。用方向键控制，回车来确定。最简单的方式是：</p>
+<ol>
+<li>Answer questions about your style</li>
+<li>y</li>
+<li>y</li>
+<li>这个问题是根据你是在浏览器还是在 node 上</li>
+<li>这个问题是问你是否使用 CommonJS，如果不写 node 的话，选择 N</li>
+<li>Do you use JSX? 写 React 的话，就选 y</li>
+<li>Spaces</li>
+<li>Single</li>
+<li>根据电脑系统选择换行的组成。LF/CRLF</li>
+<li>y</li>
+<li>JSON
+根据我这个配置会生成如下配置代码</li>
+</ol>
+<div class="gatsby-highlight">
+      <pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"env"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"browser"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"es6"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"extends"</span><span class="token operator">:</span> <span class="token string">"eslint:recommended"</span><span class="token punctuation">,</span>
+  <span class="token property">"parserOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"sourceType"</span><span class="token operator">:</span> <span class="token string">"module"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"rules"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"indent"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"error"</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"linebreak-style"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"error"</span><span class="token punctuation">,</span> <span class="token string">"unix"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"quotes"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"error"</span><span class="token punctuation">,</span> <span class="token string">"single"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"semi"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"error"</span><span class="token punctuation">,</span> <span class="token string">"always"</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+<p>注意 <code class="language-text">indent</code> 这个，根据你的偏好来调整数字。4 表示的是 4 个空格。接着根据这个配置，eslint 就能发挥作用了。
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-99c89.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 36.09022556390977%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABTUlEQVQozz1QW3KDMBDLZcLDDwyEYIwBA2k7aZsmvf9lVBmafGh2tDurXemQCoskb3EUHbJihCoXHLMWqXCQZkYue2jpUZoVirUoAlTBvpqQCY+M8yQ745g2SIiD0J5LDoO5wBUXlHWH3n/A+SuMaaH1gGq64TQ/cOpnmNrBhxnTusJPATV5rhzFW8LikKso2KEdb2jDHbV7h52/Ma5XTNMVgw9o6gm1GWAKLksLqS206fipJd+FUrqM2AVptyxoq+hR8VrFKrksdQ+h7G4pa15LkSdZuyHNd7Gn6MtyzCzXE2S5ckgxZiXIFXNU7MU8o0DkunrbZtHZ88hLUDIjZUac11808x2V/4QJPyiXBxdnWm0xhC+E9Y55uUHTybgEhAtnZ7qp7f7Qv+gmKFSPkvZK2hW8msWQt6DtFrZQHeGYmf/ndkOcx0yf38X6B2//3rl9Fy5DAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 5"
+        title=""
+        src="/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-fb8a0.png"
+        srcset="/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-1a291.png 148w,
+/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-2bc4a.png 295w,
+/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-fb8a0.png 590w,
+/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-526de.png 885w,
+/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-99c89.png 1064w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+想我这个文件就有很多波浪线出现，它们就是 eslint 在抗议了。第一个错误和第三个错误是因为我们在设置的时候没有选择 <code class="language-text">commonJS</code> 导致的。<code class="language-text">console.log</code> 下面会有波浪线是因为 <code class="language-text">eslint:recommended</code> 的默认配置里，包含了一个选项
+<code class="language-text">no-console: error</code>，意思就是语句中不能出现 <code class="language-text">console</code>，否则就是 error。调整的方法也很简单，在 <code class="language-text">rules</code> 下面添加一句 <code class="language-text">no-console: &#39;off&#39;</code> 来覆盖这个设置就行。</p>
+<h3>Code Runner</h3>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-99514.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 35%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABYUlEQVQoz12SSXLjMAxFdZVeRLJoWdFIUvNkOUl7iO2Vl6lK3/8KryGluyqVxSuQKAj4H5TjbXLUVuMrTdP9ph9O2HImSVtM3pBmHcGuRCmL7xtcqf8iw/Uynr6x5JwsjPg8/OLSBFT9la4/UrVvlOXEXFfU5YgpD2i7J047oqTlOW7W+J8lvxCEFU6wM8SRIQyNKHsl0xOen7PZWlxV4CkjZ4MvdxUUqJ0Q/Dv/YCO1TqZHCnuQSd06+TlqxZrF8zQbz3zh2pU158pdrC8ff8fztazO4kSyKz2fsfVBVFaoWNSkBpVJzGS3Ep+KFNemqESa6lxU67XBTxYXTmoGto8H5fDG1B2xx5HkUpPeaqJbSXZv8P8k+B8J+tyzexiCtJThNWHUEIuzhWWXq+VcLO+7E600a/sTXXtiGq4M3TuTPNI83tk3N+b2zti/M7ZX+RPODNNF6o8U1Qtl/bLGReFficTkTTU9spYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 6"
+        title=""
+        src="/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-fb8a0.png"
+        srcset="/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-1a291.png 148w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-2bc4a.png 295w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-fb8a0.png 590w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-526de.png 885w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-fa2eb.png 1180w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-08f6a.png 1770w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-99514.png 2280w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+这个插件的功能是通过调用的系统的二进制文件，来直接运行代码，类似于 IDE 中的编译运行。不过在真正使用之前还需要稍微配置一下，在用户设置中搜索，<code class="language-text">code-runner</code>，可以看到搜索出来的结果。
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-d0ad4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 67.37481031866464%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB+UlEQVQ4y3VT2XLaQBDkY1KgPSVk0IkkhDlsoJAdJ04MyUNSlZT//wc6M4sQGMcPrVmtpN6Z7lZvICKEyQpZ/Yi0ajBK76DDGcx4ATOaw7bVIZgiCBewwQzKlg7SFPBkDObh2ut7Y5SrL9h+/YXN82/U62fIUQ2TrqDjOWHRrY0tcDMkQr/qCE7oCN2GiCFkCs/jmkCqHEIkUFSlzOh5Qi+n6HsRPg1uwE14RDC4wInUdVhvX/BweEXz4xWLh58wyRJ+sUUwbeBXO5hhhSgtEWcFYYJwlLedRe875IUyOelSwvgFNEGoFIL2hJlA2gmEzmgvohofoVoS+XbsjjCrG8y3e9xuXlDMn2CiFWxYw6fOFOkmiXhwNaLrSMTvtOwNaOSouEe5/EzmPCGpNpBhBalT0pI/HLeIPjTiDSFfbFBhSLEIqKsgvKWxpy4SmuJh6V6Rq6wjy/E/kssDnCnT9Tc0+z/YHf5i3hyg0yV0wnFZwpZbZxJ3q0ziHH7b9Xl9jg1FRWgSX2UuHlLn9PFRO9bwtObnXDvwe23A2UjXIV80jRyMKbx+2b3s/gJ7JJStMVIzIblPREwm9PkATyWXOfyOR8pgwyPv9lD8V+T3sJP1cfT8DjIoEPoz+KRv3xtduH01Mi/YUW1zB2UyyteV4HQ6R+QjMy5N+Qe1ZaA93w9peAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 7"
+        title=""
+        src="/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-fb8a0.png"
+        srcset="/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-1a291.png 148w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-2bc4a.png 295w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-fb8a0.png 590w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-526de.png 885w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-fa2eb.png 1180w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-d0ad4.png 1318w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+有很多的配置，可能很让人头大，但是先别慌，找几个我们要用的就行。</p>
+<ul>
+<li><code class="language-text">clearPreviousOutPut</code></li>
+<li><code class="language-text">runInTerminal</code></li>
+<li><code class="language-text">saveFileBeforeRun</code> or <code class="language-text">saveAllFilesBeforeRun</code></li>
+</ul>
+<p>第一个的意思就是每次运行会清楚之前的输入，看个人喜好吧，我是觉得清楚一下会更好。第二个就是在自己系统的终端中运行这个，好处是可以直接打通我们<strong>心爱的终端</strong>，而且如果不配置这个的话，Window 会出现一些奇怪的问题，强烈推荐。</p>
+<p>第三个的意思是，运行之前保存当前文件和运行之前保存所有文件，自己选择一个设置为 True 就行。为什么需要这个？因为我们经常会写完代码就去运行，但是发现自己忘记保存了，结果还是之前的结果。运行 JS 就是通过 node 来实现的，在我们安装后这个插件并重启后，新建一个 js 文件。像我下面是一个生成 HTML 模板的代码, 输入进去后</p>
+<div class="gatsby-highlight">
+      <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">template</span> <span class="token operator">=</span> <span class="token punctuation">(</span>title<span class="token punctuation">,</span> content<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token template-string"><span class="token string">`
+  &lt;section>
+	&lt;h1></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>title<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/h1>
+	&lt;article></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>content<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/article>
+  &lt;/section>
+`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'I can run js'</span><span class="token punctuation">,</span> article<span class="token punctuation">:</span> <span class="token string">'Very Cool!'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'I can run everything'</span><span class="token punctuation">,</span> article<span class="token punctuation">:</span> <span class="token string">'Really Cool!'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> theHtml <span class="token operator">=</span> config
+  <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span> title<span class="token punctuation">,</span> content <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">template</span><span class="token punctuation">(</span>title<span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>theHtml<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<p>之后点击右上角的的这个播放键
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-b3959.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 274px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 30.656934306569344%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABCUlEQVQY021Py07CUBDtB/ji1dLHbW/bW9AE2EhofECqYeGWFbLQvbjgJ0iIid9AjD96nBlaguhicu+cmTkPS8c9HFac9HGMHc+TdEDv/3PL81McVtuN6TXlPylxA9fbzRtNhVrdL/fSP2XxgMtpa7TsEJHuotlSgqmwQ1gkuOslguX5BA+PT+TwSm4Ys51o/7d4kZkvai7W6w9st98wWR8npzZmszn1X+h0ByIS6UssFq9Yvq9wPbwjtwHt9lAUUxK6F9FfhG/LFTabTwQqQ73h4+a2wPz5hXojDlSYYZSPMZ5MRYSd+YERt5xMCKvI3DApE/Eii3DUs3NHyKrIjDNJdbOLrPeRfwAJpa1tzqQn8QAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 8"
+        title=""
+        src="/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-b3959.png"
+        srcset="/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-1b2ba.png 148w,
+/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-b3959.png 274w"
+        sizes="(max-width: 274px) 100vw, 274px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+就能看到 <code class="language-text">console.log</code> 的结果被打印出来。
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-a4a9f.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 40.899795501022496%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA6klEQVQoz42S/W6CQBDEeZmqiCJB8bgDVL5Bjaa1ff9Hme6uQkxr4v0xTC63O7v8wJnNFRZ+guUqITeYzCJ8TDeku/N56m5Hcf3gr+TwZWxq9KcflNUV27gkVYhUCZO2WG8OUuh66m3YGBiEOxQUdsjP2OcnpLseSdYh2x+hTUMDGxnqLY1d4DrKpUHpGn6Q/mtyvVhktSE/5gs9NjGzv2KeA0srhkpXKOurvKIfZLLlijwkfrw9e/hg+S7U4cnMsO1v8lGa7gttdyOWZ3THb2J7kbu6+RSWVgwjVcAkLTSJN3wueP5dbDj+AkhF/jZF4GUxAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 9"
+        title=""
+        src="/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-fb8a0.png"
+        srcset="/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-1a291.png 148w,
+/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-2bc4a.png 295w,
+/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-fb8a0.png 590w,
+/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-526de.png 885w,
+/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-a4a9f.png 978w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Code Runner 不仅仅支持 JS，我们需要这个功能可能是为了学习新语法，也可能是测试某个算法。</p>
+<h3>Prettier</h3>
+<p>这个是最近一年最火的格式化工具，能够将你写成 💩 一样的 JS 也能格式成十分漂亮的代码（前提是没有语法没错）。同时也支持 HTML，CSS，JSON，Markdown 等等文件。
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-8c144.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 17.74622892635315%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAm0lEQVQY04WOyw6CMBRE+Q7XYosmItD20kRoKXRBeOjO//+SsZCoC6Mszl1MZk5uxFNCZQe4dkZV93DdjNbfYZsBmgy0diDtcb5ckZxKsESBH+knUVoamCAbpwesmwIjmvYGUjWMLFAKDUEdsrxepZvCXTiFdJDk3yHjEnu2QIi5QswEDiF7yf5Jo1xYLAjVIM2qdfgpfA+3PnwC6Ep/buwtrhMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 10"
+        title=""
+        src="/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-fb8a0.png"
+        srcset="/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-1a291.png 148w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-2bc4a.png 295w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-fb8a0.png 590w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-526de.png 885w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-fa2eb.png 1180w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-08f6a.png 1770w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-8c144.png 2254w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+为了体现它的强大，我们需要去改一些配置。和之前一样，在设置中搜索 <code class="language-text">format</code>，找到</p>
+<ul>
+<li><code class="language-text">editor.foramtOnPaste</code></li>
+<li><code class="language-text">editor.formatOnSave</code></li>
+<li><code class="language-text">editor.formatOnType</code></li>
+</ul>
+<p>解释已经有中文了，全部设置为 true 就行。至于设置这个功能的效果，不好仅仅通过文字来描述，但是我的博客又不支持 Video，所以这些只有由你们自己去尝试了。<strong>写一点缩进比较烂的代码，接着保存，所有的代码就被格式化了。</strong></p>
+<hr>
+<p>不需要配置的插件</p>
+<h3>Bracket Pair Colorizer</h3>
+<p>如果仅仅看它的介绍的话，这个插件是一个会将你的 <code class="language-text">([{}])</code> 这些使用不同的颜色区分出来，提升鉴别度。
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-34554.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 374px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 24.598930481283425%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABGklEQVQY00WQ20oDMRiE+yKWIthD2u4hm+4p2123rLWtUK0iKKg3injtRb0QLH0CfePPZF31YpjM/2cmQ1q9QUi3P8FyX0Q11xBW23PU7Jq50faexVFvYqD+fJZbQyfDCwoGo5husxRDYzDGrsFg+B8qRNxoW0IhVYEKy7rQ7yMtqUpWm5QqXuHF5+SlJJcpaXiFOq4o0hFl7uEXa7R7RqUD4rLEcxZ8bHe8bt9odxyEKVQH+jJjfR2yijYExR2zE5+pm5El96SLJTMtWFYOcn6Ddi441Qq9nCO9Sz73X7zv9hy0xyYw+W1YUS1Siqliony0dk0rDx2FhHFArsfoxCWKFVMzK7RDkvgo3+Xl+ZbHpwc6h775ip+G3+n6pYV/nPSYAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 11"
+        title=""
+        src="/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-34554.png"
+        srcset="/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-bcbd5.png 148w,
+/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-82669.png 295w,
+/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-34554.png 374w"
+        sizes="(max-width: 374px) 100vw, 374px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+可以看到这些括号都是彩色的。当然如果仅仅只是这么一个花哨的功能的话，当然不能提升什么编码幸福感。其实我最看重的是它的<strong>作用域语句高亮功能</strong>，嗯这个名字是我乱取的。就像这样：
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-c0626.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 448px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 54.46428571428571%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB/ElEQVQoz4WS2W7aYBCFeZU0gPd4+b0vgE0CxrEbSlOUplJVqe//DF/HJkRqL5qL0Wg84zPnnPln9l2J41YsrYQbLeBGD/ikK+ZGiGbE3C4UN7c+86V6qwOWWsTSiNDMGC8oMex06ulmwswwU3QrpVItBzXQh0d2qqf2WkwnZ9MMtN23t3imPTyjkgZlVVhmyelcsa7302LDGgEFTJPYRHuOyUAXd7TRgY3XCPOEZtvx2J+omwNFec/rj19U670AZriycPhSUK52E6BmCKAlkl2vJIx8NMcmDXL8ICTKUtI0I8+LKQfyzbFdfN9ney91GKBCRVml+Cqb5Lp+xmypx5hWKIOKWy0RqQO+W7Nrv/I4vHDozvRPr3x+/I5vrpjLfLOrcbyc+mHDz98d/XGLG2TCdstspGnZkTAQs8VYxy4YfbWcbAr7LscU05d6NLEYfXLcdMrXuB5kOsoV0PNGhhGN36P8mvv9kX17ouvPDE8vtLsTriHL7ITD0EyMqs2K84/dVN95GW3fXAANK6bIAxkO8ay1WJDhqRVxuhV/1oRy1Tje4pg5C1nqq1zYi3dhTrleEUSjigQVF8x0eUuakfPQKlb1RmRfJIwSF1r4nse4Sht9v8zEzBdj/1KP+R2weYhFprw9q/jLk3/jf703D2VAWDleMR3hox8+ij8JNmPJg7XnEQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 12"
+        title=""
+        src="/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-c0626.png"
+        srcset="/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-9c6b5.png 148w,
+/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-10b5c.png 295w,
+/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-c0626.png 448w"
+        sizes="(max-width: 448px) 100vw, 448px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+注意到了吗，这对 <code class="language-text">[]</code> 之间是一条折线，来表明这个括号所表示的作用域。这个功能在较长代码和嵌套的时候，特别有用。</p>
+<h3>Auto Close Tag</h3>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-99fdf.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 498px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 30.120481927710845%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABFklEQVQY021RXW+CUAzlX2wRZQgIiApixCmgfAioLJvLsk2XbPFxe9r/fzujFROy7aHpaW972nMrdJURFNWGqtnQeg4McwLKqZoD3XAZ/2eK+jcnd4cQerqL55d3vB4+sCufcDyecHw7IcvvsX88MHYnIWa3CayBh5ZooCP1IbYNSDcW43bHhCQPmFTQqk2CMEe4LLDw11iuCsRJiSjeMtFmu+f3+SJFur6DH2RshEf2HN4s4j4axhuqNSEREUmSlhzHya4esGGCqbdCUHmK6Z0IaSDV5MUD9zIh/d/UizB2g6ow46KWqFeSzEqOxZ4knWWaddxn6ST56lqD7fj4/Ppm2cLlKE275Jr+9zGa+fNBx5CVIX4AxXa8vu9ewe0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 13"
+        title=""
+        src="/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-99fdf.png"
+        srcset="/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-03b27.png 148w,
+/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-4e370.png 295w,
+/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-99fdf.png 498w"
+        sizes="(max-width: 498px) 100vw, 498px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>这个不解释了，就是自动帮你填充对应的 Tag。如果你对 emmet 用的很熟练的话，这个插件可能出场率不高。</p>
+<h3>Auto Rename Tag</h3>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-5aaa8.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 25.718608169440245%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABBElEQVQY012Qy26DMBBF+RkCxYHQAOZtysuhNBClTcmiVaWuK3Xfr78dW6WLLK5G8thnztiw7jhMK/xLhDjtUbczmu5EdUJVHylPSPIBftQhTCTCuEUQ1Qh5gyTr4e8FNjaH7cQweDWjnd4ghitMOhQPIy6vH+gPZwzjC47TgkY+Y5YdpjLA3OQQRYuaBpbVo4Z5fgElpoHZYcHl8xvvXz9wyWBHTWWppkdkkuaSLCTSuEISZnCdPRzG4e4KMDfVm60wVQ0WNFDhYoLtlcjLEXJYyO4K/17A2abYejkYxWYEsNXDmFaM/kErTBtaqkExN4G+xNxMA5SBuqT+RsW6AdyC1vwCGlCk0F5Y59kAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 14"
+        title=""
+        src="/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-fb8a0.png"
+        srcset="/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-1a291.png 148w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-2bc4a.png 295w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-fb8a0.png 590w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-526de.png 885w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-fa2eb.png 1180w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-5aaa8.png 1322w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>和上面一个算是兄弟插件吧。嗯，作者也是同一个人。作用很明显，自动帮你改对应的 tag！同样的，如果你的结构比较复杂的话，这个还是会有点小 bug 的话，不过在时间的节省上，这个插件显然是必装的。</p>
+<h3>HTML CSS Support</h3>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-fbb21.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 494px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 28.74493927125506%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABKElEQVQY022Q6W6CUBBGeYrGpoJ7KogspgiICgIiuC+ljUaTJn3/Z/h6Z2yTJu2Pk8sMM3PPXClOVjgcz5hMF/BHCTbbEtGsYIJxKpgjjHKYlg9Vc6D3XbTaJhrN/h9q9R6kLNvitbwiLw5wvRl2+3fMRW61PuF6+8T58oHj6cIDCXsw5saq3IWsqAzFzZZxHzgVZmTnDEMk6RpRVLDpZJLB92ORjzCLlyiWR65J5xuOiTzfI1vs4DghKo8dYalDGgUpCE80D92IMUwffcPjU9Ve0NOHsOyA16XTHgTfxiNoPQf0bDSDrCUyICMqpFtoBfqh1DSG1iBk5R7/rEkx5R8qLbYv326ivw2JdqcBz92BMHFRb+hs1+5Y/P3f4/+G+umCp2qX678A2f+/3yFT44EAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 15"
+        title=""
+        src="/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-fbb21.png"
+        srcset="/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-279be.png 148w,
+/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-bbcff.png 295w,
+/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-fbb21.png 494w"
+        sizes="(max-width: 494px) 100vw, 494px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>刚写前端的时候，或者为了方便，我们偶尔会把 CSS 写在 HTML 里，但是那样的话是没有直接创建 <code class="language-text">.css</code> 文件强大的自动补全特性的，这个插件让一切都回来了。</p>
+<h3>Settings Sync</h3>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-fbb21.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 494px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 27.530364372469634%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABIklEQVQY04VRXW+CQBDkZ7RJ/RYFUUDAD0TBShXUFKtpbfug2DTQh/7/5+ntNiRN06QPk53du53b2ZNa7T7aisWoN3Q0ZRNyq49G0xDR5FqBWr33L6Qs/8Tp9I7L2wdywR/2LzinGdJLhvXmAK07hDddoqePUa5oKJVVgY7gHeaVqsacwILuJIRuuHAGAfwggu3MBPcxHM0ZtuNz3u2N0GpbGAwDGOI+5X1rCnJo2VOY5oRFpXi9Z6HlKhExxu1ig1W046lWUcJT0p3j85kfXYRbJLsj9odX3CdPmPmREPa4V1EdSME8xsS740lIhDjt8aetwlq11kWJa99nNyWVbV5dy0jTHNvtIyTaEe1HUW0UnD6Emn8v/K8agcTHbghD2P4CPTnAPjJJMqEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 16"
+        title=""
+        src="/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-fbb21.png"
+        srcset="/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-279be.png 148w,
+/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-bbcff.png 295w,
+/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-fbb21.png 494w"
+        sizes="(max-width: 494px) 100vw, 494px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>同步你在 VSCode 中的所有设置和下载过的插件，Snippet，快捷键绑定。对于有多台电脑的情况下，这个插件是必备的。不过它理是基于 <strong>gist</strong> 保存的，而这个在国内需要翻墙… 同时这个插件第一次设置的也比较繁琐，需要一定的耐心。总的来说，当你必须换一台电脑的时候，一定要花点时间到这个插件上。可以节省你大量的时间！</p>
+<h3>Path Intellisense</h3>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-bef25.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 492px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 23.17073170731707%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA/ElEQVQY021Q226CUBA8P9KKXHpTrhZKQbwA1VoQYykkFXlo/f9vmJ7dxKQmPkxmdzY7Z86KQ/eDY3/CZrPH/vMb3B9PaNse1a5FI3kySeC4MVwvhqpZGCgjhjIcX2ComhDTZIU0KxAEC+YsLzGfvyN/22KZfmC13sF2IphWyKbGnQvdcHD/4DHTA7phS91hU0EmZ6MziqJGGC4RxTkbVlWLNC1QbhvUXx2S2ZrTF2XNu1STRuaCll6jjBG8LODLpFST/uzPoOk2J6A0lO5p5HMSVTPlzGKd+kP3y3vC9abw5I08yWRG36OezGn2/1YDZXz1dje3j2iannf+AH/UpmdHImN4AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 17"
+        title=""
+        src="/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-bef25.png"
+        srcset="/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-31c43.png 148w,
+/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-0464b.png 295w,
+/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-bef25.png 492w"
+        sizes="(max-width: 492px) 100vw, 492px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>提供 URL 的自动补全功能，这个必须装吧。支持任何语言，触发条件一般是在一对引号中，输入 <code class="language-text">./</code> ，<code class="language-text">../</code>, <code class="language-text">/</code> 这些表示路径的前缀，就会跳出来了。像我们的 JS，HTML 中引用文件，CSS 中 <code class="language-text">url</code> 就再也不用担心了。
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-e0185.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 77.44186046511628%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACP0lEQVQ4y5WTS2/TQBSF/UNImpft2E6cOI4fk/iZd5MgnlLbVEIs2CCEWEARLApCSGz4A0iIBVsW/MXDvRMSkjaqyuLEo1Hm87lnjhWrGcFu9+B6EVrthNb/r4YdoW760A0fimGFqGldiP4Ui+UZhpNz5KNTZMMTWq8wGG90dlD8/yh98A9YNwNodR+dTowgyBElM8SkNJtD011Uqm1UVQcqrQ9Kc6HXPTBHNwIoOpFVvYuOGxEwgR9k6HoJRG+AUORy326FKFeaOCpZKJUt+dxdV2o2dOnQg2JaAoZJGboE82NE8QT9aIwgHBAsJphAoxlI4CGVyg3UaAKr0Ydl9aGEYoFmM4Xj8MiphG1cVmstFIomikfW9jDrKlAloG0nxEmgOG4GvhiGhGEqHQkxIIc5mna4BVwF7QL5xTyuxiNPjx9iOL6PNJ3BaQv0+iOqj7jm5kag2paXwlK6PmXl5dIVO+S8WtTLOwVDBl4oGnsj3wSUteEfVfckxPf5lnN4fganQ2U1XLjdBKbl3cqhBI4mNG6+/JthhsFwicn0Hoaj9R5nyWB2e8jlNeDs+BHidE6gBQJyKCjDLJ/LyjBM0x15kIMvlW/pMBvcpa9jQtVZXwqPyeIKcbFDytftxpSluVefjfhlW6Dj5mh3MpmdEJmEcAc9f93JmtqShypVW8Iq1X3xXm3X4ctXl7j8+BWvLz7h+Yu3ePrkDb6sfuPD+U+8O/2O9yc/cPH4Gz6vfmEZPUNZs+nLWh9ey5PPDfAPWPbe9FbFj7sAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 18"
+        title=""
+        src="/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-fb8a0.png"
+        srcset="/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-1a291.png 148w,
+/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-2bc4a.png 295w,
+/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-fb8a0.png 590w,
+/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-e0185.png 860w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h3>CSS Peak</h3>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-14388.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 16.063548102383056%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAr0lEQVQI10WP226DMBAF+ZcQAsQxmEuIbUxIHGiVqlL7/x8ztf3Sh9HsSnuOtJlsLcv6hWgsZv7Aup22c/TjE33z9MpwqsbAleNpoCjHRJwPR8Uhb8mDi7InLzqy1b9RSvHavvHbD9v+izY7ev7E6jtPY5j0i3HyyGZGto4mEN12C41yVOcbZT0lsuG64hbP/fEOoY1ueKSD80VTXwyVMNRCp11IE/yPkDY5FsUPIn/bVmCqfkKFTAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 19"
+        title=""
+        src="/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-fb8a0.png"
+        srcset="/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-1a291.png 148w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-2bc4a.png 295w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-fb8a0.png 590w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-526de.png 885w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-fa2eb.png 1180w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-08f6a.png 1770w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-14388.png 2266w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>这插件的功能就是在我们看到 HTML 或者 JSX 等代码中，如果出现了 <code class="language-text">class/className</code> 的话，可以通过 <code class="language-text">Cmd/Ctrl</code> ➕ 左键点击某个 class 直接跳转到对应 CSS 的定义。非常方便，但是<strong>并不是每个时候都有用</strong></p>
+<h3>Live Server</h3>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-14388.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 18.00529567519859%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAtElEQVQY031PPQ+CMBTkzyhtwSZYKKVQkW+ixrg4uDm5+v+ns5SwYHS4XF7e3bt7HgsUWJBBFz3a7oZM94hlDZlWSEQORmNQqyEshU8lNn7s+Be8p//GQ71wqE8YL3dU7RWmPMMUDQaTo9SFDRuhdAepWkSiRMi1M08ha3iKDFC8dyIyNtgfBwQsg2+XW8s01K7hBBYqBLt5Xg5+NZS2CRcGIqkg0ho8MtiSZDb8eW05tm74AcLIf/WW4UtBAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 20"
+        title=""
+        src="/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-fb8a0.png"
+        srcset="/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-1a291.png 148w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-2bc4a.png 295w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-fb8a0.png 590w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-526de.png 885w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-fa2eb.png 1180w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-08f6a.png 1770w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-14388.png 2266w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>这是一个神器，如果你还不会使用 <code class="language-text">webpack 或者 parcel</code> 的话。它提供了自动保存文件后自动刷新的功能。虽然这个功能看上去并不是很起眼，和 <code class="language-text">browser-sync</code> 似乎也差不多，但它能内置到 VSCode 中就大大简化了操作。</p>
+<p>对于刚写前端的朋友有一个很重要的问题，他们往往喜欢直接通过浏览器打开某个 HTML 文件，在浏览器顶部会显示这个 URL 是 <strong>file</strong> 开头的。file 也算是一个协议，和我们知道的 HTTP 协议一样。如果直接通过 file 来打开 HTML 的话，很多 JS 的功能是不能实现的。比如：</p>
+<ol>
+<li>Web Worker</li>
+<li>Service Worker</li>
+<li><code class="language-text">&lt;script type=&quot;module&quot; src=&quot;&quot;&gt;&lt;/script&gt;</code></li>
+</ol>
+<p>所以使用这个插件，就再也不用担心这个问题。使用方式也很简单，安装好后，点击需要的启动的 HTML 文件中底部 tab 的</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-0fc2b.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 200px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 30%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABFUlEQVQY012PW0+DQBCF9zeovUGBgqXAghZMKNTWKrWKxtZb+qCJTWrik8aXxqTx1x/ZoZiWhy9nZnbP2R1m8xhlHFdotNG8L9dFb7u7Xqa1OMrIigXd8NDMVN30qubQmapxqqnX3ZwtL6vVWyioN3QcVBR0/R4eHueI4jNUqioc7kOSDaqFNpU2sbcv0/1qTcu8eQZrSAYEknxIqqgmXl4XWK1+sHz/oHChb4slLie3SMYpwt4Q0+kTrq7v8Pn1DdvxKUxkMJG+jXgx7p9jvf5F//QiW80iY3ozw2g0gR9ESJIUg+GYwmf3z9mq9v9PGXcD7MADWjEMB3C9E1h2F072A7PjUS0Q8451jLbpZfMjul/4/wBiW7a82rlvXwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 21"
+        title=""
+        src="/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-0fc2b.png"
+        srcset="/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-0e1a5.png 148w,
+/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-0fc2b.png 200w"
+        sizes="(max-width: 200px) 100vw, 200px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>在短暂的等待后，就会自动打开你的默认浏览器跳入由该插件启动的服务器。</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-9f11a.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 434px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 12.903225806451612%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAjElEQVQI1z2PbQqGIBCEu/+JejuAv4IOkGHhAULyI02dl1ko4WF31mWYHZ7nwXVdcM4hxiiklJBzxn3fUkkp5aP3jtaa9LVW0IOabzjPE9P0wzzPUEphHEcsywJjjKC1xrqu2Pcd27aJPo4D1lqpr2YIMaQ7TZmMKQkTMx1nIQTBe//1/KemCTX33mv+zFPjHMAoO0QAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DraggedImage 22"
+        title=""
+        src="/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-9f11a.png"
+        srcset="/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-47618.png 148w,
+/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-527c6.png 295w,
+/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-9f11a.png 434w"
+        sizes="(max-width: 434px) 100vw, 434px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>下次要进去的话，可以直接通过 <code class="language-text">localhost:5500</code>进去。值得一提的是，这个插件仅仅只是一个很方便的功能，但不代表它很强大。需要更强大的开发流程还是需要考虑 parcel 或者 webpack。</p>
+<h2>更多</h2>
+<p>如果还想继续提升开发的幸福感，可以考虑学习</p>
+<ol>
+<li><a href="https://emmet.io">Emmet</a></li>
+<li><a href="https://code.visualstudio.com/docs/editor/codebasics">VSCode 文档</a></li>
+</ol>
+<p>谢谢阅读 🌚</p></div><hr style="margin-bottom:1.75rem;" data-reactid="9"/><div style="display:flex;" data-reactid="10"><img src="/blogs/static/profile-pic.6b7afd22.jpg" alt="A cat named musa" style="margin-right:0.875rem;margin-bottom:0;width:3.5rem;height:3.5rem;" data-reactid="11"/><p data-reactid="12">博客的目的一是分享一些个人的总结, 二是翻译一些国内不能正常访问的文章, 比如 Medium 下的.</p></div></div><span style="display:block;clear:both;" data-reactid="13"> </span></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-12fd34cec34fa1cfd7a2.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js","107818501498521":"component---src-templates-blog-post-js-67fb1056b29307632efb.js","35783957827783":"component---src-pages-index-js-e9ae4bf1fb6dd95eb6d3.js","60335399758886":"path----557518bd178906f8d58a.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","112632292875057":"path---base-64-base-64-编码的简单尝试-3fc0e6853beb1a8c9b08.js","227484829515402":"path---first-step-software-world-03f4662c97d3e7ab2e13.js","144342403179678":"path---hello-world-1b163e14efd76441259d.js","150799105546278":"path---object-assign-819f5e78fe4f396ec446.js","184208325429431":"path---lodash-fp-7ef9aba4c5e7ac2bb2a8.js","35672907685451":"path---parcel-parcel-📦-和-react-⚛️-的使用-f2f25bf3608c08004cbd.js","155041412123632":"path---react-component-and-element-737a282f3a8a09b004b7.js","65931765013031":"path---uuid-uuid-a9eabd5ce4601b5925ea.js","276753157451298":"path---反转字符串-9e4906597303847d9bcc.js","220407911892673":"path---pure-component-is-harmful-pure-component-is-harmful-da67e52356fad7a14624.js","146322531349299":"path---deep-learning-4ec1fb0f59c8f8d1a764.js","135168153432516":"path---vs-code-695a6697b333c43008a9.js","142629428675168":"path---index-6d70402db9a625b7e4b5.js","114276838955818":"component---src-layouts-index-js-3396ad3b64d776f86883.js"}/*]]>*/</script><script>
+            
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'undefined', 'auto');
+      }
+      </script><script>/*<![CDATA[*/["/blogs/commons-b473c4ddef8d57bfbb89.js","/blogs/app-12fd34cec34fa1cfd7a2.js","/blogs/path---vs-code-695a6697b333c43008a9.js","/blogs/component---src-templates-blog-post-js-67fb1056b29307632efb.js","/blogs/component---src-layouts-index-js-3396ad3b64d776f86883.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>

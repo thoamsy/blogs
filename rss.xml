@@ -1,4 +1,981 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Mon, 21 May 2018 04:38:34 GMT</lastBuildDate><item><title><![CDATA[PureComponent Considered Harmful]]></title><description><![CDATA[这篇文章有点标题党, 其实主要要强调的是  到处使用 PureComponent 是不对的 . 和 Component…]]></description><link>https://github.com/thoamsy/blogs.git/PureComponent is harmful/PureComponent is harmful/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/PureComponent is harmful/PureComponent is harmful/</guid><pubDate>Mon, 21 May 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章有点标题党, 其实主要要强调的是 &lt;strong&gt;到处使用 PureComponent 是不对的&lt;/strong&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yangkui's Blog]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Mon, 04 Jun 2018 13:25:07 GMT</lastBuildDate><item><title><![CDATA[使用 VSCode 搭建一个很爽的前端环境]]></title><description><![CDATA[这篇文章主要是针对打算学习前端的小白，和想学点前端的后端大佬，为了提升你们的编码幸福感。 工欲善其功，必先利其器 简单介绍下背景，VSCode 是目前前端界最为流行的一款 编辑器 ，每月一次的更新，强大的插件生态和 TypeScript…]]></description><link>https://github.com/thoamsy/blogs.git/vs code/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/vs code/</guid><pubDate>Mon, 04 Jun 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章主要是针对打算学习前端的小白，和想学点前端的后端大佬，为了提升你们的编码幸福感。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;工欲善其功，必先利其器&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;简单介绍下背景，VSCode 是目前前端界最为流行的一款&lt;strong&gt;编辑器&lt;/strong&gt;，每月一次的更新，强大的插件生态和 TypeScript 的整合，让这款编辑器瞬间风靡世界。像之前的 Sublime 和 GitHub 的 Atom，都无法与它抗衡。比如 &lt;a href=&quot;https://vuejs.org&quot;&gt;Vue&lt;/a&gt; 的作者 Evan You 也是用它作为主力开发工具。&lt;/p&gt;
+&lt;h2&gt;准备工作&lt;/h2&gt;
+&lt;p&gt;第一步当然是下载 &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VSCode&lt;/a&gt; 并安装。Window 用户印象中还需要下载一个 Git 的工具，无论你知不知道的 Git，以及 Git 和 GitHub 的区别，反正去&lt;a href=&quot;https://git-scm.com/&quot;&gt;官网&lt;/a&gt; 下载好这个并安装。如果你在终端（命令行）中输入&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; --version&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;会有一个版本号输出的话，就说明下载成功了。
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-1e245.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 7.00218818380744%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAVklEQVQI1xXGKxKAIABAQQJDkWDzHDYZqA5SxOAYLX6iRcEbeO2npl1hTYMxBuscIQS87xj3xHw9DFumXy7imonb/f33ZEot8agpqwIpJVprlFIIIXgB9H8jk7lhonkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-1a291.png 148w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-2bc4a.png 295w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-fb8a0.png 590w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-526de.png 885w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-fa2eb.png 1180w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-08f6a.png 1770w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-1e245.png 1828w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+Mac 用户只要安装过 Xcode 或者开发者工具套件的话，就内置了 Git 的功能。之所以要安装 git 是因为 VS Code 的插件基于 Git 的支持。&lt;/p&gt;
+&lt;p&gt;接着还需要安装，&lt;a href=&quot;nodejs.org&quot;&gt;node&lt;/a&gt;，&lt;a href=&quot;https://yarnpkg.com/lang/en/&quot;&gt;yarn&lt;/a&gt; 英文不好的同学也不要管那么多，看到 &lt;strong&gt;Install, Download&lt;/strong&gt; 这种单词就点，下版本最高的就行。Window 用户的 node 需要下载的是一个 &lt;code class=&quot;language-text&quot;&gt;.msi&lt;/code&gt; 文件不是 &lt;code class=&quot;language-text&quot;&gt;.exe&lt;/code&gt; 文件，&lt;code class=&quot;language-text&quot;&gt;msi&lt;/code&gt; 文件能给 Window 环境写入一个二进制文件，而 &lt;code class=&quot;language-text&quot;&gt;exe&lt;/code&gt; 仅仅是一个 node 的 REPL 环境。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因为作者本人对 Window 不够熟悉，很多描述是靠之前碰到过的坑，如果碰到问题的话，还请自己使用搜索引擎解决&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;还是和之前一样，输入几个命令测试是否安装成功。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;node -v
+yarn why&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;在这两个都确定安装好后，继续输入&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;yarn global add eslint&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Window 用户如果 Yarn 没有安装成功的话，就使用 npm 安装作为 B 计划&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g eslint&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;安装好后，就会有打印出安装成功的 eslint 版本。&lt;a href=&quot;http://eslint.cn/&quot;&gt;eslint&lt;/a&gt; 是一个 JS 的静态分析器，它可以解决一些写 JS 经常遇到的问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;变量名写错了，但是没有报错。&lt;/li&gt;
+&lt;li&gt;自己不想写分号，让它自动加&lt;/li&gt;
+&lt;li&gt;强制要求格式的规范&lt;/li&gt;
+&lt;li&gt;等等&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;还有 &lt;a href=&quot;https://www.typescriptlang.org/&quot;&gt;TypeScript&lt;/a&gt; 这是微软开发的一个 JS 超集，安装它的目的主要是它能够为 VS Code 赋予更强的能力，让开发更爽。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;yarn global add typescript
+// or
+&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g typescript&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;和上面一样，如果 yarn 没安装成功的话就是用 npm。在本文写作的时候，typescript 的版本为 &lt;code class=&quot;language-text&quot;&gt;2.9.1&lt;/code&gt;
+接下来就进入 VSCode 的流程。&lt;/p&gt;
+&lt;h2&gt;安装插件&lt;/h2&gt;
+&lt;p&gt;最基本的 VSCode 的侧边栏有五项
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-1-3acbbb2f132d7f0b2efc67f5e1a65f70-b1b8a.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 102px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 525.4901960784314%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAABpCAYAAAA6NQMSAAAACXBIWXMAABYlAAAWJQFJUiTwAAAID0lEQVRo3u1ZaU9UZxTmJzRp2qSmdR12kEV2EHBlU8R9AcUVFRVxx11UBBdEK/vqvmsVUHGppn7RWq2K2miqH0zT2JiYmCb9YNLm6fuc4eKdYe5wh5K2aSU5ucPc9z73vO855znLuPXq7Yvukt59/ODWPzAO3SEBwfHoZwmAW2hEIv6qhIQnIiwyGRb3ILgNCBuO7hAC93MPhFtIeAIcCRfxGhaZhPAoJW1XPqjd06+1AgY5BtQ/4OkTA3evKJF+HhHoHzS4A6hTQG1hcOgwBA4Ygn2lVTj71XmRy1euYFJ6Fnz8Y0Vzba1pDUePm46N+UXYuq0YWfOW4tGjB3j79jXiBo+Wl2maOgXkmz19olFeWYuHrfdx6sxZfH39Ou59fxfJI6fg+fNn+ObmTXj7xbZZuBMNefAWz0hcvNSCGbNy0OOLQAxPmgD+3bp9Cykj0/Hd3TvtmpkD9IrEufNNmJu9DB7e0UhMmYym5gt49ctPyFuzGc0XLpo/Qw3wfGMz5sxdqrY2EBFRyfjkMz9U1TSgcHsJGpuaFWCiq4BNmJe9HL4B8YiJSxXgQ4ePoaCwGFevXXNdQ2oxYfIcfNrDH16+MfjoY09UVNVhW9FubN6608APA42Ncu58o2ybGu35skJAWpXbLF6yBn0sYbJlDUwDtDjSMFRJQPAQpI2djr0KiGAle8vFwQkaNXCkzVb1V2+fUONIYYj1dQ9vlz5KGH6MIPvwbAf0DTWOFG5BSMFO7MFMAboq/2dAn27XMKxzQHuLGls5EZ7eIc4B9XnFyuBD2zOd6dCzB+OVFBYRnaKYOk1Iwj9wkA2o09Czzyv8XL//EJ4++0HJE9xUbJ2aNhV+ioVMpYD2mFYLqA2J9ts7tzF2/AwkKaKtqm7Ay5cvMHjYWGteMZOkeJMajJ80G89fPBNmIYXxDHv0DMKllsuort0vrKTxolNALVGtWp2P6zeuw907SrHMCETGpEieZha81NIieZrxbUJDK9uMGpOJx09aEa0oi0zD7z7vFaxecgPlFbXmNORNLuLD1Oj165/R2voA06YvwGjFkceOn8KPz59iYPwoBIUMNU4BemvRLcJVYqJ2b968Qk3dAdx/cA9Pnz6RrQ5PmmjjOk41DAoZhlj19kePH+Ldu18lr/TqFyoPRUQni0+S0R35YQdAbtVDGeP4idP44/ffMG7iLGXdgeLUfIh+yTUuFUt8+xjlc2nKIPZFkbNYNjxDfub59A8aZJPMO4t5p1Z2RABdBuwqH34AdE79eg8wum+qxnaWT1zuAsh9WnQEtTG3NackCLHqNe9UQz5AAli/cRtW5m1CTGyqAC/MyUP+lh0SkowoUxryhm//OAEiaMa0bGTOXKTq7ElYtnw9Bqg1bDVMb1kj1wmK/teu36qkAAnJE4UgWLCvXbdV1d5LHGpocWZl5pSjx05g+869kk88lcydvwxXrl4VBud52vOoYV6mltQgJ3e1FO/pU+erLDdOveCk1Nj2bqRVDh6eA4ytrLEOz/LkqTM4cvQEdhXva7e8Ixfy8gnvvBulgbjtAwePtDG61XUclcRePp0USzwXGqho+x407D8sPbMzZzfUUJ/seX7sRJn06Yd+gfHtTaPLgDzDiSpJsTeZNSdXOqsuA2pCA2RMmy++F95W1hm1FU4B9Q9QKxrHiDRMa6gtfD9OSei6UYx4zxnBWjy6nbED/ws5peOcK8G1yZKejhi3dBfWON5K+Jl+aLpYeq+VlWk48GF0kGhXr92iomWx1I1GbUUHo1hvWMGmqoq1rKIGmzZvx6ysXGQvXIktBbtQWV2vOoKZDgtOi331ZY3feAG7qpiZ1/ghY6R4Z53Iday76xsOSbnHCk0DFQ0tdhryzNgtlSvNZmctQWVVnbrmyuwhJTVdyJYPT06fi31lVe2NUUi4g16Pb/Dxj8P8BSuwbkOB9COpo6ehRvUjGzYVorqmAadOn8VsRRLMJzsVe4+boG09oWM3agWMlczGLc6cnSOzr+UrN8hEZIdi7cKiEiSNmCyANBINxmc0d7LplzVAgq3My5e0uUalzBMnT8u1rLxGrE1DLcxZhRWrNkkWtAH0tQOkn81UrrGlYCd69g0RLTiWYrZbtDgPVTX1mDQlS7oqniubSKYIDaPDiICHTD/j0IxWZCrl1nmuTAEjR2XI9qlx0Y49umTvYOagb3roZw2qpSX991Y9CgeRBORAiGUIjRMvU86hzmcOelD6W2lZNXaXlElyz1cOvndfpWhGsIDgwTaObThz0EDptDwCugbzCd2FZ8ZtaqOCDoneaOaggfJKbWlJit4AXZ452NCXK53Uh7ai+wDNNoz29eHfA6ifKDES6MS8Wv8fAn/l7PRLfqcHMwTUwo6MXFFZZ50OK2ZOV9VXcUkpqmsbZJZNKuOUyRp+TmcOihMVhTHU+NsJa+vDR45jamY2ausOYMmydVikCnnOuPnTiD5RGWpITiRTc5xCgMwZC+UFJNURqRkyyj946KjMcEwDkgNbLl9WpLpafldpbGxGU1MzineXynck3bSxma4DshQmhZH/zpw9J9TFapZMPmjoGBs+NK0hjcDm58LFi9ix60tJr2Rt9oEaY5s+w9ylazFdNY6s/lk5sCNg9XBNbXmUSrGdbllvZWrIwdmRo8dFM76E/zML8tcfMrqpM2SBPiVjniR4bq22bj+2FRZLoVRXf0C+Y0WRPGJK5374PlJU967KEhHVjLNE0X7n42eKqUj595PDhxTwAfAfAvwTKMDnbWBoVMQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 1&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-1-3acbbb2f132d7f0b2efc67f5e1a65f70-b1b8a.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-1-3acbbb2f132d7f0b2efc67f5e1a65f70-b1b8a.png 102w&quot;
+        sizes=&quot;(max-width: 102px) 100vw, 102px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+其中第五个就是安装插件的一个 Tab，点开来，选择常用的拓展，就能看到根据安装量排序的拓展工具。
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-b76b9.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 99.75550122249389%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAErklEQVQ4y1VVaU9bRxT1j2iaD2Hzhnc/288GY7ywh12EsARCwpJQlERV2qrhS0BR2RKRQMCsNhgKBgwhbIHYmDWsbVqoKqWpqv6Z0ztDqdQPV3fGb955995zzlgiswlQKsxQqS1QKE2Qygz/iwSpgZ4bIVcIkMmNiE/QQ6/V0PriWYJUz7NUpqdzekjkUgEW0QlHaiYEUwquxajoJS0d0vHDMXEauOxuGIVkKBPpgwRaVSilfQo0ehf/UHyCjp8XjSpIFIkWCGb3f2EW02AQnFBpknmotXZIFRYUFlejp3cELa2daH3WjaeUn7Z0oL2zB96BMfjGg2hs+hYSpcqKVFcBnO5CHumZJbDZc6A1OHnoBTdkCisa7j9GZHMfo74pTAffYIwAfP4phBZWsX/4ER/PP6Hr1RABJpqRlp4Pl/s6dPokqDVWJKosiIvX8WDzufKlDJW36rGyGkG/14+h4QC8g2MYHApg8sd5RLYOsH/0C9qoAwkjIjunCJmZVKUzG5lZhfSBPCQlp/G52lMyINKMHzz8jgA3MTA4zlv0Uh4cnsDk9BtEto/w4eQcP3QPXgCKoosDmMwOYlqARmvlrLPqE1VmxMSqcffuV9hYD2N4yA/f6DgGvCO0HsNMcAG7e0f46eczdPZQy4wlsyUVekMyl42cJBIXr/23ZS1n+upVGUrKGzC5uIuuvik8p3jhDaJ7cBbewAqCaydY3P4dTzqHqUI5ycbi5PNjoGZaG4x2aHU2ng2CAzq1ETJPE9wdf6Gi9xMqXn/Grf7PKO/7E/kv/oC++TcYWv6GqXEaEpmWZGNxwEBgrFUmXhaXwma/sVk+/LoZq5FjzC9vY35lBwuru5R3+XpuaQeRvXO0vvRBItQWw52eC48nlzMtWl1ItqfD6cqB1ebmlcaTaKuqGxCN7iEQmMZEIIhQaAkzM4tYWQmTnPZwenqGrn4/yUYroiD/JoqKy5GbV0LVZCE9owB5+Tco5/O9jkDr6h5g7d0WevtG8LpvlDQYRD+x/XY5guj2MQ6Pz9DGWSYmbfY0JCUxllM5MZcsJ6pElJXXo7SsDt8/eYZwZA9zoWXMzi1haTmMtbUthEns4c0POCBxt70iUoT6Yngy8mCzeaAkiTDAWPJvTKyGZ5Xayi+EmjtNeLceJfsNUYUjmJldwvrGDpZJ7Ovvd3F8coZ2BijXW6jlUmqxlAubzY5dFiyYNm1JHnKPiHv3HxHAFrxeH7dcX/8ohQ8TkyFqO4yT03O09zCnKEyw8RfTuCsEk4O3y9pmsmF7ptU7JOzN6D4WyLvzFEEiJDS/ip3dE0SiBzg6/hVtL4fYDE2c1VSqLsVBVrNnEKDIXcKEfS1GjS+uJKCiso4q3OY+Hg/M0gWxiMDEHL8s/GNBLL7dQEfv6AUpzMtZ2UVcNszLrG235zqXDaua6bKq+h4iREo/b3maQGfgp7xB89sI7+GQLofnff4LLydTy6LVzefGACzkbaY/FuwiZWeYAh5/04wbpbdxs7wWZRX1KK9sQPXtRtTUNKG27hFySREc0OnKvriBaW6XfwOXfo6N03KWL33N9lIZeV5JZ1VJiJcZoZRbaC9Cn1GCfwC3AkIyaVCR3wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 2&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-1a291.png 148w,
+/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-2bc4a.png 295w,
+/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-fb8a0.png 590w,
+/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-b76b9.png 818w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+如果真的想要好好运用 VSCode 的话，还是要自己多花费点时间在这些拓展上，找出几个真正适合你的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;先看看，需要配置的插件&lt;/p&gt;
+&lt;h3&gt;ESLint&lt;/h3&gt;
+&lt;p&gt;现在没有 ESLint 已经没法写 JS 代码了，我们不需要花太多时间在找自己的拼写错误导致的 bug 上。下载 VSCode 的 ESLint 插件后，重载 VSCode，打开设置，搜索 &lt;em&gt;eslint&lt;/em&gt;。
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-d3efd.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 26.344086021505376%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA/klEQVQY02WQSUvEQBCF5884SSa9ZOskbRYTs4wJEQkyoIcRBBFv4v8/PKtbDANzKF71o/iqXu/2roJzyMCjBomeEecT/KCBSEbyOoi4x3r6wPn9G7qcwQPywnuwoIUvanq3OLACjpfCJc7O8RRunATlsOL18wfT8xuYHiHvFohqhqwXSKPFA5iskIQjVHQkiN4gpjagudAapHuHrvWybcg1vRm0Xm6TmPJ8DY/dbqB/mFELNE2UjajHE3TzBJ70EOkRPB0gMlI1QFLMIOwRRAN8Xtm4dskF7CKygm4fsZ6/0C0v8NMOnGKznP6xmMCyHoyXiGSHmKB/AHUV19Qvukmh/+Kzg0oAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 3&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-1a291.png 148w,
+/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-2bc4a.png 295w,
+/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-fb8a0.png 590w,
+/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-526de.png 885w,
+/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-d3efd.png 1116w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+这里主要需要修改的几个配置。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;eslint.autoFixOnSave&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;eslint.packageManager&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中第一个设置是可以在每次保存的时候，自动修复一些&lt;strong&gt;能自动修复&lt;/strong&gt;的错误，比如少了冒号，缩进不对等等… 注意 VSCode 的设置不能直接修改，需要复制到右边的用户设置区，来修改。通过点击左侧的那个 edit 图标就能复制到右侧，接着修改后再保存就能生效。
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-448c3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 13.904761904761905%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAuElEQVQI103OSU7DQBBGYZ8GYvdAd2cwbjuecIiJIoSsIBbgLQskLsDlH4WzYfGpSvo3L7lZbVllBamKaNugTE2myuuvq0UmmzJ7tGtJTSVKlK0xvifTJbfpVuwWSR5HyvaFaf5m/vrhdPlk170Sx5n74Y3i+E4xfpDXE8XmzLCfaeKFzfpICI8EP+DdgxgWiQstft1Ttc+0h4k8PmGkxIYe67vrld24BiOV7q4XHcZKsdTrv/J/fgEJo2QNkocmwAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 4&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-1a291.png 148w,
+/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-2bc4a.png 295w,
+/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-fb8a0.png 590w,
+/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-526de.png 885w,
+/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-448c3.png 1050w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+第二个设置是根据你使用 yarn 还是 npm 安装 eslint 来确定的。如果使用的是 yarn，就改成 yarn；npm 保存不变。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;eslint 通过一个&lt;strong&gt;规则文件&lt;/strong&gt;驱动，可以叫做 &lt;code class=&quot;language-text&quot;&gt;.eslintrc, .eslintrc.json, .eslintrc.js&lt;/code&gt; 等等，刚开始的时候，你可能不知道 eslint 有哪些规则，这该怎么办？如果你之前成功使用 yarn 或者 npm 安装了 eslint 的话，可以通过&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;eslint --init&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;接着会需要你回答一些和偏好有关的问题&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;How would you like to configure ESLint?
+&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; Answer questions about your style
+  Use a popular style guide
+  Inspect your JavaScript file&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;类似于这样的问题。用方向键控制，回车来确定。最简单的方式是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Answer questions about your style&lt;/li&gt;
+&lt;li&gt;y&lt;/li&gt;
+&lt;li&gt;y&lt;/li&gt;
+&lt;li&gt;这个问题是根据你是在浏览器还是在 node 上&lt;/li&gt;
+&lt;li&gt;这个问题是问你是否使用 CommonJS，如果不写 node 的话，选择 N&lt;/li&gt;
+&lt;li&gt;Do you use JSX? 写 React 的话，就选 y&lt;/li&gt;
+&lt;li&gt;Spaces&lt;/li&gt;
+&lt;li&gt;Single&lt;/li&gt;
+&lt;li&gt;根据电脑系统选择换行的组成。LF/CRLF&lt;/li&gt;
+&lt;li&gt;y&lt;/li&gt;
+&lt;li&gt;JSON
+根据我这个配置会生成如下配置代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;env&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;browser&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;es6&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;extends&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;eslint:recommended&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;parserOptions&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;sourceType&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;module&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;rules&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;indent&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;linebreak-style&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;unix&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;quotes&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;single&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;semi&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;always&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;注意 &lt;code class=&quot;language-text&quot;&gt;indent&lt;/code&gt; 这个，根据你的偏好来调整数字。4 表示的是 4 个空格。接着根据这个配置，eslint 就能发挥作用了。
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-99c89.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 36.09022556390977%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABTUlEQVQozz1QW3KDMBDLZcLDDwyEYIwBA2k7aZsmvf9lVBmafGh2tDurXemQCoskb3EUHbJihCoXHLMWqXCQZkYue2jpUZoVirUoAlTBvpqQCY+M8yQ745g2SIiD0J5LDoO5wBUXlHWH3n/A+SuMaaH1gGq64TQ/cOpnmNrBhxnTusJPATV5rhzFW8LikKso2KEdb2jDHbV7h52/Ma5XTNMVgw9o6gm1GWAKLksLqS206fipJd+FUrqM2AVptyxoq+hR8VrFKrksdQ+h7G4pa15LkSdZuyHNd7Gn6MtyzCzXE2S5ckgxZiXIFXNU7MU8o0DkunrbZtHZ88hLUDIjZUac11808x2V/4QJPyiXBxdnWm0xhC+E9Y55uUHTybgEhAtnZ7qp7f7Qv+gmKFSPkvZK2hW8msWQt6DtFrZQHeGYmf/ndkOcx0yf38X6B2//3rl9Fy5DAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 5&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-1a291.png 148w,
+/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-2bc4a.png 295w,
+/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-fb8a0.png 590w,
+/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-526de.png 885w,
+/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-99c89.png 1064w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+想我这个文件就有很多波浪线出现，它们就是 eslint 在抗议了。第一个错误和第三个错误是因为我们在设置的时候没有选择 &lt;code class=&quot;language-text&quot;&gt;commonJS&lt;/code&gt; 导致的。&lt;code class=&quot;language-text&quot;&gt;console.log&lt;/code&gt; 下面会有波浪线是因为 &lt;code class=&quot;language-text&quot;&gt;eslint:recommended&lt;/code&gt; 的默认配置里，包含了一个选项
+&lt;code class=&quot;language-text&quot;&gt;no-console: error&lt;/code&gt;，意思就是语句中不能出现 &lt;code class=&quot;language-text&quot;&gt;console&lt;/code&gt;，否则就是 error。调整的方法也很简单，在 &lt;code class=&quot;language-text&quot;&gt;rules&lt;/code&gt; 下面添加一句 &lt;code class=&quot;language-text&quot;&gt;no-console: &amp;#39;off&amp;#39;&lt;/code&gt; 来覆盖这个设置就行。&lt;/p&gt;
+&lt;h3&gt;Code Runner&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-99514.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 35%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABYUlEQVQoz12SSXLjMAxFdZVeRLJoWdFIUvNkOUl7iO2Vl6lK3/8KryGluyqVxSuQKAj4H5TjbXLUVuMrTdP9ph9O2HImSVtM3pBmHcGuRCmL7xtcqf8iw/Uynr6x5JwsjPg8/OLSBFT9la4/UrVvlOXEXFfU5YgpD2i7J047oqTlOW7W+J8lvxCEFU6wM8SRIQyNKHsl0xOen7PZWlxV4CkjZ4MvdxUUqJ0Q/Dv/YCO1TqZHCnuQSd06+TlqxZrF8zQbz3zh2pU158pdrC8ff8fztazO4kSyKz2fsfVBVFaoWNSkBpVJzGS3Ep+KFNemqESa6lxU67XBTxYXTmoGto8H5fDG1B2xx5HkUpPeaqJbSXZv8P8k+B8J+tyzexiCtJThNWHUEIuzhWWXq+VcLO+7E600a/sTXXtiGq4M3TuTPNI83tk3N+b2zti/M7ZX+RPODNNF6o8U1Qtl/bLGReFficTkTTU9spYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 6&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-1a291.png 148w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-2bc4a.png 295w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-fb8a0.png 590w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-526de.png 885w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-fa2eb.png 1180w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-08f6a.png 1770w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-99514.png 2280w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+这个插件的功能是通过调用的系统的二进制文件，来直接运行代码，类似于 IDE 中的编译运行。不过在真正使用之前还需要稍微配置一下，在用户设置中搜索，&lt;code class=&quot;language-text&quot;&gt;code-runner&lt;/code&gt;，可以看到搜索出来的结果。
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-d0ad4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 67.37481031866464%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB+UlEQVQ4y3VT2XLaQBDkY1KgPSVk0IkkhDlsoJAdJ04MyUNSlZT//wc6M4sQGMcPrVmtpN6Z7lZvICKEyQpZ/Yi0ajBK76DDGcx4ATOaw7bVIZgiCBewwQzKlg7SFPBkDObh2ut7Y5SrL9h+/YXN82/U62fIUQ2TrqDjOWHRrY0tcDMkQr/qCE7oCN2GiCFkCs/jmkCqHEIkUFSlzOh5Qi+n6HsRPg1uwE14RDC4wInUdVhvX/BweEXz4xWLh58wyRJ+sUUwbeBXO5hhhSgtEWcFYYJwlLedRe875IUyOelSwvgFNEGoFIL2hJlA2gmEzmgvohofoVoS+XbsjjCrG8y3e9xuXlDMn2CiFWxYw6fOFOkmiXhwNaLrSMTvtOwNaOSouEe5/EzmPCGpNpBhBalT0pI/HLeIPjTiDSFfbFBhSLEIqKsgvKWxpy4SmuJh6V6Rq6wjy/E/kssDnCnT9Tc0+z/YHf5i3hyg0yV0wnFZwpZbZxJ3q0ziHH7b9Xl9jg1FRWgSX2UuHlLn9PFRO9bwtObnXDvwe23A2UjXIV80jRyMKbx+2b3s/gJ7JJStMVIzIblPREwm9PkATyWXOfyOR8pgwyPv9lD8V+T3sJP1cfT8DjIoEPoz+KRv3xtduH01Mi/YUW1zB2UyyteV4HQ6R+QjMy5N+Qe1ZaA93w9peAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 7&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-1a291.png 148w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-2bc4a.png 295w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-fb8a0.png 590w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-526de.png 885w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-fa2eb.png 1180w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-d0ad4.png 1318w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+有很多的配置，可能很让人头大，但是先别慌，找几个我们要用的就行。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;clearPreviousOutPut&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;runInTerminal&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;saveFileBeforeRun&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;saveAllFilesBeforeRun&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;第一个的意思就是每次运行会清楚之前的输入，看个人喜好吧，我是觉得清楚一下会更好。第二个就是在自己系统的终端中运行这个，好处是可以直接打通我们&lt;strong&gt;心爱的终端&lt;/strong&gt;，而且如果不配置这个的话，Window 会出现一些奇怪的问题，强烈推荐。&lt;/p&gt;
+&lt;p&gt;第三个的意思是，运行之前保存当前文件和运行之前保存所有文件，自己选择一个设置为 True 就行。为什么需要这个？因为我们经常会写完代码就去运行，但是发现自己忘记保存了，结果还是之前的结果。运行 JS 就是通过 node 来实现的，在我们安装后这个插件并重启后，新建一个 js 文件。像我下面是一个生成 HTML 模板的代码, 输入进去后&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; content&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`
+  &amp;lt;section&gt;
+	&amp;lt;h1&gt;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;title&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&amp;lt;/h1&gt;
+	&amp;lt;article&gt;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;content&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&amp;lt;/article&gt;
+  &amp;lt;/section&gt;
+`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; config &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;I can run js&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; article&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Very Cool!&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;I can run everything&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; article&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Really Cool!&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; theHtml &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; config
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; content &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; content&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;\n&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;theHtml&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;之后点击右上角的的这个播放键
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-b3959.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 274px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 30.656934306569344%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABCUlEQVQY021Py07CUBDtB/ji1dLHbW/bW9AE2EhofECqYeGWFbLQvbjgJ0iIid9AjD96nBlaguhicu+cmTkPS8c9HFac9HGMHc+TdEDv/3PL81McVtuN6TXlPylxA9fbzRtNhVrdL/fSP2XxgMtpa7TsEJHuotlSgqmwQ1gkuOslguX5BA+PT+TwSm4Ys51o/7d4kZkvai7W6w9st98wWR8npzZmszn1X+h0ByIS6UssFq9Yvq9wPbwjtwHt9lAUUxK6F9FfhG/LFTabTwQqQ73h4+a2wPz5hXojDlSYYZSPMZ5MRYSd+YERt5xMCKvI3DApE/Eii3DUs3NHyKrIjDNJdbOLrPeRfwAJpa1tzqQn8QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 8&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-b3959.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-1b2ba.png 148w,
+/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-b3959.png 274w&quot;
+        sizes=&quot;(max-width: 274px) 100vw, 274px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+就能看到 &lt;code class=&quot;language-text&quot;&gt;console.log&lt;/code&gt; 的结果被打印出来。
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-a4a9f.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 40.899795501022496%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA6klEQVQoz42S/W6CQBDEeZmqiCJB8bgDVL5Bjaa1ff9Hme6uQkxr4v0xTC63O7v8wJnNFRZ+guUqITeYzCJ8TDeku/N56m5Hcf3gr+TwZWxq9KcflNUV27gkVYhUCZO2WG8OUuh66m3YGBiEOxQUdsjP2OcnpLseSdYh2x+hTUMDGxnqLY1d4DrKpUHpGn6Q/mtyvVhktSE/5gs9NjGzv2KeA0srhkpXKOurvKIfZLLlijwkfrw9e/hg+S7U4cnMsO1v8lGa7gttdyOWZ3THb2J7kbu6+RSWVgwjVcAkLTSJN3wueP5dbDj+AkhF/jZF4GUxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 9&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-1a291.png 148w,
+/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-2bc4a.png 295w,
+/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-fb8a0.png 590w,
+/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-526de.png 885w,
+/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-a4a9f.png 978w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Code Runner 不仅仅支持 JS，我们需要这个功能可能是为了学习新语法，也可能是测试某个算法。&lt;/p&gt;
+&lt;h3&gt;Prettier&lt;/h3&gt;
+&lt;p&gt;这个是最近一年最火的格式化工具，能够将你写成 💩 一样的 JS 也能格式成十分漂亮的代码（前提是没有语法没错）。同时也支持 HTML，CSS，JSON，Markdown 等等文件。
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-8c144.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 17.74622892635315%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAm0lEQVQY04WOyw6CMBRE+Q7XYosmItD20kRoKXRBeOjO//+SsZCoC6Mszl1MZk5uxFNCZQe4dkZV93DdjNbfYZsBmgy0diDtcb5ckZxKsESBH+knUVoamCAbpwesmwIjmvYGUjWMLFAKDUEdsrxepZvCXTiFdJDk3yHjEnu2QIi5QswEDiF7yf5Jo1xYLAjVIM2qdfgpfA+3PnwC6Ep/buwtrhMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 10&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-1a291.png 148w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-2bc4a.png 295w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-fb8a0.png 590w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-526de.png 885w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-fa2eb.png 1180w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-08f6a.png 1770w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-8c144.png 2254w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+为了体现它的强大，我们需要去改一些配置。和之前一样，在设置中搜索 &lt;code class=&quot;language-text&quot;&gt;format&lt;/code&gt;，找到&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;editor.foramtOnPaste&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;editor.formatOnSave&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;editor.formatOnType&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;解释已经有中文了，全部设置为 true 就行。至于设置这个功能的效果，不好仅仅通过文字来描述，但是我的博客又不支持 Video，所以这些只有由你们自己去尝试了。&lt;strong&gt;写一点缩进比较烂的代码，接着保存，所有的代码就被格式化了。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;不需要配置的插件&lt;/p&gt;
+&lt;h3&gt;Bracket Pair Colorizer&lt;/h3&gt;
+&lt;p&gt;如果仅仅看它的介绍的话，这个插件是一个会将你的 &lt;code class=&quot;language-text&quot;&gt;([{}])&lt;/code&gt; 这些使用不同的颜色区分出来，提升鉴别度。
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-34554.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 374px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 24.598930481283425%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABGklEQVQY00WQ20oDMRiE+yKWIthD2u4hm+4p2123rLWtUK0iKKg3injtRb0QLH0CfePPZF31YpjM/2cmQ1q9QUi3P8FyX0Q11xBW23PU7Jq50faexVFvYqD+fJZbQyfDCwoGo5husxRDYzDGrsFg+B8qRNxoW0IhVYEKy7rQ7yMtqUpWm5QqXuHF5+SlJJcpaXiFOq4o0hFl7uEXa7R7RqUD4rLEcxZ8bHe8bt9odxyEKVQH+jJjfR2yijYExR2zE5+pm5El96SLJTMtWFYOcn6Ddi441Qq9nCO9Sz73X7zv9hy0xyYw+W1YUS1Siqliony0dk0rDx2FhHFArsfoxCWKFVMzK7RDkvgo3+Xl+ZbHpwc6h775ip+G3+n6pYV/nPSYAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 11&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-34554.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-bcbd5.png 148w,
+/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-82669.png 295w,
+/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-34554.png 374w&quot;
+        sizes=&quot;(max-width: 374px) 100vw, 374px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+可以看到这些括号都是彩色的。当然如果仅仅只是这么一个花哨的功能的话，当然不能提升什么编码幸福感。其实我最看重的是它的&lt;strong&gt;作用域语句高亮功能&lt;/strong&gt;，嗯这个名字是我乱取的。就像这样：
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-c0626.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 448px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 54.46428571428571%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB/ElEQVQoz4WS2W7aYBCFeZU0gPd4+b0vgE0CxrEbSlOUplJVqe//DF/HJkRqL5qL0Wg84zPnnPln9l2J41YsrYQbLeBGD/ikK+ZGiGbE3C4UN7c+86V6qwOWWsTSiNDMGC8oMex06ulmwswwU3QrpVItBzXQh0d2qqf2WkwnZ9MMtN23t3imPTyjkgZlVVhmyelcsa7302LDGgEFTJPYRHuOyUAXd7TRgY3XCPOEZtvx2J+omwNFec/rj19U670AZriycPhSUK52E6BmCKAlkl2vJIx8NMcmDXL8ICTKUtI0I8+LKQfyzbFdfN9ney91GKBCRVml+Cqb5Lp+xmypx5hWKIOKWy0RqQO+W7Nrv/I4vHDozvRPr3x+/I5vrpjLfLOrcbyc+mHDz98d/XGLG2TCdstspGnZkTAQs8VYxy4YfbWcbAr7LscU05d6NLEYfXLcdMrXuB5kOsoV0PNGhhGN36P8mvv9kX17ouvPDE8vtLsTriHL7ITD0EyMqs2K84/dVN95GW3fXAANK6bIAxkO8ay1WJDhqRVxuhV/1oRy1Tje4pg5C1nqq1zYi3dhTrleEUSjigQVF8x0eUuakfPQKlb1RmRfJIwSF1r4nse4Sht9v8zEzBdj/1KP+R2weYhFprw9q/jLk3/jf703D2VAWDleMR3hox8+ij8JNmPJg7XnEQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 12&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-c0626.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-9c6b5.png 148w,
+/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-10b5c.png 295w,
+/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-c0626.png 448w&quot;
+        sizes=&quot;(max-width: 448px) 100vw, 448px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+注意到了吗，这对 &lt;code class=&quot;language-text&quot;&gt;[]&lt;/code&gt; 之间是一条折线，来表明这个括号所表示的作用域。这个功能在较长代码和嵌套的时候，特别有用。&lt;/p&gt;
+&lt;h3&gt;Auto Close Tag&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-99fdf.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 498px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 30.120481927710845%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABFklEQVQY021RXW+CUAzlX2wRZQgIiApixCmgfAioLJvLsk2XbPFxe9r/fzujFROy7aHpaW972nMrdJURFNWGqtnQeg4McwLKqZoD3XAZ/2eK+jcnd4cQerqL55d3vB4+sCufcDyecHw7IcvvsX88MHYnIWa3CayBh5ZooCP1IbYNSDcW43bHhCQPmFTQqk2CMEe4LLDw11iuCsRJiSjeMtFmu+f3+SJFur6DH2RshEf2HN4s4j4axhuqNSEREUmSlhzHya4esGGCqbdCUHmK6Z0IaSDV5MUD9zIh/d/UizB2g6ow46KWqFeSzEqOxZ4knWWaddxn6ST56lqD7fj4/Ppm2cLlKE275Jr+9zGa+fNBx5CVIX4AxXa8vu9ewe0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 13&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-99fdf.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-03b27.png 148w,
+/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-4e370.png 295w,
+/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-99fdf.png 498w&quot;
+        sizes=&quot;(max-width: 498px) 100vw, 498px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;这个不解释了，就是自动帮你填充对应的 Tag。如果你对 emmet 用的很熟练的话，这个插件可能出场率不高。&lt;/p&gt;
+&lt;h3&gt;Auto Rename Tag&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-5aaa8.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 25.718608169440245%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABBElEQVQY012Qy26DMBBF+RkCxYHQAOZtysuhNBClTcmiVaWuK3Xfr78dW6WLLK5G8thnztiw7jhMK/xLhDjtUbczmu5EdUJVHylPSPIBftQhTCTCuEUQ1Qh5gyTr4e8FNjaH7cQweDWjnd4ghitMOhQPIy6vH+gPZwzjC47TgkY+Y5YdpjLA3OQQRYuaBpbVo4Z5fgElpoHZYcHl8xvvXz9wyWBHTWWppkdkkuaSLCTSuEISZnCdPRzG4e4KMDfVm60wVQ0WNFDhYoLtlcjLEXJYyO4K/17A2abYejkYxWYEsNXDmFaM/kErTBtaqkExN4G+xNxMA5SBuqT+RsW6AdyC1vwCGlCk0F5Y59kAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 14&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-1a291.png 148w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-2bc4a.png 295w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-fb8a0.png 590w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-526de.png 885w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-fa2eb.png 1180w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-5aaa8.png 1322w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;和上面一个算是兄弟插件吧。嗯，作者也是同一个人。作用很明显，自动帮你改对应的 tag！同样的，如果你的结构比较复杂的话，这个还是会有点小 bug 的话，不过在时间的节省上，这个插件显然是必装的。&lt;/p&gt;
+&lt;h3&gt;HTML CSS Support&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-fbb21.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 494px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 28.74493927125506%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABKElEQVQY022Q6W6CUBBGeYrGpoJ7KogspgiICgIiuC+ljUaTJn3/Z/h6Z2yTJu2Pk8sMM3PPXClOVjgcz5hMF/BHCTbbEtGsYIJxKpgjjHKYlg9Vc6D3XbTaJhrN/h9q9R6kLNvitbwiLw5wvRl2+3fMRW61PuF6+8T58oHj6cIDCXsw5saq3IWsqAzFzZZxHzgVZmTnDEMk6RpRVLDpZJLB92ORjzCLlyiWR65J5xuOiTzfI1vs4DghKo8dYalDGgUpCE80D92IMUwffcPjU9Ve0NOHsOyA16XTHgTfxiNoPQf0bDSDrCUyICMqpFtoBfqh1DSG1iBk5R7/rEkx5R8qLbYv326ivw2JdqcBz92BMHFRb+hs1+5Y/P3f4/+G+umCp2qX678A2f+/3yFT44EAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 15&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-fbb21.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-279be.png 148w,
+/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-bbcff.png 295w,
+/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-fbb21.png 494w&quot;
+        sizes=&quot;(max-width: 494px) 100vw, 494px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;刚写前端的时候，或者为了方便，我们偶尔会把 CSS 写在 HTML 里，但是那样的话是没有直接创建 &lt;code class=&quot;language-text&quot;&gt;.css&lt;/code&gt; 文件强大的自动补全特性的，这个插件让一切都回来了。&lt;/p&gt;
+&lt;h3&gt;Settings Sync&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-fbb21.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 494px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 27.530364372469634%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABIklEQVQY04VRXW+CQBDkZ7RJ/RYFUUDAD0TBShXUFKtpbfug2DTQh/7/5+ntNiRN06QPk53du53b2ZNa7T7aisWoN3Q0ZRNyq49G0xDR5FqBWr33L6Qs/8Tp9I7L2wdywR/2LzinGdJLhvXmAK07hDddoqePUa5oKJVVgY7gHeaVqsacwILuJIRuuHAGAfwggu3MBPcxHM0ZtuNz3u2N0GpbGAwDGOI+5X1rCnJo2VOY5oRFpXi9Z6HlKhExxu1ig1W046lWUcJT0p3j85kfXYRbJLsj9odX3CdPmPmREPa4V1EdSME8xsS740lIhDjt8aetwlq11kWJa99nNyWVbV5dy0jTHNvtIyTaEe1HUW0UnD6Emn8v/K8agcTHbghD2P4CPTnAPjJJMqEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 16&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-fbb21.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-279be.png 148w,
+/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-bbcff.png 295w,
+/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-fbb21.png 494w&quot;
+        sizes=&quot;(max-width: 494px) 100vw, 494px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;同步你在 VSCode 中的所有设置和下载过的插件，Snippet，快捷键绑定。对于有多台电脑的情况下，这个插件是必备的。不过它理是基于 &lt;strong&gt;gist&lt;/strong&gt; 保存的，而这个在国内需要翻墙… 同时这个插件第一次设置的也比较繁琐，需要一定的耐心。总的来说，当你必须换一台电脑的时候，一定要花点时间到这个插件上。可以节省你大量的时间！&lt;/p&gt;
+&lt;h3&gt;Path Intellisense&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-bef25.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 492px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 23.17073170731707%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA/ElEQVQY021Q226CUBA8P9KKXHpTrhZKQbwA1VoQYykkFXlo/f9vmJ7dxKQmPkxmdzY7Z86KQ/eDY3/CZrPH/vMb3B9PaNse1a5FI3kySeC4MVwvhqpZGCgjhjIcX2ComhDTZIU0KxAEC+YsLzGfvyN/22KZfmC13sF2IphWyKbGnQvdcHD/4DHTA7phS91hU0EmZ6MziqJGGC4RxTkbVlWLNC1QbhvUXx2S2ZrTF2XNu1STRuaCll6jjBG8LODLpFST/uzPoOk2J6A0lO5p5HMSVTPlzGKd+kP3y3vC9abw5I08yWRG36OezGn2/1YDZXz1dje3j2iannf+AH/UpmdHImN4AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 17&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-bef25.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-31c43.png 148w,
+/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-0464b.png 295w,
+/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-bef25.png 492w&quot;
+        sizes=&quot;(max-width: 492px) 100vw, 492px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;提供 URL 的自动补全功能，这个必须装吧。支持任何语言，触发条件一般是在一对引号中，输入 &lt;code class=&quot;language-text&quot;&gt;./&lt;/code&gt; ，&lt;code class=&quot;language-text&quot;&gt;../&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;/&lt;/code&gt; 这些表示路径的前缀，就会跳出来了。像我们的 JS，HTML 中引用文件，CSS 中 &lt;code class=&quot;language-text&quot;&gt;url&lt;/code&gt; 就再也不用担心了。
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-e0185.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 77.44186046511628%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACP0lEQVQ4y5WTS2/TQBSF/UNImpft2E6cOI4fk/iZd5MgnlLbVEIs2CCEWEARLApCSGz4A0iIBVsW/MXDvRMSkjaqyuLEo1Hm87lnjhWrGcFu9+B6EVrthNb/r4YdoW760A0fimGFqGldiP4Ui+UZhpNz5KNTZMMTWq8wGG90dlD8/yh98A9YNwNodR+dTowgyBElM8SkNJtD011Uqm1UVQcqrQ9Kc6HXPTBHNwIoOpFVvYuOGxEwgR9k6HoJRG+AUORy326FKFeaOCpZKJUt+dxdV2o2dOnQg2JaAoZJGboE82NE8QT9aIwgHBAsJphAoxlI4CGVyg3UaAKr0Ydl9aGEYoFmM4Xj8MiphG1cVmstFIomikfW9jDrKlAloG0nxEmgOG4GvhiGhGEqHQkxIIc5mna4BVwF7QL5xTyuxiNPjx9iOL6PNJ3BaQv0+iOqj7jm5kag2paXwlK6PmXl5dIVO+S8WtTLOwVDBl4oGnsj3wSUteEfVfckxPf5lnN4fganQ2U1XLjdBKbl3cqhBI4mNG6+/JthhsFwicn0Hoaj9R5nyWB2e8jlNeDs+BHidE6gBQJyKCjDLJ/LyjBM0x15kIMvlW/pMBvcpa9jQtVZXwqPyeIKcbFDytftxpSluVefjfhlW6Dj5mh3MpmdEJmEcAc9f93JmtqShypVW8Iq1X3xXm3X4ctXl7j8+BWvLz7h+Yu3ePrkDb6sfuPD+U+8O/2O9yc/cPH4Gz6vfmEZPUNZs+nLWh9ey5PPDfAPWPbe9FbFj7sAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 18&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-1a291.png 148w,
+/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-2bc4a.png 295w,
+/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-fb8a0.png 590w,
+/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-e0185.png 860w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;CSS Peak&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-14388.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 16.063548102383056%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAr0lEQVQI10WP226DMBAF+ZcQAsQxmEuIbUxIHGiVqlL7/x8ztf3Sh9HsSnuOtJlsLcv6hWgsZv7Aup22c/TjE33z9MpwqsbAleNpoCjHRJwPR8Uhb8mDi7InLzqy1b9RSvHavvHbD9v+izY7ev7E6jtPY5j0i3HyyGZGto4mEN12C41yVOcbZT0lsuG64hbP/fEOoY1ueKSD80VTXwyVMNRCp11IE/yPkDY5FsUPIn/bVmCqfkKFTAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 19&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-1a291.png 148w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-2bc4a.png 295w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-fb8a0.png 590w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-526de.png 885w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-fa2eb.png 1180w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-08f6a.png 1770w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-14388.png 2266w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;这插件的功能就是在我们看到 HTML 或者 JSX 等代码中，如果出现了 &lt;code class=&quot;language-text&quot;&gt;class/className&lt;/code&gt; 的话，可以通过 &lt;code class=&quot;language-text&quot;&gt;Cmd/Ctrl&lt;/code&gt; ➕ 左键点击某个 class 直接跳转到对应 CSS 的定义。非常方便，但是&lt;strong&gt;并不是每个时候都有用&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;Live Server&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-14388.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 18.00529567519859%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAtElEQVQY031PPQ+CMBTkzyhtwSZYKKVQkW+ixrg4uDm5+v+ns5SwYHS4XF7e3bt7HgsUWJBBFz3a7oZM94hlDZlWSEQORmNQqyEshU8lNn7s+Be8p//GQ71wqE8YL3dU7RWmPMMUDQaTo9SFDRuhdAepWkSiRMi1M08ha3iKDFC8dyIyNtgfBwQsg2+XW8s01K7hBBYqBLt5Xg5+NZS2CRcGIqkg0ho8MtiSZDb8eW05tm74AcLIf/WW4UtBAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 20&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-fb8a0.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-1a291.png 148w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-2bc4a.png 295w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-fb8a0.png 590w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-526de.png 885w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-fa2eb.png 1180w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-08f6a.png 1770w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-14388.png 2266w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;这是一个神器，如果你还不会使用 &lt;code class=&quot;language-text&quot;&gt;webpack 或者 parcel&lt;/code&gt; 的话。它提供了自动保存文件后自动刷新的功能。虽然这个功能看上去并不是很起眼，和 &lt;code class=&quot;language-text&quot;&gt;browser-sync&lt;/code&gt; 似乎也差不多，但它能内置到 VSCode 中就大大简化了操作。&lt;/p&gt;
+&lt;p&gt;对于刚写前端的朋友有一个很重要的问题，他们往往喜欢直接通过浏览器打开某个 HTML 文件，在浏览器顶部会显示这个 URL 是 &lt;strong&gt;file&lt;/strong&gt; 开头的。file 也算是一个协议，和我们知道的 HTTP 协议一样。如果直接通过 file 来打开 HTML 的话，很多 JS 的功能是不能实现的。比如：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Web Worker&lt;/li&gt;
+&lt;li&gt;Service Worker&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;script type=&amp;quot;module&amp;quot; src=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以使用这个插件，就再也不用担心这个问题。使用方式也很简单，安装好后，点击需要的启动的 HTML 文件中底部 tab 的&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-0fc2b.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 200px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 30%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABFUlEQVQY012PW0+DQBCF9zeovUGBgqXAghZMKNTWKrWKxtZb+qCJTWrik8aXxqTx1x/ZoZiWhy9nZnbP2R1m8xhlHFdotNG8L9dFb7u7Xqa1OMrIigXd8NDMVN30qubQmapxqqnX3ZwtL6vVWyioN3QcVBR0/R4eHueI4jNUqioc7kOSDaqFNpU2sbcv0/1qTcu8eQZrSAYEknxIqqgmXl4XWK1+sHz/oHChb4slLie3SMYpwt4Q0+kTrq7v8Pn1DdvxKUxkMJG+jXgx7p9jvf5F//QiW80iY3ozw2g0gR9ESJIUg+GYwmf3z9mq9v9PGXcD7MADWjEMB3C9E1h2F072A7PjUS0Q8451jLbpZfMjul/4/wBiW7a82rlvXwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 21&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-0fc2b.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-0e1a5.png 148w,
+/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-0fc2b.png 200w&quot;
+        sizes=&quot;(max-width: 200px) 100vw, 200px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;在短暂的等待后，就会自动打开你的默认浏览器跳入由该插件启动的服务器。&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-9f11a.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 434px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 12.903225806451612%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAjElEQVQI1z2PbQqGIBCEu/+JejuAv4IOkGHhAULyI02dl1ko4WF31mWYHZ7nwXVdcM4hxiiklJBzxn3fUkkp5aP3jtaa9LVW0IOabzjPE9P0wzzPUEphHEcsywJjjKC1xrqu2Pcd27aJPo4D1lqpr2YIMaQ7TZmMKQkTMx1nIQTBe//1/KemCTX33mv+zFPjHMAoO0QAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;DraggedImage 22&quot;
+        title=&quot;&quot;
+        src=&quot;/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-9f11a.png&quot;
+        srcset=&quot;/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-47618.png 148w,
+/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-527c6.png 295w,
+/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-9f11a.png 434w&quot;
+        sizes=&quot;(max-width: 434px) 100vw, 434px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;下次要进去的话，可以直接通过 &lt;code class=&quot;language-text&quot;&gt;localhost:5500&lt;/code&gt;进去。值得一提的是，这个插件仅仅只是一个很方便的功能，但不代表它很强大。需要更强大的开发流程还是需要考虑 parcel 或者 webpack。&lt;/p&gt;
+&lt;h2&gt;更多&lt;/h2&gt;
+&lt;p&gt;如果还想继续提升开发的幸福感，可以考虑学习&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://emmet.io&quot;&gt;Emmet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://code.visualstudio.com/docs/editor/codebasics&quot;&gt;VSCode 文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;谢谢阅读 🌚&lt;/p&gt;</content:encoded></item><item><title><![CDATA[PureComponent Considered Harmful]]></title><description><![CDATA[这篇文章有点标题党, 其实主要要强调的是  到处使用 PureComponent 是不对的 . 和 Component…]]></description><link>https://github.com/thoamsy/blogs.git/PureComponent is harmful/PureComponent is harmful/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/PureComponent is harmful/PureComponent is harmful/</guid><pubDate>Mon, 21 May 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章有点标题党, 其实主要要强调的是 &lt;strong&gt;到处使用 PureComponent 是不对的&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2&gt;和 Component 的区别&lt;/h2&gt;
 &lt;p&gt;其实, &lt;code class=&quot;language-text&quot;&gt;PureComponent &amp;amp; Component&lt;/code&gt; 的区别不大, &lt;code class=&quot;language-text&quot;&gt;PureComponent&lt;/code&gt; 自己实现了 &lt;code class=&quot;language-text&quot;&gt;shouldComponentUpdate&lt;/code&gt; 方法, 大概的实现类似于&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
@@ -571,7 +1548,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;/blockquote&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getPrototypeOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getOwnPropertyDescriptors&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Deep Learning Quick Guide]]></title><description><![CDATA[原文 AI(Artificial Intelligence)  和 ML(Machine Learning) 是当下最热的话题. 我们每天都能看到 AI 的字眼, 那些有抱负的程序员都说自己想学点 AI. 你也听到高层说他们想在服务中集成 AI…]]></description><link>https://github.com/thoamsy/blogs.git/deep-learning/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/deep-learning/</guid><pubDate>Sun, 28 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
+      &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Deep Learning Quick Guide（翻译）]]></title><description><![CDATA[原文 AI(Artificial Intelligence)  和 ML(Machine Learning) 是当下最热的话题. 我们每天都能看到 AI 的字眼, 那些有抱负的程序员都说自己想学点 AI. 你也听到高层说他们想在服务中集成 AI…]]></description><link>https://github.com/thoamsy/blogs.git/deep-learning/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/deep-learning/</guid><pubDate>Sun, 28 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/blogs/static/1*1mpE6fsq5LNxH31xeTWi5w-8281600941e9adcae8c522d9bd13a3a6-0b287.jpeg&quot;
