@@ -1,5 +1,5 @@
 ---
-title: Deep Learning Quick Guide
+title: Deep Learning Quick Guide（翻译）
 date: "2018-01-28"
 ---
 
