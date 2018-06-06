@@ -76,7 +76,7 @@ npm install -g typescript
 
 ### ESLint
 
-现在没有 ESLint 已经没法写 JS 代码了，我们不需要花太多时间在找自己的拼写错误导致的 bug 上。先来配置一下 eslint 的插件。打开设置，搜索 _eslint_。
+现在没有 ESLint 已经没法写 JS 代码了，我们不需要花太多时间在找自己的拼写错误导致的 bug 上。下载 VSCode 的 ESLint 插件后，重载 VSCode，打开设置，搜索 _eslint_。
 ![](DraggedImage-3.png)
 这里主要需要修改的几个配置。
 
