@@ -51,7 +51,7 @@ npm install -g eslint
 3.  强制要求格式的规范
 4.  等等
 
-还有 [TypeScript](https://www.typescriptlang.org/) 这是微软开发的一个 JS 超集，安装它的目的主要是它能够为 VS Code 赋予更强的能力，让开发更爽。
+还有 [TypeScript](https://www.typescriptlang.org/) 这是微软开发的一个 JS 超集，安装它的目的主要是它能够为 VS Code 赋予更强的能力，让开发更爽。设置里面会有很多功能性开关，需要安装了指定版本的 typescript 才可以，所以我们安装最新的就是了。
 
 ```bash
 yarn global add typescript
@@ -83,11 +83,11 @@ npm install -g typescript
 * `eslint.autoFixOnSave`
 * `eslint.packageManager`
 
-  其中第一个设置是可以在每次保存的时候，自动修复一些**能自动修复**的错误，比如少了冒号，缩进不对等等… 注意 VSCode 的设置不能直接修改，需要复制到右边的用户设置区，来修改。通过点击左侧的那个 edit 图标就能复制到右侧，接着修改后再保存就能生效。
+  其中第一个设置是可以在每次保存的时候，自动修复一些**能自动修复**的错误，比如少了分号，缩进不对等等… 注意 VSCode 的设置不能直接修改，需要复制到右边的用户设置区，来修改。通过点击左侧的那个 edit 图标就能复制到右侧，接着修改后再保存就能生效。
   ![](DraggedImage-4.png)
   第二个设置是根据你使用 yarn 还是 npm 安装 eslint 来确定的。如果使用的是 yarn，就改成 yarn；npm 保存不变。
 
-eslint 通过一个**规则文件**驱动，可以叫做 `.eslintrc, .eslintrc.json, .eslintrc.js` 等等，刚开始的时候，你可能不知道 eslint 有哪些规则，这该怎么办？如果你之前成功使用 yarn 或者 npm 安装了 eslint 的话，可以通过
+eslint 通过一个**规则文件**驱动，可以叫做 `.eslintrc, .eslintrc.json, .eslintrc.js` 等等，刚开始的时候，你可能不知道 eslint 有哪些规则，这该怎么办？我们可以使用 eslint 默认的设置，来入门。
 
 ```bash
 eslint --init
@@ -136,10 +136,10 @@ How would you like to configure ESLint?
 }
 ```
 
-注意 `indent` 这个，根据你的偏好来调整数字。4 表示的是 4 个空格。接着根据这个配置，eslint 就能发挥作用了。
+注意 `indent` 这个 key，根据你的偏好来调整数字。4 表示的是 4 个空格。接着根据这个配置文件，eslint 就能发挥作用了。
 ![](DraggedImage-5.png)
-想我这个文件就有很多波浪线出现，它们就是 eslint 在抗议了。第一个错误和第三个错误是因为我们在设置的时候没有选择 `commonJS` 导致的。`console.log` 下面会有波浪线是因为 `eslint:recommended` 的默认配置里，包含了一个选项
-`no-console: error`，意思就是语句中不能出现 `console`，否则就是 error。调整的方法也很简单，在 `rules` 下面添加一句 `no-console: 'off'` 来覆盖这个设置就行。
+像我这个代码就有很多波浪线出现，就是因为 eslint 在抗议了。第一个错误和第三个错误是因为我们在设置的时候没有选择 `commonJS` 导致的。`console.log` 下面会有波浪线是因为 `eslint:recommended` 的默认配置里，包含了一个选项
+`no-console: error`，意思就是语句中不能出现 `console`，否则就是 error（error 还是 warn 决定了能够成功编译文件，出现了 error 就不行）。调整的方法也很简单，在 `rules` 中添加一句 `no-console: 'off'` 来覆盖这个设置就行。
 
 ### Code Runner
 
