@@ -32,13 +32,9 @@
       "component---src-layouts-index-js-3396ad3b64d776f86883.js",
       "component---src-layouts-index-js-3396ad3b64d776f86883.js.map"
     ],
-    "path---vs-code": [
-      "path---vs-code-695a6697b333c43008a9.js",
-      "path---vs-code-695a6697b333c43008a9.js.map"
-    ],
     "path---index": [
-      "path---index-6d70402db9a625b7e4b5.js",
-      "path---index-6d70402db9a625b7e4b5.js.map"
+      "path---index-c426fa39491509a377c6.js",
+      "path---index-c426fa39491509a377c6.js.map"
     ],
     "path---hello-world": [
       "path---hello-world-1b163e14efd76441259d.js",
@@ -66,6 +62,10 @@
       "path---lodash-fp-7ef9aba4c5e7ac2bb2a8.js",
       "path---lodash-fp-7ef9aba4c5e7ac2bb2a8.js.map"
     ],
+    "path---vscode": [
+      "path---vscode-1fc8190f32a7265882e2.js",
+      "path---vscode-1fc8190f32a7265882e2.js.map"
+    ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
@@ -79,9 +79,9 @@
       "path---first-step-software-world-03f4662c97d3e7ab2e13.js.map"
     ],
     "app": [
-      "app-12fd34cec34fa1cfd7a2.js",
+      "app-b7940801ceb4aba441c9.js",
       "build-js-styles.css",
-      "app-12fd34cec34fa1cfd7a2.js.map",
+      "app-b7940801ceb4aba441c9.js.map",
       "build-js-styles.css.map"
     ],
     "path---反转字符串": [
