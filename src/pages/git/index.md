@@ -24,3 +24,12 @@ date: 2018-08-12
 这里需要关注的命令不多，有一个值得注意的概念：`git config --global` 会将配置存与 `~/.gitconfig` 路径下，而默认操作(--local) 将配置保存在 `./.git/config` 下
 
 `git config --global alias.[xxx] yyy` 这个命令可以通过输入 `git xxx` 来取代 `git yyy`。
+
+## git add
+
+`git add --all` 将所有的改动全部添加到缓存区， 包括没有被 tracked 的
+`git add -i` 一个交互式的添加操作，不是那么的常用。而且子命令太多了，完全搞不懂是干嘛的
+
+## git commit
+
+`git commit --amend`, 用于修改上一次的提交记录（类似于 `git rebase -i` 的子功能）。不过需要注意的是，因为这个会修改 commit 的 SHA，如果之前改动之前已经将 repo 推到了 remote repo，就必须要先 `git pull` 然后再 `git push`, 这样反而拜拜增加了两个没用的 commit log. 除非远程仓库没有开启*分支保护*功能，这样就可以使用 `git push -f` 来覆盖远程分支。在使用 -f 的时候，请保证这个分支没有其他人同时在修改。
