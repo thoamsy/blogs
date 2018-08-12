@@ -33,3 +33,23 @@ date: 2018-08-12
 ## git commit
 
 `git commit --amend`, 用于修改上一次的提交记录（类似于 `git rebase -i` 的子功能）。不过需要注意的是，因为这个会修改 commit 的 SHA，如果之前改动之前已经将 repo 推到了 remote repo，就必须要先 `git pull` 然后再 `git push`, 这样反而拜拜增加了两个没用的 commit log. 除非远程仓库没有开启*分支保护*功能，这样就可以使用 `git push -f` 来覆盖远程分支。在使用 -f 的时候，请保证这个分支没有其他人同时在修改。
+
+## git stash
+
+算是切分支神器。工作中我经常遇到手头在解决某个事情的时候，突然碰到突如其来的情况需要紧急处理，但是手头上的工作又不适合做一个 commit 的话，就可以用到这个它。
+
+`git stash apply` 相比 `git stash pop` 的区别是，它再使用后仍然会存在于 `stash list` 中，可以用于其他的分支。就有点像 Stack 中，直接取 Stack Top 和 Pop 后取返回值的区别。
+
+`git stash` 只会 stash 被 _tracked or added_ 的文件。可以使用 `git stash -u` 将未被 track 的文件。`git stash -a` 会添加当前被修改的所有的文件，包括在 ignore 下的。
+
+`git stash save [message]` 和直接 stash 不同，如果直接使用 `git stash` ，这次 stash 的名字会直接以当前最新的提交的 title 来命名。这样可能会有些困惑，因为并没有描述清楚这个 stash 到底做了什么。这在一段时间后，可能就懵逼咯。所以可以使用这个命令添加描述性的标题
+
+`git stash pop [index]` 添加 index 就不需要按照 stack 的顺序来选择 stash。而 index 的值可以对应 `git stash list` 下的 _stash@{n}_
+
+`git shash show [-p] [index]` 仅仅看到列表还不够，还需要看到某个 stash 到底改变了什么。就可以使用这个命令，其他添加 -p 选项，可以获得和 git diff 一样更为全面的信息。
+
+`git stash -p` 这个命令和 `git stash -p` 很像，很针对每一个文件的每一个 chunk 来提问，是否需要被 stash。算是为完美主义者准备的工具吧，无聊的时候可以试一下，反正我是头晕。
+
+![](./stash-p.png)
+
+`git stash branch <branch-name> [stash]` 为了防止有些时候一旦 pop 了某个 stash，导致冲突的话，可以通过将这个 stash 应用在一个新的分支来缓解问题。
