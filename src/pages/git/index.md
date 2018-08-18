@@ -1,5 +1,5 @@
 ---
-title: git 常见操作
+title: The Junior Git
 date: 2018-08-12
 ---
 
