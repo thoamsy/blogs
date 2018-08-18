@@ -53,3 +53,10 @@ date: 2018-08-12
 ![](./stash-p.png)
 
 `git stash branch <branch-name> [stash]` 为了防止有些时候一旦 pop 了某个 stash，导致冲突的话，可以通过将这个 stash 应用在一个新的分支来缓解问题。
+
+## git log
+
+`git log --stat` 用于显示某次 commit，针对一个文件行数的增加和减少，文件名的修改情况。
+`git log -p` 会显示某次 commit 的 diff 状态
+`git log --author=<name>` 快速过滤某个 author 的提交次数
+`git log -n<count>` 显示最近 count 个提交
