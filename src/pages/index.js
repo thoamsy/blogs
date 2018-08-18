@@ -21,6 +21,7 @@ class BlogIndex extends React.Component {
           return (
             <div key={node.fields.slug}>
               <h3
+                className="blog-index"
                 style={{
                   marginBottom: rhythm(1 / 4),
                 }}
