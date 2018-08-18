@@ -1,12 +1,16 @@
 {
   "assetsByChunkName": {
+    "path---git": [
+      "path---git-b03fbd81f188e3e8fd42.js",
+      "path---git-b03fbd81f188e3e8fd42.js.map"
+    ],
     "path---parcel-parcel-📦-和-react-⚛️-的使用": [
       "path---parcel-parcel-📦-和-react-⚛️-的使用-f2f25bf3608c08004cbd.js",
       "path---parcel-parcel-📦-和-react-⚛️-的使用-f2f25bf3608c08004cbd.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-e9ae4bf1fb6dd95eb6d3.js",
-      "component---src-pages-index-js-e9ae4bf1fb6dd95eb6d3.js.map"
+      "component---src-pages-index-js-b04271930615de93baa5.js",
+      "component---src-pages-index-js-b04271930615de93baa5.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -21,8 +25,8 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "component---src-templates-blog-post-js": [
-      "component---src-templates-blog-post-js-67fb1056b29307632efb.js",
-      "component---src-templates-blog-post-js-67fb1056b29307632efb.js.map"
+      "component---src-templates-blog-post-js-105fcdf1c3c3f2e8b573.js",
+      "component---src-templates-blog-post-js-105fcdf1c3c3f2e8b573.js.map"
     ],
     "path---base-64-base-64-编码的简单尝试": [
       "path---base-64-base-64-编码的简单尝试-3fc0e6853beb1a8c9b08.js",
@@ -33,8 +37,8 @@
       "component---src-layouts-index-js-3396ad3b64d776f86883.js.map"
     ],
     "path---index": [
-      "path---index-c426fa39491509a377c6.js",
-      "path---index-c426fa39491509a377c6.js.map"
+      "path---index-53425259a65284b786b3.js",
+      "path---index-53425259a65284b786b3.js.map"
     ],
     "path---hello-world": [
       "path---hello-world-1b163e14efd76441259d.js",
@@ -53,9 +57,9 @@
       "path---react-component-and-element-737a282f3a8a09b004b7.js.map"
     ],
     "commons": [
-      "commons-b473c4ddef8d57bfbb89.js",
+      "commons-574fac331fd1d472d82c.js",
       "build-js-styles.css",
-      "commons-b473c4ddef8d57bfbb89.js.map",
+      "commons-574fac331fd1d472d82c.js.map",
       "build-js-styles.css.map"
     ],
     "path---lodash-fp": [
@@ -79,9 +83,9 @@
       "path---first-step-software-world-03f4662c97d3e7ab2e13.js.map"
     ],
     "app": [
-      "app-b7940801ceb4aba441c9.js",
+      "app-ef611abf99676658297a.js",
       "build-js-styles.css",
-      "app-b7940801ceb4aba441c9.js.map",
+      "app-ef611abf99676658297a.js.map",
       "build-js-styles.css.map"
     ],
     "path---反转字符串": [
