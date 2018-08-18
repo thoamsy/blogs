@@ -28,11 +28,14 @@ date: 2018-08-12
 ## git add
 
 `git add --all` 将所有的改动全部添加到缓存区， 包括没有被 tracked 的
+
 `git add -i` 一个交互式的添加操作，不是那么的常用。而且子命令太多了，完全搞不懂是干嘛的
 
 ## git commit
 
-`git commit --amend`, 用于修改上一次的提交记录（类似于 `git rebase -i` 的子功能）。不过需要注意的是，因为这个会修改 commit 的 SHA，如果之前改动之前已经将 repo 推到了 remote repo，就必须要先 `git pull` 然后再 `git push`, 这样反而拜拜增加了两个没用的 commit log. 除非远程仓库没有开启*分支保护*功能，这样就可以使用 `git push -f` 来覆盖远程分支。在使用 -f 的时候，请保证这个分支没有其他人同时在修改。
+`git commit --amend`, 用于修改上一次的提交记录（类似于 `git rebase -i` 的子功能）。不过需要注意的是，因为这个会修改 commit 的 SHA.
+
+如果之前改动之前已经将 repo 推到了 remote repo，就必须要先 `git pull` 然后再 `git push`, 这样反而拜拜增加了两个没用的 commit log. 除非远程仓库没有开启*分支保护*功能，这样就可以使用 `git push -f` 来覆盖远程分支。在使用 -f 的时候，请保证这个分支没有其他人同时在修改。
 
 ## git stash
 
@@ -67,9 +70,13 @@ Git 中有两种 tag：_annotated and lightweight tags_
 前者会包括一些注释信息，来进一步解释这个 tag 的作用，而后者就仅仅只是一个 tag 的名字。
 
 `git tag <name>` 会创建一个 lightweight tag
+
 `git tag -a <name>` 则会创建一个 annotated tag，之后会弹出 git 默认的编辑器，用于描述注释
+
 `git tag list -l <pattern>` 通过 pattern 过滤 tag list
+
 `git tag -d <tagname>` 删除 tag
+
 `git tag -f [other]` replace 一个 tag 以其相关信息
 
 同时，还可以 checkout 某个 tag，但这其实相当于跳转到创建该 tag 的 commit 上，进入 _detached HEAD state_。这个时候最好不要修改代码，或者先创建新分支
