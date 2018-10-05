@@ -50,3 +50,22 @@ Web 开发者有很多种方式可以按时浏览器如何恰当地加载资源�
 Figure 3: 主线程解析 CSS 得到计算过的样式
 
 即使你不提供任何 CSS，每一个 DOM 节点还是会有一个被计算过的样式。`<h1>` 标签看上去会比 `<h2>` 更大，并且每一个元素的 margin 也是不一样的。这是因为浏览器维护了一个默认样式表。如果你想了解 Chrome 的默认样式，可以阅读[源码](https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/css/html.css)
+
+## Layout
+
+现在渲染进程知道了 DOM 的结构和每一个节点的样式，但是这些信息还不足以去渲染一个页面。相信你在电话的另一头努力地给你的朋友描述一幅画。“有一个巨大的红色的圆和一个小一点的蓝色的正方形”是不足以让你的朋友想象出这幅画的样子的。
+
+![](../resource/part3/tellgame.png)
+Figure 4: A person standing in front of a painting, phone line connected to the other person
+
+Layout 是一个找到元素的几何信息的过程。主线程通过遍历 DOM，计算样式，并创建一个包换了 x y 坐标信息和边框大小的 layout 树。Layout 树可能和 DOM 树很相似，但是它仅仅包含了在能在页面中被看到的信息。比如 `display: none` 一旦被应用到每个元素上，这个元素就不是 layout 树的一部分。相似的，如果一个伪元素 `p::before { content: "Hi!" }`被应用饿了，它虽然不会出现在 DOM 树上，但是属于 layout 树。
+
+![](../resource/part3/layout.png)
+Figure 5: 主线程遍历 DOM 树，通过已经计算的样式，得到 layout 树
+
+确定页面的布局是一项由挑战性的任务。即使是最简单的页面布局，如从上到下的 block flow，也必须考虑字体的大小以及在哪里划分它们，因为它们会影响段落的大小和形状，还会影响下一段所需的位置。
+
+<a href='../resource/part3/layout.mp4'>layout.mp4</a>
+Figure 6: 因为一个断行的改变，layout 也跟着改变
+
+CSS 还能让元素浮动到一边，隐藏超出边界的部分，并修改写入方向。你可以想象到，layout 阶段其实是非常复杂的任务。在 Chrome 中，有专门一个团队的工程师致力于 layout 的工作。如果你想了解更多有关他们的工作细节，[few talks form BlinkOn Conference](https://www.youtube.com/watch?v=Y5Xa4H2wtVA) 记录了大量的有趣的内容。
