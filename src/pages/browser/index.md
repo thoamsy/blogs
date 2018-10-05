@@ -69,3 +69,40 @@ Figure 5: 主线程遍历 DOM 树，通过已经计算的样式，得到 layout 
 Figure 6: 因为一个断行的改变，layout 也跟着改变
 
 CSS 还能让元素浮动到一边，隐藏超出边界的部分，并修改写入方向。你可以想象到，layout 阶段其实是非常复杂的任务。在 Chrome 中，有专门一个团队的工程师致力于 layout 的工作。如果你想了解更多有关他们的工作细节，[few talks form BlinkOn Conference](https://www.youtube.com/watch?v=Y5Xa4H2wtVA) 记录了大量的有趣的内容。
+
+## Paint
+
+![](../resource/part3/drawgame.png)
+Figure 7: 一个人拿着画笔站在画布前，想着应该先画圆还是先画正方形
+
+有了 DOM，style，layout 还不足于渲染一个页面。假设你正在努力画一幅画，你知道画的大小，形状，每一个元素所在的位置，但是你还是需要判断绘制它们的顺序。
+比如，`z-index` 可能会被设置到当前元素上，在这种情况下，如果按 HTML 定义的顺序来绘制就会得到错误的结果。
+
+![](../resource/part3/zindex.png)
+Figure 8: 页面的元素按 HTML 元素中定义的元素，导致了错误的结果。因为 z-index 没有被考虑在内
+
+在绘制（Paint）阶段，主线程遍历 layout 树来创建绘制记录（Paint record)。绘制记录是一个绘画过程的注解，如“先背景，接着文本，然后矩形”。如果你使用过 `canvas`，那么这个过程对你来说应该很熟悉。
+
+![](../resource/part3/paint.png)
+Figure 9: 主线程遍历 layout 树并生成绘制记录
+
+### Updating rendering pipeline is costly
+
+<a href='../resource/part3/trees.mp4'>trees.mp4</a>
+Figure 10: 有序的生成 DOM ，Style，Layout，Paint Trees
+
+想要理解渲染一条龙，最重要的一点是**每一步中，都会使用上一个操作的结果作为新的数据。** 比如修改了 layout 树，那么 paint 树也需要重新生成。
+如果你打算为某些元素加动画，浏览器必须在每一帧都重复这些过程。大多数显示器 1 秒刷新 60 次屏幕（60 fps）。当物体在屏幕中移动的时候，出现在每一帧中，人眼就会认为这段动画十分平滑。然后，如果动画在某段时间内丢帧了，页面就会看上去“卡顿”
+
+![](../resource/part3/pagejank1.png)
+Figure 11：Animation frames on a timeline
+
+即使你的渲染操作能跟上屏幕的刷新，但是因为这些计算是发生在主线程上，这意味着当有其他的 JS 代码运行的时候，动画就会“掉帧”
+
+![](../resource/part3/pagejank2.png)
+Figure 12: 在动画帧的时间线上，有一帧被 JS 堵塞了
+
+你可以使用 `requestAnimationFrame` 将 JS 操作拆分成一小片，它们会分散在每一帧中运行。关于这个话题更深入的部分，请看 [Optimize JavaScript Execution](https://developers.google.cn/web/fundamentals/performance/rendering/optimize-javascript-execution)
+
+![](../resource/part3/raf.png)
+Figure 13：在动画帧的时间线上，更小的 JS 块
