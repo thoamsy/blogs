@@ -1,9 +1,9 @@
 ---
-title: Inside look at modern web browser
+title: Inside look at modern web browser(翻译)
 date: 2018-10-05
 ---
 
-## Inner workings of a Renderer Process
+原文系列: https://developers.google.cn/web/updates/2018/09/inside-browser-part1
 
 之前，我们提到了 Chrome 的多进程构架和 URL 导航的实现。在这片文章中，我们要一起去看看渲染进程到底做了什么
 
@@ -66,6 +66,7 @@ Figure 5: 主线程遍历 DOM 树，通过已经计算的样式，得到 layout 
 确定页面的布局是一项由挑战性的任务。即使是最简单的页面布局，如从上到下的 block flow，也必须考虑字体的大小以及在哪里划分它们，因为它们会影响段落的大小和形状，还会影响下一段所需的位置。
 
 <a href='./layout.mp4'>layout.mp4</a>
+
 Figure 6: 因为一个断行的改变，layout 也跟着改变
 
 CSS 还能让元素浮动到一边，隐藏超出边界的部分，并修改写入方向。你可以想象到，layout 阶段其实是非常复杂的任务。在 Chrome 中，有专门一个团队的工程师致力于 layout 的工作。如果你想了解更多有关他们的工作细节，[few talks form BlinkOn Conference](https://www.youtube.com/watch?v=Y5Xa4H2wtVA) 记录了大量的有趣的内容。
@@ -89,6 +90,7 @@ Figure 9: 主线程遍历 layout 树并生成绘制记录
 ### Updating rendering pipeline is costly
 
 <a href='./trees.mp4'>trees.mp4</a>
+
 Figure 10: 有序的生成 DOM ，Style，Layout，Paint Trees
 
 想要理解渲染一条龙，最重要的一点是**每一步中，都会使用上一个操作的结果作为新的数据。** 比如修改了 layout 树，那么 paint 树也需要重新生成。
@@ -112,6 +114,7 @@ Figure 13：在动画帧的时间线上，更小的 JS 块
 ### 你怎样 draw 一个页面
 
 <a href='./naive_rastering.mp4'>naive_rastering.mp4</a>
+
 Figure 14: naive 的栅格化过程
 
 现在浏览器知道了文档结构，每一个元素的样式，页面的几何信息，和绘制顺序，接下来怎样 draw 出这个页面呢？将这些信息转化为像素并呈现在屏幕上的过程被称为**栅格化**。
