@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/blogs/component---src-layouts-index-js-3396ad3b64d776f86883.js" as="script"/><link rel="preload" href="/blogs/component---src-templates-blog-post-js-105fcdf1c3c3f2e8b573.js" as="script"/><link rel="preload" href="/blogs/path---vscode-1fc8190f32a7265882e2.js" as="script"/><link rel="preload" href="/blogs/app-ef611abf99676658297a.js" as="script"/><link rel="preload" href="/blogs/commons-574fac331fd1d472d82c.js" as="script"/><link rel="alternate" type="application/rss+xml" href="/blogs/rss.xml"/><title data-react-helmet="true">使用 VSCode 搭建一个很爽的前端环境 | Yangkui&#x27;s Blog</title><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link href="//fonts.googleapis.com/css?family=Montserrat:700|Merriweather:400,400i,700,700i,900,900i" rel="stylesheet" type="text/css"/><style id="gatsby-inlined-css">code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/blogs/static/montserrat-latin-100.50d27986.woff2) format("woff2"),url(/blogs/static/montserrat-latin-100.5e334eff.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/blogs/static/montserrat-latin-100italic.8c070533.woff2) format("woff2"),url(/blogs/static/montserrat-latin-100italic.03e19243.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/blogs/static/montserrat-latin-200.4343d3d9.woff2) format("woff2"),url(/blogs/static/montserrat-latin-200.f2022ecd.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/blogs/static/montserrat-latin-200italic.116c4c4b.woff2) format("woff2"),url(/blogs/static/montserrat-latin-200italic.89614a60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/blogs/static/montserrat-latin-300.d2ad295b.woff2) format("woff2"),url(/blogs/static/montserrat-latin-300.3a371ee0.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/blogs/static/montserrat-latin-300italic.f6b6bf24.woff2) format("woff2"),url(/blogs/static/montserrat-latin-300italic.16521668.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/blogs/static/montserrat-latin-400.240a8444.woff2) format("woff2"),url(/blogs/static/montserrat-latin-400.b20cc131.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/blogs/static/montserrat-latin-400italic.86172bb8.woff2) format("woff2"),url(/blogs/static/montserrat-latin-400italic.9405e787.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/blogs/static/montserrat-latin-500.fb8d6b71.woff2) format("woff2"),url(/blogs/static/montserrat-latin-500.50825d47.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/blogs/static/montserrat-latin-500italic.c0a555a4.woff2) format("woff2"),url(/blogs/static/montserrat-latin-500italic.635de59c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/blogs/static/montserrat-latin-600.d5615136.woff2) format("woff2"),url(/blogs/static/montserrat-latin-600.f300da4f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/blogs/static/montserrat-latin-600italic.10f29d13.woff2) format("woff2"),url(/blogs/static/montserrat-latin-600italic.2bc37d86.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/blogs/static/montserrat-latin-700.7d77e1f0.woff2) format("woff2"),url(/blogs/static/montserrat-latin-700.81826529.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/blogs/static/montserrat-latin-700italic.1dd2b53f.woff2) format("woff2"),url(/blogs/static/montserrat-latin-700italic.c162d257.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/blogs/static/montserrat-latin-800.d4e7bf86.woff2) format("woff2"),url(/blogs/static/montserrat-latin-800.895aadbf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/blogs/static/montserrat-latin-800italic.fc0cbe44.woff2) format("woff2"),url(/blogs/static/montserrat-latin-800italic.b3362875.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/blogs/static/montserrat-latin-900.c8bdd772.woff2) format("woff2"),url(/blogs/static/montserrat-latin-900.1b99ef78.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/blogs/static/montserrat-latin-900italic.cb72c1f9.woff2) format("woff2"),url(/blogs/static/montserrat-latin-900italic.b78bb9f8.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/blogs/static/merriweather-latin-300.f015f1e9.woff2) format("woff2"),url(/blogs/static/merriweather-latin-300.92dfe81b.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/blogs/static/merriweather-latin-300italic.7fd86b32.woff2) format("woff2"),url(/blogs/static/merriweather-latin-300italic.878b76f5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/blogs/static/merriweather-latin-400.12dbf4c0.woff2) format("woff2"),url(/blogs/static/merriweather-latin-400.1fffad22.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/blogs/static/merriweather-latin-400italic.1e0d3e81.woff2) format("woff2"),url(/blogs/static/merriweather-latin-400italic.de18d4c4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/blogs/static/merriweather-latin-700.dc8fec81.woff2) format("woff2"),url(/blogs/static/merriweather-latin-700.d7d2ed8e.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/blogs/static/merriweather-latin-700italic.b7b7e5da.woff2) format("woff2"),url(/blogs/static/merriweather-latin-700italic.6210a5fc.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/blogs/static/merriweather-latin-900.43f870d5.woff2) format("woff2"),url(/blogs/static/merriweather-latin-900.8f3806df.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/blogs/static/merriweather-latin-900italic.168c1ab2.woff2) format("woff2"),url(/blogs/static/merriweather-latin-900italic.ae7778f0.woff) format("woff")}h1,h2,h3,h4,h5,h6{font-family:SF Pro SC,SF Pro Display,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif}em,li,p,small,strong{font-family:SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif}h2:not(.blog-index),h3:not(.blog-index){padding-bottom:.3em;border-bottom:1px solid #eaecef}p>code.language-text{padding:.2em .4em;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px;color:#24292e;text-shadow:none}</style></head><body><div id="___gatsby"><div style="max-width:42rem;margin-left:auto;margin-right:auto;padding:2.625rem 1.3125rem;" data-reactroot="" data-reactid="1" data-react-checksum="-1505692083"><h3 style="font-family:Montserrat, sans-serif;margin-top:0;margin-bottom:-1.75rem;" data-reactid="2"><a style="box-shadow:none;text-decoration:none;color:inherit;" href="/blogs/" data-reactid="3">Thomas&#x27; Blog</a></h3><div data-reactid="4"><!-- react-empty: 5 --><h1 data-reactid="6">使用 VSCode 搭建一个很爽的前端环境</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem;" data-reactid="7">2018/06/04</p><div data-reactid="8"><p>这篇文章主要是针对打算学习前端的小白，和想学点前端的后端大佬，为了提升你们的编码幸福感。</p>
+<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/blogs/component---src-layouts-index-js-3396ad3b64d776f86883.js" as="script"/><link rel="preload" href="/blogs/component---src-templates-blog-post-js-105fcdf1c3c3f2e8b573.js" as="script"/><link rel="preload" href="/blogs/path---vscode-165ef5ea3bb3541259e7.js" as="script"/><link rel="preload" href="/blogs/app-3dd95c1b38e700a28cea.js" as="script"/><link rel="preload" href="/blogs/commons-4e9012e9394bd6e4620d.js" as="script"/><link rel="alternate" type="application/rss+xml" href="/blogs/rss.xml"/><title data-react-helmet="true">使用 VSCode 搭建一个很爽的前端环境 | Yangkui&#x27;s Blog</title><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link href="//fonts.googleapis.com/css?family=Montserrat:700|Merriweather:400,400i,700,700i,900,900i" rel="stylesheet" type="text/css"/><style id="gatsby-inlined-css">code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/blogs/static/montserrat-latin-100.50d27986.woff2) format("woff2"),url(/blogs/static/montserrat-latin-100.5e334eff.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/blogs/static/montserrat-latin-100italic.8c070533.woff2) format("woff2"),url(/blogs/static/montserrat-latin-100italic.03e19243.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/blogs/static/montserrat-latin-200.4343d3d9.woff2) format("woff2"),url(/blogs/static/montserrat-latin-200.f2022ecd.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/blogs/static/montserrat-latin-200italic.116c4c4b.woff2) format("woff2"),url(/blogs/static/montserrat-latin-200italic.89614a60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/blogs/static/montserrat-latin-300.d2ad295b.woff2) format("woff2"),url(/blogs/static/montserrat-latin-300.3a371ee0.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/blogs/static/montserrat-latin-300italic.f6b6bf24.woff2) format("woff2"),url(/blogs/static/montserrat-latin-300italic.16521668.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/blogs/static/montserrat-latin-400.240a8444.woff2) format("woff2"),url(/blogs/static/montserrat-latin-400.b20cc131.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/blogs/static/montserrat-latin-400italic.86172bb8.woff2) format("woff2"),url(/blogs/static/montserrat-latin-400italic.9405e787.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/blogs/static/montserrat-latin-500.fb8d6b71.woff2) format("woff2"),url(/blogs/static/montserrat-latin-500.50825d47.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/blogs/static/montserrat-latin-500italic.c0a555a4.woff2) format("woff2"),url(/blogs/static/montserrat-latin-500italic.635de59c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/blogs/static/montserrat-latin-600.d5615136.woff2) format("woff2"),url(/blogs/static/montserrat-latin-600.f300da4f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/blogs/static/montserrat-latin-600italic.10f29d13.woff2) format("woff2"),url(/blogs/static/montserrat-latin-600italic.2bc37d86.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/blogs/static/montserrat-latin-700.7d77e1f0.woff2) format("woff2"),url(/blogs/static/montserrat-latin-700.81826529.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/blogs/static/montserrat-latin-700italic.1dd2b53f.woff2) format("woff2"),url(/blogs/static/montserrat-latin-700italic.c162d257.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/blogs/static/montserrat-latin-800.d4e7bf86.woff2) format("woff2"),url(/blogs/static/montserrat-latin-800.895aadbf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/blogs/static/montserrat-latin-800italic.fc0cbe44.woff2) format("woff2"),url(/blogs/static/montserrat-latin-800italic.b3362875.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/blogs/static/montserrat-latin-900.c8bdd772.woff2) format("woff2"),url(/blogs/static/montserrat-latin-900.1b99ef78.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/blogs/static/montserrat-latin-900italic.cb72c1f9.woff2) format("woff2"),url(/blogs/static/montserrat-latin-900italic.b78bb9f8.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/blogs/static/merriweather-latin-300.f015f1e9.woff2) format("woff2"),url(/blogs/static/merriweather-latin-300.92dfe81b.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/blogs/static/merriweather-latin-300italic.7fd86b32.woff2) format("woff2"),url(/blogs/static/merriweather-latin-300italic.878b76f5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/blogs/static/merriweather-latin-400.12dbf4c0.woff2) format("woff2"),url(/blogs/static/merriweather-latin-400.1fffad22.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/blogs/static/merriweather-latin-400italic.1e0d3e81.woff2) format("woff2"),url(/blogs/static/merriweather-latin-400italic.de18d4c4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/blogs/static/merriweather-latin-700.dc8fec81.woff2) format("woff2"),url(/blogs/static/merriweather-latin-700.d7d2ed8e.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/blogs/static/merriweather-latin-700italic.b7b7e5da.woff2) format("woff2"),url(/blogs/static/merriweather-latin-700italic.6210a5fc.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/blogs/static/merriweather-latin-900.43f870d5.woff2) format("woff2"),url(/blogs/static/merriweather-latin-900.8f3806df.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/blogs/static/merriweather-latin-900italic.168c1ab2.woff2) format("woff2"),url(/blogs/static/merriweather-latin-900italic.ae7778f0.woff) format("woff")}h1,h2,h3,h4,h5,h6{font-family:SF Pro SC,SF Pro Display,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif}em,li,p,small,strong{font-family:SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif}h2:not(.blog-index),h3:not(.blog-index){padding-bottom:.3em;border-bottom:1px solid #eaecef}p>code.language-text{padding:.2em .4em;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px;color:#24292e;text-shadow:none}</style></head><body><div id="___gatsby"><div style="max-width:42rem;margin-left:auto;margin-right:auto;padding:2.625rem 1.3125rem;" data-reactroot="" data-reactid="1" data-react-checksum="2076282747"><h3 style="font-family:Montserrat, sans-serif;margin-top:0;margin-bottom:-1.75rem;" data-reactid="2"><a style="box-shadow:none;text-decoration:none;color:inherit;" href="/blogs/" data-reactid="3">Thomas&#x27; Blog</a></h3><div data-reactid="4"><!-- react-empty: 5 --><h1 data-reactid="6">使用 VSCode 搭建一个很爽的前端环境</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem;" data-reactid="7">2018/06/04</p><div data-reactid="8"><p>这篇文章主要是针对打算学习前端的小白，和想学点前端的后端大佬，为了提升你们的编码幸福感。</p>
 <blockquote>
 <p>工欲善其功，必先利其器</p>
 </blockquote>
@@ -12,7 +12,7 @@
 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-1e245.png"
+    href="/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-d3c11.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -20,7 +20,7 @@
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -31,15 +31,14 @@
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage"
         title=""
-        src="/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-fb8a0.png"
-        srcset="/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-1a291.png 148w,
-/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-2bc4a.png 295w,
-/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-fb8a0.png 590w,
-/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-526de.png 885w,
-/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-fa2eb.png 1180w,
-/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-08f6a.png 1770w,
-/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-1e245.png 1828w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-42603.png"
+        srcset="/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-f931c.png 200w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-e8031.png 400w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-42603.png 800w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-5b8b9.png 1200w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-c7ea5.png 1600w,
+/blogs/static/DraggedImage-0648f1f5a16dfb03dd0a812f5e030e05-d3c11.png 1828w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -84,7 +83,7 @@ yarn why</code></pre>
 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-1-3acbbb2f132d7f0b2efc67f5e1a65f70-b1b8a.png"
+    href="/blogs/static/DraggedImage-1-3acbbb2f132d7f0b2efc67f5e1a65f70-c29b3.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -103,8 +102,8 @@ yarn why</code></pre>
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 1"
         title=""
-        src="/blogs/static/DraggedImage-1-3acbbb2f132d7f0b2efc67f5e1a65f70-b1b8a.png"
-        srcset="/blogs/static/DraggedImage-1-3acbbb2f132d7f0b2efc67f5e1a65f70-b1b8a.png 102w"
+        src="/blogs/static/DraggedImage-1-3acbbb2f132d7f0b2efc67f5e1a65f70-c29b3.png"
+        srcset="/blogs/static/DraggedImage-1-3acbbb2f132d7f0b2efc67f5e1a65f70-c29b3.png 102w"
         sizes="(max-width: 102px) 100vw, 102px"
       />
     </span>
@@ -116,7 +115,7 @@ yarn why</code></pre>
 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-b76b9.png"
+    href="/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-2e17d.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -124,7 +123,7 @@ yarn why</code></pre>
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -135,12 +134,12 @@ yarn why</code></pre>
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 2"
         title=""
-        src="/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-fb8a0.png"
-        srcset="/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-1a291.png 148w,
-/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-2bc4a.png 295w,
-/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-fb8a0.png 590w,
-/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-b76b9.png 818w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-42603.png"
+        srcset="/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-f931c.png 200w,
+/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-e8031.png 400w,
+/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-42603.png 800w,
+/blogs/static/DraggedImage-2-f20afe910439f6f7b19ca45e9cc848c3-2e17d.png 818w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -159,7 +158,7 @@ yarn why</code></pre>
 <p>选一个好看的字体还是挺重要的，如果每天面对 Window 的 cmd 那种字体的话，写程序一定会十分痛苦。目前广受好评的一个开源字体是，<a href="https://github.com/tonsky/FiraCode">Fira Code</a>, 好看是一方面，还支持一个特别神奇的 <em>font ligatures</em> 功能，它的效果就是能将你输入的一些特定的符号组合，换成另外一个更为<strong>写实风格</strong>的符号。比如我们常用的 <code class="language-text">!=</code> 最后就长得和 <code class="language-text">≠</code> 一样。 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-357c1.png"
+    href="/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-00685.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -167,7 +166,7 @@ yarn why</code></pre>
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -178,15 +177,14 @@ yarn why</code></pre>
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="fira code"
         title=""
-        src="/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-fb8a0.png"
-        srcset="/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-1a291.png 148w,
-/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-2bc4a.png 295w,
-/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-fb8a0.png 590w,
-/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-526de.png 885w,
-/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-fa2eb.png 1180w,
-/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-08f6a.png 1770w,
-/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-357c1.png 1836w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-42603.png"
+        srcset="/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-f931c.png 200w,
+/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-e8031.png 400w,
+/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-42603.png 800w,
+/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-5b8b9.png 1200w,
+/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-c7ea5.png 1600w,
+/blogs/static/fira-code-34775835d427cb3f5ef2b4415bfc6afa-00685.png 1836w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -199,7 +197,7 @@ yarn why</code></pre>
 <p>而文件图标的效果就是让你的文件或者文件夹有一个小图标，提供辨识度。像这样 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/file-icon-d76beb34e8f3330dbe8bb2368c55950a-0a4c8.png"
+    href="/blogs/static/file-icon-d76beb34e8f3330dbe8bb2368c55950a-13b6e.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -218,10 +216,10 @@ yarn why</code></pre>
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="file icon"
         title=""
-        src="/blogs/static/file-icon-d76beb34e8f3330dbe8bb2368c55950a-0a4c8.png"
-        srcset="/blogs/static/file-icon-d76beb34e8f3330dbe8bb2368c55950a-076a5.png 148w,
-/blogs/static/file-icon-d76beb34e8f3330dbe8bb2368c55950a-1e0b5.png 295w,
-/blogs/static/file-icon-d76beb34e8f3330dbe8bb2368c55950a-0a4c8.png 524w"
+        src="/blogs/static/file-icon-d76beb34e8f3330dbe8bb2368c55950a-13b6e.png"
+        srcset="/blogs/static/file-icon-d76beb34e8f3330dbe8bb2368c55950a-549d5.png 200w,
+/blogs/static/file-icon-d76beb34e8f3330dbe8bb2368c55950a-11c0c.png 400w,
+/blogs/static/file-icon-d76beb34e8f3330dbe8bb2368c55950a-13b6e.png 524w"
         sizes="(max-width: 524px) 100vw, 524px"
       />
     </span>
@@ -238,7 +236,7 @@ yarn why</code></pre>
 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-d3efd.png"
+    href="/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-bc0fd.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -246,7 +244,7 @@ yarn why</code></pre>
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -257,13 +255,12 @@ yarn why</code></pre>
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 3"
         title=""
-        src="/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-fb8a0.png"
-        srcset="/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-1a291.png 148w,
-/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-2bc4a.png 295w,
-/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-fb8a0.png 590w,
-/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-526de.png 885w,
-/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-d3efd.png 1116w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-42603.png"
+        srcset="/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-f931c.png 200w,
+/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-e8031.png 400w,
+/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-42603.png 800w,
+/blogs/static/DraggedImage-3-e9220b82be80fb3c7b82126a19a0f78d-bc0fd.png 1116w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -281,7 +278,7 @@ yarn why</code></pre>
 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-448c3.png"
+    href="/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-655e1.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -289,7 +286,7 @@ yarn why</code></pre>
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -300,13 +297,12 @@ yarn why</code></pre>
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 4"
         title=""
-        src="/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-fb8a0.png"
-        srcset="/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-1a291.png 148w,
-/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-2bc4a.png 295w,
-/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-fb8a0.png 590w,
-/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-526de.png 885w,
-/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-448c3.png 1050w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-42603.png"
+        srcset="/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-f931c.png 200w,
+/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-e8031.png 400w,
+/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-42603.png 800w,
+/blogs/static/DraggedImage-4-c145d6992b35b4c76d6b5de65dd7cac3-655e1.png 1050w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -364,7 +360,7 @@ yarn why</code></pre>
 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-99c89.png"
+    href="/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-27268.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -372,7 +368,7 @@ yarn why</code></pre>
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -383,13 +379,12 @@ yarn why</code></pre>
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 5"
         title=""
-        src="/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-fb8a0.png"
-        srcset="/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-1a291.png 148w,
-/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-2bc4a.png 295w,
-/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-fb8a0.png 590w,
-/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-526de.png 885w,
-/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-99c89.png 1064w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-42603.png"
+        srcset="/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-f931c.png 200w,
+/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-e8031.png 400w,
+/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-42603.png 800w,
+/blogs/static/DraggedImage-5-56a79be7625a59306c6ee766158c9e6f-27268.png 1064w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -402,7 +397,7 @@ yarn why</code></pre>
 <p>
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-99514.png"
+    href="/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-2dc60.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -410,7 +405,7 @@ yarn why</code></pre>
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -421,15 +416,14 @@ yarn why</code></pre>
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 6"
         title=""
-        src="/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-fb8a0.png"
-        srcset="/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-1a291.png 148w,
-/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-2bc4a.png 295w,
-/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-fb8a0.png 590w,
-/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-526de.png 885w,
-/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-fa2eb.png 1180w,
-/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-08f6a.png 1770w,
-/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-99514.png 2280w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-42603.png"
+        srcset="/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-f931c.png 200w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-e8031.png 400w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-42603.png 800w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-5b8b9.png 1200w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-c7ea5.png 1600w,
+/blogs/static/DraggedImage-6-6f4fbf287fa23b7fccd92a108843be15-2dc60.png 2280w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -440,7 +434,7 @@ yarn why</code></pre>
 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-d0ad4.png"
+    href="/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-0fd3b.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -448,7 +442,7 @@ yarn why</code></pre>
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -459,14 +453,13 @@ yarn why</code></pre>
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 7"
         title=""
-        src="/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-fb8a0.png"
-        srcset="/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-1a291.png 148w,
-/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-2bc4a.png 295w,
-/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-fb8a0.png 590w,
-/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-526de.png 885w,
-/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-fa2eb.png 1180w,
-/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-d0ad4.png 1318w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-42603.png"
+        srcset="/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-f931c.png 200w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-e8031.png 400w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-42603.png 800w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-5b8b9.png 1200w,
+/blogs/static/DraggedImage-7-705799511d2df6c9957faea510f32273-0fd3b.png 1318w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -504,7 +497,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-b3959.png"
+    href="/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-d6195.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -523,9 +516,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 8"
         title=""
-        src="/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-b3959.png"
-        srcset="/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-1b2ba.png 148w,
-/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-b3959.png 274w"
+        src="/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-d6195.png"
+        srcset="/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-2649b.png 200w,
+/blogs/static/DraggedImage-8-ce984e911a270f3bb175a39451ef4564-d6195.png 274w"
         sizes="(max-width: 274px) 100vw, 274px"
       />
     </span>
@@ -537,7 +530,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-a4a9f.png"
+    href="/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-3debb.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -545,7 +538,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -556,13 +549,12 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 9"
         title=""
-        src="/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-fb8a0.png"
-        srcset="/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-1a291.png 148w,
-/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-2bc4a.png 295w,
-/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-fb8a0.png 590w,
-/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-526de.png 885w,
-/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-a4a9f.png 978w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-42603.png"
+        srcset="/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-f931c.png 200w,
+/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-e8031.png 400w,
+/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-42603.png 800w,
+/blogs/static/DraggedImage-9-701358a41d5df7b22b23a24cc6fc90f2-3debb.png 978w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -575,7 +567,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-8c144.png"
+    href="/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-634a2.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -583,7 +575,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -594,15 +586,14 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 10"
         title=""
-        src="/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-fb8a0.png"
-        srcset="/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-1a291.png 148w,
-/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-2bc4a.png 295w,
-/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-fb8a0.png 590w,
-/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-526de.png 885w,
-/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-fa2eb.png 1180w,
-/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-08f6a.png 1770w,
-/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-8c144.png 2254w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-42603.png"
+        srcset="/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-f931c.png 200w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-e8031.png 400w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-42603.png 800w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-5b8b9.png 1200w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-c7ea5.png 1600w,
+/blogs/static/DraggedImage-10-ec5e2d1128d5525805b70ec49d5bd3f4-634a2.png 2254w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -623,7 +614,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-34554.png"
+    href="/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-23728.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -642,10 +633,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 11"
         title=""
-        src="/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-34554.png"
-        srcset="/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-bcbd5.png 148w,
-/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-82669.png 295w,
-/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-34554.png 374w"
+        src="/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-23728.png"
+        srcset="/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-80b0e.png 200w,
+/blogs/static/DraggedImage-11-b9913877db7acc2c61cdb0f6bb6ddf86-23728.png 374w"
         sizes="(max-width: 374px) 100vw, 374px"
       />
     </span>
@@ -657,7 +647,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-c0626.png"
+    href="/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-50a2d.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -676,10 +666,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 12"
         title=""
-        src="/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-c0626.png"
-        srcset="/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-9c6b5.png 148w,
-/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-10b5c.png 295w,
-/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-c0626.png 448w"
+        src="/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-50a2d.png"
+        srcset="/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-fd10f.png 200w,
+/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-00869.png 400w,
+/blogs/static/DraggedImage-12-1ce670f817f4157b59c32b142b47fd99-50a2d.png 448w"
         sizes="(max-width: 448px) 100vw, 448px"
       />
     </span>
@@ -692,7 +682,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-99fdf.png"
+    href="/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-1274e.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -711,10 +701,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 13"
         title=""
-        src="/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-99fdf.png"
-        srcset="/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-03b27.png 148w,
-/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-4e370.png 295w,
-/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-99fdf.png 498w"
+        src="/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-1274e.png"
+        srcset="/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-8a03d.png 200w,
+/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-61462.png 400w,
+/blogs/static/DraggedImage-13-f042e1918db50d4f0fe60e49be37b59f-1274e.png 498w"
         sizes="(max-width: 498px) 100vw, 498px"
       />
     </span>
@@ -727,7 +717,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-5aaa8.png"
+    href="/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-81941.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -735,7 +725,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -746,14 +736,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 14"
         title=""
-        src="/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-fb8a0.png"
-        srcset="/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-1a291.png 148w,
-/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-2bc4a.png 295w,
-/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-fb8a0.png 590w,
-/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-526de.png 885w,
-/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-fa2eb.png 1180w,
-/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-5aaa8.png 1322w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-42603.png"
+        srcset="/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-f931c.png 200w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-e8031.png 400w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-42603.png 800w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-5b8b9.png 1200w,
+/blogs/static/DraggedImage-14-d9451876d2a67a0beb4a8ad48cf93f0a-81941.png 1322w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -765,7 +754,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-fbb21.png"
+    href="/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-df553.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -784,10 +773,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 15"
         title=""
-        src="/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-fbb21.png"
-        srcset="/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-279be.png 148w,
-/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-bbcff.png 295w,
-/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-fbb21.png 494w"
+        src="/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-df553.png"
+        srcset="/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-80f1f.png 200w,
+/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-d00a4.png 400w,
+/blogs/static/DraggedImage-15-bdab489283bc25b9e8067114fcb87cbe-df553.png 494w"
         sizes="(max-width: 494px) 100vw, 494px"
       />
     </span>
@@ -800,7 +789,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-fbb21.png"
+    href="/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-df553.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -819,10 +808,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 16"
         title=""
-        src="/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-fbb21.png"
-        srcset="/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-279be.png 148w,
-/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-bbcff.png 295w,
-/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-fbb21.png 494w"
+        src="/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-df553.png"
+        srcset="/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-80f1f.png 200w,
+/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-d00a4.png 400w,
+/blogs/static/DraggedImage-16-ecd09958faef608f6794cac3bc5e6d9f-df553.png 494w"
         sizes="(max-width: 494px) 100vw, 494px"
       />
     </span>
@@ -835,7 +824,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-bef25.png"
+    href="/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-12556.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -854,10 +843,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 17"
         title=""
-        src="/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-bef25.png"
-        srcset="/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-31c43.png 148w,
-/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-0464b.png 295w,
-/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-bef25.png 492w"
+        src="/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-12556.png"
+        srcset="/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-60e82.png 200w,
+/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-2f516.png 400w,
+/blogs/static/DraggedImage-17-b1189f788c88c0ba1841df121e97482b-12556.png 492w"
         sizes="(max-width: 492px) 100vw, 492px"
       />
     </span>
@@ -869,7 +858,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-e0185.png"
+    href="/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-e4e5b.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -877,7 +866,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -888,12 +877,12 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 18"
         title=""
-        src="/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-fb8a0.png"
-        srcset="/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-1a291.png 148w,
-/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-2bc4a.png 295w,
-/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-fb8a0.png 590w,
-/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-e0185.png 860w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-42603.png"
+        srcset="/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-f931c.png 200w,
+/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-e8031.png 400w,
+/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-42603.png 800w,
+/blogs/static/DraggedImage-18-6c313d49f82f3cd880af2fb5d5804df8-e4e5b.png 860w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -904,7 +893,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-14388.png"
+    href="/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-12c38.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -912,7 +901,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -923,15 +912,14 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 19"
         title=""
-        src="/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-fb8a0.png"
-        srcset="/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-1a291.png 148w,
-/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-2bc4a.png 295w,
-/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-fb8a0.png 590w,
-/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-526de.png 885w,
-/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-fa2eb.png 1180w,
-/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-08f6a.png 1770w,
-/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-14388.png 2266w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-42603.png"
+        srcset="/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-f931c.png 200w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-e8031.png 400w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-42603.png 800w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-5b8b9.png 1200w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-c7ea5.png 1600w,
+/blogs/static/DraggedImage-19-0b0cbd23a4236f22f6570d41b569f6cc-12c38.png 2266w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -943,7 +931,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-14388.png"
+    href="/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-12c38.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -951,7 +939,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
   
   <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
@@ -962,15 +950,14 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 20"
         title=""
-        src="/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-fb8a0.png"
-        srcset="/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-1a291.png 148w,
-/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-2bc4a.png 295w,
-/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-fb8a0.png 590w,
-/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-526de.png 885w,
-/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-fa2eb.png 1180w,
-/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-08f6a.png 1770w,
-/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-14388.png 2266w"
-        sizes="(max-width: 590px) 100vw, 590px"
+        src="/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-42603.png"
+        srcset="/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-f931c.png 200w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-e8031.png 400w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-42603.png 800w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-5b8b9.png 1200w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-c7ea5.png 1600w,
+/blogs/static/DraggedImage-20-6c73592240d9ad5c9ac39239dca439c8-12c38.png 2266w"
+        sizes="(max-width: 800px) 100vw, 800px"
       />
     </span>
   </span>
@@ -989,7 +976,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-0fc2b.png"
+    href="/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-642f1.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -1008,9 +995,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 21"
         title=""
-        src="/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-0fc2b.png"
-        srcset="/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-0e1a5.png 148w,
-/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-0fc2b.png 200w"
+        src="/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-642f1.png"
+        srcset="/blogs/static/DraggedImage-21-c755ad342baefc7ad5f4e6d46b13e721-642f1.png 200w"
         sizes="(max-width: 200px) 100vw, 200px"
       />
     </span>
@@ -1022,7 +1008,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>
   <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-9f11a.png"
+    href="/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-b26d0.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -1041,10 +1027,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="DraggedImage 22"
         title=""
-        src="/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-9f11a.png"
-        srcset="/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-47618.png 148w,
-/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-527c6.png 295w,
-/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-9f11a.png 434w"
+        src="/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-b26d0.png"
+        srcset="/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-c8443.png 200w,
+/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-e096b.png 400w,
+/blogs/static/DraggedImage-22-540d5a716800cdbfda68f156e6800d98-b26d0.png 434w"
         sizes="(max-width: 434px) 100vw, 434px"
       />
     </span>
@@ -1059,7 +1045,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li><a href="https://emmet.io">Emmet</a></li>
 <li><a href="https://code.visualstudio.com/docs/editor/codebasics">VSCode 文档</a></li>
 </ol>
-<p>谢谢阅读 🌚</p></div><hr style="margin-bottom:1.75rem;" data-reactid="9"/><div style="display:flex;" data-reactid="10"><img src="/blogs/static/profile-pic.6b7afd22.jpg" alt="A cat named musa" style="margin-right:0.875rem;margin-bottom:0;width:3.5rem;height:3.5rem;" data-reactid="11"/><p data-reactid="12">博客的目的一是分享一些个人的总结, 二是翻译一些国内不能正常访问的文章, 比如 Medium 下的.</p></div></div><span style="display:block;clear:both;" data-reactid="13"> </span></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-ef611abf99676658297a.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js","107818501498521":"component---src-templates-blog-post-js-105fcdf1c3c3f2e8b573.js","35783957827783":"component---src-pages-index-js-b04271930615de93baa5.js","60335399758886":"path----557518bd178906f8d58a.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","220407911892673":"path---pure-component-is-harmful-pure-component-is-harmful-da67e52356fad7a14624.js","112632292875057":"path---base-64-base-64-编码的简单尝试-3fc0e6853beb1a8c9b08.js","146322531349299":"path---deep-learning-4ec1fb0f59c8f8d1a764.js","227484829515402":"path---first-step-software-world-03f4662c97d3e7ab2e13.js","144342403179678":"path---hello-world-1b163e14efd76441259d.js","184208325429431":"path---lodash-fp-7ef9aba4c5e7ac2bb2a8.js","150799105546278":"path---object-assign-819f5e78fe4f396ec446.js","35672907685451":"path---parcel-parcel-📦-和-react-⚛️-的使用-f2f25bf3608c08004cbd.js","155041412123632":"path---react-component-and-element-737a282f3a8a09b004b7.js","65931765013031":"path---uuid-uuid-a9eabd5ce4601b5925ea.js","276753157451298":"path---反转字符串-9e4906597303847d9bcc.js","201811504738303":"path---vscode-1fc8190f32a7265882e2.js","16183777268280":"path---git-b03fbd81f188e3e8fd42.js","142629428675168":"path---index-53425259a65284b786b3.js","114276838955818":"component---src-layouts-index-js-3396ad3b64d776f86883.js"}/*]]>*/</script><script>
+<p>谢谢阅读 🌚</p></div><hr style="margin-bottom:1.75rem;" data-reactid="9"/><div style="display:flex;" data-reactid="10"><img src="/blogs/static/profile-pic.6b7afd22.jpg" alt="A cat named musa" style="margin-right:0.875rem;margin-bottom:0;width:3.5rem;height:3.5rem;" data-reactid="11"/><p data-reactid="12">博客的目的一是分享一些个人的总结, 二是翻译一些国内不能正常访问的文章, 比如 Medium 下的.</p></div></div><span style="display:block;clear:both;" data-reactid="13"> </span></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-3dd95c1b38e700a28cea.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js","107818501498521":"component---src-templates-blog-post-js-105fcdf1c3c3f2e8b573.js","35783957827783":"component---src-pages-index-js-b04271930615de93baa5.js","60335399758886":"path----557518bd178906f8d58a.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","112632292875057":"path---base-64-base-64-编码的简单尝试-3fc0e6853beb1a8c9b08.js","146322531349299":"path---deep-learning-857acd909fbeb48b992d.js","220407911892673":"path---pure-component-is-harmful-pure-component-is-harmful-bb770fefab75c1778a71.js","227484829515402":"path---first-step-software-world-ffbd83c698364aaf6e07.js","144342403179678":"path---hello-world-6dcd5942672994bec20e.js","16183777268280":"path---git-89c1f06c61896a6ecae6.js","150799105546278":"path---object-assign-690971a911babd85db7f.js","155041412123632":"path---react-component-and-element-223f87e392999bcb6b1c.js","57569562641160":"path---browser-65f2c0039906e9b4a27a.js","184208325429431":"path---lodash-fp-7ef9aba4c5e7ac2bb2a8.js","35672907685451":"path---parcel-parcel-📦-和-react-⚛️-的使用-ba3b48cf20b684f1141b.js","65931765013031":"path---uuid-uuid-20788a883f25ba0f9e61.js","276753157451298":"path---反转字符串-2c0d19ae27c7b0a4346c.js","201811504738303":"path---vscode-165ef5ea3bb3541259e7.js","142629428675168":"path---index-ff6ee4dcf656c2c5f9dc.js","114276838955818":"component---src-layouts-index-js-3396ad3b64d776f86883.js"}/*]]>*/</script><script>
             
   
   if(true) {
@@ -1071,4 +1057,4 @@ console<span class="token punctuation">.</span><span class="token function">log<
   if (typeof ga === "function") {
     ga('create', 'undefined', 'auto');
       }
-      </script><script>/*<![CDATA[*/["/blogs/commons-574fac331fd1d472d82c.js","/blogs/app-ef611abf99676658297a.js","/blogs/path---vscode-1fc8190f32a7265882e2.js","/blogs/component---src-templates-blog-post-js-105fcdf1c3c3f2e8b573.js","/blogs/component---src-layouts-index-js-3396ad3b64d776f86883.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>
+      </script><script>/*<![CDATA[*/["/blogs/commons-4e9012e9394bd6e4620d.js","/blogs/app-3dd95c1b38e700a28cea.js","/blogs/path---vscode-165ef5ea3bb3541259e7.js","/blogs/component---src-templates-blog-post-js-105fcdf1c3c3f2e8b573.js","/blogs/component---src-layouts-index-js-3396ad3b64d776f86883.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>
