@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Yangkui\'s Blog',
+    title: "Yangkui's Blog",
     author: 'Yang Kui',
     description: 'A starter blog template with gatsby',
     siteUrl: 'https://github.com/thoamsy/blogs.git',
@@ -21,7 +21,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 800,
             },
           },
           {
@@ -54,4 +54,4 @@ module.exports = {
       },
     },
   ],
-}
+};

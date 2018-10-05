@@ -16,6 +16,7 @@
     "gatsby-plugin-sharp": "^1.6.24",
     "gatsby-plugin-typography": "^1.7.10",
     "gatsby-remark-copy-linked-files": "^1.5.25",
+    "gatsby-remark-embed-video": "^1.4.0",
     "gatsby-remark-images": "^1.5.36",
     "gatsby-remark-prismjs": "^1.2.11",
     "gatsby-remark-responsive-iframe": "^1.4.16",
@@ -32,7 +33,7 @@
   "devDependencies": {
     "eslint": "^4.13.1",
     "eslint-plugin-react": "^7.5.1",
-    "gh-pages": "^1.1.0",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.9.2"
   },
   "homepage": "https://thoamsy.github.io/blogs/",
