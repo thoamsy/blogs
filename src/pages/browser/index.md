@@ -106,3 +106,49 @@ Figure 12: 在动画帧的时间线上，有一帧被 JS 堵塞了
 
 ![](../resource/part3/raf.png)
 Figure 13：在动画帧的时间线上，更小的 JS 块
+
+## Compositing
+
+### 你怎样 draw 一个页面
+
+<a href='../resource/part3/naive_rastering.mp4'>naive_rastering.mp4</a>
+Figure 14: naive 的栅格化过程
+
+现在浏览器知道了文档结构，每一个元素的样式，页面的几何信息，和绘制顺序，接下来怎样 draw 出这个页面呢？将这些信息转化为像素并呈现在屏幕上的过程被称为**栅格化**。
+可能一个比较 naive 的处理这个方式是：仅仅栅格化视口的部分。如果用户滚动着页面，那么在移动帧的过程中，通过继续栅格化来填充缺失的部分。这也是 Chrome 刚发布的时候，采用的策略。然后现代浏览器会使用一种被称为合成（compositing）的更为牛逼（sophisticated）的方式。
+
+### 什么是合成
+
+<a href='../resource/part3/composit.mp4'>composit.mp4</a>
+Figure 15: 合成过程
+
+合成是一种用来将一个界面分为多个层，分别将它们栅格化，并在一个叫做合成器的线程中将它们重新合并成一个界面的技术。如果滚动发生了，因为每一个图层（Layer）都早已栅格化，现在说需要做的事情仅仅是合成一个新的帧。而动画也可以通过移动层并将它们组合成一个新的帧的方式来实现。
+你可以使用开发者工具中的 Layers 面板来查看你的网页是被分成了哪些层。
+
+### 深入 Layer
+
+为了分清楚哪些元素会在哪些图层中出现，主线程需要遍历 layout 树并创建一个 layer 树（在 Performance 面板中，这一部分被称为 Update Layer Tree）。如果界面中那些本该成为单独的层（比如抽屉菜单）却没有成为，你可以使用 CSS 属性 `will-change` 来暗示浏览器，将它提升为一个单独的层。
+
+你可能会禁不住诱惑让每一个元素都成为一个图层，但是合成大量的层反而会导致这个过程比一帧一帧的栅格化还要慢，关键才是要测量你的渲染性能。关于这个部分的更多细节，请看 [Stick to Compositor-Only Properties and Manager Layer Count](https://developers.google.cn/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)
+
+### Raster and composite off of the main thread
+
+一旦 Layer 树已经创建好，并且 Paint 的顺序是确定的，那么主线程就会将这些信息提交到合成器线程中。合成器线程会栅格化每一个 Layer。有些 Layer 可以和整个页面一样大，所以合成器线程会将它们分为多个图块，接着将每一个图块发送给栅格线程。栅格线程栅格化每一个图块，并将它们存在 GPU 的内存中。
+
+![](../resource/part3/raster.png)
+Figure 17: 栅格线程创建多个位图块，并发送给 GPU
+
+合成线程还可以根据优先级决定，以便视口（或附近）可以先被栅格化。图层还具有多个 tiliings 用于处理放大操作等。
+
+一旦图块被栅格化，合成器线程会有一个被称为**draw quads（绘制四边形）**的过程来收集这些图块的信息，以创建一个 **compositor frame（合成帧）**
+Compositor frame 接着会由 IPC 提交到浏览器进程中。此时，可以从 UI 线程中添加其他的合成帧用于浏览器 UI 的改变或者渲染进程。最后这些合成帧会被发送到 GPU 以显示到屏幕上。如果有滚动事件发送，合成器线程会创建新的合成帧发送到 GPU。
+
+![](../resource/part3/composit.png)
+Figure 18: 合成器线程创造合成帧的过程。帧先发送到浏览器线程然后发送到 GPU
+
+合成的优点就是它不依赖主线程。合成线程不需要等待样式的计算或者 JS 的执行。这也是为什么 [只改变那些会导致合成的属性](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)被认为是创建平滑动画的最佳选择。如果 layout 或者 paint 需要被再次计算，则主线程又会忙碌起来。
+
+## 总结
+
+在这篇文章中，我们探索了渲染一条龙：从解析到合成。但愿你现在有能力去越多更多有关网页性能优化的文章。
+在下一篇，也是本系列的最后一篇中，我们将会深入合成线程，一起看看当用户输入事件`mousemove click`的时候会发生什么。
