@@ -41,3 +41,12 @@ Figure 2: 主线程解析 HTML 文档并构建 DOM 树
 ## 暗示浏览器哪些资源是可以加载的
 
 Web 开发者有很多种方式可以按时浏览器如何恰当地加载资源。如果你的 JS 不使用 `document.write()`，你可以给 `script` 标签添加 `async` 或者 `defer` attribute。这样浏览器就异步的加载和运行 JS 代码，而不会堵塞解析过程。你同时也可以在恰当的时候使用 [JavaScript module](https://developers.google.cn/web/fundamentals/primers/modules)。`<link ref="preload">` 也是一种通知浏览器，当前资源可以尽快下载的方式。可以通过阅读 [Resource Prioritization – Getting the Browser to Help You](https://developers.google.cn/web/fundamentals/performance/resource-prioritization) 了解更多。
+
+## Style calculation
+
+因为 CSS 的存在，仅仅有一个 DOM 是不足以让浏览器了解整个网页会是怎么样的。主线程会解析 CS，并为每一个 DOM 节点计算出最终样式。这些信息会基于 CSS 选择器来呈现每一个元素被应用了哪些样式。你可以在通过开发者工具的 `computed` 来看到这些信息。
+
+![](../resource/part3/computedstyle.png)
+Figure 3: 主线程解析 CSS 得到计算过的样式
+
+即使你不提供任何 CSS，每一个 DOM 节点还是会有一个被计算过的样式。`<h1>` 标签看上去会比 `<h2>` 更大，并且每一个元素的 margin 也是不一样的。这是因为浏览器维护了一个默认样式表。如果你想了解 Chrome 的默认样式，可以阅读[源码](https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/css/html.css)
