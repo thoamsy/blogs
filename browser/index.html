@@ -1,43 +1,38 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/blogs/component---src-layouts-index-js-3396ad3b64d776f86883.js" as="script"/><link rel="preload" href="/blogs/component---src-templates-blog-post-js-105fcdf1c3c3f2e8b573.js" as="script"/><link rel="preload" href="/blogs/path---browser-65f2c0039906e9b4a27a.js" as="script"/><link rel="preload" href="/blogs/app-3dd95c1b38e700a28cea.js" as="script"/><link rel="preload" href="/blogs/commons-4e9012e9394bd6e4620d.js" as="script"/><link rel="alternate" type="application/rss+xml" href="/blogs/rss.xml"/><title data-react-helmet="true">Inside look at modern web browser（翻译） | Yangkui&#x27;s Blog</title><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link href="//fonts.googleapis.com/css?family=Montserrat:700|Merriweather:400,400i,700,700i,900,900i" rel="stylesheet" type="text/css"/><style id="gatsby-inlined-css">code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/blogs/static/montserrat-latin-100.50d27986.woff2) format("woff2"),url(/blogs/static/montserrat-latin-100.5e334eff.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/blogs/static/montserrat-latin-100italic.8c070533.woff2) format("woff2"),url(/blogs/static/montserrat-latin-100italic.03e19243.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/blogs/static/montserrat-latin-200.4343d3d9.woff2) format("woff2"),url(/blogs/static/montserrat-latin-200.f2022ecd.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/blogs/static/montserrat-latin-200italic.116c4c4b.woff2) format("woff2"),url(/blogs/static/montserrat-latin-200italic.89614a60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/blogs/static/montserrat-latin-300.d2ad295b.woff2) format("woff2"),url(/blogs/static/montserrat-latin-300.3a371ee0.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/blogs/static/montserrat-latin-300italic.f6b6bf24.woff2) format("woff2"),url(/blogs/static/montserrat-latin-300italic.16521668.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/blogs/static/montserrat-latin-400.240a8444.woff2) format("woff2"),url(/blogs/static/montserrat-latin-400.b20cc131.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/blogs/static/montserrat-latin-400italic.86172bb8.woff2) format("woff2"),url(/blogs/static/montserrat-latin-400italic.9405e787.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/blogs/static/montserrat-latin-500.fb8d6b71.woff2) format("woff2"),url(/blogs/static/montserrat-latin-500.50825d47.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/blogs/static/montserrat-latin-500italic.c0a555a4.woff2) format("woff2"),url(/blogs/static/montserrat-latin-500italic.635de59c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/blogs/static/montserrat-latin-600.d5615136.woff2) format("woff2"),url(/blogs/static/montserrat-latin-600.f300da4f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/blogs/static/montserrat-latin-600italic.10f29d13.woff2) format("woff2"),url(/blogs/static/montserrat-latin-600italic.2bc37d86.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/blogs/static/montserrat-latin-700.7d77e1f0.woff2) format("woff2"),url(/blogs/static/montserrat-latin-700.81826529.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/blogs/static/montserrat-latin-700italic.1dd2b53f.woff2) format("woff2"),url(/blogs/static/montserrat-latin-700italic.c162d257.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/blogs/static/montserrat-latin-800.d4e7bf86.woff2) format("woff2"),url(/blogs/static/montserrat-latin-800.895aadbf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/blogs/static/montserrat-latin-800italic.fc0cbe44.woff2) format("woff2"),url(/blogs/static/montserrat-latin-800italic.b3362875.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/blogs/static/montserrat-latin-900.c8bdd772.woff2) format("woff2"),url(/blogs/static/montserrat-latin-900.1b99ef78.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/blogs/static/montserrat-latin-900italic.cb72c1f9.woff2) format("woff2"),url(/blogs/static/montserrat-latin-900italic.b78bb9f8.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/blogs/static/merriweather-latin-300.f015f1e9.woff2) format("woff2"),url(/blogs/static/merriweather-latin-300.92dfe81b.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/blogs/static/merriweather-latin-300italic.7fd86b32.woff2) format("woff2"),url(/blogs/static/merriweather-latin-300italic.878b76f5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/blogs/static/merriweather-latin-400.12dbf4c0.woff2) format("woff2"),url(/blogs/static/merriweather-latin-400.1fffad22.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/blogs/static/merriweather-latin-400italic.1e0d3e81.woff2) format("woff2"),url(/blogs/static/merriweather-latin-400italic.de18d4c4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/blogs/static/merriweather-latin-700.dc8fec81.woff2) format("woff2"),url(/blogs/static/merriweather-latin-700.d7d2ed8e.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/blogs/static/merriweather-latin-700italic.b7b7e5da.woff2) format("woff2"),url(/blogs/static/merriweather-latin-700italic.6210a5fc.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/blogs/static/merriweather-latin-900.43f870d5.woff2) format("woff2"),url(/blogs/static/merriweather-latin-900.8f3806df.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/blogs/static/merriweather-latin-900italic.168c1ab2.woff2) format("woff2"),url(/blogs/static/merriweather-latin-900italic.ae7778f0.woff) format("woff")}h1,h2,h3,h4,h5,h6{font-family:SF Pro SC,SF Pro Display,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif}em,li,p,small,strong{font-family:SF Pro SC,SF Pro Text,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif}h2:not(.blog-index),h3:not(.blog-index){padding-bottom:.3em;border-bottom:1px solid #eaecef}p>code.language-text{padding:.2em .4em;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px;color:#24292e;text-shadow:none}</style></head><body><div id="___gatsby"><div style="max-width:42rem;margin-left:auto;margin-right:auto;padding:2.625rem 1.3125rem;" data-reactroot="" data-reactid="1" data-react-checksum="1351402174"><h3 style="font-family:Montserrat, sans-serif;margin-top:0;margin-bottom:-1.75rem;" data-reactid="2"><a style="box-shadow:none;text-decoration:none;color:inherit;" href="/blogs/" data-reactid="3">Thomas&#x27; Blog</a></h3><div data-reactid="4"><!-- react-empty: 5 --><h1 data-reactid="6">Inside look at modern web browser（翻译）</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem;" data-reactid="7">2018/10/05</p><div data-reactid="8"><p>原文系列: <a href="https://developers.google.cn/web/updates/2018/09/inside-browser-part1">https://developers.google.cn/web/updates/2018/09/inside-browser-part1</a></p>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/blogs/0.3bab22f1f658e066ab05.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/blogs/static/montserrat-latin-100-4124805c0503dbfe42dd67d7f5715964.woff2) format("woff2"),url(/blogs/static/montserrat-latin-100-c8fb2f714bbc7bc3e8dfffa916b286dc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/blogs/static/montserrat-latin-100italic-e4bf47bd171a9b2a72dd84c58bf90edf.woff2) format("woff2"),url(/blogs/static/montserrat-latin-100italic-d1f3f2d02ee4d7d2d4b1ad865014f189.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/blogs/static/montserrat-latin-200-444ae007121264bc1969d49b4031f9b2.woff2) format("woff2"),url(/blogs/static/montserrat-latin-200-edbce16a90aa22c297a0307b85789837.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/blogs/static/montserrat-latin-200italic-f316c5d1ec40f3e68654c3f38b3999f3.woff2) format("woff2"),url(/blogs/static/montserrat-latin-200italic-d7bbb730d9b5e11720b3eb32326dcca7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/blogs/static/montserrat-latin-300-0a7c6df06e85d978d096d4d18fd8d43d.woff2) format("woff2"),url(/blogs/static/montserrat-latin-300-5e86df2cad22d2ef2b03516334afae5e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/blogs/static/montserrat-latin-300italic-c076c4892bc7a4be7b9097e97a35012d.woff2) format("woff2"),url(/blogs/static/montserrat-latin-300italic-37c74a8d2d0d36a0a2c6e9a37ee15b0c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/blogs/static/montserrat-latin-400-501ce09c42716a2f6e1503a25eb174c9.woff2) format("woff2"),url(/blogs/static/montserrat-latin-400-f29d2b8559699b6beb5b29b25b8bc572.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/blogs/static/montserrat-latin-400italic-882908d9950d9c86ebd380877f293d95.woff2) format("woff2"),url(/blogs/static/montserrat-latin-400italic-22e7b04e5f2a901d49d4d342315a715a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/blogs/static/montserrat-latin-500-f0f2716c5fe401d175b88715e7d28685.woff2) format("woff2"),url(/blogs/static/montserrat-latin-500-991b453bf90a0980e78966d2af7e3d3a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/blogs/static/montserrat-latin-500italic-4590ebba421b3288c305305d7fa7b504.woff2) format("woff2"),url(/blogs/static/montserrat-latin-500italic-f3d41e4cdcc2314e49ddcea751d6f87f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/blogs/static/montserrat-latin-600-15c24f7109941777774ddd2c636c6a50.woff2) format("woff2"),url(/blogs/static/montserrat-latin-600-f6dc6096f48956908c1787d9a722570a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/blogs/static/montserrat-latin-600italic-6d10b80529d5c36c7c09fca7193af0fc.woff2) format("woff2"),url(/blogs/static/montserrat-latin-600italic-02c4833312d94b1b0866f073023a250e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/blogs/static/montserrat-latin-700-79982cd1f74c6fa7451bf9b37ead09ff.woff2) format("woff2"),url(/blogs/static/montserrat-latin-700-957e93fbbe131a59791cd820d98b7109.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/blogs/static/montserrat-latin-700italic-283438e9577fe6a684466bb100e105ec.woff2) format("woff2"),url(/blogs/static/montserrat-latin-700italic-ca627c5ccc65cf80c2ecaea44b997de9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/blogs/static/montserrat-latin-800-35386154b78d046218fc8f88a44ff515.woff2) format("woff2"),url(/blogs/static/montserrat-latin-800-756655905d91b77960888262e7d58d35.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/blogs/static/montserrat-latin-800italic-e1b52a7bd83e2324db6d92bdc206844c.woff2) format("woff2"),url(/blogs/static/montserrat-latin-800italic-a69f0add9d86c1a84311d7dd8693ba4a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/blogs/static/montserrat-latin-900-260c2ea3ef57feb82251952e605a36d5.woff2) format("woff2"),url(/blogs/static/montserrat-latin-900-186cae8091da578150d81958e217714a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/blogs/static/montserrat-latin-900italic-d785fb9fc74588ffb7f306799709a97d.woff2) format("woff2"),url(/blogs/static/montserrat-latin-900italic-43b527fe77254f97ea36e2b54e845ec4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/blogs/static/merriweather-latin-300-a50c381443e6993188ed9cc4b6806866.woff2) format("woff2"),url(/blogs/static/merriweather-latin-300-2c73b119ad85e697123658b8a091ff83.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/blogs/static/merriweather-latin-300italic-bd410cbf8c272acd4fbdd9f61a7015bf.woff2) format("woff2"),url(/blogs/static/merriweather-latin-300italic-9deeb422b65afb1daacc039296bb3640.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/blogs/static/merriweather-latin-400-f936cb550d4dcd769f75c453207ac5e6.woff2) format("woff2"),url(/blogs/static/merriweather-latin-400-ab0616e6d856817eff54eb8c5e1664e4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/blogs/static/merriweather-latin-400italic-5c9a23d08e2c851e5a25795b940acd4f.woff2) format("woff2"),url(/blogs/static/merriweather-latin-400italic-0ab4b54f3b1e8b14cf755970fde8ce35.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/blogs/static/merriweather-latin-700-1636f13a52ca3f0eb8784c9c57f62082.woff2) format("woff2"),url(/blogs/static/merriweather-latin-700-cc673c945b482dc1378d4a3c95ffd175.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/blogs/static/merriweather-latin-700italic-8b0db67123584893c6591accbc51640c.woff2) format("woff2"),url(/blogs/static/merriweather-latin-700italic-513649f5b9ba4675cff15cf3f7ad4f2a.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/blogs/static/merriweather-latin-900-46631a9aab93dec3ed34f429dd1a5646.woff2) format("woff2"),url(/blogs/static/merriweather-latin-900-a0528570caa2c785891308ce604d8db7.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/blogs/static/merriweather-latin-900italic-a26a8168916e5d4e5485081171d7fdb0.woff2) format("woff2"),url(/blogs/static/merriweather-latin-900italic-db42a3f34378e69ef5aebb6717f1f33e.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.0.59"/><link rel="alternate" type="application/rss+xml" href="/blogs/rss.xml"/><title data-react-helmet="true">Inside look at modern web browser（翻译） | Yangkui&#x27;s Blog</title><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link as="script" rel="preload" href="/blogs/0-f86bee9c85018e940169.js"/><link as="script" rel="preload" href="/blogs/component---src-templates-blog-post-js-70853527bbba11d0cdee.js"/><link as="script" rel="preload" href="/blogs/app-347480b22dd7c9349b5f.js"/><link as="script" rel="preload" href="/blogs/webpack-runtime-0397cc4d90c75a624682.js"/><link rel="preload" href="/blogs/static/d/37/path---browser-fcd-daf-vzan14YXEa7AP8lqhmuNs9tZC0.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><h3 style="font-family:Montserrat, sans-serif;margin-top:0;margin-bottom:-1.75rem"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/blogs/">Yangkui&#x27;s Blog</a></h3><h1>Inside look at modern web browser（翻译）</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">2018/10/05</p><div><p>原文系列: <a href="https://developers.google.cn/web/updates/2018/09/inside-browser-part1">https://developers.google.cn/web/updates/2018/09/inside-browser-part1</a></p>
 <p>之前，我们提到了 Chrome 的多进程构架和 URL 导航的实现。在这片文章中，我们要一起去看看渲染进程到底做了什么</p>
 <p>渲染过程（Render Progress）和 Web 的性能息息相关。也因为在渲染过程中会发生很多事情，本文仅仅介绍它的冰山一角。如果你想深入的了解，<a href="https://developers.google.cn/web/fundamentals/performance/why-performance-matters/">Why Performance Matters</a> 有更多的资源。</p>
 <h2>渲染过程处理 Web 内容</h2>
 <p>渲染过程负责在 Tab 中发生的一切事情。在一次渲染过程中，主线程会处理绝大部分你为用户准备的代码。如果还包含了 Web Worker 或者 Service Worker（PWA） 的代码，这部分会由 Worker 线程来处理。<strong>Compositor（合成）</strong> 和 <strong>Raster（栅格）</strong>也属于渲染进程的一部分，使页面渲染的更为高效和平滑。</p>
 <p>渲染进程的核心任务是将 HTML，CSS，JavaScript 转化成用户可以与之交互的 Web 网页。</p>
-<p>
-  <a
+<p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/renderer-bdfa66a4ef1fbd2805797bc4cd90f8d8-3c337.png"
+    href="/blogs/static/bdfa66a4ef1fbd2805797bc4cd90f8d8/3c337/renderer.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
+    <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABbklEQVQoz2WRyXLCQAxE/f9/w5EqDgQ4kIrBG3ghBuxiD2CzQ9jMY0QoV6UPY02P1GrJWpZlcRx/fum22+l0gjAMPc/zfZ9LW4Gr67q2bf8oWJY1m82out/vGp/RaOT5gem0PxTK5bJhGCTput5sNk3T5Fqr1RBCtNvtIvEqHgwGnoLjOJZtkxEEwfcfQgWCXq+HFyFxOp1O9/u9BoUl0qIoJu73+1kOyN9uNwnkvF6vBGmaJkminc9nqNPp9C7YbreHw0EmvFwuML8KURSt12vJ2e121GubzWaxWGCjUChUKhWEYJkNezwhj/p8Pl+tVsVi8e2LBs9iZk4U6vV6tVoliTe06LNcLo/HI1fIVqvF8MPhkO1OJhOqcKFhjIdSqcQPECHxiXPkxSdXfLIa1i5yr87sAyX08uuRJVMvWoA9NRoN/gWOSB6Px8/OqGb/QCqjYkqWLIz0FOa1MJbBh/HSHBgSYc48CfMOMMvrA+t4W7C5eyUwAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-    >
-      <img
+    ></span>
+    <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="renderer"
         title=""
-        src="/blogs/static/renderer-bdfa66a4ef1fbd2805797bc4cd90f8d8-42603.png"
-        srcset="/blogs/static/renderer-bdfa66a4ef1fbd2805797bc4cd90f8d8-f931c.png 200w,
-/blogs/static/renderer-bdfa66a4ef1fbd2805797bc4cd90f8d8-e8031.png 400w,
-/blogs/static/renderer-bdfa66a4ef1fbd2805797bc4cd90f8d8-42603.png 800w,
-/blogs/static/renderer-bdfa66a4ef1fbd2805797bc4cd90f8d8-3c337.png 865w"
+        src="/blogs/static/bdfa66a4ef1fbd2805797bc4cd90f8d8/42603/renderer.png"
+        srcset="/blogs/static/bdfa66a4ef1fbd2805797bc4cd90f8d8/f931c/renderer.png 200w,
+/blogs/static/bdfa66a4ef1fbd2805797bc4cd90f8d8/e8031/renderer.png 400w,
+/blogs/static/bdfa66a4ef1fbd2805797bc4cd90f8d8/42603/renderer.png 800w,
+/blogs/static/bdfa66a4ef1fbd2805797bc4cd90f8d8/3c337/renderer.png 865w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-    </span>
   </span>
-  
   </a>
-    
 Figure 1: 渲染进程包括了一个主线程，Worker 线程，一个 Compositor 线程 和一个 Raster 线程。</p>
 <h2>Parsing</h2>
 <h3>DOM 的创建过程</h3>
@@ -46,40 +41,35 @@ Figure 1: 渲染进程包括了一个主线程，Worker 线程，一个 Composit
 <a href="https://html.spec.whatwg.org/">HTML Standard</a> 定义了将 HTML 转化成 DOM 的过程。你应该注意到过，浏览器从来不会在解析 HTML 的时候抛出一个错误。比如，少了 <code class="language-text">&lt;/p&gt;</code> 的标签是一个合法的 HTML。像 <code class="language-text">Hi! &lt;b&gt;I&#39;m &lt;i&gt;Chrome&lt;/b&gt;!&lt;/i&gt;</code> （b 标签在 i 之前就闭合了）这种错误的标记，会被浏览器看成 <code class="language-text">Hi!&lt;b&gt;I&#39;m &lt;i&gt;Chrome&lt;/i&gt;&lt;/b&gt;&lt;i&gt;!&lt;/i&gt;</code> 来理解。这是因为 HTML 的标准就是特意设计成能够将错误优雅的处理掉。如果你好奇这内部的细节，可以阅读 HTML 标准中的 <a href="https://html.spec.whatwg.org/multipage/parsing.html#an-introduction-to-error-handling-and-strange-cases-in-the-parser">An introduction to error handling and strange cases in the parser</a> 这一节。</p>
 <h3>子资源加载</h3>
 <p>一个网页通常还会有图片，CSS 和 JS 等这些外部资源。这些文件需要从网络或者缓存中被加载。主线会在解析 HTML 文件并构建 DOM 的过程中，一个一个的处理它们。但是为了提速，“（预加载扫描器）preload scanner” 会并行运行。如果存在 <code class="language-text">&lt;img&gt; 和 &lt;link&gt;</code> 在 HTML 中，预加载扫描器会默默地查看这些标记，并在浏览进程中向 network 线程发送请求。</p>
-<p>
-  <a
+<p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/dom-fa689d6a31b8687522c58774c8d9d064-3c337.png"
+    href="/blogs/static/fa689d6a31b8687522c58774c8d9d064/3c337/dom.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
+    <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABc0lEQVQoz22S2XKCUAyGef+namecYZi2FJFNAXfZioqK4lKgH8Txqrk45OTkXxJV2rZdLBbax6fp+YHvh2Hoed54PA6CwHEc13V936cyGo1++hgOh2magmqaRuGzXq8dzzNM6/3tGbqu0/TVx3cfg8HAsixY4Mqy7AkGic5kMrFtG3rU0ERfzldMp1OpzGazzWaTJMn5fFaAGYZhmiasqAG+XC5VVUFc1zUdXG+32+PxIN9ut5qmIV6W5W63U6je73fwsM7n8zzP6cAOxgDDSB2fIPf7fRzHqqoyFMpcFaqn0wllzPz2AUZWQoVZcAv4er1SZwXgj8fjcrnslOFASjYEGcqHw0EUQHKFl1l4avtgHE5sd8oQ8GEN0ENJN0OS88xEsideV6sV4qyWnB8Msx2YqcDThFUskAPGDvSciAPgjyAnQQNtyHRgPiyTVYFHFjWuAkYh74NuvJD8Y5sqxPIHIMQbb0VRyCkJuxBZ8iiKKP4Bs75RmkY8U9EAAAAASUVORK5CYII='); background-size: cover; display: block;"
-    >
-      <img
+    ></span>
+    <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="dom"
         title=""
-        src="/blogs/static/dom-fa689d6a31b8687522c58774c8d9d064-42603.png"
-        srcset="/blogs/static/dom-fa689d6a31b8687522c58774c8d9d064-f931c.png 200w,
-/blogs/static/dom-fa689d6a31b8687522c58774c8d9d064-e8031.png 400w,
-/blogs/static/dom-fa689d6a31b8687522c58774c8d9d064-42603.png 800w,
-/blogs/static/dom-fa689d6a31b8687522c58774c8d9d064-3c337.png 865w"
+        src="/blogs/static/fa689d6a31b8687522c58774c8d9d064/42603/dom.png"
+        srcset="/blogs/static/fa689d6a31b8687522c58774c8d9d064/f931c/dom.png 200w,
+/blogs/static/fa689d6a31b8687522c58774c8d9d064/e8031/dom.png 400w,
+/blogs/static/fa689d6a31b8687522c58774c8d9d064/42603/dom.png 800w,
+/blogs/static/fa689d6a31b8687522c58774c8d9d064/3c337/dom.png 865w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-    </span>
   </span>
-  
   </a>
-    
 Figure 2: 主线程解析 HTML 文档并构建 DOM 树</p>
 <h3>JavaScript 会堵塞解析</h3>
 <p>当 HTML 解析器找到一个 <code class="language-text">script</code> 标签的时候，它会暂停解析 HTML 文档，并开始下载，解析并执行 JS 代码。为什么？因为 JS 可以使用像 <code class="language-text">document.write()</code> 这种改变了整个 DOM 结构的方法来改变文档的形状（shape of the document)。这就是为什么 HTML 解析器在它可以继续解析 HTML 文档之前，必须等待 Javascript 运行结束。如果你对 JS 的执行细节好奇的话，<a href="https://mathiasbynens.be/notes/shapes-ics">V8 团队有一篇关于它的博客介绍</a></p>
@@ -87,341 +77,296 @@ Figure 2: 主线程解析 HTML 文档并构建 DOM 树</p>
 <p>Web 开发者有很多种方式可以按时浏览器如何恰当地加载资源。如果你的 JS 不使用 <code class="language-text">document.write()</code>，你可以给 <code class="language-text">script</code> 标签添加 <code class="language-text">async</code> 或者 <code class="language-text">defer</code> attribute。这样浏览器就异步的加载和运行 JS 代码，而不会堵塞解析过程。你同时也可以在恰当的时候使用 <a href="https://developers.google.cn/web/fundamentals/primers/modules">JavaScript module</a>。<code class="language-text">&lt;link ref=&quot;preload&quot;&gt;</code> 也是一种通知浏览器，当前资源可以尽快下载的方式。可以通过阅读 <a href="https://developers.google.cn/web/fundamentals/performance/resource-prioritization">Resource Prioritization – Getting the Browser to Help You</a> 了解更多。</p>
 <h2>Style calculation</h2>
 <p>因为 CSS 的存在，仅仅有一个 DOM 是不足以让浏览器了解整个网页会是怎么样的。主线程会解析 CS，并为每一个 DOM 节点计算出最终样式。这些信息会基于 CSS 选择器来呈现每一个元素被应用了哪些样式。你可以在通过开发者工具的 <code class="language-text">computed</code> 来看到这些信息。</p>
-<p>
-  <a
+<p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/computedstyle-fb7d195814a04c6ed98eab8dbda477c6-3c337.png"
+    href="/blogs/static/fb7d195814a04c6ed98eab8dbda477c6/3c337/computedstyle.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
+    <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABiklEQVQoz1WRWY+CQBCE+f//xsRolBfXI2YDKiKKgujiiYrifUVlP2YS3e2Hoafpqq7qUeI49v2fb003bcd1HM/zuiIcx7Esq91uk3c6HdM0l8vlarVqNpuLxQLU6/VS+EwmE7vbM1rWF1EsFgqFRqNBk67r9XrdMAzOcrksiVzX/YDH47Ft21RbpgmAabKD6Pf78kTOcDj0RJBMp9P5fH46nRTkwQ3a931yTsn6EPF8Pu/3+/V6vd1u+/1+vV5Xq1UYj8cjuULHZrPhLi1FURSG4WAwqNVq6NQ0DTqK9MxmMwYCxlQQBBQVOEDSB5IcMefzmUo2m8VnJpMBjE7+giyVSsxAwmg0SsDw8ZsLK5V4KjjP5/OVSiWXy7EexCMQDKJiEbQlYMwcDoeeCFjkZFaYSqVUVU2n0/Bib7vd4vwNBpKAL5cLqnhGHgzxu92OCawUPLtll+QMD0Sg+R8YVgbih5N/PAwVdNKBVE6kyW0zRtY/soFhErfvrbDYUARXzuhPwEuRBpox8gsmH01pB0VyDQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
-    >
-      <img
+    ></span>
+    <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="computedstyle"
         title=""
-        src="/blogs/static/computedstyle-fb7d195814a04c6ed98eab8dbda477c6-42603.png"
-        srcset="/blogs/static/computedstyle-fb7d195814a04c6ed98eab8dbda477c6-f931c.png 200w,
-/blogs/static/computedstyle-fb7d195814a04c6ed98eab8dbda477c6-e8031.png 400w,
-/blogs/static/computedstyle-fb7d195814a04c6ed98eab8dbda477c6-42603.png 800w,
-/blogs/static/computedstyle-fb7d195814a04c6ed98eab8dbda477c6-3c337.png 865w"
+        src="/blogs/static/fb7d195814a04c6ed98eab8dbda477c6/42603/computedstyle.png"
+        srcset="/blogs/static/fb7d195814a04c6ed98eab8dbda477c6/f931c/computedstyle.png 200w,
+/blogs/static/fb7d195814a04c6ed98eab8dbda477c6/e8031/computedstyle.png 400w,
+/blogs/static/fb7d195814a04c6ed98eab8dbda477c6/42603/computedstyle.png 800w,
+/blogs/static/fb7d195814a04c6ed98eab8dbda477c6/3c337/computedstyle.png 865w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-    </span>
   </span>
-  
   </a>
-    
 Figure 3: 主线程解析 CSS 得到计算过的样式</p>
 <p>即使你不提供任何 CSS，每一个 DOM 节点还是会有一个被计算过的样式。<code class="language-text">&lt;h1&gt;</code> 标签看上去会比 <code class="language-text">&lt;h2&gt;</code> 更大，并且每一个元素的 margin 也是不一样的。这是因为浏览器维护了一个默认样式表。如果你想了解 Chrome 的默认样式，可以阅读<a href="https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/css/html.css">源码</a></p>
 <h2>Layout</h2>
 <p>现在渲染进程知道了 DOM 的结构和每一个节点的样式，但是这些信息还不足以去渲染一个页面。相信你在电话的另一头努力地给你的朋友描述一幅画。“有一个巨大的红色的圆和一个小一点的蓝色的正方形”是不足以让你的朋友想象出这幅画的样子的。</p>
-<p>
-  <a
+<p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/tellgame-0658494542e14f7db66b913c02c03202-3c337.png"
+    href="/blogs/static/0658494542e14f7db66b913c02c03202/3c337/tellgame.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
+    <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: 53.294797687861276%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB10lEQVQoz21Su47TQBQdim0QEgUUQLESP7D8AtI2iHYrOkRBS02zH4D4AUo6N2ELQrTtJqFIsnlY5GEltmfs8dqOTZLNy3b8iPfEXu1D2iv7auy555x7zwzhnHuel6ZpkiRBECyXy/V6PZ/PF4vFarXCZxiG2+0WBXEcp/eDMMYkSQIFkGCJwjD2/RTlqI2iTRjmFFEUVatVy7LGWWAfYsQwDNM0S6XSdDrFAizm5fxCY1TnoiTZlmXbNtgLhUKr1apUKr1er1gslstldERAAwxowM0oRX/ezx+ztwfu0WH7z+8w69b3fVEUkQeDAbpDFgSh0WgQWZYnk0maDc3ssf+v7e4//v9qjz4h/Q/vd7+zgTEdZJrNJpSHwyEgAJLRaASHcgPEkSwXhPPnjzqvn7Zf7n38/P3NSSAoO59klf7NQlGUWq2We0y63W6+gkkYGHnx5ZP7jKwPXrw7PiVf6bezMTb5hQmNTqeDNbLrujvwXeupqkZJEm8CX2xGmvJL2x63kto4TuMN1TQUoGHHcaBPKb0F5ycJZY0xzg1jOjMcZ2bqnsNdkzOm2baVgyGrqup12+mDsePK3uy5CUwLw/r9/vUluQ95OHCQ2IVavV7XdR2e57ftCp5ZSInelRfHAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-    >
-      <img
+    ></span>
+    <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="tellgame"
         title=""
-        src="/blogs/static/tellgame-0658494542e14f7db66b913c02c03202-42603.png"
-        srcset="/blogs/static/tellgame-0658494542e14f7db66b913c02c03202-f931c.png 200w,
-/blogs/static/tellgame-0658494542e14f7db66b913c02c03202-e8031.png 400w,
-/blogs/static/tellgame-0658494542e14f7db66b913c02c03202-42603.png 800w,
-/blogs/static/tellgame-0658494542e14f7db66b913c02c03202-3c337.png 865w"
+        src="/blogs/static/0658494542e14f7db66b913c02c03202/42603/tellgame.png"
+        srcset="/blogs/static/0658494542e14f7db66b913c02c03202/f931c/tellgame.png 200w,
+/blogs/static/0658494542e14f7db66b913c02c03202/e8031/tellgame.png 400w,
+/blogs/static/0658494542e14f7db66b913c02c03202/42603/tellgame.png 800w,
+/blogs/static/0658494542e14f7db66b913c02c03202/3c337/tellgame.png 865w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-    </span>
   </span>
-  
   </a>
-    
 Figure 4: A person standing in front of a painting, phone line connected to the other person</p>
 <p>Layout 是一个找到元素的几何信息的过程。主线程通过遍历 DOM，计算样式，并创建一个包换了 x y 坐标信息和边框大小的 layout 树。Layout 树可能和 DOM 树很相似，但是它仅仅包含了在能在页面中被看到的信息。比如 <code class="language-text">display: none</code> 一旦被应用到每个元素上，这个元素就不是 layout 树的一部分。相似的，如果一个伪元素 <code class="language-text">p::before { content: &quot;Hi!&quot; }</code>被应用饿了，它虽然不会出现在 DOM 树上，但是属于 layout 树。</p>
-<p>
-  <a
+<p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/layout-0c1de85206f0d177f93a70931a0f8272-3c337.png"
+    href="/blogs/static/0c1de85206f0d177f93a70931a0f8272/3c337/layout.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
+    <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjElEQVQoz1WS6Y6CQBCEef/30QR/aUTiZlmN3AoeCCqCovG+Vvyc2d1kO2bohqqumm6Vsiwnk8nHp2H5QRgGw+HQ9/1+vx+Goeu65EEQeJ5nWVae56vVqtfrLZdLWM/nU+GRxLHr+V3TbjQa9Tq/eqfTAfQloitC0zTbtulC0yzLfshJkvAKKduyTNN0HGcwGIQicPGXjEYjmYzH49lslqbp8XhUoNEYe3ygNwjZ9X6/Xy6XbxGPx4MT9Hq9brfbYA6HA1dQAPGgRh+3zWaTEv58PkftdrvJXpwwF4uFruuIoVwUhbLf7xkJN+SqrVarUqlAA3o+n7FDI/hgOJGhOzTKKIre5EQEfMhYUlWVz4ZhIIIyfJLNZkOvUoR0Af9N5mK73Y5N1Go1mNVqFTQ60+mUFaJAiWGgwKBxeU7yN/l0OsVxzDWYliGCwTAhSjlSZkEXJoQau2D52MTUdrtVWBrTZ+8gQJNLV2her1dyPDMFANL5P9upCAaDPf5DcoyyJIFJd16iU/wGOe04XwjcTY6e4hgvAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-    >
-      <img
+    ></span>
+    <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="layout"
         title=""
-        src="/blogs/static/layout-0c1de85206f0d177f93a70931a0f8272-42603.png"
-        srcset="/blogs/static/layout-0c1de85206f0d177f93a70931a0f8272-f931c.png 200w,
-/blogs/static/layout-0c1de85206f0d177f93a70931a0f8272-e8031.png 400w,
-/blogs/static/layout-0c1de85206f0d177f93a70931a0f8272-42603.png 800w,
-/blogs/static/layout-0c1de85206f0d177f93a70931a0f8272-3c337.png 865w"
+        src="/blogs/static/0c1de85206f0d177f93a70931a0f8272/42603/layout.png"
+        srcset="/blogs/static/0c1de85206f0d177f93a70931a0f8272/f931c/layout.png 200w,
+/blogs/static/0c1de85206f0d177f93a70931a0f8272/e8031/layout.png 400w,
+/blogs/static/0c1de85206f0d177f93a70931a0f8272/42603/layout.png 800w,
+/blogs/static/0c1de85206f0d177f93a70931a0f8272/3c337/layout.png 865w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-    </span>
   </span>
-  
   </a>
-    
 Figure 5: 主线程遍历 DOM 树，通过已经计算的样式，得到 layout 树</p>
 <p>确定页面的布局是一项由挑战性的任务。即使是最简单的页面布局，如从上到下的 block flow，也必须考虑字体的大小以及在哪里划分它们，因为它们会影响段落的大小和形状，还会影响下一段所需的位置。</p>
 <p><a href='/blogs/layout-d79962918f183bf37afdfbbec0b45780.mp4'>layout.mp4</a></p>
 <p>Figure 6: 因为一个断行的改变，layout 也跟着改变</p>
 <p>CSS 还能让元素浮动到一边，隐藏超出边界的部分，并修改写入方向。你可以想象到，layout 阶段其实是非常复杂的任务。在 Chrome 中，有专门一个团队的工程师致力于 layout 的工作。如果你想了解更多有关他们的工作细节，<a href="https://www.youtube.com/watch?v=Y5Xa4H2wtVA">few talks form BlinkOn Conference</a> 记录了大量的有趣的内容。</p>
 <h2>Paint</h2>
-<p>
-  <a
+<p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/drawgame-d8fe81b968531c8b3d4767006ea9725d-3c337.png"
+    href="/blogs/static/d8fe81b968531c8b3d4767006ea9725d/3c337/drawgame.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
+    <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: 37.45664739884393%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsTAAALEwEAmpwYAAABL0lEQVQY05VPPU+DUBR9iZOrcTBODk6auDv4M5z7cxydjXFxMsbJ0YnNpBKIaYSQgnyWPngUXvkoUAh4oEtXz3bPveeec4jrOCzLqaFT16HrbLmkjEWmabquG8dxtAfHcZqm8X3/Z0RZliRIs1744Fen2c1Fr8pdP2A+n6dpWlXVZkSe513XQb8YgZUgCLIsk4Cvs8ktOyL05ODl7uk9GsS6YeAiSRJKqWVZQRBAzxhTFEXTNFVVPc8Lw5CwvGhen9dnh4vry+P74PxtEBvGL67rurZtG3d4AZJzruu6KIowRzQwBE3qvs++PpPZ94O6fZwV7baGA9wQGOa7CKiAL3iHRxglSUJ/slqtkjjGkm/KLo/bAisOEg35HsCCadsWaafTKboMzv1/ADdtxK7IHzccdTm16O1FAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-    >
-      <img
+    ></span>
+    <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="drawgame"
         title=""
-        src="/blogs/static/drawgame-d8fe81b968531c8b3d4767006ea9725d-42603.png"
-        srcset="/blogs/static/drawgame-d8fe81b968531c8b3d4767006ea9725d-f931c.png 200w,
-/blogs/static/drawgame-d8fe81b968531c8b3d4767006ea9725d-e8031.png 400w,
-/blogs/static/drawgame-d8fe81b968531c8b3d4767006ea9725d-42603.png 800w,
-/blogs/static/drawgame-d8fe81b968531c8b3d4767006ea9725d-3c337.png 865w"
+        src="/blogs/static/d8fe81b968531c8b3d4767006ea9725d/42603/drawgame.png"
+        srcset="/blogs/static/d8fe81b968531c8b3d4767006ea9725d/f931c/drawgame.png 200w,
+/blogs/static/d8fe81b968531c8b3d4767006ea9725d/e8031/drawgame.png 400w,
+/blogs/static/d8fe81b968531c8b3d4767006ea9725d/42603/drawgame.png 800w,
+/blogs/static/d8fe81b968531c8b3d4767006ea9725d/3c337/drawgame.png 865w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-    </span>
   </span>
-  
   </a>
-    
 Figure 7: 一个人拿着画笔站在画布前，想着应该先画圆还是先画正方形</p>
 <p>有了 DOM，style，layout 还不足于渲染一个页面。假设你正在努力画一幅画，你知道画的大小，形状，每一个元素所在的位置，但是你还是需要判断绘制它们的顺序。
 比如，<code class="language-text">z-index</code> 可能会被设置到当前元素上，在这种情况下，如果按 HTML 定义的顺序来绘制就会得到错误的结果。</p>
-<p>
-  <a
+<p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/zindex-785924a8744dfda1428cc692e2c3f411-73363.png"
+    href="/blogs/static/785924a8744dfda1428cc692e2c3f411/73363/zindex.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
+    <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: 53.44062153163153%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABa0lEQVQoz32S/W6CQBDE7/2fo3/1KUxM1JgQg5CqIKJyIigfIgpYRforV02bmG7iZW93bmdmUfR6vclkYhjGbDYzTdP3/SiK9vv9brcLw9BxHNd1pZQkm81msVhYlrVer5fLZZqmQtf14XA4GAw0Tev3+5wfbVAHCojT8zwIbNtmChwkx+Pxer2Ky+UCCYNpMBvcdDo1DQNCT0pegp7P50gbjUbookJ+u92aphHc6fEGPbCNx2NUUKSXhKGaKB9TsMMV/M9jqnir61r5oVQU5yiOA9+X729VnpPTbV6FiONYZeiHAZPb7ZbxnI5tIwGHcK5WK5D3+/3PYwwHQcAJDjNssiiKJEnYfHo4gEZOt9vtdDrsBdvUWYrSIvjVbZAwBf7PNsj5ZmVZslhaVMCUbTBdSfjeNhdKVVWBhhnx7A/ZyKHLerIse+05+xV5np8foXIY8Mz3xxFD1YKezkXzbyDqdDqR8Jd4unvGF3HhXceMYMsUAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-    >
-      <img
+    ></span>
+    <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="zindex"
         title=""
-        src="/blogs/static/zindex-785924a8744dfda1428cc692e2c3f411-42603.png"
-        srcset="/blogs/static/zindex-785924a8744dfda1428cc692e2c3f411-f931c.png 200w,
-/blogs/static/zindex-785924a8744dfda1428cc692e2c3f411-e8031.png 400w,
-/blogs/static/zindex-785924a8744dfda1428cc692e2c3f411-42603.png 800w,
-/blogs/static/zindex-785924a8744dfda1428cc692e2c3f411-5b8b9.png 1200w,
-/blogs/static/zindex-785924a8744dfda1428cc692e2c3f411-c7ea5.png 1600w,
-/blogs/static/zindex-785924a8744dfda1428cc692e2c3f411-73363.png 1802w"
+        src="/blogs/static/785924a8744dfda1428cc692e2c3f411/42603/zindex.png"
+        srcset="/blogs/static/785924a8744dfda1428cc692e2c3f411/f931c/zindex.png 200w,
+/blogs/static/785924a8744dfda1428cc692e2c3f411/e8031/zindex.png 400w,
+/blogs/static/785924a8744dfda1428cc692e2c3f411/42603/zindex.png 800w,
+/blogs/static/785924a8744dfda1428cc692e2c3f411/5b8b9/zindex.png 1200w,
+/blogs/static/785924a8744dfda1428cc692e2c3f411/c7ea5/zindex.png 1600w,
+/blogs/static/785924a8744dfda1428cc692e2c3f411/73363/zindex.png 1802w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-    </span>
   </span>
-  
   </a>
-    
 Figure 8: 页面的元素按 HTML 元素中定义的元素，导致了错误的结果。因为 z-index 没有被考虑在内</p>
 <p>在绘制（Paint）阶段，主线程遍历 layout 树来创建绘制记录（Paint record)。绘制记录是一个绘画过程的注解，如“先背景，接着文本，然后矩形”。如果你使用过 <code class="language-text">canvas</code>，那么这个过程对你来说应该很熟悉。</p>
-<p>
-  <a
+<p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/paint-a68fd128fc59b9b2bed3511fcf223c94-3c337.png"
+    href="/blogs/static/a68fd128fc59b9b2bed3511fcf223c94/3c337/paint.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
+    <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeklEQVQoz22R23KCQBBE+f+v0iq1jFFQQECBCOJdQfGKaCQHpqzkIfOwO9U7090zqxRFEYbBx2fXsF3PdX3fdxxnPB57nmdZFrnrurZtG4ax3W53u12/31+v13S9Xi+FazabWbaj6Wa9VqvXOWqqqg4Gg24V5JqmNRoN0zRhgeu3mU6RMg1D1/XhcCiyxGQy+foTIPgCnM/nq9XqcrkolCICaxAE5JywfleBwnK5XCwWaZoCns/nOI7b7TbikivP55MLvizLxExRRZ7nEKEWhiE6IJTB1Wq1GARkv98rFN3v99FoxD6ogAtNSTDJzKxqs9kIXa/Xw8jxeJxOp2WzCALhGZ9Qgsh6yUnAhVdMyYntsvnxeHDJGnGYVsGXnE4n7DSbzU6nA7UMT0EURXSyrSRJlOv1KrMB8bG80ckbpHgD4QllSjGPF1Z9u90oKJUpZVuMgRmK4MY8RExOG+bRl4X9Y1v+g03CTTPekipAoirQFzB+B20gh8PhB0XOU3hbyxq5AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-    >
-      <img
+    ></span>
+    <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="paint"
         title=""
-        src="/blogs/static/paint-a68fd128fc59b9b2bed3511fcf223c94-42603.png"
-        srcset="/blogs/static/paint-a68fd128fc59b9b2bed3511fcf223c94-f931c.png 200w,
-/blogs/static/paint-a68fd128fc59b9b2bed3511fcf223c94-e8031.png 400w,
-/blogs/static/paint-a68fd128fc59b9b2bed3511fcf223c94-42603.png 800w,
-/blogs/static/paint-a68fd128fc59b9b2bed3511fcf223c94-3c337.png 865w"
+        src="/blogs/static/a68fd128fc59b9b2bed3511fcf223c94/42603/paint.png"
+        srcset="/blogs/static/a68fd128fc59b9b2bed3511fcf223c94/f931c/paint.png 200w,
+/blogs/static/a68fd128fc59b9b2bed3511fcf223c94/e8031/paint.png 400w,
+/blogs/static/a68fd128fc59b9b2bed3511fcf223c94/42603/paint.png 800w,
+/blogs/static/a68fd128fc59b9b2bed3511fcf223c94/3c337/paint.png 865w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-    </span>
   </span>
-  
   </a>
-    
 Figure 9: 主线程遍历 layout 树并生成绘制记录</p>
 <h3>Updating rendering pipeline is costly</h3>
 <p><a href='/blogs/trees-4fb0aeab900ba7deeab02d06057f464e.mp4'>trees.mp4</a></p>
 <p>Figure 10: 有序的生成 DOM ，Style，Layout，Paint Trees</p>
 <p>想要理解渲染一条龙，最重要的一点是<strong>每一步中，都会使用上一个操作的结果作为新的数据。</strong> 比如修改了 layout 树，那么 paint 树也需要重新生成。
 如果你打算为某些元素加动画，浏览器必须在每一帧都重复这些过程。大多数显示器 1 秒刷新 60 次屏幕（60 fps）。当物体在屏幕中移动的时候，出现在每一帧中，人眼就会认为这段动画十分平滑。然后，如果动画在某段时间内丢帧了，页面就会看上去“卡顿”</p>
-<p>
-  <a
+<p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/pagejank1-fbcb48cd931be64c96ac87a3fa1ee177-6fdd2.png"
+    href="/blogs/static/fbcb48cd931be64c96ac87a3fa1ee177/6fdd2/pagejank1.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
+    <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: 23.1%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVQY02WN3U+CUADF+f/f3HrpoVecFNK81crNrbx0uwgCgYEwMK5XqN3SIR9SLinsKdd5ONvZOTs/7vuf6l8nhGia5vu+5/mGYWRZtq/q+u+SK4t8W5V5nldl8Vltsmz9tf1YLZdhOEvTdE7IevXexN2hmpfGuVbnBpj05GJ4DO6BHrXal6doCn22KfKyLI86V7zsuWzTcHaH2D35enDXhwovdLFu9fq3gniOjae22FMUjBDihTOoWYMh6oqi604lSZJlWVVVAADGmJtY1ktMtdGIRM8LOscP6I29TqxH0zQppfp4HM3CJF5ACJMkcRzHtu04joMgYIz9ACMYBWmHluTAAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-    >
-      <img
+    ></span>
+    <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="pagejank1"
         title=""
-        src="/blogs/static/pagejank1-fbcb48cd931be64c96ac87a3fa1ee177-42603.png"
-        srcset="/blogs/static/pagejank1-fbcb48cd931be64c96ac87a3fa1ee177-f931c.png 200w,
-/blogs/static/pagejank1-fbcb48cd931be64c96ac87a3fa1ee177-e8031.png 400w,
-/blogs/static/pagejank1-fbcb48cd931be64c96ac87a3fa1ee177-42603.png 800w,
-/blogs/static/pagejank1-fbcb48cd931be64c96ac87a3fa1ee177-6fdd2.png 1000w"
+        src="/blogs/static/fbcb48cd931be64c96ac87a3fa1ee177/42603/pagejank1.png"
+        srcset="/blogs/static/fbcb48cd931be64c96ac87a3fa1ee177/f931c/pagejank1.png 200w,
+/blogs/static/fbcb48cd931be64c96ac87a3fa1ee177/e8031/pagejank1.png 400w,
+/blogs/static/fbcb48cd931be64c96ac87a3fa1ee177/42603/pagejank1.png 800w,
+/blogs/static/fbcb48cd931be64c96ac87a3fa1ee177/6fdd2/pagejank1.png 1000w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-    </span>
   </span>
-  
   </a>
-    
 Figure 11：Animation frames on a timeline</p>
 <p>即使你的渲染操作能跟上屏幕的刷新，但是因为这些计算是发生在主线程上，这意味着当有其他的 JS 代码运行的时候，动画就会“掉帧”</p>
-<p>
-  <a
+<p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/pagejank2-6e35a283b1b93f266a18f739475db1ea-6fdd2.png"
+    href="/blogs/static/6e35a283b1b93f266a18f739475db1ea/6fdd2/pagejank2.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
+    <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: 23.1%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAABDElEQVQY02WOXU+CUACG+UOurZV/N7swi1auRutjkWVAxAkhDoi4QEAkOBZ1IfLlOeTW7KZn78V78bzbS9UbyKaUZTU0x+BFnbj+QNF0Y/Tf+YUqs7QsCkJwvkyrMq9xYo+VBL1FU/177nwhe5G4JI9JjnCVFdmyqiqMMVkPMKbanBkuVq7vHw2iNPVrdfeTbWTcVnjTtLrb6xB5Bz83aqU50i+PlXlarv4uUMwdz4vgoNPhVPOWZc+7bcuQTujWQ++qf39NH+5DVej3Lk7plqIqe/QZxwsASAzDiKJIGfB1FgQAAN91PM97EqX3+EPThxrUp0Eoy6oz8WZh/MgJURRZpgEhDILAtm2E0A9U1ABD8UOCoQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
-    >
-      <img
+    ></span>
+    <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="pagejank2"
         title=""
-        src="/blogs/static/pagejank2-6e35a283b1b93f266a18f739475db1ea-42603.png"
-        srcset="/blogs/static/pagejank2-6e35a283b1b93f266a18f739475db1ea-f931c.png 200w,
-/blogs/static/pagejank2-6e35a283b1b93f266a18f739475db1ea-e8031.png 400w,
-/blogs/static/pagejank2-6e35a283b1b93f266a18f739475db1ea-42603.png 800w,
-/blogs/static/pagejank2-6e35a283b1b93f266a18f739475db1ea-6fdd2.png 1000w"
+        src="/blogs/static/6e35a283b1b93f266a18f739475db1ea/42603/pagejank2.png"
+        srcset="/blogs/static/6e35a283b1b93f266a18f739475db1ea/f931c/pagejank2.png 200w,
+/blogs/static/6e35a283b1b93f266a18f739475db1ea/e8031/pagejank2.png 400w,
+/blogs/static/6e35a283b1b93f266a18f739475db1ea/42603/pagejank2.png 800w,
+/blogs/static/6e35a283b1b93f266a18f739475db1ea/6fdd2/pagejank2.png 1000w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-    </span>
   </span>
-  
   </a>
-    
 Figure 12: 在动画帧的时间线上，有一帧被 JS 堵塞了</p>
 <p>你可以使用 <code class="language-text">requestAnimationFrame</code> 将 JS 操作拆分成一小片，它们会分散在每一帧中运行。关于这个话题更深入的部分，请看 <a href="https://developers.google.cn/web/fundamentals/performance/rendering/optimize-javascript-execution">Optimize JavaScript Execution</a></p>
-<p>
-  <a
+<p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/raf-7b1959d9953869798ba89282c6533bd2-6fdd2.png"
+    href="/blogs/static/7b1959d9953869798ba89282c6533bd2/6fdd2/raf.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
+    <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: 23.1%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAABD0lEQVQY01WPW0+DQBSE+f//wAejjZoWrLG6mGpUwFAot7JA1VibugWMraG7UOUi6oKo8cHvYWYyDydnGNHxo/n+Y2ALzpQ+s7doAa+vPpbHordaoB5+0qRxkIe7Uz8cumZNQN1Q0foHBjhLNOGFy544S3y4CRTX9e89eQO4ZHLXV0ROekjnbgtImoHCmbW1fsljQhBCGGPm7ORIUUftDjfSlXNB5dp7N964e9i/OAWDgdFhD2xDVYZwp7XtQch2eZ4HsiwDAFRVZT5pRWkVBEGa5eVbkSTr1zSNm+NxkucZIXiFcVFkGJOyfK//w/xa80MYhhBCTdN0XW/Utm3LskzTbELTG4YRRdH33j8opV87Zv9mDQAZNwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
-    >
-      <img
+    ></span>
+    <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="raf"
         title=""
-        src="/blogs/static/raf-7b1959d9953869798ba89282c6533bd2-42603.png"
-        srcset="/blogs/static/raf-7b1959d9953869798ba89282c6533bd2-f931c.png 200w,
-/blogs/static/raf-7b1959d9953869798ba89282c6533bd2-e8031.png 400w,
-/blogs/static/raf-7b1959d9953869798ba89282c6533bd2-42603.png 800w,
-/blogs/static/raf-7b1959d9953869798ba89282c6533bd2-6fdd2.png 1000w"
+        src="/blogs/static/7b1959d9953869798ba89282c6533bd2/42603/raf.png"
+        srcset="/blogs/static/7b1959d9953869798ba89282c6533bd2/f931c/raf.png 200w,
+/blogs/static/7b1959d9953869798ba89282c6533bd2/e8031/raf.png 400w,
+/blogs/static/7b1959d9953869798ba89282c6533bd2/42603/raf.png 800w,
+/blogs/static/7b1959d9953869798ba89282c6533bd2/6fdd2/raf.png 1000w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-    </span>
   </span>
-  
   </a>
-    
 Figure 13：在动画帧的时间线上，更小的 JS 块</p>
 <h2>Compositing</h2>
 <h3>你怎样 draw 一个页面</h3>
@@ -439,84 +384,74 @@ Figure 15: 合成过程</p>
 <p>你可能会禁不住诱惑让每一个元素都成为一个图层，但是合成大量的层反而会导致这个过程比一帧一帧的栅格化还要慢，关键才是要测量你的渲染性能。关于这个部分的更多细节，请看 <a href="https://developers.google.cn/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count">Stick to Compositor-Only Properties and Manager Layer Count</a></p>
 <h3>Raster and composite off of the main thread</h3>
 <p>一旦 Layer 树已经创建好，并且 Paint 的顺序是确定的，那么主线程就会将这些信息提交到合成器线程中。合成器线程会栅格化每一个 Layer。有些 Layer 可以和整个页面一样大，所以合成器线程会将它们分为多个图块，接着将每一个图块发送给栅格线程。栅格线程栅格化每一个图块，并将它们存在 GPU 的内存中。</p>
-<p>
-  <a
+<p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/raster-371b5fa654d59f0c8ccb2f4f0658c20a-3c337.png"
+    href="/blogs/static/371b5fa654d59f0c8ccb2f4f0658c20a/3c337/raster.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
+    <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB0UlEQVQoz01Sy5KbMBDk//8ktxySVPaQKpulYnaNMWCe4ikQIDAE2+W3DU4b55A5iJFQd8/0SHg8HpQmH3PFcIhPSBiG7hiEENM0LctCbtu2YRh1Xa/Xa13Xq6oCahgGAR/GmON62sqcIkRxMpksl0tN0xRFUVUVOVZJkkDkeR7YwfIPnGUZuD3PtVbPsMcbkE3GCIIgiiIA4jj2fR9brJRSzvnhcBBw8+NzDhgQKMkjfj8MIIYOrl4ul7ZtT6fT+Xy+3+99399uN2h2XYdz4U9TRcSxlYltLMLVzNIUmkRFUYAIlUMELNABGBTDyIuA7GazEeqSpZHH3HnoGLvS5ywmrr3f70VRBPdut0OH2+0WOXxqmga/gEQOp4R2XenqfPH+MwmcX9++vH3/Gng2XBCnU5SdpulLHG5jCxcABiPoULlQ8zKLffX9x2oha7/fAsdo67LrNsfjsR/jer3CJLQAFwFAtaAD6RPMC9Y1nDqfEbEiU962vKmKYZzEqz3goYkRQB+asBazlGUZJ0JVZIwGoS75jh7oUp6QqmSP/wImoz3gMXaUjZeD1zCbzZ7goixZXuRZwvI8z2iaMc4r1NaNgQSGvdyG/0jQLVY8Nfz6CxoTRqDyXR/aAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-    >
-      <img
+    ></span>
+    <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="raster"
         title=""
-        src="/blogs/static/raster-371b5fa654d59f0c8ccb2f4f0658c20a-42603.png"
-        srcset="/blogs/static/raster-371b5fa654d59f0c8ccb2f4f0658c20a-f931c.png 200w,
-/blogs/static/raster-371b5fa654d59f0c8ccb2f4f0658c20a-e8031.png 400w,
-/blogs/static/raster-371b5fa654d59f0c8ccb2f4f0658c20a-42603.png 800w,
-/blogs/static/raster-371b5fa654d59f0c8ccb2f4f0658c20a-3c337.png 865w"
+        src="/blogs/static/371b5fa654d59f0c8ccb2f4f0658c20a/42603/raster.png"
+        srcset="/blogs/static/371b5fa654d59f0c8ccb2f4f0658c20a/f931c/raster.png 200w,
+/blogs/static/371b5fa654d59f0c8ccb2f4f0658c20a/e8031/raster.png 400w,
+/blogs/static/371b5fa654d59f0c8ccb2f4f0658c20a/42603/raster.png 800w,
+/blogs/static/371b5fa654d59f0c8ccb2f4f0658c20a/3c337/raster.png 865w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-    </span>
   </span>
-  
   </a>
-    
 Figure 17: 栅格线程创建多个位图块，并发送给 GPU</p>
 <p>合成线程还可以根据优先级决定，以便视口（或附近）可以先被栅格化。图层还具有多个 tiliings 用于处理放大操作等。</p>
 <p>一旦图块被栅格化，合成器线程会有一个被称为<strong>draw quads（绘制四边形）</strong>的过程来收集这些图块的信息，以创建一个 <strong>compositor frame（合成帧）</strong>
 Compositor frame 接着会由 IPC 提交到浏览器进程中。此时，可以从 UI 线程中添加其他的合成帧用于浏览器 UI 的改变或者渲染进程。最后这些合成帧会被发送到 GPU 以显示到屏幕上。如果有滚动事件发送，合成器线程会创建新的合成帧发送到 GPU。</p>
-<p>
-  <a
+<p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/composit-397d4949099dd6d1aaffcb55e8678e37-3c337.png"
+    href="/blogs/static/397d4949099dd6d1aaffcb55e8678e37/3c337/composit.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
+    <span
     class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+    style="position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABkElEQVQoz1WS127CQBRE9///hiceQIJgJHABI3fjgg0WHdGCKKHkyBsS5Uos17szc8ezFq/XK88zVTdsP4qjKEmSIAiGw2Ecx57n0UdR5Pu+bdur1Wq9Xg8Gg8ViAevxeAj+isnEC0LTcprN5kdZpmlaltXv92lAs7bbbcdx0EJ0uVzCej6foigK5jDEc13kwzBklFcWA13XZQWQpilrVFaWZVhgvuAMMZ6TNEVov9+DG41GTAZNA4D917twe7/fv8oS1+v1eDzebrfz+cwZPRzpSqJlA/RyuYCB/CskTqfTbrfDsGEYzNxsNmTGfLzM53MIEoeopmm9Xk/uSEUxHo+JoVqtVioVVVUJI02SPM8bjQYhoYtnmTOATqfzj4xJEBwTAN6YQFRIsK/rOvPlEQan0ylxHg6HPzI/nmu1GjcEwdB1pdXikjCp4aTb5YYkn3ep1+ukDYXMfu4ZVUVRmAMIwzTyJmazGdN4c+zgTl4eAHY4JR3BN0BahAQTC9vtlhSQg/D5LnoZJBgaLKAF8hvmbE0ktc1lqQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
-    >
-      <img
+    ></span>
+    <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="composit"
         title=""
-        src="/blogs/static/composit-397d4949099dd6d1aaffcb55e8678e37-42603.png"
-        srcset="/blogs/static/composit-397d4949099dd6d1aaffcb55e8678e37-f931c.png 200w,
-/blogs/static/composit-397d4949099dd6d1aaffcb55e8678e37-e8031.png 400w,
-/blogs/static/composit-397d4949099dd6d1aaffcb55e8678e37-42603.png 800w,
-/blogs/static/composit-397d4949099dd6d1aaffcb55e8678e37-3c337.png 865w"
+        src="/blogs/static/397d4949099dd6d1aaffcb55e8678e37/42603/composit.png"
+        srcset="/blogs/static/397d4949099dd6d1aaffcb55e8678e37/f931c/composit.png 200w,
+/blogs/static/397d4949099dd6d1aaffcb55e8678e37/e8031/composit.png 400w,
+/blogs/static/397d4949099dd6d1aaffcb55e8678e37/42603/composit.png 800w,
+/blogs/static/397d4949099dd6d1aaffcb55e8678e37/3c337/composit.png 865w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
-    </span>
   </span>
-  
   </a>
-    
 Figure 18: 合成器线程创造合成帧的过程。帧先发送到浏览器线程然后发送到 GPU</p>
 <p>合成的优点就是它不依赖主线程。合成线程不需要等待样式的计算或者 JS 的执行。这也是为什么 <a href="https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/">只改变那些会导致合成的属性</a>被认为是创建平滑动画的最佳选择。如果 layout 或者 paint 需要被再次计算，则主线程又会忙碌起来。</p>
 <h2>总结</h2>
 <p>在这篇文章中，我们探索了渲染一条龙：从解析到合成。但愿你现在有能力去越多更多有关网页性能优化的文章。
-在下一篇，也是本系列的最后一篇中，我们将会深入合成线程，一起看看当用户输入事件<code class="language-text">mousemove click</code>的时候会发生什么。</p></div><hr style="margin-bottom:1.75rem;" data-reactid="9"/><div style="display:flex;" data-reactid="10"><img src="/blogs/static/profile-pic.6b7afd22.jpg" alt="A cat named musa" style="margin-right:0.875rem;margin-bottom:0;width:3.5rem;height:3.5rem;" data-reactid="11"/><p data-reactid="12">博客的目的一是分享一些个人的总结, 二是翻译一些国内不能正常访问的文章, 比如 Medium 下的.</p></div></div><span style="display:block;clear:both;" data-reactid="13"> </span></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-3dd95c1b38e700a28cea.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js","107818501498521":"component---src-templates-blog-post-js-105fcdf1c3c3f2e8b573.js","35783957827783":"component---src-pages-index-js-b04271930615de93baa5.js","60335399758886":"path----557518bd178906f8d58a.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","112632292875057":"path---base-64-base-64-编码的简单尝试-3fc0e6853beb1a8c9b08.js","146322531349299":"path---deep-learning-857acd909fbeb48b992d.js","220407911892673":"path---pure-component-is-harmful-pure-component-is-harmful-bb770fefab75c1778a71.js","227484829515402":"path---first-step-software-world-ffbd83c698364aaf6e07.js","144342403179678":"path---hello-world-6dcd5942672994bec20e.js","16183777268280":"path---git-89c1f06c61896a6ecae6.js","150799105546278":"path---object-assign-690971a911babd85db7f.js","155041412123632":"path---react-component-and-element-223f87e392999bcb6b1c.js","57569562641160":"path---browser-65f2c0039906e9b4a27a.js","184208325429431":"path---lodash-fp-7ef9aba4c5e7ac2bb2a8.js","35672907685451":"path---parcel-parcel-📦-和-react-⚛️-的使用-ba3b48cf20b684f1141b.js","65931765013031":"path---uuid-uuid-20788a883f25ba0f9e61.js","276753157451298":"path---反转字符串-2c0d19ae27c7b0a4346c.js","201811504738303":"path---vscode-165ef5ea3bb3541259e7.js","142629428675168":"path---index-ff6ee4dcf656c2c5f9dc.js","114276838955818":"component---src-layouts-index-js-3396ad3b64d776f86883.js"}/*]]>*/</script><script>
-            
+在下一篇，也是本系列的最后一篇中，我们将会深入合成线程，一起看看当用户输入事件<code class="language-text">mousemove click</code>的时候会发生什么。</p></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;align-items:center"><img src="/blogs/static/profile-pic-6b7afd22a39ed60d2b081c18b1bc0000.jpg" alt="A cat named musa" style="margin-right:0.875rem;margin-bottom:0;border-radius:50%;width:3.5rem;height:3.5rem"/><h4 style="margin:0">Just Happy</h4></div></div></div></div><script>
+  
   
   if(true) {
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -525,6 +460,7 @@ Figure 18: 合成器线程创造合成帧的过程。帧先发送到浏览器线
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   }
   if (typeof ga === "function") {
-    ga('create', 'undefined', 'auto');
+    ga('create', 'undefined', 'auto', {});
+      
       }
-      </script><script>/*<![CDATA[*/["/blogs/commons-4e9012e9394bd6e4620d.js","/blogs/app-3dd95c1b38e700a28cea.js","/blogs/path---browser-65f2c0039906e9b4a27a.js","/blogs/component---src-templates-blog-post-js-105fcdf1c3c3f2e8b573.js","/blogs/component---src-layouts-index-js-3396ad3b64d776f86883.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-post-js","jsonName":"browser-fcd","path":"/browser/"};window.dataPath="37/path---browser-fcd-daf-vzan14YXEa7AP8lqhmuNs9tZC0";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-347480b22dd7c9349b5f.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-1e7cf6c9cb3151f68e3b.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-70853527bbba11d0cdee.js"],"component---src-pages-index-js":["/component---src-pages-index-js.9395728091d5cba7975e.css","/component---src-pages-index-js-15590a6238d26c3da525.js"]};/*]]>*/</script><script src="/blogs/webpack-runtime-0397cc4d90c75a624682.js" async=""></script><script src="/blogs/app-347480b22dd7c9349b5f.js" async=""></script><script src="/blogs/component---src-templates-blog-post-js-70853527bbba11d0cdee.js" async=""></script><script src="/blogs/0-f86bee9c85018e940169.js" async=""></script></body></html>
