@@ -28,3 +28,26 @@ p > a {
   border-bottom: 1px solid rgba(0,0,0,0.2);
   color: #1a1a1a;
 }
+
+blockquote {
+  background-color: rgba(255,229,100,0.3);
+  border-left-color: #ffe564;
+  border-left-width: 9px;
+  border-left-style: solid;
+  padding: 20px 45px 20px 26px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+blockquote p:first-of-type:not(:last-child) {
+  font-weight: 700;
+  color: initial;
+  margin-top: 0;
+}
+
+blockquote p:nth-of-type(2) {
+  margin-top: 0;
+  font-size: 17px;
+}
