@@ -11,6 +11,7 @@ const Bio = () => (
   <div
     style={{
       display: 'flex',
+      alignItems: 'center',
     }}
   >
     <img
@@ -24,7 +25,7 @@ const Bio = () => (
         height: rhythm(2),
       }}
     />
-    <p>Just Happy.</p>
+    <h4 style={{ margin: 0 }}>Just Happy</h4>
   </div>
 );
 
