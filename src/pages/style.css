@@ -13,6 +13,14 @@ h2:not(.blog-index),h3:not(.blog-index) {
   border-bottom: 1px solid #eaecef;
 }
 
+p > a:not(.gatsby-resp-image-link) {
+  background-color: rgba(187,239,253,0.3);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  color: #1a1a1a;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
 p > a:hover:not(.gatsby-resp-image-link) {
   box-shadow: 0 1px 0 0 currentColor;
 }
