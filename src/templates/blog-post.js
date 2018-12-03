@@ -27,7 +27,7 @@ const PageNavigation = ({ previous, next }) => (
       {next && (
         <Link to={next.fields.slug} rel="next">
           {next.frontmatter.title} →
-              </Link>
+        </Link>
       )}
     </li>
   </ul>
@@ -38,12 +38,14 @@ const BlogPostTemplate = ({
   data: { markdownRemark: post, site },
 }) => {
   const siteTitle = site.siteMetadata.title;
-  console.log(post, pageContext)
 
+  console.log(pageContext);
   return (
     <Layout location={location} title={siteTitle}>
       <Helmet
-        title={`${post.frontmatter.title} | ${siteTitle}`} htmlAttributes={{ lang: 'zh-cn' }} />
+        title={`${post.frontmatter.title} | ${siteTitle}`}
+        htmlAttributes={{ lang: 'zh-cn' }}
+      />
       <h1>{post.frontmatter.title}</h1>
       <p
         style={{
@@ -62,6 +64,8 @@ const BlogPostTemplate = ({
         }}
       />
       <Bio />
+      <br />
+      <PageNavigation {...pageContext} />
     </Layout>
   );
 };
