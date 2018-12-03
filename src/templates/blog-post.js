@@ -39,7 +39,6 @@ const BlogPostTemplate = ({
 }) => {
   const siteTitle = site.siteMetadata.title;
 
-  console.log(pageContext);
   return (
     <Layout location={location} title={siteTitle}>
       <Helmet

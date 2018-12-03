@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Yangkui's Blog",
+    title: '😏',
     author: 'Yang Kui',
     description: 'A starter blog template with gatsby',
     siteUrl: 'https://github.com/thoamsy/blogs.git',

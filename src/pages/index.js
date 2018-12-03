@@ -11,9 +11,10 @@ import { rhythm } from '../utils/typography';
 const BlogIndex = ({ location, data }) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
+
   return (
-    <Layout location={location}>
-      <Helmet title={siteTitle} />
+    <Layout location={location} title={siteTitle}>
+      <Helmet title={siteTitle} htmlAttributes={{ lang: 'zh-cn' }} />
       <Bio />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
