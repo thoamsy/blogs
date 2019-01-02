@@ -17,7 +17,7 @@ const BlogIndex = ({ location, data }) => {
       <Helmet title={siteTitle} htmlAttributes={{ lang: 'zh-cn' }} />
       <Bio />
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug;
+        const { title = node.fields.slug, spoiler, date } = node.frontmatter;
         return (
           <div key={node.fields.slug}>
             <h3
@@ -30,8 +30,12 @@ const BlogIndex = ({ location, data }) => {
                 {title}
               </Link>
             </h3>
-            <small>{node.frontmatter.date}</small>
-            <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            <small>{date}</small>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: spoiler || node.excerpt,
+              }}
+            />
           </div>
         );
       })}
@@ -57,6 +61,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "YYYY/MM/DD")
             title
+            spoiler
           }
         }
       }

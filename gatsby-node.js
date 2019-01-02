@@ -12,7 +12,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         `
           {
             allMarkdownRemark(
-              sort: { fields: [frontmatter___date], order: DESC },
+              sort: { fields: [frontmatter___date], order: DESC }
               limit: 1000
             ) {
               edges {
@@ -22,6 +22,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   }
                   frontmatter {
                     title
+                    spoiler
                   }
                 }
               }
