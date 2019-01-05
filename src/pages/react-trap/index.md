@@ -6,7 +6,7 @@ spoiler: 收集一些不为人所知的，React 的细节问题。帮助自己�
 
 收集一些不为人所知的，React 的细节问题。帮助自己理顺 React 内部深层的逻辑。
 
-# Synthetic Event 和 DOM Event 同时出现的问题
+## Synthetic Event 和 DOM Event 同时出现的问题
 
 首先解释下，为什么 React 会有 Synthetic Event 这个概念。主要两个原因
 
@@ -60,7 +60,7 @@ handling event on the document
 
 一起来分析下原因
 
-## 原因
+### 原因
 
 首先，在 button 被点击后，`stopPropagation` 起作用，使父组件 div 的 _onClick_ Synthetic Event 不会被调用。另外，原生的 DOM 事件也会被触发。因为 stopPropagation 不同于 `stopImmediatePropagation`，所以 document 上的事件还是被调用。但是，_window_ 上的事件就不会被调用。
 
@@ -125,18 +125,18 @@ handling event on document
 
 那最后的结果是什么呢？可以自己去尝试下。
 
-## 结论
+### 结论
 
 因为 Synthetic Event 会将事件绑定在 document 上，从而导致在和 native dom 事件有一定逻辑关联的时候，出现一些不符合直觉的问题。这种场景下，一定需要小心。
 
-## 相关链接
+### 相关链接
 
 - [Event listener attached to document will still be called after calling event.stopPropagation() · Issue #12518 · facebook/react · GitHub](https://github.com/facebook/react/issues/12518)
 - [SyntheticEvent – React](https://reactjs.org/docs/events.html)
 
 ---
 
-# Context 的更新，会更新 ✨ Provider ➡️ Consumer 之间所有的组件么
+## Context 的更新，会更新 ✨ Provider ➡️ Consumer 之间所有的组件么
 
 这个问题提出来的依据主要是，`setState` 在 React 中是会**一定会带来更新的**，除非设置了 `memo` 或者 `shouldComponentUpdate` 这些优化措施。换句话说，一般情况下，每次 Context 中 value 的更新，必定伴随着一个 setState 的过程。而这个过程必定导致含有 `<Context.Provider>` 的组件往下更新，也就让我们无法观察到这个过程的更进一步的细节。
 
@@ -186,7 +186,7 @@ const App = () => {
 
 最后结论就是：**Provider 的更新不会带动 Consumer 之间的组件更新**。
 
-## 随便一提
+### 随便一提
 
 当然，其实这个问题通过推断就能得到结果的。因为新的 Context 带来的一个重要特性就是**即使 shouldComponentUpdate 返回 false，子组件也会被更新。**
 
