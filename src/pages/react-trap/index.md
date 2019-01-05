@@ -186,7 +186,7 @@ const App = () => {
 
 最后结论就是：**Provider 的更新不会带动 Consumer 之间的组件更新**。
 
-### 随便一提
+### 顺便一提
 
 当然，其实这个问题通过推断就能得到结果的。因为新的 Context 带来的一个重要特性就是**即使 shouldComponentUpdate 返回 false，子组件也会被更新。**
 
