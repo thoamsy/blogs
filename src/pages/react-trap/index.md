@@ -6,7 +6,7 @@ spoiler: 收集一些不为人所知的，React 的细节问题。帮助自己�
 
 收集一些不为人所知的，React 的细节问题。帮助自己理顺 React 内部深层的逻辑。
 
-# SyntheticEvent 和 DOM Event 同时出现的问题
+# Synthetic Event 和 DOM Event 同时出现的问题
 
 首先解释下，为什么 React 会有 Synthetic Event 这个概念。主要两个原因
 
