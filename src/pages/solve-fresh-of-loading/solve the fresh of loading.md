@@ -63,95 +63,60 @@ const App = () => {
 
 ## Promise 的解决方案
 
-```jsx
-import React, { useState, useCallback } from 'react';
+主要的实现思路就是通过 `Promise.race`，在**请求和超时**中竞争出优先被 settled 的那个 Promise，作出相应的逻辑。
+为了实现的简单，超时的函数应该使用
 
-const delay = ms => new Promise(r => setTimeout(r, ms));
-const timeout = ms => new Promise((_, r) => setTimeout(r, ms));
-
-const ajax = (api, ms, resolve, reject) => (...args) => {
-  const request = api(...args);
-  Promise.race([request, timeout(ms)]).then(resolve, err => {
-    reject(err);
-    return request.then(resolve);
-  });
-};
-
-const afterOneSecondsWillReturn = foo => delay(400).then(() => foo);
-
-const App = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const fetchApi = useCallback(
-    ajax(
-      afterOneSecondsWillReturn,
-      500,
-      rep => {
-        setData(rep);
-        setLoading(false);
-      },
-      () => {
-        setLoading(true);
-      }
-    ),
-    [loading, data]
-  );
-
-  const eject = useCallback(() => fetchApi('foo'), []);
-  return (
-    <div>
-      <button onClick={eject}>let us eject!</button>
-      {loading ? 'loading…' : <div>{data}</div>}
-    </div>
-  );
-};
-
-export default App;
+```js
+const timeout = ms => new Promise((_, reject) => setTimeout(reject, ms));
 ```
 
-改进
+使用 reject 而不是 resolve 的好处，可以让代码更加简洁。因为进入 _fulfilled_ 的情况只有一种，那就是请求在超时之前返回了。而在 rejected 状态下，就是超时的逻辑了（**注意 ⚠️，这里不考虑请求异常的情况**）
 
-```jsx
-import React, { useState, useCallback } from 'react';
+根据上面的说法，很容易写出一个 naive 的实现
 
-const delay = ms => new Promise(r => setTimeout(r, ms));
-const timeout = ms => new Promise((_, r) => setTimeout(r, ms));
-
-const ajax = (api, ms, reject) => (...args) => {
-  const request = api(...args);
-  return Promise.race([request, timeout(ms)]).then(undefined, err => {
-    reject(err);
-    return request;
-  });
-};
-
-const afterOneSecondsWillReturn = foo => delay(1000).then(() => foo);
-
-const App = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const fetchApi = useCallback(
-    ajax(afterOneSecondsWillReturn, 500, () => {
-      setLoading(true);
-    }),
-    [loading, data]
-  );
-
-  const eject = useCallback(
-    () =>
-      fetchApi('foo').then(rep => {
-        setData(rep);
-        setLoading(false);
-      }),
-    []
-  );
-  return (
-    <div>
-      <button onClick={eject}>let us eject!</button>
-      {loading ? 'loading…' : <div>{data}</div>}
-    </div>
-  );
-};
-
-export default App;
+```js
+try {
+  const rep = await Promise.race([timeout(400), fetch(url)]);
+  this.setState(rep);
+} catch (e) {
+  this.setState({ loading: true });
+}
 ```
+
+很显然，这不符合我们的要求。如果没有进入 `catch` 里，世界和平，但是如果进入 `catch` 里，谁帮我们继续 `this.setState(rep)` 呢？换句话说，它只把一个 loading 丢给你，其他就不管了！
+
+当然这也很简单，我们改进一下
+
+```js
+try {
+  const rep = await Promise.race([timeout(400), fetch(url)]);
+  this.setState(rep);
+} catch (e) {
+  this.setState({ loading: true });
+  const rep = await fetch(url);
+  this.setState(rep);
+}
+```
+
+嗯，感觉我是来搞笑的？这样做当然也不行啊，不是白白发了一次请求么，完全没有效果啊！！！
+但是，其实我们已经接近那隧道尽头的光了。如果 `const rep = await fetch(url)` 它不会重新发送请求，而仅仅只是接着第一次调用 `fetch(url)` 的场景，继续运行的话，是不是就解决我们的问题了？
+
+是的，我们只需要将 `fetch(url)` 保存下来，就可以做到了。这是最终实现
+
+```js
+try {
+  const fetchPromise = fetch(url);
+  const rep = await Promise.race([timeout(400), fetchPromise]);
+  this.setState(rep);
+} catch (e) {
+  this.setState({ loading: true });
+  const rep = await fetchPromise;
+  this.setState(rep);
+}
+```
+
+It’s Done 😎.
+
+## 让它更加通用
+
+TODO
