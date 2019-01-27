@@ -89,8 +89,8 @@ try {
 
 接着，我们改进一下
 
-```js
-try {
+```js{6,7}
+try
   const rep = await Promise.race([timeout(400), fetch(url)]);
   this.setState(rep);
 } catch (e) {
@@ -105,7 +105,7 @@ try {
 
 是的，我们只需要将 `fetch(url)` 保存下来，就可以做到了。这是最终实现
 
-```js
+```js{2}
 try {
   const fetchPromise = fetch(url);
   const rep = await Promise.race([timeout(400), fetchPromise]);
@@ -132,7 +132,7 @@ It’s Done 😎.
 
 下面使用 Promise 而不是 async 来实现，因为这样会让代码更简单。实现如下：
 
-```jsx
+```jsx{5,7}
 const timeout = ms => new Promise((_, r) => setTimeout(r, ms));
 
 const ajax = (api, ms, resolve, reject) => async (...args) => {
