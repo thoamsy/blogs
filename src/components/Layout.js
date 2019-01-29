@@ -33,7 +33,7 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h3
         style={{
-          fontFamily: 'Montserrat, sans-serif',
+          fontFamily: 'sans-serif',
           marginTop: 0,
           marginBottom: rhythm(-1),
         }}
