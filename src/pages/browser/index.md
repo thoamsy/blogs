@@ -1,6 +1,7 @@
 ---
 title: Inside look at modern web browser（翻译）
 date: 2018-10-05
+spoiler: 谷歌搬砖
 ---
 
 原文系列: https://developers.google.cn/web/updates/2018/09/inside-browser-part1
