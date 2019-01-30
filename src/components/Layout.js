@@ -5,7 +5,11 @@ import 'prismjs/themes/prism-okaidia.css';
 import { rhythm, scale } from '../utils/typography';
 
 const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`;
+  let rootPath = '/';
+  if (typeof __PATH_PREFIX__ !== 'undefined') {
+    rootPath = __PATH_PREFIX__ + `/`;
+  }
+  console.log(location.pathname, rootPath, 'foo');
   let header;
 
   if (location.pathname === rootPath) {
@@ -33,7 +37,7 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h3
         style={{
-          fontFamily: 'Montserrat, sans-serif',
+          fontFamily: 'sans-serif',
           marginTop: 0,
           marginBottom: rhythm(-1),
         }}
