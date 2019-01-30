@@ -5,10 +5,11 @@ import 'prismjs/themes/prism-okaidia.css';
 import { rhythm, scale } from '../utils/typography';
 
 const Layout = ({ location, title, children }) => {
-  let rootPath = `/`;
-  if (typeof __PREFIX_PATHS__ !== 'undefined') {
+  let rootPath = '/';
+  if (typeof __PATH_PREFIX__ !== 'undefined') {
     rootPath = __PATH_PREFIX__ + `/`;
   }
+  console.log(location.pathname, rootPath, 'foo');
   let header;
 
   if (location.pathname === rootPath) {
