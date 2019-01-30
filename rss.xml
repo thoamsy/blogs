@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[😏]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Wed, 30 Jan 2019 05:15:51 GMT</lastBuildDate><item><title><![CDATA[解决 loading 闪烁的问题]]></title><description><![CDATA[背景 从开始接触异步请求，接触 AJAX 和 Promise 后，就会发现这些操作很 「套路化」 。绝大多数的异步操作似乎都可以类似下面 👇 的代码： 生活很美好吧，umh…]]></description><link>https://github.com/thoamsy/blogs.git/solve-fresh-of-loading/solve the fresh of loading/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/solve-fresh-of-loading/solve the fresh of loading/</guid><pubDate>Sat, 12 Jan 2019 19:30:00 GMT</pubDate><content:encoded>&lt;h2&gt;背景&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[😏]]></title><description><![CDATA[A starter blog template with gatsby]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Wed, 30 Jan 2019 16:10:13 GMT</lastBuildDate><item><title><![CDATA[解决 loading 闪烁的问题]]></title><description><![CDATA[背景 从开始接触异步请求，接触 AJAX 和 Promise 后，就会发现这些操作很 「套路化」 。绝大多数的异步操作似乎都可以类似下面 👇 的代码： 生活很美好吧，umh…]]></description><link>https://github.com/thoamsy/blogs.git/solve-fresh-of-loading/solve the fresh of loading/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/solve-fresh-of-loading/solve the fresh of loading/</guid><pubDate>Sat, 12 Jan 2019 19:30:00 GMT</pubDate><content:encoded>&lt;h2&gt;背景&lt;/h2&gt;
 &lt;p&gt;从开始接触异步请求，接触 AJAX 和 Promise 后，就会发现这些操作很&lt;strong&gt;「套路化」&lt;/strong&gt;。绝大多数的异步操作似乎都可以类似下面 👇 的代码：&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;componentDidMount&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; loading&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -393,35 +393,7 @@ Bar 则是两个组件中的中间层，它的作用就是承接 Foo 和 App。�
 &lt;h2&gt;渲染过程处理 Web 内容&lt;/h2&gt;
 &lt;p&gt;渲染过程负责在 Tab 中发生的一切事情。在一次渲染过程中，主线程会处理绝大部分你为用户准备的代码。如果还包含了 Web Worker 或者 Service Worker（PWA） 的代码，这部分会由 Worker 线程来处理。&lt;strong&gt;Compositor（合成）&lt;/strong&gt; 和 &lt;strong&gt;Raster（栅格）&lt;/strong&gt;也属于渲染进程的一部分，使页面渲染的更为高效和平滑。&lt;/p&gt;
 &lt;p&gt;渲染进程的核心任务是将 HTML，CSS，JavaScript 转化成用户可以与之交互的 Web 网页。&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/bdfa66a4ef1fbd2805797bc4cd90f8d8/3c337/renderer.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABbklEQVQoz2WRyXLCQAxE/f9/w5EqDgQ4kIrBG3ghBuxiD2CzQ9jMY0QoV6UPY02P1GrJWpZlcRx/fum22+l0gjAMPc/zfZ9LW4Gr67q2bf8oWJY1m82out/vGp/RaOT5gem0PxTK5bJhGCTput5sNk3T5Fqr1RBCtNvtIvEqHgwGnoLjOJZtkxEEwfcfQgWCXq+HFyFxOp1O9/u9BoUl0qIoJu73+1kOyN9uNwnkvF6vBGmaJkminc9nqNPp9C7YbreHw0EmvFwuML8KURSt12vJ2e121GubzWaxWGCjUChUKhWEYJkNezwhj/p8Pl+tVsVi8e2LBs9iZk4U6vV6tVoliTe06LNcLo/HI1fIVqvF8MPhkO1OJhOqcKFhjIdSqcQPECHxiXPkxSdXfLIa1i5yr87sAyX08uuRJVMvWoA9NRoN/gWOSB6Px8/OqGb/QCqjYkqWLIz0FOa1MJbBh/HSHBgSYc48CfMOMMvrA+t4W7C5eyUwAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;renderer&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/bdfa66a4ef1fbd2805797bc4cd90f8d8/42603/renderer.png&quot;
-        srcset=&quot;/blogs/static/bdfa66a4ef1fbd2805797bc4cd90f8d8/f931c/renderer.png 200w,
-/blogs/static/bdfa66a4ef1fbd2805797bc4cd90f8d8/e8031/renderer.png 400w,
-/blogs/static/bdfa66a4ef1fbd2805797bc4cd90f8d8/42603/renderer.png 800w,
-/blogs/static/bdfa66a4ef1fbd2805797bc4cd90f8d8/3c337/renderer.png 865w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://developers.google.cn/web/updates/images/inside-browser/part3/renderer.png&quot;&gt;
 Figure 1: 渲染进程包括了一个主线程，Worker 线程，一个 Compositor 线程 和一个 Raster 线程。&lt;/p&gt;
 &lt;h2&gt;Parsing&lt;/h2&gt;
 &lt;h3&gt;DOM 的创建过程&lt;/h3&gt;
@@ -430,35 +402,7 @@ Figure 1: 渲染进程包括了一个主线程，Worker 线程，一个 Composit
 &lt;a href=&quot;https://html.spec.whatwg.org/&quot;&gt;HTML Standard&lt;/a&gt; 定义了将 HTML 转化成 DOM 的过程。你应该注意到过，浏览器从来不会在解析 HTML 的时候抛出一个错误。比如，少了 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;/p&amp;gt;&lt;/code&gt; 的标签是一个合法的 HTML。像 &lt;code class=&quot;language-text&quot;&gt;Hi! &amp;lt;b&amp;gt;I&amp;#39;m &amp;lt;i&amp;gt;Chrome&amp;lt;/b&amp;gt;!&amp;lt;/i&amp;gt;&lt;/code&gt; （b 标签在 i 之前就闭合了）这种错误的标记，会被浏览器看成 &lt;code class=&quot;language-text&quot;&gt;Hi!&amp;lt;b&amp;gt;I&amp;#39;m &amp;lt;i&amp;gt;Chrome&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;i&amp;gt;!&amp;lt;/i&amp;gt;&lt;/code&gt; 来理解。这是因为 HTML 的标准就是特意设计成能够将错误优雅的处理掉。如果你好奇这内部的细节，可以阅读 HTML 标准中的 &lt;a href=&quot;https://html.spec.whatwg.org/multipage/parsing.html#an-introduction-to-error-handling-and-strange-cases-in-the-parser&quot;&gt;An introduction to error handling and strange cases in the parser&lt;/a&gt; 这一节。&lt;/p&gt;
 &lt;h3&gt;子资源加载&lt;/h3&gt;
 &lt;p&gt;一个网页通常还会有图片，CSS 和 JS 等这些外部资源。这些文件需要从网络或者缓存中被加载。主线会在解析 HTML 文件并构建 DOM 的过程中，一个一个的处理它们。但是为了提速，“（预加载扫描器）preload scanner” 会并行运行。如果存在 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;img&amp;gt; 和 &amp;lt;link&amp;gt;&lt;/code&gt; 在 HTML 中，预加载扫描器会默默地查看这些标记，并在浏览进程中向 network 线程发送请求。&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/fa689d6a31b8687522c58774c8d9d064/3c337/dom.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABc0lEQVQoz22S2XKCUAyGef+namecYZi2FJFNAXfZioqK4lKgH8Txqrk45OTkXxJV2rZdLBbax6fp+YHvh2Hoed54PA6CwHEc13V936cyGo1++hgOh2magmqaRuGzXq8dzzNM6/3tGbqu0/TVx3cfg8HAsixY4Mqy7AkGic5kMrFtG3rU0ERfzldMp1OpzGazzWaTJMn5fFaAGYZhmiasqAG+XC5VVUFc1zUdXG+32+PxIN9ut5qmIV6W5W63U6je73fwsM7n8zzP6cAOxgDDSB2fIPf7fRzHqqoyFMpcFaqn0wllzPz2AUZWQoVZcAv4er1SZwXgj8fjcrnslOFASjYEGcqHw0EUQHKFl1l4avtgHE5sd8oQ8GEN0ENJN0OS88xEsideV6sV4qyWnB8Msx2YqcDThFUskAPGDvSciAPgjyAnQQNtyHRgPiyTVYFHFjWuAkYh74NuvJD8Y5sqxPIHIMQbb0VRyCkJuxBZ8iiKKP4Bs75RmkY8U9EAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;dom&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/fa689d6a31b8687522c58774c8d9d064/42603/dom.png&quot;
-        srcset=&quot;/blogs/static/fa689d6a31b8687522c58774c8d9d064/f931c/dom.png 200w,
-/blogs/static/fa689d6a31b8687522c58774c8d9d064/e8031/dom.png 400w,
-/blogs/static/fa689d6a31b8687522c58774c8d9d064/42603/dom.png 800w,
-/blogs/static/fa689d6a31b8687522c58774c8d9d064/3c337/dom.png 865w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://developers.google.cn/web/updates/images/inside-browser/part3/dom.png&quot;&gt;
 Figure 2: 主线程解析 HTML 文档并构建 DOM 树&lt;/p&gt;
 &lt;h3&gt;JavaScript 会堵塞解析&lt;/h3&gt;
 &lt;p&gt;当 HTML 解析器找到一个 &lt;code class=&quot;language-text&quot;&gt;script&lt;/code&gt; 标签的时候，它会暂停解析 HTML 文档，并开始下载，解析并执行 JS 代码。为什么？因为 JS 可以使用像 &lt;code class=&quot;language-text&quot;&gt;document.write()&lt;/code&gt; 这种改变了整个 DOM 结构的方法来改变文档的形状（shape of the document)。这就是为什么 HTML 解析器在它可以继续解析 HTML 文档之前，必须等待 Javascript 运行结束。如果你对 JS 的执行细节好奇的话，&lt;a href=&quot;https://mathiasbynens.be/notes/shapes-ics&quot;&gt;V8 团队有一篇关于它的博客介绍&lt;/a&gt;&lt;/p&gt;
@@ -466,296 +410,42 @@ Figure 2: 主线程解析 HTML 文档并构建 DOM 树&lt;/p&gt;
 &lt;p&gt;Web 开发者有很多种方式可以按时浏览器如何恰当地加载资源。如果你的 JS 不使用 &lt;code class=&quot;language-text&quot;&gt;document.write()&lt;/code&gt;，你可以给 &lt;code class=&quot;language-text&quot;&gt;script&lt;/code&gt; 标签添加 &lt;code class=&quot;language-text&quot;&gt;async&lt;/code&gt; 或者 &lt;code class=&quot;language-text&quot;&gt;defer&lt;/code&gt; attribute。这样浏览器就异步的加载和运行 JS 代码，而不会堵塞解析过程。你同时也可以在恰当的时候使用 &lt;a href=&quot;https://developers.google.cn/web/fundamentals/primers/modules&quot;&gt;JavaScript module&lt;/a&gt;。&lt;code class=&quot;language-text&quot;&gt;&amp;lt;link ref=&amp;quot;preload&amp;quot;&amp;gt;&lt;/code&gt; 也是一种通知浏览器，当前资源可以尽快下载的方式。可以通过阅读 &lt;a href=&quot;https://developers.google.cn/web/fundamentals/performance/resource-prioritization&quot;&gt;Resource Prioritization – Getting the Browser to Help You&lt;/a&gt; 了解更多。&lt;/p&gt;
 &lt;h2&gt;Style calculation&lt;/h2&gt;
 &lt;p&gt;因为 CSS 的存在，仅仅有一个 DOM 是不足以让浏览器了解整个网页会是怎么样的。主线程会解析 CS，并为每一个 DOM 节点计算出最终样式。这些信息会基于 CSS 选择器来呈现每一个元素被应用了哪些样式。你可以在通过开发者工具的 &lt;code class=&quot;language-text&quot;&gt;computed&lt;/code&gt; 来看到这些信息。&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/fb7d195814a04c6ed98eab8dbda477c6/3c337/computedstyle.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABiklEQVQoz1WRWY+CQBCE+f//xsRolBfXI2YDKiKKgujiiYrifUVlP2YS3e2Hoafpqq7qUeI49v2fb003bcd1HM/zuiIcx7Esq91uk3c6HdM0l8vlarVqNpuLxQLU6/VS+EwmE7vbM1rWF1EsFgqFRqNBk67r9XrdMAzOcrksiVzX/YDH47Ft21RbpgmAabKD6Pf78kTOcDj0RJBMp9P5fH46nRTkwQ3a931yTsn6EPF8Pu/3+/V6vd1u+/1+vV5Xq1UYj8cjuULHZrPhLi1FURSG4WAwqNVq6NQ0DTqK9MxmMwYCxlQQBBQVOEDSB5IcMefzmUo2m8VnJpMBjE7+giyVSsxAwmg0SsDw8ZsLK5V4KjjP5/OVSiWXy7EexCMQDKJiEbQlYMwcDoeeCFjkZFaYSqVUVU2n0/Bib7vd4vwNBpKAL5cLqnhGHgzxu92OCawUPLtll+QMD0Sg+R8YVgbih5N/PAwVdNKBVE6kyW0zRtY/soFhErfvrbDYUARXzuhPwEuRBpox8gsmH01pB0VyDQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;computedstyle&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/fb7d195814a04c6ed98eab8dbda477c6/42603/computedstyle.png&quot;
-        srcset=&quot;/blogs/static/fb7d195814a04c6ed98eab8dbda477c6/f931c/computedstyle.png 200w,
-/blogs/static/fb7d195814a04c6ed98eab8dbda477c6/e8031/computedstyle.png 400w,
-/blogs/static/fb7d195814a04c6ed98eab8dbda477c6/42603/computedstyle.png 800w,
-/blogs/static/fb7d195814a04c6ed98eab8dbda477c6/3c337/computedstyle.png 865w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://developers.google.cn/web/updates/images/inside-browser/part3/computedstyle.png&quot;&gt;
 Figure 3: 主线程解析 CSS 得到计算过的样式&lt;/p&gt;
 &lt;p&gt;即使你不提供任何 CSS，每一个 DOM 节点还是会有一个被计算过的样式。&lt;code class=&quot;language-text&quot;&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; 标签看上去会比 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;h2&amp;gt;&lt;/code&gt; 更大，并且每一个元素的 margin 也是不一样的。这是因为浏览器维护了一个默认样式表。如果你想了解 Chrome 的默认样式，可以阅读&lt;a href=&quot;https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/css/html.css&quot;&gt;源码&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Layout&lt;/h2&gt;
 &lt;p&gt;现在渲染进程知道了 DOM 的结构和每一个节点的样式，但是这些信息还不足以去渲染一个页面。相信你在电话的另一头努力地给你的朋友描述一幅画。“有一个巨大的红色的圆和一个小一点的蓝色的正方形”是不足以让你的朋友想象出这幅画的样子的。&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/0658494542e14f7db66b913c02c03202/3c337/tellgame.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 53.294797687861276%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB10lEQVQoz21Su47TQBQdim0QEgUUQLESP7D8AtI2iHYrOkRBS02zH4D4AUo6N2ELQrTtJqFIsnlY5GEltmfs8dqOTZLNy3b8iPfEXu1D2iv7auy555x7zwzhnHuel6ZpkiRBECyXy/V6PZ/PF4vFarXCZxiG2+0WBXEcp/eDMMYkSQIFkGCJwjD2/RTlqI2iTRjmFFEUVatVy7LGWWAfYsQwDNM0S6XSdDrFAizm5fxCY1TnoiTZlmXbNtgLhUKr1apUKr1er1gslstldERAAwxowM0oRX/ezx+ztwfu0WH7z+8w69b3fVEUkQeDAbpDFgSh0WgQWZYnk0maDc3ssf+v7e4//v9qjz4h/Q/vd7+zgTEdZJrNJpSHwyEgAJLRaASHcgPEkSwXhPPnjzqvn7Zf7n38/P3NSSAoO59klf7NQlGUWq2We0y63W6+gkkYGHnx5ZP7jKwPXrw7PiVf6bezMTb5hQmNTqeDNbLrujvwXeupqkZJEm8CX2xGmvJL2x63kto4TuMN1TQUoGHHcaBPKb0F5ycJZY0xzg1jOjMcZ2bqnsNdkzOm2baVgyGrqup12+mDsePK3uy5CUwLw/r9/vUluQ95OHCQ2IVavV7XdR2e57ftCp5ZSInelRfHAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;tellgame&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/0658494542e14f7db66b913c02c03202/42603/tellgame.png&quot;
-        srcset=&quot;/blogs/static/0658494542e14f7db66b913c02c03202/f931c/tellgame.png 200w,
-/blogs/static/0658494542e14f7db66b913c02c03202/e8031/tellgame.png 400w,
-/blogs/static/0658494542e14f7db66b913c02c03202/42603/tellgame.png 800w,
-/blogs/static/0658494542e14f7db66b913c02c03202/3c337/tellgame.png 865w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://developers.google.cn/web/updates/images/inside-browser/part3/tellgame.png&quot;&gt;
 Figure 4: A person standing in front of a painting, phone line connected to the other person&lt;/p&gt;
 &lt;p&gt;Layout 是一个找到元素的几何信息的过程。主线程通过遍历 DOM，计算样式，并创建一个包换了 x y 坐标信息和边框大小的 layout 树。Layout 树可能和 DOM 树很相似，但是它仅仅包含了在能在页面中被看到的信息。比如 &lt;code class=&quot;language-text&quot;&gt;display: none&lt;/code&gt; 一旦被应用到每个元素上，这个元素就不是 layout 树的一部分。相似的，如果一个伪元素 &lt;code class=&quot;language-text&quot;&gt;p::before { content: &amp;quot;Hi!&amp;quot; }&lt;/code&gt;被应用饿了，它虽然不会出现在 DOM 树上，但是属于 layout 树。&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/0c1de85206f0d177f93a70931a0f8272/3c337/layout.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjElEQVQoz1WS6Y6CQBCEef/30QR/aUTiZlmN3AoeCCqCovG+Vvyc2d1kO2bohqqumm6Vsiwnk8nHp2H5QRgGw+HQ9/1+vx+Goeu65EEQeJ5nWVae56vVqtfrLZdLWM/nU+GRxLHr+V3TbjQa9Tq/eqfTAfQloitC0zTbtulC0yzLfshJkvAKKduyTNN0HGcwGIQicPGXjEYjmYzH49lslqbp8XhUoNEYe3ygNwjZ9X6/Xy6XbxGPx4MT9Hq9brfbYA6HA1dQAPGgRh+3zWaTEv58PkftdrvJXpwwF4uFruuIoVwUhbLf7xkJN+SqrVarUqlAA3o+n7FDI/hgOJGhOzTKKIre5EQEfMhYUlWVz4ZhIIIyfJLNZkOvUoR0Af9N5mK73Y5N1Go1mNVqFTQ60+mUFaJAiWGgwKBxeU7yN/l0OsVxzDWYliGCwTAhSjlSZkEXJoQau2D52MTUdrtVWBrTZ+8gQJNLV2her1dyPDMFANL5P9upCAaDPf5DcoyyJIFJd16iU/wGOe04XwjcTY6e4hgvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;layout&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/0c1de85206f0d177f93a70931a0f8272/42603/layout.png&quot;
-        srcset=&quot;/blogs/static/0c1de85206f0d177f93a70931a0f8272/f931c/layout.png 200w,
-/blogs/static/0c1de85206f0d177f93a70931a0f8272/e8031/layout.png 400w,
-/blogs/static/0c1de85206f0d177f93a70931a0f8272/42603/layout.png 800w,
-/blogs/static/0c1de85206f0d177f93a70931a0f8272/3c337/layout.png 865w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://developers.google.cn/web/updates/images/inside-browser/part3/layout.png&quot;&gt;
 Figure 5: 主线程遍历 DOM 树，通过已经计算的样式，得到 layout 树&lt;/p&gt;
 &lt;p&gt;确定页面的布局是一项由挑战性的任务。即使是最简单的页面布局，如从上到下的 block flow，也必须考虑字体的大小以及在哪里划分它们，因为它们会影响段落的大小和形状，还会影响下一段所需的位置。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&apos;/blogs/layout-d79962918f183bf37afdfbbec0b45780.mp4&apos;&gt;layout.mp4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&apos;./layout.mp4&apos;&gt;layout.mp4&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Figure 6: 因为一个断行的改变，layout 也跟着改变&lt;/p&gt;
 &lt;p&gt;CSS 还能让元素浮动到一边，隐藏超出边界的部分，并修改写入方向。你可以想象到，layout 阶段其实是非常复杂的任务。在 Chrome 中，有专门一个团队的工程师致力于 layout 的工作。如果你想了解更多有关他们的工作细节，&lt;a href=&quot;https://www.youtube.com/watch?v=Y5Xa4H2wtVA&quot;&gt;few talks form BlinkOn Conference&lt;/a&gt; 记录了大量的有趣的内容。&lt;/p&gt;
 &lt;h2&gt;Paint&lt;/h2&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/d8fe81b968531c8b3d4767006ea9725d/3c337/drawgame.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 37.45664739884393%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsTAAALEwEAmpwYAAABL0lEQVQY05VPPU+DUBR9iZOrcTBODk6auDv4M5z7cxydjXFxMsbJ0YnNpBKIaYSQgnyWPngUXvkoUAh4oEtXz3bPveeec4jrOCzLqaFT16HrbLmkjEWmabquG8dxtAfHcZqm8X3/Z0RZliRIs1744Fen2c1Fr8pdP2A+n6dpWlXVZkSe513XQb8YgZUgCLIsk4Cvs8ktOyL05ODl7uk9GsS6YeAiSRJKqWVZQRBAzxhTFEXTNFVVPc8Lw5CwvGhen9dnh4vry+P74PxtEBvGL67rurZtG3d4AZJzruu6KIowRzQwBE3qvs++PpPZ94O6fZwV7baGA9wQGOa7CKiAL3iHRxglSUJ/slqtkjjGkm/KLo/bAisOEg35HsCCadsWaafTKboMzv1/ADdtxK7IHzccdTm16O1FAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;drawgame&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/d8fe81b968531c8b3d4767006ea9725d/42603/drawgame.png&quot;
-        srcset=&quot;/blogs/static/d8fe81b968531c8b3d4767006ea9725d/f931c/drawgame.png 200w,
-/blogs/static/d8fe81b968531c8b3d4767006ea9725d/e8031/drawgame.png 400w,
-/blogs/static/d8fe81b968531c8b3d4767006ea9725d/42603/drawgame.png 800w,
-/blogs/static/d8fe81b968531c8b3d4767006ea9725d/3c337/drawgame.png 865w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://developers.google.cn/web/updates/images/inside-browser/part3/drawgame.png&quot;&gt;
 Figure 7: 一个人拿着画笔站在画布前，想着应该先画圆还是先画正方形&lt;/p&gt;
 &lt;p&gt;有了 DOM，style，layout 还不足于渲染一个页面。假设你正在努力画一幅画，你知道画的大小，形状，每一个元素所在的位置，但是你还是需要判断绘制它们的顺序。
 比如，&lt;code class=&quot;language-text&quot;&gt;z-index&lt;/code&gt; 可能会被设置到当前元素上，在这种情况下，如果按 HTML 定义的顺序来绘制就会得到错误的结果。&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/785924a8744dfda1428cc692e2c3f411/73363/zindex.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 53.44062153163153%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABa0lEQVQoz32S/W6CQBDE7/2fo3/1KUxM1JgQg5CqIKJyIigfIgpYRforV02bmG7iZW93bmdmUfR6vclkYhjGbDYzTdP3/SiK9vv9brcLw9BxHNd1pZQkm81msVhYlrVer5fLZZqmQtf14XA4GAw0Tev3+5wfbVAHCojT8zwIbNtmChwkx+Pxer2Ky+UCCYNpMBvcdDo1DQNCT0pegp7P50gbjUbookJ+u92aphHc6fEGPbCNx2NUUKSXhKGaKB9TsMMV/M9jqnir61r5oVQU5yiOA9+X729VnpPTbV6FiONYZeiHAZPb7ZbxnI5tIwGHcK5WK5D3+/3PYwwHQcAJDjNssiiKJEnYfHo4gEZOt9vtdDrsBdvUWYrSIvjVbZAwBf7PNsj5ZmVZslhaVMCUbTBdSfjeNhdKVVWBhhnx7A/ZyKHLerIse+05+xV5np8foXIY8Mz3xxFD1YKezkXzbyDqdDqR8Jd4unvGF3HhXceMYMsUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;zindex&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/785924a8744dfda1428cc692e2c3f411/42603/zindex.png&quot;
-        srcset=&quot;/blogs/static/785924a8744dfda1428cc692e2c3f411/f931c/zindex.png 200w,
-/blogs/static/785924a8744dfda1428cc692e2c3f411/e8031/zindex.png 400w,
-/blogs/static/785924a8744dfda1428cc692e2c3f411/42603/zindex.png 800w,
-/blogs/static/785924a8744dfda1428cc692e2c3f411/5b8b9/zindex.png 1200w,
-/blogs/static/785924a8744dfda1428cc692e2c3f411/c7ea5/zindex.png 1600w,
-/blogs/static/785924a8744dfda1428cc692e2c3f411/73363/zindex.png 1802w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://developers.google.cn/web/updates/images/inside-browser/part3/zindex.png&quot;&gt;
 Figure 8: 页面的元素按 HTML 元素中定义的元素，导致了错误的结果。因为 z-index 没有被考虑在内&lt;/p&gt;
 &lt;p&gt;在绘制（Paint）阶段，主线程遍历 layout 树来创建绘制记录（Paint record)。绘制记录是一个绘画过程的注解，如“先背景，接着文本，然后矩形”。如果你使用过 &lt;code class=&quot;language-text&quot;&gt;canvas&lt;/code&gt;，那么这个过程对你来说应该很熟悉。&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/a68fd128fc59b9b2bed3511fcf223c94/3c337/paint.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeklEQVQoz22R23KCQBBE+f+v0iq1jFFQQECBCOJdQfGKaCQHpqzkIfOwO9U7090zqxRFEYbBx2fXsF3PdX3fdxxnPB57nmdZFrnrurZtG4ax3W53u12/31+v13S9Xi+FazabWbaj6Wa9VqvXOWqqqg4Gg24V5JqmNRoN0zRhgeu3mU6RMg1D1/XhcCiyxGQy+foTIPgCnM/nq9XqcrkolCICaxAE5JywfleBwnK5XCwWaZoCns/nOI7b7TbikivP55MLvizLxExRRZ7nEKEWhiE6IJTB1Wq1GARkv98rFN3v99FoxD6ogAtNSTDJzKxqs9kIXa/Xw8jxeJxOp2WzCALhGZ9Qgsh6yUnAhVdMyYntsvnxeHDJGnGYVsGXnE4n7DSbzU6nA7UMT0EURXSyrSRJlOv1KrMB8bG80ckbpHgD4QllSjGPF1Z9u90oKJUpZVuMgRmK4MY8RExOG+bRl4X9Y1v+g03CTTPekipAoirQFzB+B20gh8PhB0XOU3hbyxq5AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;paint&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/a68fd128fc59b9b2bed3511fcf223c94/42603/paint.png&quot;
-        srcset=&quot;/blogs/static/a68fd128fc59b9b2bed3511fcf223c94/f931c/paint.png 200w,
-/blogs/static/a68fd128fc59b9b2bed3511fcf223c94/e8031/paint.png 400w,
-/blogs/static/a68fd128fc59b9b2bed3511fcf223c94/42603/paint.png 800w,
-/blogs/static/a68fd128fc59b9b2bed3511fcf223c94/3c337/paint.png 865w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://developers.google.cn/web/updates/images/inside-browser/part3/paint.png&quot;&gt;
 Figure 9: 主线程遍历 layout 树并生成绘制记录&lt;/p&gt;
 &lt;h3&gt;Updating rendering pipeline is costly&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&apos;/blogs/trees-4fb0aeab900ba7deeab02d06057f464e.mp4&apos;&gt;trees.mp4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&apos;./trees.mp4&apos;&gt;trees.mp4&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Figure 10: 有序的生成 DOM ，Style，Layout，Paint Trees&lt;/p&gt;
 &lt;p&gt;想要理解渲染一条龙，最重要的一点是&lt;strong&gt;每一步中，都会使用上一个操作的结果作为新的数据。&lt;/strong&gt; 比如修改了 layout 树，那么 paint 树也需要重新生成。
 如果你打算为某些元素加动画，浏览器必须在每一帧都重复这些过程。大多数显示器 1 秒刷新 60 次屏幕（60 fps）。当物体在屏幕中移动的时候，出现在每一帧中，人眼就会认为这段动画十分平滑。然后，如果动画在某段时间内丢帧了，页面就会看上去“卡顿”&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/fbcb48cd931be64c96ac87a3fa1ee177/6fdd2/pagejank1.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 23.1%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVQY02WN3U+CUADF+f/f3HrpoVecFNK81crNrbx0uwgCgYEwMK5XqN3SIR9SLinsKdd5ONvZOTs/7vuf6l8nhGia5vu+5/mGYWRZtq/q+u+SK4t8W5V5nldl8Vltsmz9tf1YLZdhOEvTdE7IevXexN2hmpfGuVbnBpj05GJ4DO6BHrXal6doCn22KfKyLI86V7zsuWzTcHaH2D35enDXhwovdLFu9fq3gniOjae22FMUjBDihTOoWYMh6oqi604lSZJlWVVVAADGmJtY1ktMtdGIRM8LOscP6I29TqxH0zQppfp4HM3CJF5ACJMkcRzHtu04joMgYIz9ACMYBWmHluTAAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;pagejank1&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/fbcb48cd931be64c96ac87a3fa1ee177/42603/pagejank1.png&quot;
-        srcset=&quot;/blogs/static/fbcb48cd931be64c96ac87a3fa1ee177/f931c/pagejank1.png 200w,
-/blogs/static/fbcb48cd931be64c96ac87a3fa1ee177/e8031/pagejank1.png 400w,
-/blogs/static/fbcb48cd931be64c96ac87a3fa1ee177/42603/pagejank1.png 800w,
-/blogs/static/fbcb48cd931be64c96ac87a3fa1ee177/6fdd2/pagejank1.png 1000w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://developers.google.cn/web/updates/images/inside-browser/part3/pagejank1.png&quot;&gt;
 Figure 11：Animation frames on a timeline&lt;/p&gt;
 &lt;p&gt;即使你的渲染操作能跟上屏幕的刷新，但是因为这些计算是发生在主线程上，这意味着当有其他的 JS 代码运行的时候，动画就会“掉帧”&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/6e35a283b1b93f266a18f739475db1ea/6fdd2/pagejank2.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 23.1%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAABDElEQVQY02WOXU+CUACG+UOurZV/N7swi1auRutjkWVAxAkhDoi4QEAkOBZ1IfLlOeTW7KZn78V78bzbS9UbyKaUZTU0x+BFnbj+QNF0Y/Tf+YUqs7QsCkJwvkyrMq9xYo+VBL1FU/177nwhe5G4JI9JjnCVFdmyqiqMMVkPMKbanBkuVq7vHw2iNPVrdfeTbWTcVnjTtLrb6xB5Bz83aqU50i+PlXlarv4uUMwdz4vgoNPhVPOWZc+7bcuQTujWQ++qf39NH+5DVej3Lk7plqIqe/QZxwsASAzDiKJIGfB1FgQAAN91PM97EqX3+EPThxrUp0Eoy6oz8WZh/MgJURRZpgEhDILAtm2E0A9U1ABD8UOCoQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;pagejank2&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/6e35a283b1b93f266a18f739475db1ea/42603/pagejank2.png&quot;
-        srcset=&quot;/blogs/static/6e35a283b1b93f266a18f739475db1ea/f931c/pagejank2.png 200w,
-/blogs/static/6e35a283b1b93f266a18f739475db1ea/e8031/pagejank2.png 400w,
-/blogs/static/6e35a283b1b93f266a18f739475db1ea/42603/pagejank2.png 800w,
-/blogs/static/6e35a283b1b93f266a18f739475db1ea/6fdd2/pagejank2.png 1000w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://developers.google.cn/web/updates/images/inside-browser/part3/pagejank2.png&quot;&gt;
 Figure 12: 在动画帧的时间线上，有一帧被 JS 堵塞了&lt;/p&gt;
 &lt;p&gt;你可以使用 &lt;code class=&quot;language-text&quot;&gt;requestAnimationFrame&lt;/code&gt; 将 JS 操作拆分成一小片，它们会分散在每一帧中运行。关于这个话题更深入的部分，请看 &lt;a href=&quot;https://developers.google.cn/web/fundamentals/performance/rendering/optimize-javascript-execution&quot;&gt;Optimize JavaScript Execution&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/7b1959d9953869798ba89282c6533bd2/6fdd2/raf.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 23.1%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAABD0lEQVQY01WPW0+DQBSE+f//wAejjZoWrLG6mGpUwFAot7JA1VibugWMraG7UOUi6oKo8cHvYWYyDydnGNHxo/n+Y2ALzpQ+s7doAa+vPpbHordaoB5+0qRxkIe7Uz8cumZNQN1Q0foHBjhLNOGFy544S3y4CRTX9e89eQO4ZHLXV0ROekjnbgtImoHCmbW1fsljQhBCGGPm7ORIUUftDjfSlXNB5dp7N964e9i/OAWDgdFhD2xDVYZwp7XtQch2eZ4HsiwDAFRVZT5pRWkVBEGa5eVbkSTr1zSNm+NxkucZIXiFcVFkGJOyfK//w/xa80MYhhBCTdN0XW/Utm3LskzTbELTG4YRRdH33j8opV87Zv9mDQAZNwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;raf&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/7b1959d9953869798ba89282c6533bd2/42603/raf.png&quot;
-        srcset=&quot;/blogs/static/7b1959d9953869798ba89282c6533bd2/f931c/raf.png 200w,
-/blogs/static/7b1959d9953869798ba89282c6533bd2/e8031/raf.png 400w,
-/blogs/static/7b1959d9953869798ba89282c6533bd2/42603/raf.png 800w,
-/blogs/static/7b1959d9953869798ba89282c6533bd2/6fdd2/raf.png 1000w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://developers.google.cn/web/updates/images/inside-browser/part3/raf.png&quot;&gt;
 Figure 13：在动画帧的时间线上，更小的 JS 块&lt;/p&gt;
 &lt;h2&gt;Compositing&lt;/h2&gt;
 &lt;h3&gt;你怎样 draw 一个页面&lt;/h3&gt;
@@ -773,68 +463,12 @@ Figure 15: 合成过程&lt;/p&gt;
 &lt;p&gt;你可能会禁不住诱惑让每一个元素都成为一个图层，但是合成大量的层反而会导致这个过程比一帧一帧的栅格化还要慢，关键才是要测量你的渲染性能。关于这个部分的更多细节，请看 &lt;a href=&quot;https://developers.google.cn/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count&quot;&gt;Stick to Compositor-Only Properties and Manager Layer Count&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Raster and composite off of the main thread&lt;/h3&gt;
 &lt;p&gt;一旦 Layer 树已经创建好，并且 Paint 的顺序是确定的，那么主线程就会将这些信息提交到合成器线程中。合成器线程会栅格化每一个 Layer。有些 Layer 可以和整个页面一样大，所以合成器线程会将它们分为多个图块，接着将每一个图块发送给栅格线程。栅格线程栅格化每一个图块，并将它们存在 GPU 的内存中。&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/371b5fa654d59f0c8ccb2f4f0658c20a/3c337/raster.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB0UlEQVQoz01Sy5KbMBDk//8ktxySVPaQKpulYnaNMWCe4ikQIDAE2+W3DU4b55A5iJFQd8/0SHg8HpQmH3PFcIhPSBiG7hiEENM0LctCbtu2YRh1Xa/Xa13Xq6oCahgGAR/GmON62sqcIkRxMpksl0tN0xRFUVUVOVZJkkDkeR7YwfIPnGUZuD3PtVbPsMcbkE3GCIIgiiIA4jj2fR9brJRSzvnhcBBw8+NzDhgQKMkjfj8MIIYOrl4ul7ZtT6fT+Xy+3+99399uN2h2XYdz4U9TRcSxlYltLMLVzNIUmkRFUYAIlUMELNABGBTDyIuA7GazEeqSpZHH3HnoGLvS5ywmrr3f70VRBPdut0OH2+0WOXxqmga/gEQOp4R2XenqfPH+MwmcX9++vH3/Gng2XBCnU5SdpulLHG5jCxcABiPoULlQ8zKLffX9x2oha7/fAsdo67LrNsfjsR/jer3CJLQAFwFAtaAD6RPMC9Y1nDqfEbEiU962vKmKYZzEqz3goYkRQB+asBazlGUZJ0JVZIwGoS75jh7oUp6QqmSP/wImoz3gMXaUjZeD1zCbzZ7goixZXuRZwvI8z2iaMc4r1NaNgQSGvdyG/0jQLVY8Nfz6CxoTRqDyXR/aAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;raster&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/371b5fa654d59f0c8ccb2f4f0658c20a/42603/raster.png&quot;
-        srcset=&quot;/blogs/static/371b5fa654d59f0c8ccb2f4f0658c20a/f931c/raster.png 200w,
-/blogs/static/371b5fa654d59f0c8ccb2f4f0658c20a/e8031/raster.png 400w,
-/blogs/static/371b5fa654d59f0c8ccb2f4f0658c20a/42603/raster.png 800w,
-/blogs/static/371b5fa654d59f0c8ccb2f4f0658c20a/3c337/raster.png 865w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://developers.google.cn/web/updates/images/inside-browser/part3/raster.png&quot;&gt;
 Figure 17: 栅格线程创建多个位图块，并发送给 GPU&lt;/p&gt;
 &lt;p&gt;合成线程还可以根据优先级决定，以便视口（或附近）可以先被栅格化。图层还具有多个 tiliings 用于处理放大操作等。&lt;/p&gt;
 &lt;p&gt;一旦图块被栅格化，合成器线程会有一个被称为&lt;strong&gt;draw quads（绘制四边形）&lt;/strong&gt;的过程来收集这些图块的信息，以创建一个 &lt;strong&gt;compositor frame（合成帧）&lt;/strong&gt;
 Compositor frame 接着会由 IPC 提交到浏览器进程中。此时，可以从 UI 线程中添加其他的合成帧用于浏览器 UI 的改变或者渲染进程。最后这些合成帧会被发送到 GPU 以显示到屏幕上。如果有滚动事件发送，合成器线程会创建新的合成帧发送到 GPU。&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blogs/static/397d4949099dd6d1aaffcb55e8678e37/3c337/composit.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 52.601156069364166%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABkElEQVQoz1WS127CQBRE9///hiceQIJgJHABI3fjgg0WHdGCKKHkyBsS5Uos17szc8ezFq/XK88zVTdsP4qjKEmSIAiGw2Ecx57n0UdR5Pu+bdur1Wq9Xg8Gg8ViAevxeAj+isnEC0LTcprN5kdZpmlaltXv92lAs7bbbcdx0EJ0uVzCej6foigK5jDEc13kwzBklFcWA13XZQWQpilrVFaWZVhgvuAMMZ6TNEVov9+DG41GTAZNA4D917twe7/fv8oS1+v1eDzebrfz+cwZPRzpSqJlA/RyuYCB/CskTqfTbrfDsGEYzNxsNmTGfLzM53MIEoeopmm9Xk/uSEUxHo+JoVqtVioVVVUJI02SPM8bjQYhoYtnmTOATqfzj4xJEBwTAN6YQFRIsK/rOvPlEQan0ylxHg6HPzI/nmu1GjcEwdB1pdXikjCp4aTb5YYkn3ep1+ukDYXMfu4ZVUVRmAMIwzTyJmazGdN4c+zgTl4eAHY4JR3BN0BahAQTC9vtlhSQg/D5LnoZJBgaLKAF8hvmbE0ktc1lqQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;composit&quot;
-        title=&quot;&quot;
-        src=&quot;/blogs/static/397d4949099dd6d1aaffcb55e8678e37/42603/composit.png&quot;
-        srcset=&quot;/blogs/static/397d4949099dd6d1aaffcb55e8678e37/f931c/composit.png 200w,
-/blogs/static/397d4949099dd6d1aaffcb55e8678e37/e8031/composit.png 400w,
-/blogs/static/397d4949099dd6d1aaffcb55e8678e37/42603/composit.png 800w,
-/blogs/static/397d4949099dd6d1aaffcb55e8678e37/3c337/composit.png 865w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://developers.google.cn/web/updates/images/inside-browser/part3/composit.png&quot;&gt;
 Figure 18: 合成器线程创造合成帧的过程。帧先发送到浏览器线程然后发送到 GPU&lt;/p&gt;
 &lt;p&gt;合成的优点就是它不依赖主线程。合成线程不需要等待样式的计算或者 JS 的执行。这也是为什么 &lt;a href=&quot;https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/&quot;&gt;只改变那些会导致合成的属性&lt;/a&gt;被认为是创建平滑动画的最佳选择。如果 layout 或者 paint 需要被再次计算，则主线程又会忙碌起来。&lt;/p&gt;
 &lt;h2&gt;总结&lt;/h2&gt;
@@ -1917,7 +1551,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 假设我们的 state 的结构是这样&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   posts&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;1234567&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; content&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;abc&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;4343434&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; content&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;def&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;我们想删除特定的 id 的 post 话, 最原生的写法会是&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; posts &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 	posts&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; posts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;post &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; post&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id &lt;span class=&quot;token operator&quot;&gt;!==&lt;/span&gt; postId&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -1925,7 +1559,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;使用普通的 lodash 会是&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; posts &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   posts&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;posts&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;id&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; postId&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;这样看起来, 普通的 lodash 并没有做多少事情, 只不过在 &lt;code class=&quot;language-text&quot;&gt;filter&lt;/code&gt; 的时候, 通过内置的 &lt;code class=&quot;language-text&quot;&gt;reject&lt;/code&gt; 少写了一些代码.
 那么, 我们再看下 lodash/fp 的写法&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;posts&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;id&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; postId&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -1955,11 +1589,11 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;这里没有用到柯里化的写法, 仅仅是为了变现 set 的 Pure 和参数顺序的调整.
 另外, 你可以用 Jest 运行下面代码, 可以确定它是纯的, 这样也就保证了 setState 的正确性&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token function&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;The set function should be pure&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; res &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;posts[0]&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; state&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;token function&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;posts&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;not&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toBe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;posts&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;token function&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;res&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;not&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toBe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;token function&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;posts&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toBe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; res &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;posts[0]&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; state&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;posts&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;not&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toBe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;posts&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;res&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;not&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toBe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;posts&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toBe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Rearranged Arguments&lt;/h3&gt;
 &lt;p&gt;最显著的一点就是, 由 /data-first/ 变成了 /data-last/.
 除了上面的 set, 还有 &lt;code class=&quot;language-text&quot;&gt;map, reduce, filter&lt;/code&gt; 都是这样.
@@ -1969,12 +1603,12 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;将迭代器函数做限制, 主要是为了规避一些常见 bug&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// The `lodash/map` iteratee receives three arguments:&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;// (value, index|key, collection)&lt;/span&gt;
-_&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;6&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;8&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;10&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; parseInt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+_&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;6&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;8&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;10&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; parseInt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;// ➜ [6, NaN, 2]&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;// The `lodash/fp/map` iteratee is capped at one argument:&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;// (value)&lt;/span&gt;
-fp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;parseInt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;6&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;8&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;10&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+fp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;parseInt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;6&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;8&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;10&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;// ➜ [6, 8, 10]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;但是这似乎出现了问题, 我们在 React 中需要&lt;em&gt;更新&lt;/em&gt;某个数组内特定 index 的用法就用不了.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; posts &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -1984,7 +1618,7 @@ fp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&
 &lt;code class=&quot;language-text&quot;&gt;const mapWithIndex = map.convert({ cap: false })&lt;/code&gt;
 之后再将 &lt;code class=&quot;language-text&quot;&gt;map&lt;/code&gt; 替换成 &lt;code class=&quot;language-text&quot;&gt;mapWithIndex&lt;/code&gt; 就行了.&lt;/p&gt;
 &lt;p&gt;可是真的有必要这样做吗? 我们想一下, 难道 cap 仅仅只是为了减少这种 bug 吗? 在我看来还有一个原因, 我们应该使用更加 &lt;em&gt;functional&lt;/em&gt; 的方式来完成这个任务&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`posts[&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;index&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;]`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;content&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;wow&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`posts[&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;index&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;]`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;content&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;wow&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;这样看上去就十分清晰了. 不过, 有一点需要注意. 如果我们将 &lt;code class=&quot;language-text&quot;&gt;set(&amp;#39;content&amp;#39;, &amp;#39;wow&amp;#39;)&lt;/code&gt; 替换成 &lt;code class=&quot;language-text&quot;&gt;assign({ content: &amp;#39;wow&amp;#39; })&lt;/code&gt; 或者 &lt;code class=&quot;language-text&quot;&gt;merge&lt;/code&gt; 行不行呢?
 恩这里是不行的, 同样的, 原因在后面再解释.
 不过, lodash/fp 其实还提供了很多同名函数, &lt;code class=&quot;language-text&quot;&gt;set&lt;/code&gt; 的同名函数有 &lt;code class=&quot;language-text&quot;&gt;assoc&lt;/code&gt; 和 &lt;code class=&quot;language-text&quot;&gt;assocPath&lt;/code&gt;. 用法都一样, 不过在其他库中, 后面两个函数更为普遍.
@@ -1999,7 +1633,7 @@ Lodash 偷了懒, 没有在实现上区别它们. 不过它提供了一个 &lt;c
 如果一个被柯里化过得 add, 就可以这样写 &lt;code class=&quot;language-text&quot;&gt;add(a, 10) add(a)(10), add(__, 10)(a), add(__)(a)(10)&lt;/code&gt;
 你可能会问这样有什么用 0.0, 而且那个 &lt;code class=&quot;language-text&quot;&gt;__&lt;/code&gt; 是什么意思?
 最简单的方式就是, 我们可以写出一个新的函数&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; addTen &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; addTen &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;这样的话, 要计算 a, b, c 只需要调用 &lt;code class=&quot;language-text&quot;&gt;addTen(a)&lt;/code&gt; 这样就行咯.
 那么 &lt;code class=&quot;language-text&quot;&gt;__&lt;/code&gt; 呢? 官方的解释是:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -2009,7 +1643,7 @@ Lodash 偷了懒, 没有在实现上区别它们. 不过它提供了一个 &lt;c
 想一想, 我们还能用 &lt;code class=&quot;language-text&quot;&gt;sub(10)&lt;/code&gt; 吗? 显然不行, 因为减法不是加法, 是不能交换的. 如果这样的话就会变成 10 - a 而不是 a - 10 咯.
 这个时候就可以用到 &lt;code class=&quot;language-text&quot;&gt;__&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;const subTen = sub(__, 10)&lt;/code&gt;, 这样的话就能满足要求咯.
 同时, 使用占位符, 上面的代码&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`posts[&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;index&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;]`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;content&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;wow&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`posts[&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;index&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;]`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;content&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;wow&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;其实可以改成&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`posts[&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;index&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;]`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; content&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;wow&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;所以之前的 &lt;code class=&quot;language-text&quot;&gt;assign&lt;/code&gt; 不行的原因是因为, lodash/fp 并没有调整它的顺序. 本来是后面的参数覆盖前面的参数, 这种很符合人类思考方式的习惯, 但是如果硬要交换的话, 反而就会看上去很奇怪.&lt;/p&gt;
@@ -2031,7 +1665,7 @@ Lodash 偷了懒, 没有在实现上区别它们. 不过它提供了一个 &lt;c
     &lt;span class=&quot;token function&quot;&gt;pick&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;task&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;id&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;dueDate&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;title&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;priority&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;token string&quot;&gt;&apos;dueDate&apos;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;我稍微做了一点格式的调整, 但是这些整个思路就很明显了, 这不就是函数嵌套吗? 只不过可读性不是那么好 :-(, 我们根本不可能一眼看出来它是对哪个变量进行操作, 最先运行的函数又是哪个&lt;/p&gt;
 &lt;p&gt;大学数学的离散数学里应该提高一个概念, &lt;em&gt;函数组合&lt;/em&gt;. &lt;em&gt;f(g(x)) = f • g&lt;/em&gt; 所以上面的写法如果可以改为 &lt;em&gt;sortBy • map • reject • filter • get&lt;/em&gt; 这种形式的话, 看上去应该会简单很多啦, 那么我们可以做到吗? 尝试下 &lt;code class=&quot;language-text&quot;&gt;compose&lt;/code&gt; 函数.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token function&quot;&gt;compose&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
@@ -2040,7 +1674,7 @@ Lodash 偷了懒, 没有在实现上区别它们. 不过它提供了一个 &lt;c
   &lt;span class=&quot;token function&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;complete&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;token function&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;username&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;tasks&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;// 不要运行这段函数&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;其实这样看上去已经好多了不是吗? 至少我们一眼就能看出来, 我们的逻辑顺序了.
 至于为什么这么多 &lt;code class=&quot;language-text&quot;&gt;__&lt;/code&gt;, 那是因为它们都是 data 被处理后的结果, 也就是上面提到的中间变量. 所以我们仅仅只需要调整函数参数的顺序, 就可以省去这些占位符.
@@ -2051,31 +1685,31 @@ Lodash 偷了懒, 没有在实现上区别它们. 不过它提供了一个 &lt;c
   &lt;span class=&quot;token function&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;complete&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;token function&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;username&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;tasks&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;这就是参数需要调整顺序的原因啦.&lt;/p&gt;
 &lt;p&gt;再解释一下柯里化在这里的重要性. 如果函数没有柯里化的话, 从第一步 &lt;code class=&quot;language-text&quot;&gt;get(&amp;#39;tasks&amp;#39;)&lt;/code&gt; 开始, 这个函数只会被解释成 &lt;code class=&quot;language-text&quot;&gt;get(&amp;#39;tasks&amp;#39;, undefined)&lt;/code&gt;, 那么很显然, 后面的过程就没有进行下去的意义咯. 而通过柯里化, 这里返回的是一个函数, 一个需要收集它另外一个参数的函数.&lt;/p&gt;
 &lt;p&gt;同样的 &lt;code class=&quot;language-text&quot;&gt;filter&lt;/code&gt; 也需要一个数组来填充进来, &lt;code class=&quot;language-text&quot;&gt;reject&lt;/code&gt; 和后面的函数都一样. 因为它们现在都是函数, 所以 compose 不会抱怨, 它将这些函数&lt;em&gt;组合在了一起&lt;/em&gt;, 变成了一个新的函数.
 当我们将 data 传入这个新函数的时候, 先运行 &lt;code class=&quot;language-text&quot;&gt;get(&amp;#39;tasks&amp;#39;)(data)&lt;/code&gt;, 得到一个新的数组, 这个数组传给 &lt;code class=&quot;language-text&quot;&gt;filter(&amp;#39;usename&amp;#39;)&lt;/code&gt; 又得到一个新的数组. 就这样反复的执行最后得到我们的结果&lt;/p&gt;
 &lt;p&gt;顺便一提, 这种 &lt;code class=&quot;language-text&quot;&gt;a(b(c(d(e, f)))))&lt;/code&gt; 的形式其实很像 &lt;code class=&quot;language-text&quot;&gt;reduce&lt;/code&gt; 的操作, 所以再看看 compose 的实现吧&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;compose&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;fns&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; fns&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;compose&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;fns&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; fns&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;No Optional Arguments&lt;/h3&gt;
 &lt;p&gt;最后再解释一下为什么需要固定参数? Lodash 的那些可选参数的函数全部都挂了, 为什么呢?
 其实这是因为 &lt;code class=&quot;language-text&quot;&gt;curry&lt;/code&gt; 不支持可选参数的. JS 原生不支持柯里化, 那么我们无非就是使用一个函数来模拟这个过程.
 一个简单的 curry 方法可以写成&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;curry&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;fn&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; length &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; fn&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;
-  args&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; length &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; curry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; fn&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; length&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  args&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; length &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; curry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; fn&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; length&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;注意看实现就可以发现, 我们必须了解到函数的长度, 才能决定是返回函数的运行结果还是一个新的函数.
 看完这些再回过头看之前的例子的话, 应该就很容易理解了.&lt;/p&gt;
 &lt;h2&gt;更多例子&lt;/h2&gt;
 &lt;p&gt;上面已经举了使用 lodash/fp 配合 setState 更新和删除的例子, 再看看在末尾添加的例子吧.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 末尾添加&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;addPost&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;post&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;posts&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;post&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;posts&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;post&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;// 更新数组特定下标的值, 这个类似于井字棋的游戏中很有用.&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setValue&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`posts[&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;index&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;]`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`posts[&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;index&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;]`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;不足&lt;/h2&gt;
 &lt;p&gt;lodash/fp 其实还有很多不足, 它不过是将 lodash 里的函数改成了 fp 的形式, 所以它相比 lodash 没有任何新函数.
@@ -2674,9 +2308,9 @@ Element 其实就是一个纯对象，这个对象定义了一些对于 React �
 &lt;p&gt;创建组件的常用方法有两种，一种是纯函数组件，或者说 &lt;code class=&quot;language-text&quot;&gt;stateless Component&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;Button&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; color&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; background&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; color &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;通过这种方式创建, 它的返回值就是定义了一个 Element。直接使用 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;Button {...props} /&amp;gt;&lt;/code&gt; 就能得到我们定义的 Element。不过这仅仅是因为 JSX 给了我们一种语法糖，如果没有 JSX 的话，应该类似于&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; style&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; background&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; color &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; style&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; background&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; color &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;而这个函数的作用也仅仅只是生成一个&lt;strong&gt;对象而已&lt;/strong&gt;，就像最上面那个对象一样：&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 	type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
@@ -2690,8 +2324,8 @@ Element 其实就是一个纯对象，这个对象定义了一些对于 React �
 &lt;p&gt;这就是 Element 的真面目了。所以可以看到，JSX 也好，&lt;code class=&quot;language-text&quot;&gt;createElement&lt;/code&gt; 也好，不过是提供一种抽象帮我们不要写这个无聊的对象定义，要知道，如果再多几个 children 的话，整个对象定义应该就有几十行(当然，这个对象还会有其他作用，这里不展开)&lt;/p&gt;
 &lt;p&gt;同样的，如果换成 &lt;code class=&quot;language-text&quot;&gt;Stateful Component&lt;/code&gt; 的话，其实模式差不多。只不过，它们需要一个 &lt;code class=&quot;language-text&quot;&gt;render&lt;/code&gt; 方法，并且拥有一个被称为 &lt;code class=&quot;language-text&quot;&gt;instance&lt;/code&gt; 的变量。render 的目的就是定义一个 Element，而 instance 就是 在 render 中使用的 &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt; 了。&lt;/p&gt;
 &lt;p&gt;所以，一个 Element 出现的步骤此时是，&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; instance &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// type 就是该组件的 type&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Element &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; instance&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// render 不就是 React.Component.prototype 的方法吗&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; instance &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// type 就是该组件的 type&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Element &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; instance&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// render 不就是 React.Component.prototype 的方法吗&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;综上所述，我们最常写的是 Component，Component 分为三种：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;host（常见 DOM 节点）&lt;/li&gt;
@@ -2703,8 +2337,8 @@ Element 其实就是一个纯对象，这个对象定义了一些对于 React �
 &lt;p&gt;不过这里还有一个问题，function 和 class 的 &lt;code class=&quot;language-text&quot;&gt;typeof&lt;/code&gt; 都是 &lt;code class=&quot;language-text&quot;&gt;function&lt;/code&gt;，这两个是怎么判断的呢？因为 class 定义的组件，继承于 &lt;code class=&quot;language-text&quot;&gt;React.Component&lt;/code&gt;，它拥有一个特定属性，只需要检测是否拥有这个属性就能确定是 class 还是 function。&lt;/p&gt;
 &lt;h2&gt;一个常见问题&lt;/h2&gt;
 &lt;p&gt;假设有下面的两个变量&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;E&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Wow&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;C&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;E&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;E&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Wow&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;C&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;这两个的区别是什么呢？刚开始很容易写出这样的代码&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
@@ -2754,7 +2388,7 @@ Element 其实就是一个纯对象，这个对象定义了一些对于 React �
 &lt;p&gt;其中 type 就是 E。那么，根据我们的定义 E 也是一个 &lt;code class=&quot;language-text&quot;&gt;React.createElement(&amp;#39;p&amp;#39;, {}, &amp;#39;123&amp;#39;)&lt;/code&gt; 这样的表达式，其实就是一个对象。显然这个时候 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;E/&amp;gt;&lt;/code&gt; 得到的值，其实是一个对象！！ 而 React 内部是通过 type 属于 string 来确定这是 host Element，type 属于 function/class 来判断这是一个组件。因为此时 type 是一个对象，自然就会报错。&lt;/p&gt;
 &lt;p&gt;而，&lt;code class=&quot;language-text&quot;&gt;{E}&lt;/code&gt; 为什么可以呢？还记得我们最常在 &lt;code class=&quot;language-text&quot;&gt;{}&lt;/code&gt; 中写什么吗？&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;names&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;names&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;这里表达式最后就是一个 &lt;code class=&quot;language-text&quot;&gt;Array of Element&lt;/code&gt;，显然这样是合法。所以，总结过来可以发现一个规律，&lt;/p&gt;
 &lt;blockquote&gt;
@@ -2852,8 +2486,8 @@ Element 其实就是一个纯对象，这个对象定义了一些对于 React �
 &lt;p&gt;所以说, 等号右边的 &lt;code class=&quot;language-text&quot;&gt;this.foo&lt;/code&gt; 其实引用的是原型的 foo, 这个时候再赋值给 &lt;code class=&quot;language-text&quot;&gt;this.foo&lt;/code&gt; 其实是没毛病的, 因为这个时候才是赋给 &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt; 自己.&lt;/p&gt;
 &lt;p&gt;但是, 如果要我们写这个无聊的代码几百次的话, 就再也不想写了. 于是乎有一种新的语法, 英文似乎叫做 &lt;code class=&quot;language-text&quot;&gt;Class Properties&lt;/code&gt;, 支持直接使用 class 语法定义属性, 而不在属于 prototype. 这样就可以写出&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;token function-variable function&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;的语法. 于是我们不仅干掉了, 无聊的 &lt;code class=&quot;language-text&quot;&gt;bind&lt;/code&gt;, 还干掉了整个 &lt;code class=&quot;language-text&quot;&gt;constructor&lt;/code&gt;, 多酷!!!
 还有一种语法, &lt;code class=&quot;language-text&quot;&gt;::&lt;/code&gt;, 这里不介绍.&lt;/p&gt;
@@ -2930,9 +2564,9 @@ Element 其实就是一个纯对象，这个对象定义了一些对于 React �
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;还没完, 接下来只要在 &lt;code class=&quot;language-text&quot;&gt;index.js&lt;/code&gt; 做一些小操作, 就可以开始了.
 &lt;code class=&quot;language-text&quot;&gt;index.js&lt;/code&gt; 一般作为入口点, 换句话话, 这里应该是你整个项目配置的地方, 也是 &lt;code class=&quot;language-text&quot;&gt;ReactDOM.render&lt;/code&gt;调用的地方, 同时也是你的 html 文件, 应该引用的 JS 文件.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; App &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./App&apos;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; AppContainer &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react-hot-loader&apos;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react-hot-loader/patch&apos;&lt;/span&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; App &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./App&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; AppContainer &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react-hot-loader&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react-hot-loader/patch&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Component &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
@@ -2940,13 +2574,13 @@ Element 其实就是一个纯对象，这个对象定义了一些对于 React �
       &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Component &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
     &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;AppContainer&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
     document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;#root&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;App&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;App&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hot&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;App&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;App&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;这是代码的必备成分, &lt;code class=&quot;language-text&quot;&gt;App&lt;/code&gt; 就是你所有代码的合成的组件, render 函数无非就是一个小小的包装. 而 &lt;code class=&quot;language-text&quot;&gt;AppContainer&lt;/code&gt; 就是整个热加载的&lt;strong&gt;能量源泉&lt;/strong&gt;. 而 &lt;code class=&quot;language-text&quot;&gt;module.hot.accept&lt;/code&gt; 里的回调, 就是整个源泉的能量使用者.
 和文档中不一样的是, 文档中 &lt;code class=&quot;language-text&quot;&gt;accept&lt;/code&gt; 接受两个参数, 第二个才是回调. 也是我一直被坑的地方, 可能是因为 parcel 针对这个做了某些小小的优化吧.&lt;/p&gt;
 &lt;p&gt;这些都写好了, 就可以开始&lt;strong&gt;热加载&lt;/strong&gt;之旅了!
@@ -2955,7 +2589,7 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hot&lt;span 
 有一个 input 和任意的 label. 如果我们 input 中填写了某些信息, 再去 label 中修改, input 中的数据没有丢失的话, 就说明热加载成功了. 这真的很重要, 在写表单类似的程序的时候, 我们需要不断的输入然后刷新, 光光这个时间就不知道被浪费了多少.&lt;/p&gt;
 &lt;p&gt;补充：这个热加载似乎会引入一个 bug&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;无法在 &lt;code class=&quot;language-text&quot;&gt;async&lt;/code&gt; 函数中找到 &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt;&lt;br&gt;
+&lt;p&gt;无法在 &lt;code class=&quot;language-text&quot;&gt;async&lt;/code&gt; 函数中找到 &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt;
 我不太清楚这是什么原因，在不需要重度依赖 async 的情况下，还是可以接受的。另外，估计 v4 版本已经解决了这个问题吧。感谢开源让生活更美好, 也让我们知道牛逼的程序员到处都是.&lt;/p&gt;
 &lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[UUID]]></title><description><![CDATA[花了一个晚上看了一下 UUID 的实现源码. 发现 UUID 有 5 个版本, 其中的特点分别为:
 V1: 以 机子的网卡和时间戳 以及一些其他的东西作为因子来生成一个唯一的标识符
