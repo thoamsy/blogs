@@ -1,6 +1,7 @@
 ---
 title: PureComponent Considered Harmful
 date: 2018-05-21
+spoiler: 不要让所有的组件都是 PureComponent 或者 memo
 ---
 
 这篇文章有点标题党, 其实主要要强调的是 **到处使用 PureComponent 是不对的**.
