@@ -1,6 +1,7 @@
 ---
 title: Parcel 📦 和 React ⚛️ 的使用
-date: "2018-01-07"
+date: '2018-01-07'
+spoiler: 你也用 parcel?
 ---
 
 Parcel 这种工具虽然号称零配置, 但是在 React 相关开关的时候还需要一些必要的配置才能让整个代码真的跑起来. 特别是如果需要 **Hot Reloader** 的时候. 如果使用 [create-react-app](https://github.com/facebookincubator/create-react-app) 确实很方便, 这也是入门和新项目首选. 但是呢, 想上面提到的 `hot reloader` 默认是不支持的, 除非自己先 `yarn eject` **弹射** 出去, 再手动配置 webpack 文件才行! 这个虽然文档上也有详细的记载, 但是感觉就没有那份纯粹性了.
@@ -48,8 +49,8 @@ Object.defineProperty(A, 'foo', {
 
 ```js
 class A {
-  state = {}
-  foo = () => {}
+  state = {};
+  foo = () => {};
 }
 ```
 
@@ -138,9 +139,9 @@ yarn add -D react-hot-loader
 `index.js` 一般作为入口点, 换句话话, 这里应该是你整个项目配置的地方, 也是 `ReactDOM.render`调用的地方, 同时也是你的 html 文件, 应该引用的 JS 文件.
 
 ```js
-import App from './App'
-import { AppContainer } from 'react-hot-loader'
-import 'react-hot-loader/patch'
+import App from './App';
+import { AppContainer } from 'react-hot-loader';
+import 'react-hot-loader/patch';
 
 const render = Component => {
   ReactDOM.render(
@@ -148,13 +149,13 @@ const render = Component => {
       <Component />
     </AppContainer>,
     document.querySelector('#root')
-  )
-}
+  );
+};
 
-render(App)
+render(App);
 module.hot.accept(function() {
-  render(App)
-})
+  render(App);
+});
 ```
 
 这是代码的必备成分, `App` 就是你所有代码的合成的组件, render 函数无非就是一个小小的包装. 而 `AppContainer` 就是整个热加载的**能量源泉**. 而 `module.hot.accept` 里的回调, 就是整个源泉的能量使用者.
@@ -168,5 +169,5 @@ module.hot.accept(function() {
 
 补充：这个热加载似乎会引入一个 bug
 
-> 无法在 `async` 函数中找到 `this`  
+> 无法在 `async` 函数中找到 `this`
 > 我不太清楚这是什么原因，在不需要重度依赖 async 的情况下，还是可以接受的。另外，估计 v4 版本已经解决了这个问题吧。感谢开源让生活更美好, 也让我们知道牛逼的程序员到处都是.
