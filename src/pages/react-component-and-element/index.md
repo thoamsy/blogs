@@ -1,7 +1,7 @@
 ---
-
 title: Element 和 Component 的区别
-date: "2018-01-14T12:12Z"
+date: '2018-01-14T12:12Z'
+spoiler: 一个判断是否是 React 新手的概念
 ---
 
 本文的出现离不开 Dan 的一篇卓越的 blog。
@@ -36,13 +36,13 @@ Element 其实就是一个纯对象，这个对象定义了一些对于 React �
 ```jsx
 const Button = ({ color, text }) => (
   <button style={{ background: color }}>{text}</button>
-)
+);
 ```
 
 通过这种方式创建, 它的返回值就是定义了一个 Element。直接使用 `<Button {...props} />` 就能得到我们定义的 Element。不过这仅仅是因为 JSX 给了我们一种语法糖，如果没有 JSX 的话，应该类似于
 
 ```js
-React.createElement('button', { style: { background: color } }, text)
+React.createElement('button', { style: { background: color } }, text);
 ```
 
 而这个函数的作用也仅仅只是生成一个**对象而已**，就像最上面那个对象一样：
@@ -66,8 +66,8 @@ React.createElement('button', { style: { background: color } }, text)
 所以，一个 Element 出现的步骤此时是，
 
 ```js
-const instance = new type(props) // type 就是该组件的 type
-const Element = instance.render() // render 不就是 React.Component.prototype 的方法吗
+const instance = new type(props); // type 就是该组件的 type
+const Element = instance.render(); // render 不就是 React.Component.prototype 的方法吗
 ```
 
 综上所述，我们最常写的是 Component，Component 分为三种：
@@ -87,8 +87,8 @@ Function 的返回值是 Element, class 的 render 函数的返回值是 Element
 假设有下面的两个变量
 
 ```jsx
-const E = <p>Wow</p>
-const C = () => E
+const E = <p>Wow</p>;
+const C = () => E;
 ```
 
 这两个的区别是什么呢？刚开始很容易写出这样的代码
@@ -123,7 +123,7 @@ render() {
 
 ```jsx
 {
-  this.props.names.map(name => <li key={name.id}>{name}</li>)
+  this.props.names.map(name => <li key={name.id}>{name}</li>);
 }
 ```
 
