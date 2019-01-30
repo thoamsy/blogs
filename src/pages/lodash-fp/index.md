@@ -1,6 +1,7 @@
 ---
 title: 使用 lodash/fp
-date: "2018-04-02"
+date: '2018-04-02'
+spoiler: 感受 fp 的强大
 ---
 
 这篇文章主要是介绍 lodash 的 [fp](https://github.com/lodash/lodash/wiki/FP-Guide) 模块, 通过它的特点来让 React 的 `setState` 少写很多代码. 同样的原理也能放在 redux 的 `reducer` 上, 但是因为 lodash/fp 的缺陷, 这篇文章不会深入.
@@ -13,7 +14,7 @@ date: "2018-04-02"
 ```js
 state = {
   posts: [{ id: '1234567', content: 'abc' }, { id: '4343434', content: 'def' }],
-}
+};
 ```
 
 我们想删除特定的 id 的 post 话, 最原生的写法会是
@@ -29,7 +30,7 @@ this.setState(({ posts }) => ({
 ```js
 this.setState(({ posts }) => ({
   posts: reject(posts, ['id', postId]),
-}))
+}));
 ```
 
 这样看起来, 普通的 lodash 并没有做多少事情, 只不过在 `filter` 的时候, 通过内置的 `reject` 少写了一些代码.
@@ -80,11 +81,11 @@ this.setState((prevState) => set('posts[0], 10, prevState))
 
 ```js
 test('The set function should be pure', () => {
-  const res = set('posts[0]', 10, state)
-  expect(res.posts).not.toBe(state.posts)
-  expect(res).not.toBe(state)
-  expect(res.posts[0]).toBe(10)
-})
+  const res = set('posts[0]', 10, state);
+  expect(res.posts).not.toBe(state.posts);
+  expect(res).not.toBe(state);
+  expect(res.posts[0]).toBe(10);
+});
 ```
 
 ### Rearranged Arguments
@@ -101,12 +102,12 @@ test('The set function should be pure', () => {
 ```js
 // The `lodash/map` iteratee receives three arguments:
 // (value, index|key, collection)
-_.map(['6', '8', '10'], parseInt)
+_.map(['6', '8', '10'], parseInt);
 // ➜ [6, NaN, 2]
 
 // The `lodash/fp/map` iteratee is capped at one argument:
 // (value)
-fp.map(parseInt)(['6', '8', '10'])
+fp.map(parseInt)(['6', '8', '10']);
 // ➜ [6, 8, 10]
 ```
 
@@ -125,7 +126,7 @@ this.setState(({ posts }) => ({
 可是真的有必要这样做吗? 我们想一下, 难道 cap 仅仅只是为了减少这种 bug 吗? 在我看来还有一个原因, 我们应该使用更加 _functional_ 的方式来完成这个任务
 
 ```js
-this.setState(update(`posts[${index}]`, set('content', 'wow')))
+this.setState(update(`posts[${index}]`, set('content', 'wow')));
 ```
 
 这样看上去就十分清晰了. 不过, 有一点需要注意. 如果我们将 `set('content', 'wow')` 替换成 `assign({ content: 'wow' })` 或者 `merge` 行不行呢?
@@ -147,7 +148,7 @@ Lodash 偷了懒, 没有在实现上区别它们. 不过它提供了一个 `esli
 最简单的方式就是, 我们可以写出一个新的函数
 
 ```js
-const addTen = add(10)
+const addTen = add(10);
 ```
 
 这样的话, 要计算 a, b, c 只需要调用 `addTen(a)` 这样就行咯.
@@ -161,7 +162,7 @@ const addTen = add(10)
 同时, 使用占位符, 上面的代码
 
 ```js
-this.setState(update(`posts[${index}]`, set('content', 'wow')))
+this.setState(update(`posts[${index}]`, set('content', 'wow')));
 ```
 
 其实可以改成
@@ -196,7 +197,7 @@ sortBy(
     pick(task, ['id', 'dueDate', 'title', 'priority'])
   ),
   'dueDate'
-)
+);
 ```
 
 我稍微做了一点格式的调整, 但是这些整个思路就很明显了, 这不就是函数嵌套吗? 只不过可读性不是那么好 :-(, 我们根本不可能一眼看出来它是对哪个变量进行操作, 最先运行的函数又是哪个
@@ -210,7 +211,7 @@ compose(
   reject(__, 'complete'),
   filter(__, 'username'),
   get(__, 'tasks')
-)(data)
+)(data);
 // 不要运行这段函数
 ```
 
@@ -225,7 +226,7 @@ compose(
   reject('complete'),
   filter('username'),
   get('tasks')
-)(data)
+)(data);
 ```
 
 这就是参数需要调整顺序的原因啦.
@@ -238,7 +239,7 @@ compose(
 顺便一提, 这种 `a(b(c(d(e, f)))))` 的形式其实很像 `reduce` 的操作, 所以再看看 compose 的实现吧
 
 ```js
-const compose = (...fns) => fns.reduce((...args) => (a, b) => a(b(...args)))
+const compose = (...fns) => fns.reduce((...args) => (a, b) => a(b(...args)));
 ```
 
 ### No Optional Arguments
@@ -249,7 +250,7 @@ const compose = (...fns) => fns.reduce((...args) => (a, b) => a(b(...args)))
 
 ```js
 const curry = (fn, length = fn.length, ...args) =>
-  args.length >= length ? fn(...args) : curry.bind(null, fn, length, ...args)
+  args.length >= length ? fn(...args) : curry.bind(null, fn, length, ...args);
 ```
 
 注意看实现就可以发现, 我们必须了解到函数的长度, 才能决定是返回函数的运行结果还是一个新的函数.
@@ -262,12 +263,12 @@ const curry = (fn, length = fn.length, ...args) =>
 ```js
 // 末尾添加
 function addPost(post) {
-  this.setState(update('posts', concat(post)))
+  this.setState(update('posts', concat(post)));
 }
 
 // 更新数组特定下标的值, 这个类似于井字棋的游戏中很有用.
 function setValue(value, index) {
-  this.setState(set(`posts[${index}]`, value))
+  this.setState(set(`posts[${index}]`, value));
 }
 ```
 
