@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "gatsby": "^2.0.59",
-    "gatsby-link": "latest",
+    "gatsby-link": "^2.0.10",
     "gatsby-plugin-feed": "^2.0.11",
     "gatsby-plugin-google-analytics": "latest",
     "gatsby-plugin-offline": "^2.0.20",
@@ -20,7 +20,7 @@
     "gatsby-remark-images": "latest",
     "gatsby-remark-prismjs": "^3.2.0",
     "gatsby-remark-responsive-iframe": "^2.0.7",
-    "gatsby-remark-smartypants": "latest",
+    "gatsby-remark-smartypants": "^2.0.8",
     "gatsby-source-filesystem": "^2.0.12",
     "gatsby-transformer-remark": "^2.1.19",
     "gatsby-transformer-sharp": "^2.1.10",
@@ -28,8 +28,9 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
-    "react-responsive-grid": "latest",
+    "react-responsive-grid": "^0.3.4",
     "react-typography": "^0.16.13",
+    "styled-components": "^4.1.3",
     "typography": "^0.16.17",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
