@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 
 import Bio from '../components/Bio';
@@ -41,11 +40,9 @@ const BlogPostTemplate = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Helmet
-        title={`${post.frontmatter.title} | ${siteTitle}`}
-        htmlAttributes={{ lang: 'zh-cn' }}
-      />
-      <h1>{post.frontmatter.title}</h1>
+      <header>
+        <h1 style={{ color: 'var(--textTitle)' }}>{post.frontmatter.title}</h1>
+      </header>
       <p
         style={{
           ...scale(-1 / 5),
