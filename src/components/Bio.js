@@ -1,6 +1,6 @@
 import React from 'react';
 
-import profilePic from './profile-pic.jpg';
+import profilePic from './avatar.jpg';
 import { rhythm } from '../utils/typography';
 
 const Bio = () => (
