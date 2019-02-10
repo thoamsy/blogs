@@ -12,6 +12,12 @@ const PostContainer = styled.main`
   min-height: 100vh;
 `;
 
+const HomeLink = styled(Link).attrs({ to: '/' })`
+  box-shadow: none;
+  text-decoration: none;
+  color: var(--textTitle);
+`;
+
 const Layout = ({ location, title, children }) => {
   let rootPath = '/';
   if (typeof __PATH_PREFIX__ !== 'undefined') {
@@ -28,16 +34,7 @@ const Layout = ({ location, title, children }) => {
           marginTop: 0,
         }}
       >
-        <Link
-          style={{
-            boxShadow: 'none',
-            textDecoration: 'none',
-            color: 'var(--textTitle)',
-          }}
-          to={'/'}
-        >
-          {title}
-        </Link>
+        <HomeLink>{title}</HomeLink>
       </h1>
     );
   } else {
@@ -49,22 +46,13 @@ const Layout = ({ location, title, children }) => {
           marginBottom: rhythm(-1),
         }}
       >
-        <Link
-          style={{
-            boxShadow: 'none',
-            textDecoration: 'none',
-            color: 'inherit',
-          }}
-          to={'/'}
-        >
-          {title}
-        </Link>
+        <HomeLink>{title}</HomeLink>
       </h3>
     );
   }
   return (
     <PostContainer>
-      <div
+      <article
         style={{
           marginLeft: 'auto',
           marginRight: 'auto',
@@ -74,7 +62,7 @@ const Layout = ({ location, title, children }) => {
       >
         {header}
         {children}
-      </div>
+      </article>
     </PostContainer>
   );
 };
