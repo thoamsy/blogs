@@ -12,19 +12,18 @@ body {
   background-color: var(--bg);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    -webkit-font-smoothing: antialiased;
 
-    --bg: #282c35;
-    --header: #ffffff;
-    --textNormal: rgba(255, 255, 255, 0.88);
-    --textTitle: #ffffff;
-    --textLink: var(--pink);
-    --hr: hsla(0, 0%, 100%, 0.2);
-    --inlineCode-bg: hsl(222, 14%, 25%);
-    --inlineCode-text: #e6e6e6;
-  }
+body.dark {
+  -webkit-font-smoothing: antialiased;
+
+  --bg: #282c35;
+  --header: #ffffff;
+  --textNormal: rgba(255, 255, 255, 0.88);
+  --textTitle: #ffffff;
+  --textLink: var(--pink);
+  --hr: hsla(0, 0%, 100%, 0.2);
+  --inlineCode-bg: hsl(222, 14%, 25%);
+  --inlineCode-text: #e6e6e6;
 }
 
 h1,h2,h3,h4,h5,h6 {
