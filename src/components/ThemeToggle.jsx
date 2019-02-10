@@ -1,12 +1,7 @@
-import React, {
-  PureComponent,
-  useCallback,
-  useState,
-  useRef,
-  useEffect,
-} from 'react';
+import React, { useCallback, useState, useRef } from 'react';
 import './Toggle.css';
 
+const noop = () => {};
 // Copyright 2015-present Drifty Co.
 // http://drifty.com/
 // from: https://github.com/driftyco/ionic/blob/master/src/util/dom.ts
@@ -190,7 +185,8 @@ const Toggle = ({ onChange, ...props }) => {
 
       <input
         {...inputProps}
-        defaultChecked={checked}
+        checked={checked}
+        onChange={noop}
         ref={input}
         onFocus={handleFocus}
         onBlur={handleBlur}
