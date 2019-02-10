@@ -19,8 +19,14 @@ const HomeLink = styled(Link).attrs({ to: '/' })`
   color: var(--textTitle);
 `;
 
+const THEME = 'theme';
 const Layout = ({ location, title, children }) => {
-  const [checked, setChecked] = useState(false);
+  let cacheTheme;
+  const [checked, setChecked] = useState(() => {
+    cacheTheme = localStorage.getItem(THEME);
+    return cacheTheme === 'dark';
+  });
+
   useEffect(() => {
     const colorSchemeChanged = ({ matches }) => {
       document.body.className = matches ? 'dark' : 'light';
@@ -29,7 +35,9 @@ const Layout = ({ location, title, children }) => {
 
     const media = window.matchMedia('(prefers-color-scheme: dark)');
     media && media.addListener(colorSchemeChanged);
-    colorSchemeChanged(media);
+    colorSchemeChanged({
+      matches: cacheTheme === undefined ? media.matches : checked,
+    });
     return () => media && media.removeListener(colorSchemeChanged);
   }, []);
 
@@ -58,8 +66,10 @@ const Layout = ({ location, title, children }) => {
             unchecked: <span>🌞</span>,
           }}
           onChange={checked => {
-            document.body.className = checked ? 'dark' : 'light';
+            const theme = checked ? 'dark' : 'light';
+            document.body.className = theme;
             setChecked(checked);
+            localStorage.setItem(THEME, theme);
           }}
         />
       </>
