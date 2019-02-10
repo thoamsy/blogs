@@ -43,6 +43,10 @@ const Toggle = props => {
   );
   const [hasFocus, setFocus] = useState(false);
 
+  if (props.checked !== checked) {
+    setChecked(props.checked);
+  }
+
   const handleClick = useCallback(
     event => {
       const checkbox = input.current;

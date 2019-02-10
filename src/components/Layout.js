@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import Toggle from './ThemeToggle';
@@ -20,6 +20,19 @@ const HomeLink = styled(Link).attrs({ to: '/' })`
 `;
 
 const Layout = ({ location, title, children }) => {
+  const [checked, setChecked] = useState(false);
+  useEffect(() => {
+    const colorSchemeChanged = ({ matches }) => {
+      document.body.className = matches ? 'dark' : 'light';
+      setChecked(matches);
+    };
+
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+    media && media.addListener(colorSchemeChanged);
+    colorSchemeChanged(media);
+    return () => media && media.removeListener(colorSchemeChanged);
+  }, []);
+
   let rootPath = '/';
   if (typeof __PATH_PREFIX__ !== 'undefined') {
     rootPath = __PATH_PREFIX__ + `/`;
@@ -39,11 +52,12 @@ const Layout = ({ location, title, children }) => {
           <HomeLink>{title}</HomeLink>
         </h1>
         <Toggle
+          checked={checked}
           icons={{
             checked: <span>🌚</span>,
             unchecked: <span>🌞</span>,
           }}
-          checked={false}
+          // onChange={({ target }) => setChecked(target.checked)}
         />
       </>
     );
