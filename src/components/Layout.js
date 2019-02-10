@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import Toggle from './ThemeToggle';
 
 import 'prismjs/themes/prism-okaidia.css';
 import { rhythm, scale } from '../utils/typography';
@@ -27,15 +28,24 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <h1
-        style={{
-          ...scale(1),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <HomeLink>{title}</HomeLink>
-      </h1>
+      <>
+        <h1
+          style={{
+            ...scale(1),
+            marginBottom: rhythm(1.5),
+            marginTop: 0,
+          }}
+        >
+          <HomeLink>{title}</HomeLink>
+        </h1>
+        <Toggle
+          icons={{
+            checked: <span>🌚</span>,
+            unchecked: <span>🌞</span>,
+          }}
+          checked={false}
+        />
+      </>
     );
   } else {
     header = (
