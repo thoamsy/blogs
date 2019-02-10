@@ -27,7 +27,7 @@ function pointerCoord(event) {
   return { x: 0, y: 0 };
 }
 
-const Toggle = props => {
+const Toggle = ({ onChange, ...props }) => {
   const input = useRef(null);
   const touchParams = useRef({
     moved: false,
@@ -37,15 +37,7 @@ const Toggle = props => {
     hadFocusAtTouchStart: false,
     touchStarted: false,
   });
-
-  const [checked, setChecked] = useState(
-    !!(props.checked || props.defaultChecked)
-  );
   const [hasFocus, setFocus] = useState(false);
-
-  if (props.checked !== checked) {
-    setChecked(props.checked);
-  }
 
   const handleClick = useCallback(
     event => {
@@ -58,7 +50,7 @@ const Toggle = props => {
         checkbox.click();
         return;
       }
-      setChecked(!checkbox.checked);
+      onChange(!checkbox.checked);
     },
     [input, touchParams]
   );
@@ -84,10 +76,10 @@ const Toggle = props => {
       if (startX != null) {
         let currentX = pointerCoord(event).x;
         if (checked && currentX + 15 < startX) {
-          setChecked(false);
+          onChange(false);
           touchParams.current.startX = currentX;
         } else if (!checked && currentX - 15 > startX) {
-          setChecked(true);
+          onChange(true);
           touchParams.current.startX = currentX;
         }
       }
@@ -173,7 +165,7 @@ const Toggle = props => {
       : icons[type];
   };
 
-  const { className, icons: _icons, disabled, ...inputProps } = props;
+  const { className, icons: _icons, disabled, checked, ...inputProps } = props;
   const classes =
     'react-toggle' +
     (checked ? ' react-toggle--checked' : '') +
@@ -198,7 +190,7 @@ const Toggle = props => {
 
       <input
         {...inputProps}
-        checked={checked}
+        defaultChecked={checked}
         ref={input}
         onFocus={handleFocus}
         onBlur={handleBlur}

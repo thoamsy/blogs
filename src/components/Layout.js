@@ -57,7 +57,10 @@ const Layout = ({ location, title, children }) => {
             checked: <span>🌚</span>,
             unchecked: <span>🌞</span>,
           }}
-          // onChange={({ target }) => setChecked(target.checked)}
+          onChange={checked => {
+            document.body.className = checked ? 'dark' : 'light';
+            setChecked(checked);
+          }}
         />
       </>
     );
