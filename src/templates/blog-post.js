@@ -41,18 +41,25 @@ const BlogPostTemplate = ({
   return (
     <Layout location={location} title={siteTitle}>
       <header>
-        <h1 style={{ color: 'var(--textTitle)' }}>{post.frontmatter.title}</h1>
+        <h1
+          style={{
+            color: 'var(--textTitle)',
+            transition: 'color 0.3s ease-out, background 0.3s ease-out',
+          }}
+        >
+          {post.frontmatter.title}
+        </h1>
+        <p
+          style={{
+            ...scale(-1 / 5),
+            display: 'block',
+            marginBottom: rhythm(1),
+            marginTop: rhythm(-1),
+          }}
+        >
+          {post.frontmatter.date}
+        </p>
       </header>
-      <p
-        style={{
-          ...scale(-1 / 5),
-          display: 'block',
-          marginBottom: rhythm(1),
-          marginTop: rhythm(-1),
-        }}
-      >
-        {post.frontmatter.date}
-      </p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr
         style={{

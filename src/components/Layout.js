@@ -19,6 +19,13 @@ const HomeLink = styled(Link).attrs({ to: '/' })`
   color: var(--textTitle);
 `;
 
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.625rem;
+`;
+
 const THEME = 'theme';
 const Layout = ({ location, title, children }) => {
   let cacheTheme;
@@ -49,30 +56,15 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <>
-        <h1
-          style={{
-            ...scale(1),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <HomeLink>{title}</HomeLink>
-        </h1>
-        <Toggle
-          checked={checked}
-          icons={{
-            checked: <span>🌚</span>,
-            unchecked: <span>🌞</span>,
-          }}
-          onChange={checked => {
-            const theme = checked ? 'dark' : 'light';
-            document.body.className = theme;
-            setChecked(checked);
-            localStorage.setItem(THEME, theme);
-          }}
-        />
-      </>
+      <h1
+        style={{
+          ...scale(1),
+          marginBottom: 0,
+          marginTop: 0,
+        }}
+      >
+        <HomeLink>{title}</HomeLink>
+      </h1>
     );
   } else {
     header = (
@@ -97,7 +89,22 @@ const Layout = ({ location, title, children }) => {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        {header}
+        <Header>
+          {header}
+          <Toggle
+            checked={checked}
+            icons={{
+              checked: <span>🌚</span>,
+              unchecked: <span>🌞</span>,
+            }}
+            onChange={checked => {
+              const theme = checked ? 'dark' : 'light';
+              document.body.className = theme;
+              setChecked(checked);
+              localStorage.setItem(THEME, theme);
+            }}
+          />
+        </Header>
         {children}
       </article>
     </PostContainer>
