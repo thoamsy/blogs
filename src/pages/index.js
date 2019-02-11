@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import './global.css';
 
 import Layout from '../components/Layout';
 import Bio from '../components/Bio';
