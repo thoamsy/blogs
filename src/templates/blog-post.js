@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 
 import Bio from '../components/Bio';
@@ -41,21 +40,26 @@ const BlogPostTemplate = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Helmet
-        title={`${post.frontmatter.title} | ${siteTitle}`}
-        htmlAttributes={{ lang: 'zh-cn' }}
-      />
-      <h1>{post.frontmatter.title}</h1>
-      <p
-        style={{
-          ...scale(-1 / 5),
-          display: 'block',
-          marginBottom: rhythm(1),
-          marginTop: rhythm(-1),
-        }}
-      >
-        {post.frontmatter.date}
-      </p>
+      <header>
+        <h1
+          style={{
+            color: 'var(--textTitle)',
+            transition: 'color 0.3s ease-out, background 0.3s ease-out',
+          }}
+        >
+          {post.frontmatter.title}
+        </h1>
+        <p
+          style={{
+            ...scale(-1 / 5),
+            display: 'block',
+            marginBottom: rhythm(1),
+            marginTop: rhythm(-1),
+          }}
+        >
+          {post.frontmatter.date}
+        </p>
+      </header>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr
         style={{

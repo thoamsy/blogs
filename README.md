@@ -6,6 +6,6 @@
 # Maybe Need
 
 - [x] 可以在滚动到底部的时候，快速进入上一页和下一页
-- [ ] 基本的 dark mode
-- [ ] 支持 Safari 的 dark mode
+- [x] 基本的 dark mode
+- [x] 支持 Safari 的 dark mode
 - [ ] 支持根据经纬度自动切换 dark mode
