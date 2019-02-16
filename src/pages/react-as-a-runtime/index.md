@@ -368,3 +368,396 @@ dialogNode.insertBefore(pNode, inputNode);
 ```
 
 再也没有 input state 会丢失了。
+
+
+## Lists
+
+通过比较 element type 在同一位置是否改变的方式，在大多数时候都可以确定是重用还是重新创建一个新的 host instance。
+
+但是这只有在子节点是固定并且不需要重排的情况下。在我们上面的例子，即使 `message` 变量可以是一个 “hole”，我们还是可以确定 input 在 message 之后，并且没有其他子节点了。
+
+在动态列表中，我们不能保证它们的顺序是否永远不变。
+
+```jsx
+function ShoppingList({ list }) {
+  return (
+    <form>
+      {list.map(item => (
+        <p>
+          You bought {item.name}
+          <br />
+          Enter how many do you want: <input />
+        </p>
+      ))}
+    </form>
+  )
+}
+```
+
+如果我们的 Shopping List 里的 items 发生了重排，React 则会认为所有的 `p` 和 `input` 都和之前是一样的 type，而不会去移动它们。从 React 的角度来看，是*items 自身*变了，而不是它们的顺序。
+
+React 在重排 10 个 items 时会执行这段代码：
+
+```jsx
+for (let i = 0; i < 10; i++) {
+  let pNode = formNode.childNodes[i];
+  let textNode = pNode.firstChild;
+  textNode.textContent = 'You bought ' + items[i].name;
+}
+```
+
+所以 React 实际上会更新每个 DOM 节点而不是重排它们。这会造成性能问题和 bug 🐛。比如我们的在第一行输入的内容 `how many you want`，会在重排后依然显示在第一行。但其实对应的那个 items 已经不是第一行了！
+
+**这就是为什么 React 每次都会在你需要渲染一个 array 的时候不停地唠叨，老铁你的 key 丢了！**
+
+```jsx{5}
+function ShoppingList({ list }) {
+  return (
+    <form>
+      {list.map(item => (
+        <p key={item.productId}>
+          You bought {item.name}
+          <br />
+          Enter how many do you want: <input />
+        </p>
+      ))}
+    </form>
+  )
+}
+```
+
+`key` 告诉 React，这些 item 即使在两次渲染之间对于它们的父元素来说位于不同的位置，在概念上也应该认为它们是同一个。
+
+当 React 发现 `<p key="42">` 在 `<form>` 里的时候，它会检测上一次 render 是否也包含了 `<p key="42">` 在同一个 `<form>` 中。即使 `<form>` 的子节点的顺序改变了也能生效。如果存在，React 将会重用这个 key 之前的 host instance，并响应地重拍它的同胞节点。
+
+注意 `key` 仅仅和它最近的父节点有关，对于 `<p>` 它就是 `<form>`。React 不会尝试在不同的 parents 中匹配同一个 key，React 也没有原生支持如何在不重新创建 host instance 的情况下，将它移动到另外一个父元素中。
+
+`key` 应该取什么值才好呢？可以问自己一个简单的问题：**哪些项在重排之后依然可以保持不变？**比如，在购物车中，product Id 就唯一标示了一个商品。
+
+## Components
+
+我们已经学习到那些会返回 React element 的函数了：
+
+```jsx
+function Form({ showMessage }) {
+  let message = null;
+  if (showMessage) {
+    message = <p>I was just added here!</p>;
+  }
+  return (
+    <dialog>
+      {message}
+      <input />
+    </dialog>
+  );
+}
+```
+
+它们被称为 *components*。它们让我们可以创建自己的 buttons，avatars，comments 等等百宝箱🧰。可以说 Component 是 React 的面包🍞和黄油。
+
+Components 接受一个参数—一个对象。它包含了 “props”（”properties” 的简写）。上面的 `showMessage` 就是一个 prop，它们就像命名的参数一样。（译者注，其实就是 JS 不支持给函数的参数加上别名，而接受一个 Object 可以起到类似的效果）
+
+## Purity
+
+React components 的 props 会被假设为纯（pure）的。
+
+```jsx
+function Button(props) {
+  // 🔴 Doesn't work
+  props.isActive = true;
+}
+```
+
+一般来说，mutation 是不符合 React 的最佳实践的。不过，*local mutation* 是没有任何问题的：
+
+```jsx{2,5}
+function FriendList({ friends }) {
+  let items = [];
+  for (let i = 0; i < friends.length; i++) {
+    let friend = friends[i];
+    items.push(
+      <Friend key={friend.id} friend={friend} />
+    );
+  }
+  return <section>{items}</section>;
+}
+```
+
+我们在渲染的时候创建了 `items`，在这之前没有其他组件“见过”它。所以我们可以在将它作为渲染结果之前，按自己喜欢的方式修改它，而不需要为了保存**纯粹性**而扭曲你的代码。
+
+同样的，延迟初始化(lazy initialization) 虽然不是纯，但依旧很棒。
+
+```jsx
+function ExpenseForm() {
+  // Fine if it doesn't affect other components:
+  SuperCalculator.initializeIfNotReady();
+
+  // Continue rendering...
+}
+```
+
+只要多次调用一个组件是安全的，并且不会影响其他组件的渲染效果，React 并不关心你的代码是否在 FP 的世界中是百分之百纯的。
+
+也就是说，会带来副作用从而影响显示效果的 Component 在 React 中是不被接受的。换句话说，仅仅调用 Component 的方法本身，不应该在屏幕上产生任何变化。（译者注，也就是 Component 本身，不应该有类似于去修改 `window`，或者里面有一个 `ReactDOM.render`)
+
+## Recursion
+
+我们该如何在一个 component 中使用其他的 components？Components 其实都是函数所以我们可以直接调用它们：
+
+```jsx
+let reactElement = Form({ showMessage: true });
+ReactDOM.render(reactElement, domContainer);
+```
+
+然后，这种方式并不对 React runtime 的胃口。
+
+相反，React 正统地使用 components 的方式与我们之前看到得一样—React elements。**这就意味着，你不是直接调用 component 这个函数，而是让 React 来帮你做。**
+
+```jsx
+// { type: Form, props: { showMessage: true } }
+let reactElement = <Form showMessage={true} />;
+ReactDOM.render(reactElement, domContainer);
+```
+
+在 React 的某处，你的 component 将会被调用：
+
+```jsx
+// Somewhere inside React
+let type = reactElement.type; // Form
+let props = reactElement.props; // { showMessage: true }
+let result = type(props); // Whatever Form returns
+```
+
+Component function 命名采用的是首字母大写的方式，当 JSX 转译的时候碰到 `<Form>` 而不是 `<form>` 的时候，它会将 type 赋值为 Form 本身而不是字符串 “form”。
+
+```jsx
+console.log(<form />.type); // 'form' string
+console.log(<Form />.type); // Form function
+```
+
+React 中并没有全局注册的机制—当你输入 `<Form />` 的时候它会按字面上声明的 `Form` 来引用。如果 `Form` 在本地作用域中不存在的话，你就会看到 JS 报一个和你平时使用了错误的变量名一样的错误。
+
+**Okay，所以当 element 的 type 是一个 function 的时候 React 到底做了什么？它调用你的 component，并询问该 component 想要渲染的 element。
+
+这个过程会不停的递归下去，更多的细节可以在[这里](https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html)看到。简单的形式如下面这样：
+
+- **你：** `ReactDOM.render(<App />, domContainer)`
+- **React:** Hey `App`， 你想渲染什么？
+  - `App`: 我渲染一个包含了 `<Content>` 的 `<Layout>`
+- **React:** Hey `Layout`, 你想渲染什么？
+  - `Layout`: 我在一个 `div` 中渲染我的 children。我的子节点有一个 `<Content>` 说你猜这会进入 `<div>`。
+- **React:** Hey `<Content>`, 你想渲染什么？
+  - `Content`: 我渲染一个拥有一些 text 的 `<article>`，它还包含了个 `<Footer>`
+  - **React:** Hey `<Footer>`, 你想渲染什么？
+  - `Footer`: 我渲染一个拥有很多 text 的 `<footer>`。
+- **React:** Okay, 起飞吧:
+
+```jsx
+// Resulting DOM structure
+<div>
+  <article>
+    Some text
+    <footer>some more text</footer>
+  </article>
+</div>
+```
+
+这就是我们为什么说 reconciliation 是递归的了。当 React 遍历 element tree 的时候，它会碰到那些 `type` 为 component 的 element，接着会调用它并保持 component 返回的 element 的顺序继续执行。最终我们将会遍历所有的 components，React 也就知道了如何改变 host tree。
+
+我们上面提到的 reconciliation 的规则在这里依然适用。如果相同位置(由 index 和可选的 `key` 共同决定）的 `type` 发生了改变，React 将会移除当前 element 中所有的 host instance 并重新创建它们。
+
+## Inversion of Control
+
+你可以想知道：为什么我们不知道调用 component 呢？为什么要写成 `<Form />` 而不是 `Form()`？
+
+**如果 React 能提前 “了解” 到你的 component 定义，而不是只有在递归调用它后才看到返回的 element 的话，React 就可以更好的工作**
+
+**React can do its job better if it “knows” about your components rather than if it only sees the React element tree after recursively calling them.**
+
+```jsx
+// 🔴 React has no idea Layout and Article exist.
+// You're calling them.
+ReactDOM.render(
+  Layout({ children: Article() }),
+  domContainer
+)
+
+// ✅ React knows Layout and Article exist.
+// React calls them.
+ReactDOM.render(
+  <Layout><Article /></Layout>,
+  domContainer
+)
+```
+
+这是一个简单的[控制反转](https://en.wikipedia.org/wiki/Inversion_of_control)的例子。通过让 React 来控制如何调用组件的话，可以得到一些有趣的属性：
+
+* **Components become more than functions.** React can augment component functions with features like *local state* that are tied to the component identity in the tree. A good runtime provides fundamental abstractions that match the problem at hand. As we already mentioned, React is oriented specifically at programs that render UI trees and respond to interactions. If you called components directly, you’d have to build these features yourself.
+
+* **Component types participate in the reconciliation.** By letting React call your components, you also tell it more about the conceptual structure of your tree. For example, when you move from rendering `<Feed>` to the `<Profile>` page, React won’t attempt to re-use host instances inside them — just like when you replace `<button>` with a `<p>`. All state will be gone — which is usually good when you render a conceptually different view. You wouldn't want to preserve input state between `<PasswordForm>` and `<MessengerChat>` even if the `<input>` position in the tree accidentally “lines up” between them.
+
+* **React can delay the reconciliation.** If React takes control over calling our components, it can do many interesting things. For example, it can let the browser do some work between the component calls so that re-rendering a large component tree [doesn’t block the main thread](https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html). Orchestrating this manually without reimplementing a large part of React is difficult.
+
+* **A better debugging story.** If components are first-class citizens that the library is aware of, we can build [rich developer tools](https://github.com/facebook/react-devtools) for introspection in development.
+
+最后一个优势是 *lazy evaluation（惰性求值）*，一起看看这意味着什么。
+
+## Lazy Evaluation
+当我们在 JS 中调用一个函数时，实参会在调用之前就被求值：
+
+```jsx
+// (2) This gets computed second
+eat(
+  // (1) This gets computed first
+  prepareMeal()
+);
+```
+
+这种行为通常是我们所期望的，因为这些函数能带来隐含的副作用。而如果我们调用一个函数，它直到我们以某种方式使用的时候才会被执行的话，这会让我们感到很诧异。
+
+不过，React components 相对纯的，所以我们如果知道它的结果不会在屏幕上呈现的话，就完全没有必要执行它的。
+
+考虑这个 `<Comments>` 插入到 `<Page>` 中的组件：
+
+```jsx{11}
+function Story({ currentUser }) {
+  // return {
+  //   type: Page,
+  //   props: {
+  //     user: currentUser,
+  //     children: { type: Comments, props: {} }
+  //   }
+  // }
+  return (
+    <Page user={currentUser}>
+      <Comments />
+    </Page>
+  );
+}
+```
+
+`Page` 会将它的 children 在 `Layout` 中渲染。
+
+```jsx{4}
+function Page({ currentUser, children }) {
+  return (
+    <Layout>
+      {children}
+    </Layout>
+  );
+}
+```
+
+*(在 JSX 中 `<A><B /></A>` 和  `<A children={<B />} />` 等价。)*
+
+但是如果有提前提出的条件呢？
+
+```jsx{2-4}
+function Page({ currentUser, children }) {
+  if (!currentUser.isLoggedIn) {
+    return <h1>Please login</h1>;
+  }
+  return (
+    <Layout>
+      {children}
+    </Layout>
+  );
+}
+```
+
+如果我们像函数一样调用这个 `Comments()`，它都会立刻执行。无论 `Page` 是否需要它：
+
+```jsx{4,8}
+// {
+//   type: Page,
+//   props: {
+//     children: Comments() // Always runs!
+//   }
+// }
+<Page>
+  {Comments()}
+</Page>
+```
+
+但是如果我们传递一个 React element 进去的话，就不会立刻执行 `Comments` 了。
+But if we pass a React element, we don’t execute `Comments` ourselves at all:
+
+```jsx{4,8}
+// {
+//   type: Page,
+//   props: {
+//     children: { type: Comments }
+//   }
+// }
+<Page>
+  <Comments />
+</Page>
+```
+
+这就让 React 决定何时，是否调用 component 函数。如果 `Page` component 实际上忽略 `children` prop 而仅仅渲染 `<h1>Please login</h1>` 的话，React 根本就不会尝试去调用 `Comments` 函数。挺酷的吧😎？
+
+这让我们省去了不必要的渲染工作，并让我们的代码更加健壮。（在用户注销后，我们不需要关心`Comments` 是否会被 thrown away，它不会被调用的。)
+
+## State
+我们[之前](#reconciliation)讨论了 identity，以及 element 在树中的概念“位置”如何告诉 React 是否应该重用当前 host instance 还是创建新的。Host instances 拥有所有的本地状态：focus, selection, input 等等。我们希望在那些在概念上渲染的是相同 UI 的时候，能够保留这些状态。我们还希望在渲染概念上不同的东西时，能够预测到组件会被销毁（比如从 `SignupForm>` 移动到 `<MessengerChat>`）。
+
+**本地状态（Local state）是如此有用以至于 React 让 *你自己* 的组件也能拥有它。** Components 依然是函数，但 React 为它们扩充了一些对 UI 有用的特性，绑定到树中特定位置的本地状态就是一个这样的特性之一。
+
+我们称这个特性为 *Hooks*。`useState` 就是一个 Hook 。
+
+```jsx{2,6,7}
+function Example() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+它返回一对值：当前的状态和一个更新这个状态的函数。
+
+[array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring) 语法让你能够自己为状态取一个潇洒的名字。比如上面我们取名为 `count` 和 `setCount`，当其实我们也可以叫它 `banana` 和 `setBanana`。在后文，我将会使用 `setState` 来取代 `useState` 返回的第二个参数。
+*(你可以在[这里](https://reactjs.org/docs/hooks-intro.html) 学到关于 `useState` 和 React 提供的其他 hooks)*
+
+## Consistency
+即使我们想要将 reconciliation 过程拆分为[非堵塞](https://www.youtube.com/watch?v=mDdgfyRB5kg)的工作块，我们还是需要 perform the actual host tree operations in a single synchronous swoop。这样我们能确定用户不会看到更新到一半的 UI，浏览器也不会为了用户不应该看到的中间状态而执行不必要的 style recalculation 和 layout（译者注：或者叫 reflow，回流）。
+
+这就是为什么 React 将工作分为 `render 阶段` 和 `commit 阶段`。**Render 阶段* 是 React 调用组件和执行 reconciliation 的时机，在这个阶段你可以安全的中断它（译者注：也就要求 component 必须是纯的，并且 will 类生命周期也是存的），并且在可以期待的[未来](https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html)将支持异步渲染。**Commit 阶段** 则是 React 接触到 host tree 的时机。它总是同步的.
+
+## Memoization
+
+当父组件通过 `setState` 调度一个更新时，React 默认会 reconciles 它整个子树。这是因为 React 不知道这个来自父组件的更新是否会影响到它的 child，React 选择保持一致。这看上去会让每次更新的代价很高，不过在实际情况下，针对中小型规模的子树来说这不是问题。
+
+不过如果 tree 实在太深或者太广（译者注：兄弟节点太多）的话，你可以告诉 React 去 [memoize](https://en.wikipedia.org/wiki/Memoization) 它的子树，并在每次 props 改变的时候，通过浅比较来决定是否重用之前的渲染结果。
+
+```jsx{5}
+function Row({ item }) {
+  // ...
+}
+
+export default React.memo(Row);
+```
+
+现在在 `Table` 中 `setState`  时，将会跳过 reconciliation 那些 `items` 的引用和上次渲染的 `items` 相同的 `Row`。
+
+你可以通过 [`useMemo()` Hook](https://reactjs.org/docs/hooks-reference.html#usememo) 得到细粒度的 memoization。The cache is local to component tree position 并且将会和本地状态一同被销毁。它只保留上一个结果。
+
+React 内部默认不会 memoize 组件，因为许多组件每次更新都会接受到不同的 props，这样的话去 memoize 就是一种浪费。（译者注：很多组件设计成某个 props 接受一个对象，但是在传递的时候 ，如果这个对象是字面量的话，那就等于每次 props 都和上次不同了。）
+
+## Raw Models
+
+讽刺的是，React 并没有使用 “响应式” 系统进行细粒度更新。换句话说，顶部的任何更新都会触发 reconciliation，而不是仅更新受影响的 component。
+
+这其实是一个内部设计的抉择。[Time to Interactive](https://calibreapp.com/blog/time-to-interactive/) 在 C 端 Web App 性能基准中，扮演了一个及其关键的角色，遍历整个模型并设置细粒度的更新将会花费宝贵的时间。另外，在许多应用中，交互往往会导致小型（button hover）或者大型（page transition）的更新，在这种情况下，细粒度订阅往往会消耗更多内存。
+
+React 核心设计原则之一是它可以处理原始数据（raw data）。如果你从网络中接受到了大量的 JS 对象，你可以直接将它们塞进 component 中而不需要做任何预处理。你可以随意读取任何属性，也不会在结构轻微变动的时候出现意想不到的性能抖动。React 渲染时间复杂度是 O(*view size*) 而不是 O(*model size*)，你可以通过 [windowing](https://react-window.now.sh/#/examples/list/fixed-size) 来显著地降低 *view size* 的值。
+
+一些特定类型的 app 采用细粒度的更新会有更好的效果—比如股票跟踪软件。这是少有的 “everything constantly updating at the same time” 的例子。尽管自己写一些命令式的代码能够优化，React 在这种使用场景上并不是最适合的。当然，你可以在 React 的上层实现一套自己的细粒度订阅系统。
+
+**需要注意的是，有一些通用的性能问题，即使是细粒度订阅和“响应式”系统也不能解决。** 举个例子，渲染一个新的 deep tree（每次 page transition 的时候发生）而不堵塞浏览器。改变 tracking 并不会让它更快—因为它需要在订阅上做更多工作从而变慢了。另一个问题是我们在渲染视图之前必须等待数据的到来。在 React 中，我们通过 [Concurrent Rendering](https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html) 来解决这个问题。
