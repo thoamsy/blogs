@@ -24,9 +24,12 @@ spoiler: An in-depth description of the React programming model.
 - [x] memoization
 - [x] raw model
 - [x] batching
-- [ ] call tree
-- [ ] context
-- [ ] hooks
+- [x] call tree
+- [x] context
+- [x] hooks
+- [ ] custom hooks
+- [ ] static use order
+- [ ] what's left out
 
 许多教程中提到 React 是一个 UI 库，这说得没什么问题。就像字面上一样，它确实是一个 UI 库！
 ![React homepage screenshot: "A JavaScript library for building user interfaces"](./react.png)
@@ -369,7 +372,6 @@ dialogNode.insertBefore(pNode, inputNode);
 
 再也没有 input state 会丢失了。
 
-
 ## Lists
 
 通过比较 element type 在同一位置是否改变的方式，在大多数时候都可以确定是重用还是重新创建一个新的 host instance。
@@ -390,7 +392,7 @@ function ShoppingList({ list }) {
         </p>
       ))}
     </form>
-  )
+  );
 }
 ```
 
@@ -422,7 +424,7 @@ function ShoppingList({ list }) {
         </p>
       ))}
     </form>
-  )
+  );
 }
 ```
 
@@ -453,7 +455,7 @@ function Form({ showMessage }) {
 }
 ```
 
-它们被称为 *components*。它们让我们可以创建自己的 buttons，avatars，comments 等等百宝箱🧰。可以说 Component 是 React 的面包🍞和黄油。
+它们被称为 _components_。它们让我们可以创建自己的 buttons，avatars，comments 等等百宝箱 🧰。可以说 Component 是 React 的面包 🍞 和黄油。
 
 Components 接受一个参数—一个对象。它包含了 “props”（”properties” 的简写）。上面的 `showMessage` 就是一个 prop，它们就像命名的参数一样。（译者注，其实就是 JS 不支持给函数的参数加上别名，而接受一个 Object 可以起到类似的效果）
 
@@ -468,16 +470,14 @@ function Button(props) {
 }
 ```
 
-一般来说，mutation 是不符合 React 的最佳实践的。不过，*local mutation* 是没有任何问题的：
+一般来说，mutation 是不符合 React 的最佳实践的。不过，_local mutation_ 是没有任何问题的：
 
 ```jsx{2,5}
 function FriendList({ friends }) {
   let items = [];
   for (let i = 0; i < friends.length; i++) {
     let friend = friends[i];
-    items.push(
-      <Friend key={friend.id} friend={friend} />
-    );
+    items.push(<Friend key={friend.id} friend={friend} />);
   }
   return <section>{items}</section>;
 }
@@ -537,7 +537,7 @@ console.log(<Form />.type); // Form function
 
 React 中并没有全局注册的机制—当你输入 `<Form />` 的时候它会按字面上声明的 `Form` 来引用。如果 `Form` 在本地作用域中不存在的话，你就会看到 JS 报一个和你平时使用了错误的变量名一样的错误。
 
-**Okay，所以当 element 的 type 是一个 function 的时候 React 到底做了什么？它调用你的 component，并询问该 component 想要渲染的 element。
+\*\*Okay，所以当 element 的 type 是一个 function 的时候 React 到底做了什么？它调用你的 component，并询问该 component 想要渲染的 element。
 
 这个过程会不停的递归下去，更多的细节可以在[这里](https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html)看到。简单的形式如下面这样：
 
@@ -577,32 +577,32 @@ React 中并没有全局注册的机制—当你输入 `<Form />` 的时候它�
 ```jsx
 // 🔴 React has no idea Layout and Article exist.
 // You're calling them.
-ReactDOM.render(
-  Layout({ children: Article() }),
-  domContainer
-)
+ReactDOM.render(Layout({ children: Article() }), domContainer);
 
 // ✅ React knows Layout and Article exist.
 // React calls them.
 ReactDOM.render(
-  <Layout><Article /></Layout>,
+  <Layout>
+    <Article />
+  </Layout>,
   domContainer
-)
+);
 ```
 
 这是一个简单的[控制反转](https://en.wikipedia.org/wiki/Inversion_of_control)的例子。通过让 React 来控制如何调用组件的话，可以得到一些有趣的属性：
 
-* **Components become more than functions.** React can augment component functions with features like *local state* that are tied to the component identity in the tree. A good runtime provides fundamental abstractions that match the problem at hand. As we already mentioned, React is oriented specifically at programs that render UI trees and respond to interactions. If you called components directly, you’d have to build these features yourself.
+- **Components become more than functions.** React can augment component functions with features like _local state_ that are tied to the component identity in the tree. A good runtime provides fundamental abstractions that match the problem at hand. As we already mentioned, React is oriented specifically at programs that render UI trees and respond to interactions. If you called components directly, you’d have to build these features yourself.
 
-* **Component types participate in the reconciliation.** By letting React call your components, you also tell it more about the conceptual structure of your tree. For example, when you move from rendering `<Feed>` to the `<Profile>` page, React won’t attempt to re-use host instances inside them — just like when you replace `<button>` with a `<p>`. All state will be gone — which is usually good when you render a conceptually different view. You wouldn't want to preserve input state between `<PasswordForm>` and `<MessengerChat>` even if the `<input>` position in the tree accidentally “lines up” between them.
+- **Component types participate in the reconciliation.** By letting React call your components, you also tell it more about the conceptual structure of your tree. For example, when you move from rendering `<Feed>` to the `<Profile>` page, React won’t attempt to re-use host instances inside them — just like when you replace `<button>` with a `<p>`. All state will be gone — which is usually good when you render a conceptually different view. You wouldn't want to preserve input state between `<PasswordForm>` and `<MessengerChat>` even if the `<input>` position in the tree accidentally “lines up” between them.
 
-* **React can delay the reconciliation.** If React takes control over calling our components, it can do many interesting things. For example, it can let the browser do some work between the component calls so that re-rendering a large component tree [doesn’t block the main thread](https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html). Orchestrating this manually without reimplementing a large part of React is difficult.
+- **React can delay the reconciliation.** If React takes control over calling our components, it can do many interesting things. For example, it can let the browser do some work between the component calls so that re-rendering a large component tree [doesn’t block the main thread](https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html). Orchestrating this manually without reimplementing a large part of React is difficult.
 
-* **A better debugging story.** If components are first-class citizens that the library is aware of, we can build [rich developer tools](https://github.com/facebook/react-devtools) for introspection in development.
+- **A better debugging story.** If components are first-class citizens that the library is aware of, we can build [rich developer tools](https://github.com/facebook/react-devtools) for introspection in development.
 
-最后一个优势是 *lazy evaluation（惰性求值）*，一起看看这意味着什么。
+最后一个优势是 _lazy evaluation（惰性求值）_，一起看看这意味着什么。
 
 ## Lazy Evaluation
+
 当我们在 JS 中调用一个函数时，实参会在调用之前就被求值：
 
 ```jsx
@@ -640,15 +640,11 @@ function Story({ currentUser }) {
 
 ```jsx{4}
 function Page({ currentUser, children }) {
-  return (
-    <Layout>
-      {children}
-    </Layout>
-  );
+  return <Layout>{children}</Layout>;
 }
 ```
 
-*(在 JSX 中 `<A><B /></A>` 和  `<A children={<B />} />` 等价。)*
+_(在 JSX 中 `<A><B /></A>` 和 `<A children={<B />} />` 等价。)_
 
 但是如果有提前提出的条件呢？
 
@@ -657,11 +653,7 @@ function Page({ currentUser, children }) {
   if (!currentUser.isLoggedIn) {
     return <h1>Please login</h1>;
   }
-  return (
-    <Layout>
-      {children}
-    </Layout>
-  );
+  return <Layout>{children}</Layout>;
 }
 ```
 
@@ -674,9 +666,7 @@ function Page({ currentUser, children }) {
 //     children: Comments() // Always runs!
 //   }
 // }
-<Page>
-  {Comments()}
-</Page>
+<Page>{Comments()}</Page>
 ```
 
 但是如果我们传递一个 React element 进去的话，就不会立刻执行 `Comments` 了。
@@ -694,16 +684,17 @@ But if we pass a React element, we don’t execute `Comments` ourselves at all:
 </Page>
 ```
 
-这就让 React 决定何时，是否调用 component 函数。如果 `Page` component 实际上忽略 `children` prop 而仅仅渲染 `<h1>Please login</h1>` 的话，React 根本就不会尝试去调用 `Comments` 函数。挺酷的吧😎？
+这就让 React 决定何时，是否调用 component 函数。如果 `Page` component 实际上忽略 `children` prop 而仅仅渲染 `<h1>Please login</h1>` 的话，React 根本就不会尝试去调用 `Comments` 函数。挺酷的吧 😎？
 
 这让我们省去了不必要的渲染工作，并让我们的代码更加健壮。（在用户注销后，我们不需要关心`Comments` 是否会被 thrown away，它不会被调用的。)
 
 ## State
+
 我们[之前](#reconciliation)讨论了 identity，以及 element 在树中的概念“位置”如何告诉 React 是否应该重用当前 host instance 还是创建新的。Host instances 拥有所有的本地状态：focus, selection, input 等等。我们希望在那些在概念上渲染的是相同 UI 的时候，能够保留这些状态。我们还希望在渲染概念上不同的东西时，能够预测到组件会被销毁（比如从 `SignupForm>` 移动到 `<MessengerChat>`）。
 
-**本地状态（Local state）是如此有用以至于 React 让 *你自己* 的组件也能拥有它。** Components 依然是函数，但 React 为它们扩充了一些对 UI 有用的特性，绑定到树中特定位置的本地状态就是一个这样的特性之一。
+**本地状态（Local state）是如此有用以至于 React 让 _你自己_ 的组件也能拥有它。** Components 依然是函数，但 React 为它们扩充了一些对 UI 有用的特性，绑定到树中特定位置的本地状态就是一个这样的特性之一。
 
-我们称这个特性为 *Hooks*。`useState` 就是一个 Hook 。
+我们称这个特性为 _Hooks_。`useState` 就是一个 Hook 。
 
 ```jsx{2,6,7}
 function Example() {
@@ -712,9 +703,7 @@ function Example() {
   return (
     <div>
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
   );
 }
@@ -723,12 +712,13 @@ function Example() {
 它返回一对值：当前的状态和一个更新这个状态的函数。
 
 [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring) 语法让你能够自己为状态取一个潇洒的名字。比如上面我们取名为 `count` 和 `setCount`，当其实我们也可以叫它 `banana` 和 `setBanana`。在后文，我将会使用 `setState` 来取代 `useState` 返回的第二个参数。
-*(你可以在[这里](https://reactjs.org/docs/hooks-intro.html) 学到关于 `useState` 和 React 提供的其他 hooks)*
+_(你可以在[这里](https://reactjs.org/docs/hooks-intro.html) 学到关于 `useState` 和 React 提供的其他 hooks)_
 
 ## Consistency
+
 即使我们想要将 reconciliation 过程拆分为[非堵塞](https://www.youtube.com/watch?v=mDdgfyRB5kg)的工作块，我们还是需要 perform the actual host tree operations in a single synchronous swoop。这样我们能确定用户不会看到更新到一半的 UI，浏览器也不会为了用户不应该看到的中间状态而执行不必要的 style recalculation 和 layout（译者注：或者叫 reflow，回流）。
 
-这就是为什么 React 将工作分为 `render 阶段` 和 `commit 阶段`。**Render 阶段* 是 React 调用组件和执行 reconciliation 的时机，在这个阶段你可以安全的中断它（译者注：也就要求 component 必须是纯的，并且 will 类生命周期也是存的），并且在可以期待的[未来](https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html)将支持异步渲染。**Commit 阶段** 则是 React 接触到 host tree 的时机。它总是同步的.
+这就是为什么 React 将工作分为 `render 阶段` 和 `commit 阶段`。**Render 阶段\* 是 React 调用组件和执行 reconciliation 的时机，在这个阶段你可以安全的中断它（译者注：也就要求 component 必须是纯的，并且 will 类生命周期也是存的），并且在可以期待的[未来](https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html)将支持异步渲染。**Commit 阶段\*\* 则是 React 接触到 host tree 的时机。它总是同步的.
 
 ## Memoization
 
@@ -744,7 +734,7 @@ function Row({ item }) {
 export default React.memo(Row);
 ```
 
-现在在 `Table` 中 `setState`  时，将会跳过 reconciliation 那些 `items` 的引用和上次渲染的 `items` 相同的 `Row`。
+现在在 `Table` 中 `setState` 时，将会跳过 reconciliation 那些 `items` 的引用和上次渲染的 `items` 相同的 `Row`。
 
 你可以通过 [`useMemo()` Hook](https://reactjs.org/docs/hooks-reference.html#usememo) 得到细粒度的 memoization。The cache is local to component tree position 并且将会和本地状态一同被销毁。它只保留上一个结果。
 
@@ -756,7 +746,7 @@ React 内部默认不会 memoize 组件，因为许多组件每次更新都会�
 
 这其实是一个内部设计的抉择。[Time to Interactive](https://calibreapp.com/blog/time-to-interactive/) 在 C 端 Web App 性能基准中，扮演了一个及其关键的角色，遍历整个模型并设置细粒度的更新将会花费宝贵的时间。另外，在许多应用中，交互往往会导致小型（button hover）或者大型（page transition）的更新，在这种情况下，细粒度订阅往往会消耗更多内存。
 
-React 核心设计原则之一是它可以处理原始数据（raw data）。如果你从网络中接受到了大量的 JS 对象，你可以直接将它们塞进 component 中而不需要做任何预处理。你可以随意读取任何属性，也不会在结构轻微变动的时候出现意想不到的性能抖动。React 渲染时间复杂度是 O(*view size*) 而不是 O(*model size*)，你可以通过 [windowing](https://react-window.now.sh/#/examples/list/fixed-size) 来显著地降低 *view size* 的值。
+React 核心设计原则之一是它可以处理原始数据（raw data）。如果你从网络中接受到了大量的 JS 对象，你可以直接将它们塞进 component 中而不需要做任何预处理。你可以随意读取任何属性，也不会在结构轻微变动的时候出现意想不到的性能抖动。React 渲染时间复杂度是 O(_view size_) 而不是 O(_model size_)，你可以通过 [windowing](https://react-window.now.sh/#/examples/list/fixed-size) 来显著地降低 _view size_ 的值。
 
 一些特定类型的 app 采用细粒度的更新会有更好的效果—比如股票跟踪软件。这是少有的 “everything constantly updating at the same time” 的例子。尽管自己写一些命令式的代码能够优化，React 在这种使用场景上并不是最适合的。当然，你可以在 React 的上层实现一套自己的细粒度订阅系统。
 
@@ -824,33 +814,33 @@ Parent (onClick)
 批处理对性能很友好，但是会让写出下面这样的代码的你很惊讶：
 
 ```jsx
-  const [count, setCounter] = useState(0);
+const [count, setCounter] = useState(0);
 
-  function increment() {
-    setCounter(count + 1);
-  }
+function increment() {
+  setCounter(count + 1);
+}
 
-  function handleClick() {
-    increment();
-    increment();
-    increment();
-  }
+function handleClick() {
+  increment();
+  increment();
+  increment();
+}
 ```
 
 如果我们将 `count` 先设置为 `0`，接着调用 3 次 `setCount(1)`。为了修复这个，我们需要让 `setState` 接受一个 “updater” 函数：
 
 ```jsx
-  const [count, setCounter] = useState(0);
+const [count, setCounter] = useState(0);
 
-  function increment() {
-    setCounter(c => c + 1);
-  }
+function increment() {
+  setCounter(c => c + 1);
+}
 
-  function handleClick() {
-    increment();
-    increment();
-    increment();
-  }
+function handleClick() {
+  increment();
+  increment();
+  increment();
+}
 ```
 
 React 将所有的 updater 函数放进队列中，之后会一次性将它们全部运行，将 `count` 设为 `3` 并重新渲染。
@@ -859,19 +849,149 @@ React would put the updater functions in a queue, and later run them in sequence
 当状态逻辑越来越复杂后，我建议使用 [`useReducer` Hook](https://reactjs.org/docs/hooks-reference.html#usereducer)。它就像是这个 “updater” 模式的进化，并给每一种更新途径命了名：
 
 ```jsx
-  const [counter, dispatch] = useReducer((state, action) => {
-    if (action === 'increment') {
-      return state + 1;
-    } else {
-      return state;
-    }
-  }, 0);
-
-  function handleClick() {
-    dispatch('increment');
-    dispatch('increment');
-    dispatch('increment');
+const [counter, dispatch] = useReducer((state, action) => {
+  if (action === 'increment') {
+    return state + 1;
+  } else {
+    return state;
   }
+}, 0);
+
+function handleClick() {
+  dispatch('increment');
+  dispatch('increment');
+  dispatch('increment');
+}
 ```
 
 实参 `action` 可以随便设，当然 object 是一个不错的选择。
+
+## Call Tree
+
+编程语言的 runtime 通常都有 [call stack](https://medium.freecodecamp.org/understanding-the-javascript-call-stack-861e41ae61d4)。当函数 `a()` 调用一个函数 `b()`，而 b 又调用了 `c()`，在 JS 引擎的某个地方会为它构造一个类似于 `[a, b, c]` 这样的数据结构，它“跟踪”你的位置和接下来要执行的代码。一旦 `c` 运行结束，它的 call frame 就会消失了，它不再被需要。我们跳回到 `b`，接着是 `a`，这时 call stack 就是空的了。
+
+当然，React 它是基于 JS 的，它也要遵守 JS 的规则。我们可以想象 React 内部也有自己的 call stack 用来记住当前正在渲染的组件。比如：`[App, Page, Layout, Article /* we're here */]`。
+
+因为 React 它旨在呈现 UI trees，所以它和通用语言的 run time 不太相同。这些树必须要一直存在以让我们能和它们交互。DOM 也不会在第一次调用 `ReactDOM.render()` 后消失。
+
+这可能夸大了这个比喻，但我喜欢将 React components 视为 “call tree” 而不仅仅是一个 ”call stack”。当我们从 `Article` component 中退出时，它的 ”call tree” 不会被销毁。我们需要在[某个地方](https://medium.com/react-in-depth/the-how-and-why-on-reacts-usage-of-linked-list-in-fiber-67f1014d0eb7)保留本地状态和对 host instance 的引用。
+
+这些 “call tree” frames 会在被摧毁的同时带走保存的本地状态和 host instances，但这仅仅在 [reconciliation](#reconciliation) 中才有可能发生。如果你之前看过 React 源码，你可能知道这些 frame 被称之为 [Fibers](<https://en.wikipedia.org/wiki/Fiber_(computer_science)>)。
+
+Fiber 就是本地状态实际存在的地方。当状态更新时，React 会将这些 Fibers 标记为需要 reconciliation，并调用这些组件。
+
+## Context
+
+在 React 中，我们通过 props 在组件之间一层一层地传递 things。有时，大量的组件需要同样的 thing—比如，当前用户选中的主题。如果一级一级地往下传递的话，实在太笨重了。
+
+React 使用 [Context](https://reactjs.org/docs/context.html) 解决这个问题,它本质上很像组件的 [dynamic scoping](http://wiki.c2.com/?DynamicScoping)。它就像一个虫洞一样，让你将一些东西放在顶部，而每一个在底部的子节点都能去夺取它，并在它改变的时候重新渲染。
+
+```jsx
+const ThemeContext = React.createContext(
+  'light' // Default value as a fallback
+);
+
+function DarkApp() {
+  return (
+    <ThemeContext.Provider value="dark">
+      <MyComponents />
+    </ThemeContext.Provider>
+  );
+}
+
+function SomeDeeplyNestedChild() {
+  // Depends on where the child is rendered
+  const theme = useContext(ThemeContext);
+  // ...
+}
+```
+
+当 `SomeDeeplyNestedChild` 渲染时，`useContext(ThemeContext)` 将会向上去寻找最近的 `<ThemeContext.Provider>`，并使用它的 `value`。（实际上，React 还维护了一个 context stack）
+
+如果没有 `ThemeContext.Provider` 存在，`useContext(ThemeContext)` 的结果就是调用 `createContext()` 时在第一个参数里传递的值。在我们的例子中，就是 `'light'`。
+
+## Effects
+
+我们之前提到 React component 不应该在渲染的时候，有副作用，但是副作用在某些情况下确实很有必要。我们经常需要管理 focus，在 canvas 上画图，订阅一个数据源等等。
+
+React 通过声明一个 effect 来实现它：
+
+```jsx{4-6}
+function Example() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  });
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+```
+
+只要可能，React 会在浏览器重绘屏幕之前尽可能的延迟运行这些 effects。这很棒，因为类似于数据源订阅的这些代码不应该对 [time to interactive](https://calibreapp.com/blog/time-to-interactive/) 和 [time to first paint](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint) 有负面影响。（这有一个极少使用的 [hook](https://reactjs.org/docs/hooks-reference.html#uselayouteffect) 给你提供同步调用 effect 的行为。尽量别用它）
+
+Effect 不会自运行一次，它们既在组件创建的时候会运行，也在组件更新的时候运行。
+
+Effects 有些时候需要一起清理操作，比如订阅的场景。为了清理它们，effect 可以返回一个函数：
+
+```jsx
+useEffect(() => {
+  DataSource.addSubscription(handleChange);
+  return () => DataSource.removeSubscription(handleChange);
+});
+```
+
+React 将会在下次应用 effect 之前执行这个函数，当然组件摧毁之前也会执行。
+
+有些时候，每次渲染都重新运行 effect 不让人接受。你可以告诉 React，如果当前变量没有改变的话，[跳过](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects) 这次 effect 的运行。
+
+```jsx{3}
+useEffect(
+  () => {
+    document.title = `You clicked ${count} times`;
+  },
+  [count]
+);
+```
+
+然后，这通常是一个过早优化，并在你不熟悉 JS 闭包的原理下会导致问题。
+
+比如下面这个代码就有 bug：
+
+```jsx
+useEffect(() => {
+  DataSource.addSubscription(handleChange);
+  return () => DataSource.removeSubscription(handleChange);
+}, []);
+```
+
+因为 `[]` 相当于告诉 React ”永远不要重新调用这个 effect”，这就导致了 bug。因为这个 effect 的闭包捕获了 `handleChange`，而 `handleChange` 可能会引用其他的 props 或者 state。
+
+```jsx
+function handleChange() {
+  console.log(count);
+}
+```
+
+如果 effect 没有重新运行的话，`handleChange` 将会保持第一次渲染的那个版本，因此 `count` 将永远都是 0.
+
+为了解决这个问题，确保你声明的依赖数组中，包含了**所有**可能会改变的东西，包括函数：
+
+```jsx{4}
+useEffect(
+  () => {
+    DataSource.addSubscription(handleChange);
+    return () => DataSource.removeSubscription(handleChange);
+  },
+  [handleChange]
+);
+```
+
+根据你的代码耳钉，这里还会出现不必要的重订阅，因为 `handleChange` 在每次渲染的时候都是不同的。 [`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback) 可以帮助解决这个问题。或者你就让它重订阅，因为浏览器环境的 `addEventListener` 非常快，让它运行问题不大。因为一个小优化导致更多问题得不偿失。
+
+_（你可以在[这里](https://reactjs.org/docs/hooks-effect.html)学到更多关于 `useEffect` 和其他官方 Hook）_
