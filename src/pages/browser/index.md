@@ -45,7 +45,7 @@ Web 开发者有很多种方式可以按时浏览器如何恰当地加载资源�
 
 ## Style calculation
 
-因为 CSS 的存在，仅仅有一个 DOM 是不足以让浏览器了解整个网页会是怎么样的。主线程会解析 CS，并为每一个 DOM 节点计算出最终样式。这些信息会基于 CSS 选择器来呈现每一个元素被应用了哪些样式。你可以在通过开发者工具的 `computed` 来看到这些信息。
+因为 CSS 的存在，仅仅有一个 DOM 是不足以让浏览器了解整个网页会是怎么样的。主线程会解析 CSS，并为每一个 DOM 节点计算出最终样式。这些信息会基于 CSS 选择器来呈现每一个元素被应用了哪些样式。你可以在通过开发者工具的 `computed` 来看到这些信息。
 
 ![](https://developers.google.cn/web/updates/images/inside-browser/part3/computedstyle.png)
 Figure 3: 主线程解析 CSS 得到计算过的样式
@@ -54,19 +54,19 @@ Figure 3: 主线程解析 CSS 得到计算过的样式
 
 ## Layout
 
-现在渲染进程知道了 DOM 的结构和每一个节点的样式，但是这些信息还不足以去渲染一个页面。相信你在电话的另一头努力地给你的朋友描述一幅画。“有一个巨大的红色的圆和一个小一点的蓝色的正方形”是不足以让你的朋友想象出这幅画的样子的。
+现在渲染进程知道了 DOM 的结构和每一个节点的样式，但是这些信息还不足以去渲染一个页面。相信你在电话的另一头努力地给你的朋友描述一幅画。“有一个巨大的红色的圆和一个小一点的蓝色正方形”是不足以让你的朋友想象出这幅画的样子的。
 
 ![](https://developers.google.cn/web/updates/images/inside-browser/part3/tellgame.png)
 Figure 4: A person standing in front of a painting, phone line connected to the other person
 
-Layout 是一个找到元素的几何信息的过程。主线程通过遍历 DOM，计算样式，并创建一个包换了 x y 坐标信息和边框大小的 layout 树。Layout 树可能和 DOM 树很相似，但是它仅仅包含了在能在页面中被看到的信息。比如 `display: none` 一旦被应用到每个元素上，这个元素就不是 layout 树的一部分。相似的，如果一个伪元素 `p::before { content: "Hi!" }`被应用饿了，它虽然不会出现在 DOM 树上，但是属于 layout 树。
+Layout 是一个找到元素的几何信息的过程。主线程通过遍历 DOM，计算样式，并创建一个包换了 x y 坐标信息和边框大小的 layout 树。Layout 树可能和 DOM 树很相似，但是它仅仅包含了在能在页面中被看到的信息。比如 `display: none` 一旦被应用到每个元素上，这个元素就不是 layout 树的一部分。相似的，如果一个伪元素 `p::before { content: "Hi!" }`被应用了，它虽然不会出现在 DOM 树上，但是属于 layout 树。
 
 ![](https://developers.google.cn/web/updates/images/inside-browser/part3/layout.png)
 Figure 5: 主线程遍历 DOM 树，通过已经计算的样式，得到 layout 树
 
 确定页面的布局是一项由挑战性的任务。即使是最简单的页面布局，如从上到下的 block flow，也必须考虑字体的大小以及在哪里划分它们，因为它们会影响段落的大小和形状，还会影响下一段所需的位置。
 
-<a href='./layout.mp4'>layout.mp4</a>
+<a href='https://developers.google.cn/web/updates/images/inside-browser/part3/layout.mp4'>layout.mp4</a>
 
 Figure 6: 因为一个断行的改变，layout 也跟着改变
 
@@ -90,7 +90,7 @@ Figure 9: 主线程遍历 layout 树并生成绘制记录
 
 ### Updating rendering pipeline is costly
 
-<a href='./trees.mp4'>trees.mp4</a>
+<a href='https://developers.google.cn/web/updates/images/inside-browser/part3/trees.mp4'>trees.mp4</a>
 
 Figure 10: 有序的生成 DOM ，Style，Layout，Paint Trees
 
@@ -114,7 +114,7 @@ Figure 13：在动画帧的时间线上，更小的 JS 块
 
 ### 你怎样 draw 一个页面
 
-<a href='./naive_rastering.mp4'>naive_rastering.mp4</a>
+<a href='https://developers.google.cn/web/updates/images/inside-browser/part3/naive_rastering.mp4'>naive_rastering.mp4</a>
 
 Figure 14: naive 的栅格化过程
 
@@ -123,7 +123,7 @@ Figure 14: naive 的栅格化过程
 
 ### 什么是合成
 
-<a href='./composit.mp4'>composit.mp4</a>
+<a href='https://developers.google.cn/web/updates/images/inside-browser/part3/composit.mp4'>composit.mp4</a>
 Figure 15: 合成过程
 
 合成是一种用来将一个界面分为多个层，分别将它们栅格化，并在一个叫做合成器的线程中将它们重新合并成一个界面的技术。如果滚动发生了，因为每一个图层（Layer）都早已栅格化，现在说需要做的事情仅仅是合成一个新的帧。而动画也可以通过移动层并将它们组合成一个新的帧的方式来实现。
@@ -144,7 +144,7 @@ Figure 17: 栅格线程创建多个位图块，并发送给 GPU
 
 合成线程还可以根据优先级决定，以便视口（或附近）可以先被栅格化。图层还具有多个 tiliings 用于处理放大操作等。
 
-一旦图块被栅格化，合成器线程会有一个被称为**draw quads（绘制四边形）**的过程来收集这些图块的信息，以创建一个 **compositor frame（合成帧）**
+一旦图块被栅格化，合成器线程会有一个被称为 **draw quads（绘制四边形）**的过程来收集这些图块的信息，以创建一个 **compositor frame（合成帧）。**
 Compositor frame 接着会由 IPC 提交到浏览器进程中。此时，可以从 UI 线程中添加其他的合成帧用于浏览器 UI 的改变或者渲染进程。最后这些合成帧会被发送到 GPU 以显示到屏幕上。如果有滚动事件发送，合成器线程会创建新的合成帧发送到 GPU。
 
 ![](https://developers.google.cn/web/updates/images/inside-browser/part3/composit.png)
