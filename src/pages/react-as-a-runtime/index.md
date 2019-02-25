@@ -992,6 +992,6 @@ useEffect(
 );
 ```
 
-根据你的代码耳钉，这里还会出现不必要的重订阅，因为 `handleChange` 在每次渲染的时候都是不同的。 [`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback) 可以帮助解决这个问题。或者你就让它重订阅，因为浏览器环境的 `addEventListener` 非常快，让它运行问题不大。因为一个小优化导致更多问题得不偿失。
+根据你的代码而定，这里还会出现不必要的重订阅，因为 `handleChange` 在每次渲染的时候都是不同的。 [`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback) 可以帮助解决这个问题。或者你就让它重订阅，因为浏览器环境的 `addEventListener` 非常快，让它运行问题不大。因为一个小优化导致更多问题得不偿失。
 
 _（你可以在[这里](https://reactjs.org/docs/hooks-effect.html)学到更多关于 `useEffect` 和其他官方 Hook）_
