@@ -62,7 +62,7 @@ handling event on the document
 
 ### 原因
 
-首先，在 button 被点击后，`stopPropagation` 起作用，使父组件 div 的 _onClick_ Synthetic Event 不会被调用。另外，原生的 DOM 事件也会被触发。因为 stopPropagation 不同于 `stopImmediatePropagation`，所以 document 上的事件还是被调用。但是，_window_ 上的事件就不会被调用。
+首先，在 button 被点击后，`stopPropagation` 起作用，使父组件 div 的 _onClick_ Synthetic Event 不会被调用。另外，原生的 DOM 事件也会被触发。因为 `stopPropagation` 不同于 `stopImmediatePropagation`，所以 `document` 上的事件还是被调用。又因为 _window_ 是 `document` 的父级，所以就不会继续运行。
 
 原因已经很明显了，但是我们可以更进一步。如果在 div 上有一个 native DOM 事件，那么在**点击 button 后，到底是 button 的 Synthetic 事件先运行还是 button 的 native 事件？**
 
@@ -107,7 +107,7 @@ const App = () => {
 export default App;
 ```
 
-直觉上是会觉得是会打印出
+直觉上觉得是会打印出
 
 ```
 button
@@ -115,15 +115,13 @@ handle event on div with ref
 handling event on the document
 ```
 
-但根据上面的说法， Synthetic Event 会绑定在 document 上，那么根据**冒泡**的顺序，div 的 native 事件会先运行。可以得出下面猜测
+但根据上面的说法， Synthetic Event 会绑定在 document 上，那么根据**冒泡**的顺序，div 的 native 事件会先运行。可以得出下面结论
 
 ```
 handling event on div with ref
 button
 handling event on document
 ```
-
-那最后的结果是什么呢？可以自己去尝试下。
 
 ### 结论
 
@@ -141,8 +139,11 @@ handling event on document
 这个问题提出来的依据主要是，`setState` 在 React 中是会**一定会带来更新的**，除非设置了 `memo` 或者 `shouldComponentUpdate` 这些优化措施。换句话说，一般情况下，每次 Context 中 value 的更新，必定伴随着一个 setState 的过程。而这个过程必定导致含有 `<Context.Provider>` 的组件往下更新，也就让我们无法观察到这个过程的更进一步的细节。
 
 如果想要探究这个问题的话，需要三个组件，分别被称为 App, Foo, Bar。
-App 就是父组件，它的 `render` 中就返回了包含 Provider 的代码。
-Foo 组件这是这个 Context 的消费者，它通过 Provider 拿到对应的展示内容。
+
+App 是父组件，它的 `render` 中就返回了包含 Provider 的代码。
+
+Foo 组件是这个 Context 的消费者，它通过 Provider 拿到对应的展示内容。
+
 Bar 则是两个组件中的中间层，它的作用就是承接 Foo 和 App。同时它的 `shouldComponentUpdate` 会设置为 **false**。
 
 借助 Hooks，有下面的实验 🧪 代码。
@@ -182,7 +183,7 @@ const App = () => {
 界面很 简单
 ![](./FABCB7EA-DB45-4A07-B5D7-AFDB521F6219.png)
 通过点击 _click me_ 那个 button，就能看到 /i am / 的变化。同时注意 Foo 和 Bar 中都有一个 `console.count` 用来观察这个组件是否重新渲染。
-最后得到的结果就是，**foo 会随然每次点击都打印，而 bar 不会**。而如果将 memo 移除的话，每次 bar 也会被打印出来了。
+得到的结果就是，**foo 会随着每次点击都打印，而 bar 不会**。如果将 memo 移除的话，每次 bar 也会被打印出来了。
 
 最后结论就是：**Provider 的更新不会带动 Consumer 之间的组件更新**。
 
