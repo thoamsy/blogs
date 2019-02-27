@@ -6,31 +6,6 @@ spoiler: An in-depth description of the React programming model.
 
 翻译自 Dan 的[博客](https://overreacted.io/react-as-a-ui-runtime/)。文章很长:)
 
-目前进度
-
-- [x] 免责声明
-- [x] host tree
-- [x] host instance
-- [x] renderers
-- [x] react elements
-- [x] entry point
-- [x] lists
-- [x] purity
-- [x] recursion
-- [x] inverse of control
-- [x] lazy evaluation
-- [x] state
-- [x] consistency
-- [x] memoization
-- [x] raw model
-- [x] batching
-- [x] call tree
-- [x] context
-- [x] hooks
-- [ ] custom hooks
-- [ ] static use order
-- [ ] what's left out
-
 许多教程中提到 React 是一个 UI 库，这说得没什么问题。就像字面上一样，它确实是一个 UI 库！
 ![React homepage screenshot: "A JavaScript library for building user interfaces"](./react.png)
 
@@ -995,3 +970,133 @@ useEffect(
 根据你的代码而定，这里还会出现不必要的重订阅，因为 `handleChange` 在每次渲染的时候都是不同的。 [`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback) 可以帮助解决这个问题。或者你就让它重订阅，因为浏览器环境的 `addEventListener` 非常快，让它运行问题不大。因为一个小优化导致更多问题得不偿失。
 
 _（你可以在[这里](https://reactjs.org/docs/hooks-effect.html)学到更多关于 `useEffect` 和其他官方 Hook）_
+
+## Custom Hooks
+
+因为 `useState` 和 `useEffect` 其实都是函数调用，我们可以将它们组合到自己的 Hook 中：
+
+```jsx{2,8}
+function MyResponsiveComponent() {
+  const width = useWindowWidth(); // Our custom Hook
+  return (
+    <p>Window width is {width}</p>
+  );
+}
+
+function useWindowWidth() {
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  });
+  return width;
+}
+```
+
+自定义（Custom Hooks）可以让不同的组件服用逻辑，注意**状态 本身**是不共享的。每一个调用 Hook 的组件都拥有它们自己单独的状态。
+/你可以在[这里](https://reactjs.org/docs/hooks-custom.html)学到更多自定义 Hooks 的写法/
+
+## Static Use Order
+
+你可以认为 `useState` 是一个用来定义“React 状态变量”的语法。但它毕竟不是**真正**的语法，我们还是在写 JS。但我们将 React 视为运行时环境，并且由于 React 定制 JS 来描述 UI 树，因此其功能有时会更接近语言层面。
+
+如果 `use` **是**一个语法，那么它在顶级作用域就是有意义的。
+
+```jsx{3}
+// 😉 Note: not a real syntax
+component Example(props) {
+  const [count, setCount] = use State(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+如果将它放在一个条件语法或者回调中，甚至放在组件外意味着什么？
+
+```jsx
+// 😉 Note: not a real syntax
+
+// This is local state... of what?
+const [count, setCount] = use State(0);
+
+component Example() {
+  if (condition) {
+    // What happens to it when condition is false?
+    const [count, setCount] = use State(0);
+  }
+
+  function handleClick() {
+    // What happens to it when we leave a function?
+    // How is this different from a variable?
+    const [count, setCount] = use State(0);
+  }
+```
+
+React state 对于 **component** 来说是局部的，并且它在环境中具有唯一性。如果 `use` 是一个真实的语法，那么将它扩展到 **component** 的顶层也是有意义的：
+
+```jsx
+// 😉 Note: not a real syntax
+component Example(props) {
+  // Only valid here
+  const [count, setCount] = use State(0);
+
+  if (condition) {
+    // This would be a syntax error
+    const [count, setCount] = use State(0);
+  }
+```
+
+这和 `import` 只能在顶级作用域工作的情形很类似。
+
+*当然，`use` 并不是真正的语法。*（它不会给你带来好处，还带来了很多问题）
+
+不过，React **确实**期望所有对于 Hooks 的调用，在存在于 component 和 `no-if` 语句中。这些 [Hooks 的规则](https://reactjs.org/docs/hooks-rules.html) 可以通过一个 [a linter plugin](https://www.npmjs.com/package/eslint-plugin-react-hooks) 来强制执行。关于这个设计选择的讨论十分激烈，但是实际我并没有看到它让人感到困惑。我也写了[一篇文章](https://overreacted.io/why-do-hooks-rely-on-call-order/)来解释为什么一些常见的提案达不到效果。
+
+在内部，Hooks 由一个 [链表](https://dev.to/aspittel/thank-u-next-an-introduction-to-linked-lists-4pph) 实现。当你调用 `useState` 的时候，我们会移动指针到下一个 hook。当我们退出 component 的 [“call tree” frame](#call-tree)，我们会保存这个结果直到下一次 render。
+
+[这篇文章](https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e) 针对 Hooks 内部如何工作提供了一个简单的解释。数组可能比链表在理解上更加容易些。
+
+```jsx
+// Pseudocode
+let hooks, i;
+function useState() {
+  i++;
+  if (hooks[i]) {
+    // Next renders
+    return hooks[i];
+  }
+  // First render
+  hooks.push(...);
+}
+
+// Prepare to render
+i = -1;
+hooks = fiber.hooks || [];
+// Call the component
+YourComponent();
+// Remember the state of Hooks
+fiber.hooks = hooks;
+```
+
+/（如果你好奇的话，代码在[这](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberHooks.js)）/
+这是每一个 `useState` 调用如何找到正确的 state 的粗略的介绍。正如我们[之前](#reconciliation)学到的，“matching things up” 在 React 中并不是新鲜事 — reconciliation 用类似的方法在不同的渲染中匹配 elements。
+
+## What’s Left Out
+
+We’ve touched on pretty much all important aspects of the React runtime environment. If you finished this page, you probably know React in more detail than 90% of its users. And there’s nothing wrong with that!
+
+There are some parts I left out — mostly because they’re unclear even to us. React doesn’t currently have a good story for multipass rendering, i.e. when the parent render needs information about the children. Also, the [error handling API](https://reactjs.org/docs/error-boundaries.html) doesn’t yet have a Hooks version. It’s possible that these two problems can be solved together. Concurrent Mode is not stable yet, and there are interesting questions about how Suspense fits into this picture. Maybe I’ll do a follow-up when they’re fleshed out and Suspense is ready for more than [lazy loading](https://reactjs.org/blog/2018/10/23/react-v-16-6.html#reactlazy-code-splitting-with-suspense).
+
+I think it speaks to the success of React’s API that you can get very far without ever thinking about most of these topics. Good defaults like the reconciliation heuristics do the right thing in most cases. Warnings like the `key` warning nudge you when you risk shooting yourself in the foot.
+
+If you’re a UI library nerd, I hope this post was somewhat entertaining and clarified how React works in more depth. Or maybe you decided React is too complicated and you’ll never look it again. In either case, I’d love to hear from you on Twitter! Thank you for reading.
