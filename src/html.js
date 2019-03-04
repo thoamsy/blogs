@@ -32,26 +32,13 @@ export default function HTML(props) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-            let cacheTheme;
-            let checked = false;
             const DARK = 'dark';
             const LIGHT = 'light';
             if (typeof localStorage !== 'undefined') {
-              cacheTheme = localStorage.getItem('theme');
-              checked = cacheTheme === DARK;
+              const theme = localStorage.getItem('theme');
+              window.__preferTheme = theme;
+              document.body.className = theme;
             }
-
-            const colorSchemeChanged = ({ matches }) => {
-              document.body.className = matches ? DARK : LIGHT;
-              setChecked(matches);
-            };
-
-            const media = window.matchMedia('(prefers-color-scheme: dark)');
-            media && media.addListener(colorSchemeChanged);
-            colorSchemeChanged({
-              matches: cacheTheme === undefined ? media.matches : checked,
-            });
-            window.__preferTheme = cacheTheme;
           `,
           }}
         />

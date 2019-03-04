@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import Toggle from './ThemeToggle';
@@ -28,9 +28,25 @@ const Header = styled.header`
 
 const THEME = 'theme';
 const Layout = ({ location, title, children }) => {
-  const [checked, setChecked] = useState(
-    (global || window).__preferTheme === 'light'
-  );
+  let cacheTheme;
+  const [checked, setChecked] = useState(() => {
+    cacheTheme = (global || window).__preferTheme;
+    return cacheTheme === 'dark';
+  });
+
+  useEffect(() => {
+    const colorSchemeChanged = ({ matches }) => {
+      document.body.className = matches ? 'dark' : 'light';
+      setChecked(matches);
+    };
+
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+    media && media.addListener(colorSchemeChanged);
+    colorSchemeChanged({
+      matches: cacheTheme === undefined ? media.matches : checked,
+    });
+    return () => media && media.removeListener(colorSchemeChanged);
+  }, []);
 
   let rootPath = '/';
   if (typeof __PATH_PREFIX__ !== 'undefined') {
