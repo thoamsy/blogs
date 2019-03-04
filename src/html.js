@@ -33,12 +33,16 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{
             __html: `
             let cacheTheme;
+            let checked = false;
+            const DARK = 'dark';
+            const LIGHT = 'light';
             if (typeof localStorage !== 'undefined') {
-              cacheTheme = localStorage.getItem(THEME);
+              cacheTheme = localStorage.getItem('theme');
+              checked = cacheTheme === DARK;
             }
 
             const colorSchemeChanged = ({ matches }) => {
-              document.body.className = matches ? 'dark' : 'light';
+              document.body.className = matches ? DARK : LIGHT;
               setChecked(matches);
             };
 

@@ -28,7 +28,9 @@ const Header = styled.header`
 
 const THEME = 'theme';
 const Layout = ({ location, title, children }) => {
-  const [checked, setChecked] = useState((global || window).__preferTheme);
+  const [checked, setChecked] = useState(
+    (global || window).__preferTheme === 'light'
+  );
 
   let rootPath = '/';
   if (typeof __PATH_PREFIX__ !== 'undefined') {
