@@ -12,7 +12,7 @@ module.exports = {
       options: {
         name: `thoamsy's blog`,
         short_name: `😏`,
-        start_url: `/`,
+        start_url: `/blogs`,
         background_color: `#f7f0eb`,
         theme_color: `#ffffff`,
         display: `standalone`,
