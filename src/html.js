@@ -28,6 +28,29 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            let cacheTheme;
+            if (typeof localStorage !== 'undefined') {
+              cacheTheme = localStorage.getItem(THEME);
+            }
+
+            const colorSchemeChanged = ({ matches }) => {
+              document.body.className = matches ? 'dark' : 'light';
+              setChecked(matches);
+            };
+
+            const media = window.matchMedia('(prefers-color-scheme: dark)');
+            media && media.addListener(colorSchemeChanged);
+            colorSchemeChanged({
+              matches: cacheTheme === undefined ? media.matches : checked,
+            });
+            window.__preferTheme = cacheTheme;
+          `,
+          }}
+        />
       </body>
     </html>
   );
