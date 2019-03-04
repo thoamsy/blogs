@@ -5,6 +5,7 @@
 
 # Maybe Need
 
+- [x] PWA，支持将 Blogs 加入到首屏
 - [x] 可以在滚动到底部的时候，快速进入上一页和下一页
 - [x] 基本的 dark mode
 - [x] 支持 Safari 的 dark mode
