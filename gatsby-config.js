@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: '😏',
+    title: `😏`,
     author: 'Yang Kui',
-    description: 'A starter blog template with gatsby',
+    description: '👤博客',
     siteUrl: 'https://github.com/thoamsy/blogs.git',
   },
   pathPrefix: '/blogs',
@@ -17,7 +17,7 @@ module.exports = {
         theme_color: `#ffffff`,
         display: `standalone`,
         icon: `src/resource/icon@3x.png`, // This path is relative to the root of the site.
-        include_favicon: true, // Include favicon
+        include_favicon: false,
       },
     },
     {
