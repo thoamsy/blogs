@@ -30,8 +30,12 @@ const THEME = 'theme';
 const Layout = ({ location, title, children }) => {
   let cacheTheme;
   const [checked, setChecked] = useState(() => {
-    cacheTheme = (global || window).__preferTheme;
-    return cacheTheme === 'dark';
+    if (typeof localStorage !== 'undefined') {
+      cacheTheme = localStorage.getItem(THEME);
+      return cacheTheme === 'dark';
+    } else {
+      return false;
+    }
   });
 
   useEffect(() => {
