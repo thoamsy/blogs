@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/blogs/0.b6f197430f783b3e67aa.css">code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><style data-href="/blogs/component---src-templates-blog-post-js.e65711bd0a134b25c1fe.css">body{--blue:#007acc;--pink:#ffa7c4;--bg:#fff;--header:var(--blue);--textNormal:#222;--textTitle:#222;--textLink:var(--blue);--hr:rgba(0,0,0,0.2);--inlineCode-bg:rgba(255,229,100,0.2);--inlineCode-text:#1a1a1a;background-color:var(--bg)}body.dark{-webkit-font-smoothing:antialiased;--bg:#282c35;--header:#fff;--textNormal:hsla(0,0%,100%,0.88);--textTitle:#fff;--textLink:var(--pink);--hr:hsla(0,0%,100%,0.2);--inlineCode-bg:#373c49;--inlineCode-text:#e6e6e6}em,h1,h2,h3,h4,h5,h6,li,p,small,strong{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}blockquote{margin:20px -30px 30px;padding:20px 45px 20px 26px}body:not(.dark) blockquote{background-color:rgba(255,229,100,.3);border-left:9px solid #ffe564}blockquote p:first-of-type:not(:last-child){font-weight:700;color:initial;margin-top:0}blockquote p:nth-of-type(2){margin-top:0;font-size:17px}code[class*=language-],pre[class*=language-]{color:#fff;background:none;font-family:Consolas,Menlo,Monaco,source-code-pro,Courier New,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}:not(pre)>code[class*=language-],pre[class*=language-]{background:#011627}pre[class*=language-]{border-radius:10px;overflow:auto;padding:1em}pre[class*=language-]::selection{background:#27292a}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:hsla(0,0%,93%,.15)}:not(pre)>code[class=language-text]{border-radius:.3em;background-color:var(--inlineCode-bg)!important;color:var(--inlineCode-text);white-space:normal;padding:0 3px;word-break:break-word;font-family:Menlo,Consolas,Courier New,monospace;text-shadow:none}pre[data-line]{padding:1em 0 1em 3em;position:relative}.gatsby-highlight-code-line{background-color:#022a4b;display:block;margin-right:-1em;margin-left:-1em;padding-right:1em;padding-left:.75em;border-left:.25em solid #ffa7c4}.gatsby-highlight{overflow:auto}.gatsby-highlight pre[class*=language-]{float:left;min-width:100%}.token.attr-name{color:#addb67;font-style:italic}.token.comment{color:#637777}.token.string,.token.url{color:#addb67}.token.variable{color:#d6deeb}.token.number{color:#f78c6c}.token.builtin,.token.char,.token.constant,.token.function{color:#82aaff}.token.punctuation{color:#c792ea}.token.doctype,.token.selector{color:#c792ea;font-style:"italic"}.token.class-name{color:#ffcb8b}.token.keyword,.token.operator,.token.tag{color:#ffa7c4}.token.boolean{color:#ff5874}.token.property{color:#80cbc4}.token.namespace{color:#b2ccd6}.react-toggle{touch-action:pan-x;display:inline-block;position:relative;cursor:pointer;background-color:transparent;border:0;padding:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent}.react-toggle-screenreader-only{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.react-toggle-track{width:50px;height:24px;padding:0;border-radius:30px;background-color:#0f1114;transition:all .3s ease;display:flex}.react-toggle-track-check{flex:1 1;opacity:0;transition:opacity .25s ease;display:flex;align-items:center;justify-content:center}.react-toggle--checked .react-toggle-track-check,.react-toggle-track-x{opacity:1;transition:opacity .25s ease}.react-toggle-track-x{flex:1 1;display:flex;align-items:center;justify-content:center}.react-toggle--checked .react-toggle-track-x{opacity:0}.react-toggle-thumb{position:absolute;top:1px;left:1px;width:22px;height:22px;border-radius:50%;background-color:#fafafa;box-sizing:border-box;transition:all .5s cubic-bezier(.23,1,.32,1) 0ms}.react-toggle--checked .react-toggle-thumb{left:27px;border-color:#19ab27}.react-toggle--focus .react-toggle-thumb{box-shadow:0 0 2px 3px #ffa7c4}.react-toggle:active .react-toggle-thumb{box-shadow:0 0 5px 5px #ffa7c4}</style><meta name="generator" content="Gatsby 2.0.85"/><style type="text/css">
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/blogs/styles.0c6f546e4cf72f2003b6.css">.react-toggle{touch-action:pan-x;display:inline-block;position:relative;cursor:pointer;background-color:transparent;border:0;padding:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent}.react-toggle-screenreader-only{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.react-toggle-track{width:50px;height:24px;padding:0;border-radius:30px;background-color:#0f1114;transition:all .3s ease;display:-webkit-flex;display:flex}.react-toggle-track-check{-webkit-flex:1 1;flex:1 1;opacity:0;transition:opacity .25s ease;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center}.react-toggle--checked .react-toggle-track-check,.react-toggle-track-x{opacity:1;transition:opacity .25s ease}.react-toggle-track-x{-webkit-flex:1 1;flex:1 1;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center}.react-toggle--checked .react-toggle-track-x{opacity:0}.react-toggle-thumb{position:absolute;top:1px;left:1px;width:22px;height:22px;border-radius:50%;background-color:#fafafa;box-sizing:border-box;transition:all .5s cubic-bezier(.23,1,.32,1) 0ms}.react-toggle--checked .react-toggle-thumb{left:27px;border-color:#19ab27}.react-toggle--focus .react-toggle-thumb{box-shadow:0 0 2px 3px #ffa7c4}.react-toggle:active .react-toggle-thumb{box-shadow:0 0 5px 5px #ffa7c4}body{--blue:#007acc;--pink:#ffa7c4;--bg:#fff;--header:var(--blue);--textNormal:#222;--textTitle:#222;--textLink:var(--blue);--hr:rgba(0,0,0,0.2);--inlineCode-bg:rgba(255,229,100,0.2);--inlineCode-text:#1a1a1a;background-color:var(--bg)}body.dark{-webkit-font-smoothing:antialiased;--bg:#282c35;--header:#fff;--textNormal:hsla(0,0%,100%,0.88);--textTitle:#fff;--textLink:var(--pink);--hr:hsla(0,0%,100%,0.2);--inlineCode-bg:#373c49;--inlineCode-text:#e6e6e6}em,h1,h2,h3,h4,h5,h6,li,p,small,strong{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}blockquote{margin:20px -30px 30px;padding:20px 45px 20px 26px}body:not(.dark) blockquote{background-color:rgba(255,229,100,.3);border-left:9px solid #ffe564}blockquote p:first-of-type:not(:last-child){font-weight:700;color:initial;margin-top:0}blockquote p:nth-of-type(2){margin-top:0;font-size:17px}code[class*=language-],pre[class*=language-]{color:#fff;font-family:Consolas,Menlo,Monaco,source-code-pro,Courier New,monospace}:not(pre)>code[class*=language-],pre[class*=language-]{background:#011627}pre[class*=language-]{border-radius:10px}pre[class*=language-]::selection{background:#27292a}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:hsla(0,0%,93%,.15)}:not(pre)>code[class=language-text]{border-radius:.3em;background-color:var(--inlineCode-bg)!important;color:var(--inlineCode-text);white-space:normal;padding:0 3px;word-break:break-word;font-family:Menlo,Consolas,Courier New,monospace;text-shadow:none}pre[data-line]{padding:1em 0 1em 3em;position:relative}.gatsby-highlight-code-line{background-color:#022a4b;display:block;margin-right:-1em;margin-left:-1em;padding-right:1em;padding-left:.75em;border-left:.25em solid #ffa7c4}.gatsby-highlight{overflow:auto}.gatsby-highlight pre[class*=language-]{float:left;min-width:100%}.token.attr-name{color:#addb67;font-style:italic}.token.comment{color:#637777}.token.string,.token.url{color:#addb67}.token.variable{color:#d6deeb}.token.number{color:#f78c6c}.token.builtin,.token.char,.token.constant,.token.function{color:#82aaff}.token.punctuation{color:#c792ea}.token.doctype,.token.selector{color:#c792ea;font-style:"italic"}.token.class-name{color:#ffcb8b}.token.keyword,.token.operator,.token.tag{color:#ffa7c4}.token.boolean{color:#ff5874}.token.property{color:#80cbc4}.token.namespace{color:#b2ccd6}code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.1.20"/><link rel="manifest" href="/blogs/manifest.webmanifest"/><meta name="theme-color" content="#ffffff"/><link rel="apple-touch-icon" sizes="48x48" href="/blogs/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/blogs/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/blogs/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/blogs/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/blogs/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/blogs/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/blogs/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/blogs/icons/icon-512x512.png"/><style type="text/css">
     .anchor {
       float: left;
       padding-right: 4px;
@@ -40,7 +40,7 @@
         }
       }
     })
-  </script><link rel="alternate" type="application/rss+xml" href="/blogs/rss.xml"/><title data-react-helmet="true"></title><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:inherit;font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);border-left-color:inherit;opacity:0.8;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:var(--hr);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:var(--textLink);text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}a.anchor{box-shadow:none;}a.anchor svg[aria-hidden="true"]{stroke:var(--textLink);}p code{font-size:1rem;}h1 code, h2 code, h3 code, h4 code, h5 code, h6 code{font-size:inherit;}li code{font-size:1rem;}blockquote.translation{font-size:1em;}</style><link as="script" rel="preload" href="/blogs/component---src-templates-blog-post-js-0a3439677495c69d5841.js"/><link as="script" rel="preload" href="/blogs/0-e4bf796e84ab8db2b897.js"/><link as="script" rel="preload" href="/blogs/app-8af1ca11e4e4dfa1aa1d.js"/><link as="script" rel="preload" href="/blogs/webpack-runtime-87c142f2b99aadebdc00.js"/><link as="fetch" rel="preload" href="/blogs/static/d/570/path---vscode-075-293-mYoYep6iwOFHtCbkbR06Fqmrr4.json" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><main class="sc-bdVaJa jqFihH"><article style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><header class="sc-htpNat efVuag"><h3 style="font-family:sans-serif;margin-top:0;margin-bottom:-1.75rem"><a class="sc-bwzfXH ktXRaB" href="/blogs/">😏</a></h3><div class="react-toggle"><div class="react-toggle-track"><div class="react-toggle-track-check"><span>🌚</span></div><div class="react-toggle-track-x"><span>🌞</span></div></div><div class="react-toggle-thumb"></div><input type="checkbox" class="react-toggle-screenreader-only" aria-label="Switch between Dark and Light mode"/></div></header><header><h1 style="color:var(--textTitle);transition:color 0.3s ease-out, background 0.3s ease-out">使用 VSCode 搭建一个很爽的前端环境</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">2018/06/04</p></header><div><p>这篇文章主要是针对打算学习前端的小白，和想学点前端的后端大佬，为了提升你们的编码幸福感。</p>
+  </script><link rel="alternate" type="application/rss+xml" href="/blogs/rss.xml"/><title data-react-helmet="true"></title><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:inherit;font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);border-left-color:inherit;opacity:0.8;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:var(--hr);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:var(--textLink);text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}a.anchor{box-shadow:none;}a.anchor svg[aria-hidden="true"]{stroke:var(--textLink);}p code{font-size:1rem;}h1 code, h2 code, h3 code, h4 code, h5 code, h6 code{font-size:inherit;}li code{font-size:1rem;}blockquote.translation{font-size:1em;}</style><link as="script" rel="preload" href="/blogs/1-da46ee27b915e63c1f31.js"/><link as="script" rel="preload" href="/blogs/component---src-templates-blog-post-js-a3ca5a03f1b0b9303a93.js"/><link as="script" rel="preload" href="/blogs/app-011caea2a0bcf15f44d6.js"/><link as="script" rel="preload" href="/blogs/styles-df8c62b9651d38f3cf7c.js"/><link as="script" rel="preload" href="/blogs/webpack-runtime-6d6ed88df639af827f56.js"/><link as="fetch" rel="preload" href="/blogs/static/d/471/path---vscode-075-293-EkzHfZOrBhD0S40A1svWYj7uhEA.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><main class="sc-bdVaJa jqFihH"><article style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><header class="sc-htpNat efVuag"><h3 style="font-family:sans-serif;margin-top:0;margin-bottom:-1.75rem"><a class="sc-bwzfXH ktXRaB" href="/blogs/">😏</a></h3><div class="react-toggle"><div class="react-toggle-track"><div class="react-toggle-track-check"><span>🌚</span></div><div class="react-toggle-track-x"><span>🌞</span></div></div><div class="react-toggle-thumb"></div><input type="checkbox" class="react-toggle-screenreader-only" aria-label="Switch between Dark and Light mode"/></div></header><header><h1 style="color:var(--textTitle);transition:color 0.3s ease-out, background 0.3s ease-out">使用 VSCode 搭建一个很爽的前端环境</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">2018/06/04</p></header><div><p>这篇文章主要是针对打算学习前端的小白，和想学点前端的后端大佬，为了提升你们的编码幸福感。</p>
 <blockquote>
 <p>工欲善其功，必先利其器</p>
 </blockquote>
@@ -51,7 +51,7 @@
 <p>会有一个版本号输出的话，就说明下载成功了。
 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/d3c11/DraggedImage.png"
+    href="/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/1177a/DraggedImage.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -69,13 +69,13 @@
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage"
         title=""
-        src="/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/42603/DraggedImage.png"
-        srcset="/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/f931c/DraggedImage.png 200w,
-/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/e8031/DraggedImage.png 400w,
-/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/42603/DraggedImage.png 800w,
-/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/5b8b9/DraggedImage.png 1200w,
-/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/c7ea5/DraggedImage.png 1600w,
-/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/d3c11/DraggedImage.png 1828w"
+        src="/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/8a2c3/DraggedImage.png"
+        srcset="/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/c8f15/DraggedImage.png 200w,
+/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/7c8fb/DraggedImage.png 400w,
+/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/8a2c3/DraggedImage.png 800w,
+/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/f929a/DraggedImage.png 1200w,
+/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/0e4fd/DraggedImage.png 1600w,
+/blogs/static/0648f1f5a16dfb03dd0a812f5e030e05/1177a/DraggedImage.png 1828w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span>
@@ -109,7 +109,7 @@ yarn why</code></pre></div>
 <p>最基本的 VSCode 的侧边栏有五项
 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/3acbbb2f132d7f0b2efc67f5e1a65f70/c29b3/DraggedImage-1.png"
+    href="/blogs/static/3acbbb2f132d7f0b2efc67f5e1a65f70/a4b68/DraggedImage-1.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -127,8 +127,8 @@ yarn why</code></pre></div>
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 1"
         title=""
-        src="/blogs/static/3acbbb2f132d7f0b2efc67f5e1a65f70/c29b3/DraggedImage-1.png"
-        srcset="/blogs/static/3acbbb2f132d7f0b2efc67f5e1a65f70/c29b3/DraggedImage-1.png 102w"
+        src="/blogs/static/3acbbb2f132d7f0b2efc67f5e1a65f70/a4b68/DraggedImage-1.png"
+        srcset="/blogs/static/3acbbb2f132d7f0b2efc67f5e1a65f70/a4b68/DraggedImage-1.png 102w"
         sizes="(max-width: 102px) 100vw, 102px"
       />
   </span>
@@ -136,7 +136,7 @@ yarn why</code></pre></div>
 其中第五个就是安装插件的一个 Tab，点开来，选择常用的拓展，就能看到根据安装量排序的拓展工具。
 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/f20afe910439f6f7b19ca45e9cc848c3/2e17d/DraggedImage-2.png"
+    href="/blogs/static/f20afe910439f6f7b19ca45e9cc848c3/0933a/DraggedImage-2.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -154,11 +154,11 @@ yarn why</code></pre></div>
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 2"
         title=""
-        src="/blogs/static/f20afe910439f6f7b19ca45e9cc848c3/42603/DraggedImage-2.png"
-        srcset="/blogs/static/f20afe910439f6f7b19ca45e9cc848c3/f931c/DraggedImage-2.png 200w,
-/blogs/static/f20afe910439f6f7b19ca45e9cc848c3/e8031/DraggedImage-2.png 400w,
-/blogs/static/f20afe910439f6f7b19ca45e9cc848c3/42603/DraggedImage-2.png 800w,
-/blogs/static/f20afe910439f6f7b19ca45e9cc848c3/2e17d/DraggedImage-2.png 818w"
+        src="/blogs/static/f20afe910439f6f7b19ca45e9cc848c3/8a2c3/DraggedImage-2.png"
+        srcset="/blogs/static/f20afe910439f6f7b19ca45e9cc848c3/c8f15/DraggedImage-2.png 200w,
+/blogs/static/f20afe910439f6f7b19ca45e9cc848c3/7c8fb/DraggedImage-2.png 400w,
+/blogs/static/f20afe910439f6f7b19ca45e9cc848c3/8a2c3/DraggedImage-2.png 800w,
+/blogs/static/f20afe910439f6f7b19ca45e9cc848c3/0933a/DraggedImage-2.png 818w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span>
@@ -185,13 +185,13 @@ yarn why</code></pre></div>
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="fira code"
         title=""
-        src="/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/42603/fira-code.png"
-        srcset="/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/f931c/fira-code.png 200w,
-/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/e8031/fira-code.png 400w,
-/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/42603/fira-code.png 800w,
-/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/5b8b9/fira-code.png 1200w,
-/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/c7ea5/fira-code.png 1600w,
-/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/00685/fira-code.png 1836w"
+        src="/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/8a2c3/fira-code.png"
+        srcset="/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/c8f15/fira-code.png 200w,
+/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/7c8fb/fira-code.png 400w,
+/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/8a2c3/fira-code.png 800w,
+/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/f929a/fira-code.png 1200w,
+/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/0e4fd/fira-code.png 1600w,
+/blogs/static/34775835d427cb3f5ef2b4415bfc6afa/8e0c1/fira-code.png 1836w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span></p>
@@ -200,7 +200,7 @@ yarn why</code></pre></div>
 <p>2 和 3 就不需要这些步骤了，通过按住 <code class="language-text">Cmd/Ctrl</code>，接着看 K 和 T 两个键，就可以选择其他主题。不过自带的主题如果不过瘾的话，还可以下载其他主题，推荐安装一个 <em>Dracula</em></p>
 <p>而文件图标的效果就是让你的文件或者文件夹有一个小图标，提供辨识度。像这样 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/d76beb34e8f3330dbe8bb2368c55950a/13b6e/file-icon.png"
+    href="/blogs/static/d76beb34e8f3330dbe8bb2368c55950a/82a11/file-icon.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -218,10 +218,10 @@ yarn why</code></pre></div>
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="file icon"
         title=""
-        src="/blogs/static/d76beb34e8f3330dbe8bb2368c55950a/13b6e/file-icon.png"
-        srcset="/blogs/static/d76beb34e8f3330dbe8bb2368c55950a/549d5/file-icon.png 200w,
-/blogs/static/d76beb34e8f3330dbe8bb2368c55950a/11c0c/file-icon.png 400w,
-/blogs/static/d76beb34e8f3330dbe8bb2368c55950a/13b6e/file-icon.png 524w"
+        src="/blogs/static/d76beb34e8f3330dbe8bb2368c55950a/82a11/file-icon.png"
+        srcset="/blogs/static/d76beb34e8f3330dbe8bb2368c55950a/4b0fc/file-icon.png 200w,
+/blogs/static/d76beb34e8f3330dbe8bb2368c55950a/1c70a/file-icon.png 400w,
+/blogs/static/d76beb34e8f3330dbe8bb2368c55950a/82a11/file-icon.png 524w"
         sizes="(max-width: 524px) 100vw, 524px"
       />
   </span>
@@ -234,7 +234,7 @@ yarn why</code></pre></div>
 <p>现在没有 ESLint 已经没法写 JS 代码了，我们不需要花太多时间在找自己的拼写错误导致的 bug 上。下载 VSCode 的 ESLint 插件后，重载 VSCode，打开设置，搜索 <em>eslint</em>。
 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/e9220b82be80fb3c7b82126a19a0f78d/bc0fd/DraggedImage-3.png"
+    href="/blogs/static/e9220b82be80fb3c7b82126a19a0f78d/c298b/DraggedImage-3.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -252,11 +252,11 @@ yarn why</code></pre></div>
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 3"
         title=""
-        src="/blogs/static/e9220b82be80fb3c7b82126a19a0f78d/42603/DraggedImage-3.png"
-        srcset="/blogs/static/e9220b82be80fb3c7b82126a19a0f78d/f931c/DraggedImage-3.png 200w,
-/blogs/static/e9220b82be80fb3c7b82126a19a0f78d/e8031/DraggedImage-3.png 400w,
-/blogs/static/e9220b82be80fb3c7b82126a19a0f78d/42603/DraggedImage-3.png 800w,
-/blogs/static/e9220b82be80fb3c7b82126a19a0f78d/bc0fd/DraggedImage-3.png 1116w"
+        src="/blogs/static/e9220b82be80fb3c7b82126a19a0f78d/8a2c3/DraggedImage-3.png"
+        srcset="/blogs/static/e9220b82be80fb3c7b82126a19a0f78d/c8f15/DraggedImage-3.png 200w,
+/blogs/static/e9220b82be80fb3c7b82126a19a0f78d/7c8fb/DraggedImage-3.png 400w,
+/blogs/static/e9220b82be80fb3c7b82126a19a0f78d/8a2c3/DraggedImage-3.png 800w,
+/blogs/static/e9220b82be80fb3c7b82126a19a0f78d/c298b/DraggedImage-3.png 1116w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span>
@@ -271,7 +271,7 @@ yarn why</code></pre></div>
 <p>其中第一个设置是可以在每次保存的时候，自动修复一些<strong>能自动修复</strong>的错误，比如少了分号，缩进不对等等… 注意 VSCode 的设置不能直接修改，需要复制到右边的用户设置区，来修改。通过点击左侧的那个 edit 图标就能复制到右侧，接着修改后再保存就能生效。
 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/c145d6992b35b4c76d6b5de65dd7cac3/655e1/DraggedImage-4.png"
+    href="/blogs/static/c145d6992b35b4c76d6b5de65dd7cac3/35443/DraggedImage-4.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -289,11 +289,11 @@ yarn why</code></pre></div>
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 4"
         title=""
-        src="/blogs/static/c145d6992b35b4c76d6b5de65dd7cac3/42603/DraggedImage-4.png"
-        srcset="/blogs/static/c145d6992b35b4c76d6b5de65dd7cac3/f931c/DraggedImage-4.png 200w,
-/blogs/static/c145d6992b35b4c76d6b5de65dd7cac3/e8031/DraggedImage-4.png 400w,
-/blogs/static/c145d6992b35b4c76d6b5de65dd7cac3/42603/DraggedImage-4.png 800w,
-/blogs/static/c145d6992b35b4c76d6b5de65dd7cac3/655e1/DraggedImage-4.png 1050w"
+        src="/blogs/static/c145d6992b35b4c76d6b5de65dd7cac3/8a2c3/DraggedImage-4.png"
+        srcset="/blogs/static/c145d6992b35b4c76d6b5de65dd7cac3/c8f15/DraggedImage-4.png 200w,
+/blogs/static/c145d6992b35b4c76d6b5de65dd7cac3/7c8fb/DraggedImage-4.png 400w,
+/blogs/static/c145d6992b35b4c76d6b5de65dd7cac3/8a2c3/DraggedImage-4.png 800w,
+/blogs/static/c145d6992b35b4c76d6b5de65dd7cac3/35443/DraggedImage-4.png 1050w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span>
@@ -342,7 +342,7 @@ yarn why</code></pre></div>
 <p>注意 <code class="language-text">indent</code> 这个 key，根据你的偏好来调整数字。4 表示的是 4 个空格。接着根据这个配置文件，eslint 就能发挥作用了。
 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/56a79be7625a59306c6ee766158c9e6f/27268/DraggedImage-5.png"
+    href="/blogs/static/56a79be7625a59306c6ee766158c9e6f/50fb3/DraggedImage-5.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -360,11 +360,11 @@ yarn why</code></pre></div>
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 5"
         title=""
-        src="/blogs/static/56a79be7625a59306c6ee766158c9e6f/42603/DraggedImage-5.png"
-        srcset="/blogs/static/56a79be7625a59306c6ee766158c9e6f/f931c/DraggedImage-5.png 200w,
-/blogs/static/56a79be7625a59306c6ee766158c9e6f/e8031/DraggedImage-5.png 400w,
-/blogs/static/56a79be7625a59306c6ee766158c9e6f/42603/DraggedImage-5.png 800w,
-/blogs/static/56a79be7625a59306c6ee766158c9e6f/27268/DraggedImage-5.png 1064w"
+        src="/blogs/static/56a79be7625a59306c6ee766158c9e6f/8a2c3/DraggedImage-5.png"
+        srcset="/blogs/static/56a79be7625a59306c6ee766158c9e6f/c8f15/DraggedImage-5.png 200w,
+/blogs/static/56a79be7625a59306c6ee766158c9e6f/7c8fb/DraggedImage-5.png 400w,
+/blogs/static/56a79be7625a59306c6ee766158c9e6f/8a2c3/DraggedImage-5.png 800w,
+/blogs/static/56a79be7625a59306c6ee766158c9e6f/50fb3/DraggedImage-5.png 1064w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span>
@@ -374,7 +374,7 @@ yarn why</code></pre></div>
 <h3 id="code-runner"><a href="#code-runner" aria-label="code runner permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code Runner</h3>
 <p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/6f4fbf287fa23b7fccd92a108843be15/2dc60/DraggedImage-6.png"
+    href="/blogs/static/6f4fbf287fa23b7fccd92a108843be15/2dfa0/DraggedImage-6.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -392,13 +392,13 @@ yarn why</code></pre></div>
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 6"
         title=""
-        src="/blogs/static/6f4fbf287fa23b7fccd92a108843be15/42603/DraggedImage-6.png"
-        srcset="/blogs/static/6f4fbf287fa23b7fccd92a108843be15/f931c/DraggedImage-6.png 200w,
-/blogs/static/6f4fbf287fa23b7fccd92a108843be15/e8031/DraggedImage-6.png 400w,
-/blogs/static/6f4fbf287fa23b7fccd92a108843be15/42603/DraggedImage-6.png 800w,
-/blogs/static/6f4fbf287fa23b7fccd92a108843be15/5b8b9/DraggedImage-6.png 1200w,
-/blogs/static/6f4fbf287fa23b7fccd92a108843be15/c7ea5/DraggedImage-6.png 1600w,
-/blogs/static/6f4fbf287fa23b7fccd92a108843be15/2dc60/DraggedImage-6.png 2280w"
+        src="/blogs/static/6f4fbf287fa23b7fccd92a108843be15/8a2c3/DraggedImage-6.png"
+        srcset="/blogs/static/6f4fbf287fa23b7fccd92a108843be15/c8f15/DraggedImage-6.png 200w,
+/blogs/static/6f4fbf287fa23b7fccd92a108843be15/7c8fb/DraggedImage-6.png 400w,
+/blogs/static/6f4fbf287fa23b7fccd92a108843be15/8a2c3/DraggedImage-6.png 800w,
+/blogs/static/6f4fbf287fa23b7fccd92a108843be15/f929a/DraggedImage-6.png 1200w,
+/blogs/static/6f4fbf287fa23b7fccd92a108843be15/0e4fd/DraggedImage-6.png 1600w,
+/blogs/static/6f4fbf287fa23b7fccd92a108843be15/2dfa0/DraggedImage-6.png 2280w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span>
@@ -406,7 +406,7 @@ yarn why</code></pre></div>
 这个插件的功能是通过调用的系统的二进制文件，来直接运行代码，类似于 IDE 中的编译运行。不过在真正使用之前还需要稍微配置一下，在用户设置中搜索，<code class="language-text">code-runner</code>，可以看到搜索出来的结果。
 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/705799511d2df6c9957faea510f32273/0fd3b/DraggedImage-7.png"
+    href="/blogs/static/705799511d2df6c9957faea510f32273/fd873/DraggedImage-7.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -424,12 +424,12 @@ yarn why</code></pre></div>
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 7"
         title=""
-        src="/blogs/static/705799511d2df6c9957faea510f32273/42603/DraggedImage-7.png"
-        srcset="/blogs/static/705799511d2df6c9957faea510f32273/f931c/DraggedImage-7.png 200w,
-/blogs/static/705799511d2df6c9957faea510f32273/e8031/DraggedImage-7.png 400w,
-/blogs/static/705799511d2df6c9957faea510f32273/42603/DraggedImage-7.png 800w,
-/blogs/static/705799511d2df6c9957faea510f32273/5b8b9/DraggedImage-7.png 1200w,
-/blogs/static/705799511d2df6c9957faea510f32273/0fd3b/DraggedImage-7.png 1318w"
+        src="/blogs/static/705799511d2df6c9957faea510f32273/8a2c3/DraggedImage-7.png"
+        srcset="/blogs/static/705799511d2df6c9957faea510f32273/c8f15/DraggedImage-7.png 200w,
+/blogs/static/705799511d2df6c9957faea510f32273/7c8fb/DraggedImage-7.png 400w,
+/blogs/static/705799511d2df6c9957faea510f32273/8a2c3/DraggedImage-7.png 800w,
+/blogs/static/705799511d2df6c9957faea510f32273/f929a/DraggedImage-7.png 1200w,
+/blogs/static/705799511d2df6c9957faea510f32273/fd873/DraggedImage-7.png 1318w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span>
@@ -462,7 +462,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>之后点击右上角的的这个播放键
 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/ce984e911a270f3bb175a39451ef4564/d6195/DraggedImage-8.png"
+    href="/blogs/static/ce984e911a270f3bb175a39451ef4564/0915c/DraggedImage-8.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -480,9 +480,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 8"
         title=""
-        src="/blogs/static/ce984e911a270f3bb175a39451ef4564/d6195/DraggedImage-8.png"
-        srcset="/blogs/static/ce984e911a270f3bb175a39451ef4564/2649b/DraggedImage-8.png 200w,
-/blogs/static/ce984e911a270f3bb175a39451ef4564/d6195/DraggedImage-8.png 274w"
+        src="/blogs/static/ce984e911a270f3bb175a39451ef4564/0915c/DraggedImage-8.png"
+        srcset="/blogs/static/ce984e911a270f3bb175a39451ef4564/9655a/DraggedImage-8.png 200w,
+/blogs/static/ce984e911a270f3bb175a39451ef4564/0915c/DraggedImage-8.png 274w"
         sizes="(max-width: 274px) 100vw, 274px"
       />
   </span>
@@ -490,7 +490,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 就能看到 <code class="language-text">console.log</code> 的结果被打印出来。
 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/701358a41d5df7b22b23a24cc6fc90f2/3debb/DraggedImage-9.png"
+    href="/blogs/static/701358a41d5df7b22b23a24cc6fc90f2/bc561/DraggedImage-9.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -508,11 +508,11 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 9"
         title=""
-        src="/blogs/static/701358a41d5df7b22b23a24cc6fc90f2/42603/DraggedImage-9.png"
-        srcset="/blogs/static/701358a41d5df7b22b23a24cc6fc90f2/f931c/DraggedImage-9.png 200w,
-/blogs/static/701358a41d5df7b22b23a24cc6fc90f2/e8031/DraggedImage-9.png 400w,
-/blogs/static/701358a41d5df7b22b23a24cc6fc90f2/42603/DraggedImage-9.png 800w,
-/blogs/static/701358a41d5df7b22b23a24cc6fc90f2/3debb/DraggedImage-9.png 978w"
+        src="/blogs/static/701358a41d5df7b22b23a24cc6fc90f2/8a2c3/DraggedImage-9.png"
+        srcset="/blogs/static/701358a41d5df7b22b23a24cc6fc90f2/c8f15/DraggedImage-9.png 200w,
+/blogs/static/701358a41d5df7b22b23a24cc6fc90f2/7c8fb/DraggedImage-9.png 400w,
+/blogs/static/701358a41d5df7b22b23a24cc6fc90f2/8a2c3/DraggedImage-9.png 800w,
+/blogs/static/701358a41d5df7b22b23a24cc6fc90f2/bc561/DraggedImage-9.png 978w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span>
@@ -522,7 +522,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>这个是最近一年最火的格式化工具，能够将你写成 💩 一样的 JS 也能格式成十分漂亮的代码（前提是没有语法没错）。同时也支持 HTML，CSS，JSON，Markdown 等等文件。
 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/634a2/DraggedImage-10.png"
+    href="/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/43b4a/DraggedImage-10.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -540,13 +540,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 10"
         title=""
-        src="/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/42603/DraggedImage-10.png"
-        srcset="/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/f931c/DraggedImage-10.png 200w,
-/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/e8031/DraggedImage-10.png 400w,
-/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/42603/DraggedImage-10.png 800w,
-/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/5b8b9/DraggedImage-10.png 1200w,
-/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/c7ea5/DraggedImage-10.png 1600w,
-/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/634a2/DraggedImage-10.png 2254w"
+        src="/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/8a2c3/DraggedImage-10.png"
+        srcset="/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/c8f15/DraggedImage-10.png 200w,
+/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/7c8fb/DraggedImage-10.png 400w,
+/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/8a2c3/DraggedImage-10.png 800w,
+/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/f929a/DraggedImage-10.png 1200w,
+/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/0e4fd/DraggedImage-10.png 1600w,
+/blogs/static/ec5e2d1128d5525805b70ec49d5bd3f4/43b4a/DraggedImage-10.png 2254w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span>
@@ -564,7 +564,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>如果仅仅看它的介绍的话，这个插件是一个会将你的 <code class="language-text">([{}])</code> 这些使用不同的颜色区分出来，提升鉴别度。
 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/b9913877db7acc2c61cdb0f6bb6ddf86/23728/DraggedImage-11.png"
+    href="/blogs/static/b9913877db7acc2c61cdb0f6bb6ddf86/04cda/DraggedImage-11.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -582,9 +582,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 11"
         title=""
-        src="/blogs/static/b9913877db7acc2c61cdb0f6bb6ddf86/23728/DraggedImage-11.png"
-        srcset="/blogs/static/b9913877db7acc2c61cdb0f6bb6ddf86/80b0e/DraggedImage-11.png 200w,
-/blogs/static/b9913877db7acc2c61cdb0f6bb6ddf86/23728/DraggedImage-11.png 374w"
+        src="/blogs/static/b9913877db7acc2c61cdb0f6bb6ddf86/04cda/DraggedImage-11.png"
+        srcset="/blogs/static/b9913877db7acc2c61cdb0f6bb6ddf86/a9b7e/DraggedImage-11.png 200w,
+/blogs/static/b9913877db7acc2c61cdb0f6bb6ddf86/04cda/DraggedImage-11.png 374w"
         sizes="(max-width: 374px) 100vw, 374px"
       />
   </span>
@@ -592,7 +592,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 可以看到这些括号都是彩色的。当然如果仅仅只是这么一个花哨的功能的话，对编码幸福感提升不大。其实我最看重的是它的<strong>范围高亮功能</strong>，嗯这个名字是我乱取的。就像这样：
 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/1ce670f817f4157b59c32b142b47fd99/50a2d/DraggedImage-12.png"
+    href="/blogs/static/1ce670f817f4157b59c32b142b47fd99/e4ca7/DraggedImage-12.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -610,10 +610,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 12"
         title=""
-        src="/blogs/static/1ce670f817f4157b59c32b142b47fd99/50a2d/DraggedImage-12.png"
-        srcset="/blogs/static/1ce670f817f4157b59c32b142b47fd99/fd10f/DraggedImage-12.png 200w,
-/blogs/static/1ce670f817f4157b59c32b142b47fd99/00869/DraggedImage-12.png 400w,
-/blogs/static/1ce670f817f4157b59c32b142b47fd99/50a2d/DraggedImage-12.png 448w"
+        src="/blogs/static/1ce670f817f4157b59c32b142b47fd99/e4ca7/DraggedImage-12.png"
+        srcset="/blogs/static/1ce670f817f4157b59c32b142b47fd99/ea810/DraggedImage-12.png 200w,
+/blogs/static/1ce670f817f4157b59c32b142b47fd99/72bff/DraggedImage-12.png 400w,
+/blogs/static/1ce670f817f4157b59c32b142b47fd99/e4ca7/DraggedImage-12.png 448w"
         sizes="(max-width: 448px) 100vw, 448px"
       />
   </span>
@@ -622,7 +622,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="auto-close-tag"><a href="#auto-close-tag" aria-label="auto close tag permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Auto Close Tag</h3>
 <p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/f042e1918db50d4f0fe60e49be37b59f/1274e/DraggedImage-13.png"
+    href="/blogs/static/f042e1918db50d4f0fe60e49be37b59f/b8cb8/DraggedImage-13.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -640,10 +640,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 13"
         title=""
-        src="/blogs/static/f042e1918db50d4f0fe60e49be37b59f/1274e/DraggedImage-13.png"
-        srcset="/blogs/static/f042e1918db50d4f0fe60e49be37b59f/8a03d/DraggedImage-13.png 200w,
-/blogs/static/f042e1918db50d4f0fe60e49be37b59f/61462/DraggedImage-13.png 400w,
-/blogs/static/f042e1918db50d4f0fe60e49be37b59f/1274e/DraggedImage-13.png 498w"
+        src="/blogs/static/f042e1918db50d4f0fe60e49be37b59f/b8cb8/DraggedImage-13.png"
+        srcset="/blogs/static/f042e1918db50d4f0fe60e49be37b59f/cbaa0/DraggedImage-13.png 200w,
+/blogs/static/f042e1918db50d4f0fe60e49be37b59f/90f16/DraggedImage-13.png 400w,
+/blogs/static/f042e1918db50d4f0fe60e49be37b59f/b8cb8/DraggedImage-13.png 498w"
         sizes="(max-width: 498px) 100vw, 498px"
       />
   </span>
@@ -652,7 +652,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="auto-rename-tag"><a href="#auto-rename-tag" aria-label="auto rename tag permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Auto Rename Tag</h3>
 <p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/81941/DraggedImage-14.png"
+    href="/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/ce012/DraggedImage-14.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -670,12 +670,12 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 14"
         title=""
-        src="/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/42603/DraggedImage-14.png"
-        srcset="/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/f931c/DraggedImage-14.png 200w,
-/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/e8031/DraggedImage-14.png 400w,
-/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/42603/DraggedImage-14.png 800w,
-/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/5b8b9/DraggedImage-14.png 1200w,
-/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/81941/DraggedImage-14.png 1322w"
+        src="/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/8a2c3/DraggedImage-14.png"
+        srcset="/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/c8f15/DraggedImage-14.png 200w,
+/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/7c8fb/DraggedImage-14.png 400w,
+/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/8a2c3/DraggedImage-14.png 800w,
+/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/f929a/DraggedImage-14.png 1200w,
+/blogs/static/d9451876d2a67a0beb4a8ad48cf93f0a/ce012/DraggedImage-14.png 1322w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span>
@@ -684,7 +684,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="html-css-support"><a href="#html-css-support" aria-label="html css support permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTML CSS Support</h3>
 <p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/bdab489283bc25b9e8067114fcb87cbe/df553/DraggedImage-15.png"
+    href="/blogs/static/bdab489283bc25b9e8067114fcb87cbe/b686a/DraggedImage-15.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -702,10 +702,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 15"
         title=""
-        src="/blogs/static/bdab489283bc25b9e8067114fcb87cbe/df553/DraggedImage-15.png"
-        srcset="/blogs/static/bdab489283bc25b9e8067114fcb87cbe/80f1f/DraggedImage-15.png 200w,
-/blogs/static/bdab489283bc25b9e8067114fcb87cbe/d00a4/DraggedImage-15.png 400w,
-/blogs/static/bdab489283bc25b9e8067114fcb87cbe/df553/DraggedImage-15.png 494w"
+        src="/blogs/static/bdab489283bc25b9e8067114fcb87cbe/b686a/DraggedImage-15.png"
+        srcset="/blogs/static/bdab489283bc25b9e8067114fcb87cbe/4316e/DraggedImage-15.png 200w,
+/blogs/static/bdab489283bc25b9e8067114fcb87cbe/9f110/DraggedImage-15.png 400w,
+/blogs/static/bdab489283bc25b9e8067114fcb87cbe/b686a/DraggedImage-15.png 494w"
         sizes="(max-width: 494px) 100vw, 494px"
       />
   </span>
@@ -714,7 +714,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="settings-sync"><a href="#settings-sync" aria-label="settings sync permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Settings Sync</h3>
 <p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/ecd09958faef608f6794cac3bc5e6d9f/df553/DraggedImage-16.png"
+    href="/blogs/static/ecd09958faef608f6794cac3bc5e6d9f/b686a/DraggedImage-16.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -732,10 +732,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 16"
         title=""
-        src="/blogs/static/ecd09958faef608f6794cac3bc5e6d9f/df553/DraggedImage-16.png"
-        srcset="/blogs/static/ecd09958faef608f6794cac3bc5e6d9f/80f1f/DraggedImage-16.png 200w,
-/blogs/static/ecd09958faef608f6794cac3bc5e6d9f/d00a4/DraggedImage-16.png 400w,
-/blogs/static/ecd09958faef608f6794cac3bc5e6d9f/df553/DraggedImage-16.png 494w"
+        src="/blogs/static/ecd09958faef608f6794cac3bc5e6d9f/b686a/DraggedImage-16.png"
+        srcset="/blogs/static/ecd09958faef608f6794cac3bc5e6d9f/4316e/DraggedImage-16.png 200w,
+/blogs/static/ecd09958faef608f6794cac3bc5e6d9f/9f110/DraggedImage-16.png 400w,
+/blogs/static/ecd09958faef608f6794cac3bc5e6d9f/b686a/DraggedImage-16.png 494w"
         sizes="(max-width: 494px) 100vw, 494px"
       />
   </span>
@@ -744,7 +744,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="path-intellisense"><a href="#path-intellisense" aria-label="path intellisense permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Intellisense</h3>
 <p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/b1189f788c88c0ba1841df121e97482b/12556/DraggedImage-17.png"
+    href="/blogs/static/b1189f788c88c0ba1841df121e97482b/356c0/DraggedImage-17.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -762,10 +762,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 17"
         title=""
-        src="/blogs/static/b1189f788c88c0ba1841df121e97482b/12556/DraggedImage-17.png"
-        srcset="/blogs/static/b1189f788c88c0ba1841df121e97482b/60e82/DraggedImage-17.png 200w,
-/blogs/static/b1189f788c88c0ba1841df121e97482b/2f516/DraggedImage-17.png 400w,
-/blogs/static/b1189f788c88c0ba1841df121e97482b/12556/DraggedImage-17.png 492w"
+        src="/blogs/static/b1189f788c88c0ba1841df121e97482b/356c0/DraggedImage-17.png"
+        srcset="/blogs/static/b1189f788c88c0ba1841df121e97482b/dc86b/DraggedImage-17.png 200w,
+/blogs/static/b1189f788c88c0ba1841df121e97482b/a5424/DraggedImage-17.png 400w,
+/blogs/static/b1189f788c88c0ba1841df121e97482b/356c0/DraggedImage-17.png 492w"
         sizes="(max-width: 492px) 100vw, 492px"
       />
   </span>
@@ -773,7 +773,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>提供 URL 的自动补全功能，这个必须装吧。支持任何语言，触发条件一般是在一对引号中，输入 <code class="language-text">./</code> ，<code class="language-text">../</code>, <code class="language-text">/</code> 这些表示路径的前缀，就会跳出来了。像我们的 JS，HTML 中引用文件，CSS 中 <code class="language-text">url</code> 就再也不用担心了。
 <a
     class="gatsby-resp-image-link"
-    href="/blogs/static/6c313d49f82f3cd880af2fb5d5804df8/e4e5b/DraggedImage-18.png"
+    href="/blogs/static/6c313d49f82f3cd880af2fb5d5804df8/e6272/DraggedImage-18.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -791,11 +791,11 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 18"
         title=""
-        src="/blogs/static/6c313d49f82f3cd880af2fb5d5804df8/42603/DraggedImage-18.png"
-        srcset="/blogs/static/6c313d49f82f3cd880af2fb5d5804df8/f931c/DraggedImage-18.png 200w,
-/blogs/static/6c313d49f82f3cd880af2fb5d5804df8/e8031/DraggedImage-18.png 400w,
-/blogs/static/6c313d49f82f3cd880af2fb5d5804df8/42603/DraggedImage-18.png 800w,
-/blogs/static/6c313d49f82f3cd880af2fb5d5804df8/e4e5b/DraggedImage-18.png 860w"
+        src="/blogs/static/6c313d49f82f3cd880af2fb5d5804df8/8a2c3/DraggedImage-18.png"
+        srcset="/blogs/static/6c313d49f82f3cd880af2fb5d5804df8/c8f15/DraggedImage-18.png 200w,
+/blogs/static/6c313d49f82f3cd880af2fb5d5804df8/7c8fb/DraggedImage-18.png 400w,
+/blogs/static/6c313d49f82f3cd880af2fb5d5804df8/8a2c3/DraggedImage-18.png 800w,
+/blogs/static/6c313d49f82f3cd880af2fb5d5804df8/e6272/DraggedImage-18.png 860w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span>
@@ -803,7 +803,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="css-peak"><a href="#css-peak" aria-label="css peak permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CSS Peak</h3>
 <p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/12c38/DraggedImage-19.png"
+    href="/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/169c1/DraggedImage-19.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -821,13 +821,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 19"
         title=""
-        src="/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/42603/DraggedImage-19.png"
-        srcset="/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/f931c/DraggedImage-19.png 200w,
-/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/e8031/DraggedImage-19.png 400w,
-/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/42603/DraggedImage-19.png 800w,
-/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/5b8b9/DraggedImage-19.png 1200w,
-/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/c7ea5/DraggedImage-19.png 1600w,
-/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/12c38/DraggedImage-19.png 2266w"
+        src="/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/8a2c3/DraggedImage-19.png"
+        srcset="/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/c8f15/DraggedImage-19.png 200w,
+/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/7c8fb/DraggedImage-19.png 400w,
+/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/8a2c3/DraggedImage-19.png 800w,
+/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/f929a/DraggedImage-19.png 1200w,
+/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/0e4fd/DraggedImage-19.png 1600w,
+/blogs/static/0b0cbd23a4236f22f6570d41b569f6cc/169c1/DraggedImage-19.png 2266w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span>
@@ -836,7 +836,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="live-server"><a href="#live-server" aria-label="live server permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Live Server</h3>
 <p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/6c73592240d9ad5c9ac39239dca439c8/12c38/DraggedImage-20.png"
+    href="/blogs/static/6c73592240d9ad5c9ac39239dca439c8/169c1/DraggedImage-20.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -854,13 +854,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 20"
         title=""
-        src="/blogs/static/6c73592240d9ad5c9ac39239dca439c8/42603/DraggedImage-20.png"
-        srcset="/blogs/static/6c73592240d9ad5c9ac39239dca439c8/f931c/DraggedImage-20.png 200w,
-/blogs/static/6c73592240d9ad5c9ac39239dca439c8/e8031/DraggedImage-20.png 400w,
-/blogs/static/6c73592240d9ad5c9ac39239dca439c8/42603/DraggedImage-20.png 800w,
-/blogs/static/6c73592240d9ad5c9ac39239dca439c8/5b8b9/DraggedImage-20.png 1200w,
-/blogs/static/6c73592240d9ad5c9ac39239dca439c8/c7ea5/DraggedImage-20.png 1600w,
-/blogs/static/6c73592240d9ad5c9ac39239dca439c8/12c38/DraggedImage-20.png 2266w"
+        src="/blogs/static/6c73592240d9ad5c9ac39239dca439c8/8a2c3/DraggedImage-20.png"
+        srcset="/blogs/static/6c73592240d9ad5c9ac39239dca439c8/c8f15/DraggedImage-20.png 200w,
+/blogs/static/6c73592240d9ad5c9ac39239dca439c8/7c8fb/DraggedImage-20.png 400w,
+/blogs/static/6c73592240d9ad5c9ac39239dca439c8/8a2c3/DraggedImage-20.png 800w,
+/blogs/static/6c73592240d9ad5c9ac39239dca439c8/f929a/DraggedImage-20.png 1200w,
+/blogs/static/6c73592240d9ad5c9ac39239dca439c8/0e4fd/DraggedImage-20.png 1600w,
+/blogs/static/6c73592240d9ad5c9ac39239dca439c8/169c1/DraggedImage-20.png 2266w"
         sizes="(max-width: 800px) 100vw, 800px"
       />
   </span>
@@ -876,7 +876,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>通过使用这个插件，就再也不用担心这个问题。使用方式也很简单，安装好后，点击需要的启动的 HTML 文件中底部 tab 的</p>
 <p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/c755ad342baefc7ad5f4e6d46b13e721/642f1/DraggedImage-21.png"
+    href="/blogs/static/c755ad342baefc7ad5f4e6d46b13e721/85b87/DraggedImage-21.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -894,8 +894,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 21"
         title=""
-        src="/blogs/static/c755ad342baefc7ad5f4e6d46b13e721/642f1/DraggedImage-21.png"
-        srcset="/blogs/static/c755ad342baefc7ad5f4e6d46b13e721/642f1/DraggedImage-21.png 200w"
+        src="/blogs/static/c755ad342baefc7ad5f4e6d46b13e721/85b87/DraggedImage-21.png"
+        srcset="/blogs/static/c755ad342baefc7ad5f4e6d46b13e721/85b87/DraggedImage-21.png 200w"
         sizes="(max-width: 200px) 100vw, 200px"
       />
   </span>
@@ -903,7 +903,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>在短暂的等待后，就会自动打开你的默认浏览器跳入由该插件启动的服务器。</p>
 <p><a
     class="gatsby-resp-image-link"
-    href="/blogs/static/540d5a716800cdbfda68f156e6800d98/b26d0/DraggedImage-22.png"
+    href="/blogs/static/540d5a716800cdbfda68f156e6800d98/040fe/DraggedImage-22.png"
     style="display: block"
     target="_blank"
     rel="noopener"
@@ -921,10 +921,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;"
         alt="DraggedImage 22"
         title=""
-        src="/blogs/static/540d5a716800cdbfda68f156e6800d98/b26d0/DraggedImage-22.png"
-        srcset="/blogs/static/540d5a716800cdbfda68f156e6800d98/c8443/DraggedImage-22.png 200w,
-/blogs/static/540d5a716800cdbfda68f156e6800d98/e096b/DraggedImage-22.png 400w,
-/blogs/static/540d5a716800cdbfda68f156e6800d98/b26d0/DraggedImage-22.png 434w"
+        src="/blogs/static/540d5a716800cdbfda68f156e6800d98/040fe/DraggedImage-22.png"
+        srcset="/blogs/static/540d5a716800cdbfda68f156e6800d98/283f6/DraggedImage-22.png 200w,
+/blogs/static/540d5a716800cdbfda68f156e6800d98/f73cc/DraggedImage-22.png 400w,
+/blogs/static/540d5a716800cdbfda68f156e6800d98/040fe/DraggedImage-22.png 434w"
         sizes="(max-width: 434px) 100vw, 434px"
       />
   </span>
@@ -948,5 +948,24 @@ console<span class="token punctuation">.</span><span class="token function">log<
   if (typeof ga === "function") {
     ga('create', 'undefined', 'auto', {});
       
+      
+      
       }
-      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-post-js","jsonName":"vscode-075","path":"/vscode/"};window.dataPath="570/path---vscode-075-293-mYoYep6iwOFHtCbkbR06Fqmrr4";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-8af1ca11e4e4dfa1aa1d.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-5af30d9bbd11b00a7754.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js.e65711bd0a134b25c1fe.css","/component---src-templates-blog-post-js-0a3439677495c69d5841.js"],"component---src-pages-index-js":["/component---src-pages-index-js.5866ebda04275b066d22.css","/component---src-pages-index-js-707da05f72f08bd8fa35.js"],"pages-manifest":["/pages-manifest-9925aee0962920e6799d.js"]};/*]]>*/</script><script src="/blogs/webpack-runtime-87c142f2b99aadebdc00.js" async=""></script><script src="/blogs/app-8af1ca11e4e4dfa1aa1d.js" async=""></script><script src="/blogs/0-e4bf796e84ab8db2b897.js" async=""></script><script src="/blogs/component---src-templates-blog-post-js-0a3439677495c69d5841.js" async=""></script></body></html>
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-post-js","jsonName":"vscode-075","path":"/vscode/"};window.dataPath="471/path---vscode-075-293-EkzHfZOrBhD0S40A1svWYj7uhEA";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-011caea2a0bcf15f44d6.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-11b1f39ee30dae640c48.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-a3ca5a03f1b0b9303a93.js"],"component---src-pages-index-js":["/component---src-pages-index-js-0a99a71123600277b844.js"],"pages-manifest":["/pages-manifest-abd423c6b60b22133ac9.js"]};/*]]>*/</script><script src="/blogs/webpack-runtime-6d6ed88df639af827f56.js" async=""></script><script src="/blogs/styles-df8c62b9651d38f3cf7c.js" async=""></script><script src="/blogs/app-011caea2a0bcf15f44d6.js" async=""></script><script src="/blogs/component---src-templates-blog-post-js-a3ca5a03f1b0b9303a93.js" async=""></script><script src="/blogs/1-da46ee27b915e63c1f31.js" async=""></script><script>
+            let cacheTheme;
+            if (typeof localStorage !== 'undefined') {
+              cacheTheme = localStorage.getItem(THEME);
+            }
+
+            const colorSchemeChanged = ({ matches }) => {
+              document.body.className = matches ? 'dark' : 'light';
+              setChecked(matches);
+            };
+
+            const media = window.matchMedia('(prefers-color-scheme: dark)');
+            media && media.addListener(colorSchemeChanged);
+            colorSchemeChanged({
+              matches: cacheTheme === undefined ? media.matches : checked,
+            });
+            window.__preferTheme = cacheTheme;
+          </script></body></html>
