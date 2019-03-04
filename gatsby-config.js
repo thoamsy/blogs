@@ -8,6 +8,19 @@ module.exports = {
   pathPrefix: '/blogs',
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `thoamsy's blog`,
+        short_name: `😏`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+        icon: `src/resource/icon@3x.png`, // This path is relative to the root of the site.
+        include_favicon: true, // Include favicon
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
