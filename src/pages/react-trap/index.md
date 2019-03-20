@@ -19,15 +19,13 @@ spoiler: 收集一些不为人所知的，React 的细节问题。帮助自己�
 import React, { useCallback, useEffect } from 'react';
 
 const App = () => {
-  const handleClickOnDocument = useCallback(e => {
+  const handleClickOnDocument = e => {
     console.log('handling event on document');
-  }, []);
-  const handleClickOnWindow = useCallback(() => {
+  };
+  j;
+  const handleClickOnWindow = () => {
     console.log('handling event on window');
-  }, []);
-  const handleClickDiv = useCallback(() => {
-    console.log('handling event on div with ref');
-  });
+  };
   useEffect(() => {
     document.addEventListener('click', handleClickOnDocument);
     window.addEventListener('click', handleClickOnWindow);
@@ -70,15 +68,15 @@ handling event on the document
 import React, { useCallback, useEffect, useRef } from 'react';
 
 const App = () => {
-  const handleClickOnDocument = useCallback(e => {
+  const handleClickOnDocument = e => {
     console.log('handling event on document');
-  }, []);
-  const handleClickOnWindow = useCallback(() => {
+  };
+  const handleClickOnWindow = () => {
     console.log('handling event on window');
-  }, []);
-  const handleClickDiv = useCallback(() => {
+  };
+  const handleClickDiv = () => {
     console.log('handling event on div with ref');
-  });
+  };
   const div = useRef();
   useEffect(() => {
     document.addEventListener('click', handleClickOnDocument);
