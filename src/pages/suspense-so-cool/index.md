@@ -17,10 +17,10 @@ class AwesomeComponent extends Component {
   state = {
     loading: false,
     error: null,
-    data: null
-  }
+    data: null,
+  };
 
-  derivedData() {
+  async derivedData() {
     this.setState({ loading: true });
     try {
       const data = await this.props.fetchData();
@@ -28,10 +28,9 @@ class AwesomeComponent extends Component {
     } catch (error) {
       this.setState({ loading: false, error: error.message });
     }
-
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.derivedData();
   }
 
@@ -43,25 +42,26 @@ class AwesomeComponent extends Component {
 
   render() {
     const { loading, error, data } = this.state;
-    return loading
-		? <p>Loading…</p> : error
-		? <p>Error: {error}</p>
-			: <p>Data: {JSON.stringify(data)}</p>
+    return loading ? (
+      <p>Loading…</p>
+    ) : error ? (
+      <p>Error: {error}</p>
+    ) : (
+      <p>Data: {JSON.stringify(data)}</p>
+    );
   }
 }
 
 class Parent extends Component {
   state = {
-    query: 'react'
-  }
+    query: 'react',
+  };
   fetchData = () => {
-    const url = `${prefixUrl}?query=${this.state.query}`
+    const url = `${prefixUrl}?query=${this.state.query}`;
     // do something
-  }
+  };
   render() {
-    return (
-      <AwesomeComponent fetchData={this.fetchData} />
-    );
+    return <AwesomeComponent fetchData={this.fetchData} />;
   }
 }
 ```
@@ -91,7 +91,16 @@ class Parent extends Component {
 
 ```jsx
 class AwesomeComponent extends Component {
-  async componentDidMount() {
+  async derivedData() {
+    this.setState({ loading: true });
+    try {
+      const data = await this.props.fetchData();
+      this.setState({ loading: false, data });
+    } catch (error) {
+      this.setState({ loading: false, error: error.message });
+    }
+  }
+  componentDidMount() {
     this.derivedData();
   }
 
