@@ -22,7 +22,6 @@ const App = () => {
   const handleClickOnDocument = e => {
     console.log('handling event on document');
   };
-  j;
   const handleClickOnWindow = () => {
     console.log('handling event on window');
   };
