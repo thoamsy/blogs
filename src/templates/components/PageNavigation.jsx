@@ -1,4 +1,6 @@
 import { Link } from 'gatsby';
+import React from 'react';
+
 const PageNavigation = ({ previous, next }) => (
   <ul
     style={{
