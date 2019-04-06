@@ -1,10 +1,9 @@
 import React from 'react';
-
-import profilePic from './avatar.jpg';
 import { rhythm } from '../utils/typography';
+import profilePic from './avatar.jpg';
 
 const Bio = () => (
-  <div
+  <figure
     style={{
       display: 'flex',
       alignItems: 'center',
@@ -22,7 +21,7 @@ const Bio = () => (
       }}
     />
     <h4 style={{ margin: 0 }}>Just Happy</h4>
-  </div>
+  </figure>
 );
 
 export default Bio;

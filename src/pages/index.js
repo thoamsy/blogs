@@ -1,10 +1,8 @@
-import React from 'react';
 import { graphql } from 'gatsby';
 import Link from 'gatsby-link';
+import React from 'react';
 import Helmet from 'react-helmet';
-
-import Layout from '../components/Layout';
-import Bio from '../components/Bio';
+import Layout from '../templates/Layout';
 import { rhythm } from '../utils/typography';
 
 const BlogIndex = ({ location, data }) => {
@@ -14,30 +12,39 @@ const BlogIndex = ({ location, data }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Helmet title={siteTitle} htmlAttributes={{ lang: 'zh-cn' }} />
-      <Bio />
-      {posts.map(({ node }) => {
-        const { title = node.fields.slug, spoiler, date } = node.frontmatter;
-        return (
-          <div key={node.fields.slug}>
-            <h3
-              className="blog-index"
-              style={{
-                marginBottom: rhythm(1 / 4),
-              }}
-            >
-              <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                {title}
-              </Link>
-            </h3>
-            <small>{date}</small>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: spoiler || node.excerpt,
-              }}
-            />
-          </div>
-        );
-      })}
+      <nav>
+        <ol>
+          {posts.map(({ node }) => {
+            const {
+              title = node.fields.slug,
+              spoiler,
+              date,
+            } = node.frontmatter;
+            return (
+              <li key={node.fields.slug}>
+                <h3
+                  className="blog-index"
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                  }}
+                >
+                  <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h3>
+                <time>
+                  <small>{date}</small>
+                </time>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: spoiler || node.excerpt,
+                  }}
+                />
+              </li>
+            );
+          })}
+        </ol>
+      </nav>
     </Layout>
   );
 };
