@@ -275,7 +275,7 @@ const useFetch = api => {
 
 这里的原因是 React 会去查看 `useEffect` 里函数的返回值，以做一些 _cleanup_ 的操作。如果我们直接传递 `async` 函数的话，无论我们是否明确地写了 return，都会隐式的返回一个 `Promise`。这样会干扰 `useEffect` 的 _cleanup_。我们可以看看类似的截图
 
-![](DraggedImage.png)
+![](./hooks-warning.png)
 
 那么通过 Hooks 我们解决了哪些问题呢？
 
