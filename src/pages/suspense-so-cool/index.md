@@ -395,4 +395,4 @@ PS：如果你想去体验的话，可能会失望。现在 react-cache 和 16.8
 
 ## 值得一提
 
-另外，如果你想知道如何在没有 `ConcurrentMode` 的情况下，如何解决 loading 闪烁的问题，可以看[这篇文章](../solve-fresh-of-loading/index.md)。
+另外，如果你想知道如何在没有 `ConcurrentMode` 的情况下，如何解决 loading 闪烁的问题，可以看[这篇文章](../solve-fresh-of-loading)。
