@@ -1,21 +1,20 @@
 import Downshift from 'downshift';
 import { graphql } from 'gatsby';
 import Link from 'gatsby-link';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Helmet from 'react-helmet';
 import Layout from '../templates/Layout';
 import { rhythm } from '../utils/typography';
 
-
 const BlogNav = ({ to, title, date, spoiler }) => (
-  <article tabIndex={0}>
+  <article>
     <h3
       className="blog-index"
       style={{
         marginBottom: rhythm(1 / 4),
       }}
     >
-      <Link style={{ boxShadow: 'none' }} to={to}>
+      <Link tabIndex={-1} style={{ boxShadow: 'none' }} to={to}>
         {title}
       </Link>
     </h3>
@@ -34,35 +33,45 @@ const BlogIndex = ({ location, data, navigate }) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
 
+  const menuRef = useRef();
+  useEffect(() => {
+    // FIXME: 是否需要改成 context，并将 keyboard 的事件抽出来？
+    const selectedIndex = +localStorage.getItem('selectedIndex');
+    if (menuRef.current && !Number.isNaN(selectedIndex)) {
+      // @ts-ignore
+      menuRef.current.firstChild.children[selectedIndex].focus();
+      localStorage.setItem('selectedIndex', null);
+    }
+  }, [menuRef]);
+
   return (
     <Layout location={location} title={siteTitle}>
       <Helmet title={siteTitle} htmlAttributes={{ lang: 'zh-cn' }} />
-      <nav>
+      <nav ref={menuRef}>
         <Downshift
-          itemToString={item => item.title}
+          defaultIsOpen
+          initialIsOpen
+          itemToString={item => (item ? item.title : '')}
         >
-          {({ getMenuProps, getItemProps, highlightedIndex }) => (
-            <ol {...getMenuProps()}>
+          {({ getMenuProps, getItemProps }) => (
+            <ol {...getMenuProps({}, { suppressRefError: true })}>
               {posts.map(({ node }, index) => {
-                const postUrl = node.fields.slug;
-                const {
-                  title = postUrl,
-                  spoiler,
-                  date,
-                } = node.frontmatter;
+                const blogUrl = node.fields.slug;
+                const { title = blogUrl, spoiler, date } = node.frontmatter;
                 return (
                   <li
+                    tabIndex={0}
                     {...getItemProps({
                       key: node.fields.slug,
                       index,
                       onKeyPress(e) {
-
                         e.preventDefault();
                         const key = e.key.toLowerCase();
                         switch (key) {
                           case 'enter':
                           case ' ':
-                            navigate(postUrl)
+                            localStorage.setItem('selectedIndex', index);
+                            navigate(blogUrl);
                           default:
                             break;
                         }
@@ -75,7 +84,7 @@ const BlogIndex = ({ location, data, navigate }) => {
                     })}
                   >
                     <BlogNav
-                      to={postUrl}
+                      to={blogUrl}
                       title={title}
                       date={date}
                       spoiler={spoiler || node.excerpt}

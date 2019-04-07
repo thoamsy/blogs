@@ -27,6 +27,7 @@ const Header = styled.header`
 `;
 
 const THEME = 'theme';
+
 const Layout = ({ location, title, children }) => {
   let cacheTheme;
   const [checked, setChecked] = useState(() => {
@@ -56,8 +57,8 @@ const Layout = ({ location, title, children }) => {
   if (typeof __PATH_PREFIX__ !== 'undefined') {
     rootPath = __PATH_PREFIX__ + `/`;
   }
-  let header;
 
+  let header;
   const isRoot = location.pathname === rootPath;
   if (isRoot) {
     header = (
