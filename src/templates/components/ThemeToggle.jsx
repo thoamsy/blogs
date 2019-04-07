@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useRef } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import './Toggle.css';
 
 const noop = () => {};
@@ -113,23 +113,20 @@ const Toggle = ({ onChange, ...props }) => {
     [touchParams]
   );
 
-  const handleTouchCancel = useCallback(
-    () => {
-      const { startX, hadFocusAtTouchStart } = touchParams.current;
+  const handleTouchCancel = useCallback(() => {
+    const { startX, hadFocusAtTouchStart } = touchParams.current;
 
-      startX != null &&
-        Object.assign(touchParams.current, {
-          touchStarted: false,
-          startX: null,
-          touchMoved: false,
-        });
+    startX != null &&
+      Object.assign(touchParams.current, {
+        touchStarted: false,
+        startX: null,
+        touchMoved: false,
+      });
 
-      if (hadFocusAtTouchStart) {
-        setFocus(false);
-      }
-    },
-    [touchParams]
-  );
+    if (hadFocusAtTouchStart) {
+      setFocus(false);
+    }
+  }, [touchParams]);
 
   const handleFocus = useCallback(
     event => {
@@ -141,14 +138,14 @@ const Toggle = ({ onChange, ...props }) => {
     [touchParams]
   );
 
-  const handleBlur = useCallback(
-    event => {
-      props.onBlur && props.onBlur(event);
-      touchParams.hadFocusAtTouchStart = false;
-      setFocus(false);
-    },
-    [touchParams]
-  );
+  // const handleBlur = useCallback(
+  //   event => {
+  //     props.onBlur && props.onBlur(event);
+  //     touchParams.hadFocusAtTouchStart = false;
+  //     setFocus(false);
+  //   },
+  //   [touchParams]
+  // );
 
   const getIcon = type => {
     const { icons } = props;
@@ -189,7 +186,6 @@ const Toggle = ({ onChange, ...props }) => {
         onChange={noop}
         ref={input}
         onFocus={handleFocus}
-        onBlur={handleBlur}
         className="react-toggle-screenreader-only"
         type="checkbox"
         aria-label="Switch between Dark and Light mode"
