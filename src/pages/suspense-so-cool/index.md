@@ -389,6 +389,10 @@ const AwesomeComponent = ({ fetchData }) => {
 
 PS：如果你想去体验的话，可能会失望。现在 react-cache 和 16.8.x 放在一起，根本跑不起来 🌚
 
+### 新的调整
+
+就在我们认为随着 `ConcurrentMode` 的到来，`maxDuration` 就能改变我们的幸福感的时候，React core team 又临时把它[移除了](https://github.com/facebook/react/pull/15272)，将来会用更加启发式的方法来实现。至于移除的原因还是因为**太难 😔**。这也让我想到了 AirPower🥺
+
 ## 总结
 
 通过上面三种逐渐改进的开发模式 Class -> Hooks -> Suspense，我们认识到了 Hooks 的潜力。它让之前 Class 的逻辑更加清晰，能让组件设计更为合理，并且在代码复用性上也直接终结了 _HOC_ 和 *render props*这两种经典模式。但是它在处理异步任务的时候，并不是最具有表现力的方案，并且也没有解决 Class 遗留下来的问题。而 Suspense 最终通过简洁又富有声明式的代码，漂亮地解决了这些问题。很显然，未来是 Hooks 的，但是 Suspense 会让异步逻辑更加容易。
