@@ -1,10 +1,19 @@
 import React from 'react';
-
-import profilePic from './avatar.jpg';
+import styled from 'styled-components';
 import { rhythm } from '../utils/typography';
+import profilePic from './avatar.jpg';
+
+const Aside = styled.aside`
+  display: flex;
+  flex-direction: column;
+  h3 {
+    margin: 8px 0;
+    font-size: 16px;
+  }
+`;
 
 const Bio = () => (
-  <div
+  <figure
     style={{
       display: 'flex',
       alignItems: 'center',
@@ -21,8 +30,13 @@ const Bio = () => (
         height: rhythm(2),
       }}
     />
-    <h4 style={{ margin: 0 }}>Just Happy</h4>
-  </div>
+    <Aside>
+      <h3>
+        👤 📜 by <a href="http://github.com/thoamsy">thoamsy</a>
+      </h3>
+      <h3>Write some personal summary</h3>
+    </Aside>
+  </figure>
 );
 
 export default Bio;

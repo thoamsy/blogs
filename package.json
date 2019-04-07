@@ -7,6 +7,7 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
   },
   "dependencies": {
+    "downshift": "^3.2.7",
     "gatsby": "^2.1.20",
     "gatsby-link": "^2.0.10",
     "gatsby-plugin-feed": "^2.0.11",

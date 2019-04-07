@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
 import { Link } from 'gatsby';
-import Toggle from './ThemeToggle';
-
 import 'prismjs/themes/prism-okaidia.css';
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import { rhythm, scale } from '../utils/typography';
+import Bio from './Bio';
+import Toggle from './components/ThemeToggle';
 
-const PostContainer = styled.main`
+const PostContainer = styled.section`
   color: var(--textNormal);
   background: var(--bg);
   transition: color 0.3s ease-out, background 0.3s ease-out;
@@ -27,6 +27,7 @@ const Header = styled.header`
 `;
 
 const THEME = 'theme';
+
 const Layout = ({ location, title, children }) => {
   let cacheTheme;
   const [checked, setChecked] = useState(() => {
@@ -56,9 +57,10 @@ const Layout = ({ location, title, children }) => {
   if (typeof __PATH_PREFIX__ !== 'undefined') {
     rootPath = __PATH_PREFIX__ + `/`;
   }
-  let header;
 
-  if (location.pathname === rootPath) {
+  let header;
+  const isRoot = location.pathname === rootPath;
+  if (isRoot) {
     header = (
       <h1
         style={{
@@ -85,7 +87,7 @@ const Layout = ({ location, title, children }) => {
   }
   return (
     <PostContainer>
-      <article
+      <section
         style={{
           marginLeft: 'auto',
           marginRight: 'auto',
@@ -109,8 +111,9 @@ const Layout = ({ location, title, children }) => {
             }}
           />
         </Header>
+        {isRoot && <Bio />}
         {children}
-      </article>
+      </section>
     </PostContainer>
   );
 };

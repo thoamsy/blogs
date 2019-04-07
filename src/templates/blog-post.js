@@ -1,36 +1,10 @@
+import { graphql } from 'gatsby';
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-
-import Bio from '../components/Bio';
-import Layout from '../components/Layout';
 import { rhythm, scale } from '../utils/typography';
+import Bio from './Bio';
+import PageNavigation from './components/PageNavigation';
+import Layout from './Layout';
 
-const PageNavigation = ({ previous, next }) => (
-  <ul
-    style={{
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'space-between',
-      listStyle: 'none',
-      padding: 0,
-    }}
-  >
-    <li>
-      {previous && (
-        <Link to={previous.fields.slug} rel="prev">
-          ← {previous.frontmatter.title}
-        </Link>
-      )}
-    </li>
-    <li>
-      {next && (
-        <Link to={next.fields.slug} rel="next">
-          {next.frontmatter.title} →
-        </Link>
-      )}
-    </li>
-  </ul>
-);
 const BlogPostTemplate = ({
   location,
   pageContext,
@@ -40,7 +14,7 @@ const BlogPostTemplate = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <header>
+      <hgroup>
         <h1
           style={{
             color: 'var(--textTitle)',
@@ -49,7 +23,7 @@ const BlogPostTemplate = ({
         >
           {post.frontmatter.title}
         </h1>
-        <p
+        <time
           style={{
             ...scale(-1 / 5),
             display: 'block',
@@ -58,17 +32,19 @@ const BlogPostTemplate = ({
           }}
         >
           {post.frontmatter.date}
-        </p>
-      </header>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </time>
+      </hgroup>
+      <main dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr
         style={{
           marginBottom: rhythm(1),
         }}
       />
-      <Bio />
-      <br />
-      <PageNavigation {...pageContext} />
+      <footer>
+        <Bio />
+        <br />
+        <PageNavigation {...pageContext} />
+      </footer>
     </Layout>
   );
 };

@@ -219,3 +219,7 @@ pre[data-line] {
 .token.namespace {
   color: rgb(178, 204, 214);
 }
+
+nav > ol {
+  list-style: none;
+}
