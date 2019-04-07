@@ -58,7 +58,8 @@ const Layout = ({ location, title, children }) => {
   }
   let header;
 
-  if (location.pathname === rootPath) {
+  const isRoot = location.pathname === rootPath;
+  if (isRoot) {
     header = (
       <h1
         style={{
@@ -109,7 +110,7 @@ const Layout = ({ location, title, children }) => {
             }}
           />
         </Header>
-        <Bio />
+        {isRoot && <Bio />}
         {children}
       </section>
     </PostContainer>
