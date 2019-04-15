@@ -6,6 +6,14 @@ import Helmet from 'react-helmet';
 import Layout from '../templates/Layout';
 import { rhythm } from '../utils/typography';
 
+const localStorage =
+  typeof window !== 'undefined'
+    ? window.localStorage
+    : {
+        getItem() {},
+        setItem() { },
+      };
+
 const BlogNav = ({ to, title, date, spoiler }) => (
   <article>
     <h3
@@ -110,7 +118,7 @@ const BlogIndex = ({ location, data, navigate }) => {
                     {...getItemProps({
                       key: node.fields.slug,
                       index,
-                      onKeyPress(e) {
+                      onKeyDown(e) {
                         e.preventDefault();
                         const key = e.key.toLowerCase();
                         switch (key) {
