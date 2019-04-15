@@ -34,36 +34,40 @@ const BlogIndex = ({ location, data, navigate }) => {
   const posts = data.allMarkdownRemark.edges;
 
   const menuRef = useRef();
-  const selectedIndex = useRef(-1);
+  const selectedIndex = useRef(+localStorage.getItem('selectedIndex') || -1);
   useEffect(() => {
     // FIXME: 是否需要改成 context，并将 keyboard 的事件抽出来？
-    const selectedIndex = +localStorage.getItem('selectedIndex');
-    if (menuRef.current && !Number.isNaN(selectedIndex)) {
+    const index = selectedIndex.current;
+    if (menuRef.current && !Number.isNaN(index) && index !== -1) {
       // @ts-ignore
-      menuRef.current.firstChild.children[selectedIndex].focus();
+      menuRef.current.firstChild.children[index].focus();
       localStorage.setItem('selectedIndex', null);
     }
   }, [menuRef]);
 
   let lastKey = null;
-  const onKeyPressHandler = useCallback(
+  const onKeyDownHandler = useCallback(
     e => {
       const key = e.key.toLowerCase();
       let index = selectedIndex.current;
       switch (key) {
-        case 'down':
+        case 'tab': {
+          e.preventDefault();
+          break;
+        }
+        case 'arrowdown':
         case 'j': {
           if (index < posts.length - 1) selectedIndex.current = ++index;
           menuRef.current.firstChild.children[index].focus();
           break;
         }
-        case 'up':
+        case 'arrowup':
         case 'k': {
           if (index < 1) return;
           selectedIndex.current = --index;
           menuRef.current.firstChild.children[index].focus();
           if (!index) {
-            document.body.scrollIntoView({ behavior: 'smooth' });
+            document.body.scrollIntoView();
           }
           break;
         }
@@ -82,11 +86,9 @@ const BlogIndex = ({ location, data, navigate }) => {
   );
 
   useEffect(() => {
-    window.addEventListener('keypress', onKeyPressHandler);
-    return () => window.removeEventListener('keypress', onKeyPressHandler);
-  }, [onKeyPressHandler]);
-
-  console.log(menuRef.current);
+    window.addEventListener('keydown', onKeyDownHandler);
+    return () => window.removeEventListener('keydown', onKeyDownHandler);
+  }, [onKeyDownHandler]);
 
   return (
     <Layout location={location} title={siteTitle}>
