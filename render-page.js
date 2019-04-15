@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("@reach/router"), require("core-js/modules/es6.array.iterator"), require("core-js/modules/es6.array.sort"), require("core-js/modules/es6.function.name"), require("core-js/modules/es6.map"), require("core-js/modules/es6.number.constructor"), require("core-js/modules/es6.number.is-nan"), require("core-js/modules/es6.object.assign"), require("core-js/modules/es6.object.to-string"), require("core-js/modules/es6.regexp.constructor"), require("core-js/modules/es6.regexp.split"), require("core-js/modules/es6.regexp.to-string"), require("core-js/modules/es6.string.ends-with"), require("core-js/modules/es6.string.iterator"), require("core-js/modules/web.dom.iterable"), require("crypto"), require("fs"), require("lodash"), require("minimatch"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		module.exports = factory(require("@reach/router"), require("core-js/modules/es6.array.iterator"), require("core-js/modules/es6.array.sort"), require("core-js/modules/es6.function.name"), require("core-js/modules/es6.map"), require("core-js/modules/es6.number.constructor"), require("core-js/modules/es6.number.is-nan"), require("core-js/modules/es6.object.assign"), require("core-js/modules/es6.object.to-string"), require("core-js/modules/es6.regexp.constructor"), require("core-js/modules/es6.regexp.replace"), require("core-js/modules/es6.regexp.split"), require("core-js/modules/es6.regexp.to-string"), require("core-js/modules/es6.string.ends-with"), require("core-js/modules/es6.string.iterator"), require("core-js/modules/web.dom.iterable"), require("crypto"), require("fs"), require("lodash"), require("minimatch"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["@reach/router", "core-js/modules/es6.array.iterator", "core-js/modules/es6.array.sort", "core-js/modules/es6.function.name", "core-js/modules/es6.map", "core-js/modules/es6.number.constructor", "core-js/modules/es6.number.is-nan", "core-js/modules/es6.object.assign", "core-js/modules/es6.object.to-string", "core-js/modules/es6.regexp.constructor", "core-js/modules/es6.regexp.split", "core-js/modules/es6.regexp.to-string", "core-js/modules/es6.string.ends-with", "core-js/modules/es6.string.iterator", "core-js/modules/web.dom.iterable", "crypto", "fs", "lodash", "minimatch", "path", "react", "react-dom/server", "react-helmet"], factory);
+		define("lib", ["@reach/router", "core-js/modules/es6.array.iterator", "core-js/modules/es6.array.sort", "core-js/modules/es6.function.name", "core-js/modules/es6.map", "core-js/modules/es6.number.constructor", "core-js/modules/es6.number.is-nan", "core-js/modules/es6.object.assign", "core-js/modules/es6.object.to-string", "core-js/modules/es6.regexp.constructor", "core-js/modules/es6.regexp.replace", "core-js/modules/es6.regexp.split", "core-js/modules/es6.regexp.to-string", "core-js/modules/es6.string.ends-with", "core-js/modules/es6.string.iterator", "core-js/modules/web.dom.iterable", "crypto", "fs", "lodash", "minimatch", "path", "react", "react-dom/server", "react-helmet"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("@reach/router"), require("core-js/modules/es6.array.iterator"), require("core-js/modules/es6.array.sort"), require("core-js/modules/es6.function.name"), require("core-js/modules/es6.map"), require("core-js/modules/es6.number.constructor"), require("core-js/modules/es6.number.is-nan"), require("core-js/modules/es6.object.assign"), require("core-js/modules/es6.object.to-string"), require("core-js/modules/es6.regexp.constructor"), require("core-js/modules/es6.regexp.split"), require("core-js/modules/es6.regexp.to-string"), require("core-js/modules/es6.string.ends-with"), require("core-js/modules/es6.string.iterator"), require("core-js/modules/web.dom.iterable"), require("crypto"), require("fs"), require("lodash"), require("minimatch"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		exports["lib"] = factory(require("@reach/router"), require("core-js/modules/es6.array.iterator"), require("core-js/modules/es6.array.sort"), require("core-js/modules/es6.function.name"), require("core-js/modules/es6.map"), require("core-js/modules/es6.number.constructor"), require("core-js/modules/es6.number.is-nan"), require("core-js/modules/es6.object.assign"), require("core-js/modules/es6.object.to-string"), require("core-js/modules/es6.regexp.constructor"), require("core-js/modules/es6.regexp.replace"), require("core-js/modules/es6.regexp.split"), require("core-js/modules/es6.regexp.to-string"), require("core-js/modules/es6.string.ends-with"), require("core-js/modules/es6.string.iterator"), require("core-js/modules/web.dom.iterable"), require("crypto"), require("fs"), require("lodash"), require("minimatch"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else
-		root["lib"] = factory(root["@reach/router"], root["core-js/modules/es6.array.iterator"], root["core-js/modules/es6.array.sort"], root["core-js/modules/es6.function.name"], root["core-js/modules/es6.map"], root["core-js/modules/es6.number.constructor"], root["core-js/modules/es6.number.is-nan"], root["core-js/modules/es6.object.assign"], root["core-js/modules/es6.object.to-string"], root["core-js/modules/es6.regexp.constructor"], root["core-js/modules/es6.regexp.split"], root["core-js/modules/es6.regexp.to-string"], root["core-js/modules/es6.string.ends-with"], root["core-js/modules/es6.string.iterator"], root["core-js/modules/web.dom.iterable"], root["crypto"], root["fs"], root["lodash"], root["minimatch"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_array_iterator__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_array_sort__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_function_name__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_map__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_number_constructor__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_number_is_nan__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_object_assign__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_object_to_string__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_constructor__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_split__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_to_string__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_string_ends_with__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_string_iterator__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_web_dom_iterable__, __WEBPACK_EXTERNAL_MODULE_crypto__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash__, __WEBPACK_EXTERNAL_MODULE_minimatch__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
+		root["lib"] = factory(root["@reach/router"], root["core-js/modules/es6.array.iterator"], root["core-js/modules/es6.array.sort"], root["core-js/modules/es6.function.name"], root["core-js/modules/es6.map"], root["core-js/modules/es6.number.constructor"], root["core-js/modules/es6.number.is-nan"], root["core-js/modules/es6.object.assign"], root["core-js/modules/es6.object.to-string"], root["core-js/modules/es6.regexp.constructor"], root["core-js/modules/es6.regexp.replace"], root["core-js/modules/es6.regexp.split"], root["core-js/modules/es6.regexp.to-string"], root["core-js/modules/es6.string.ends-with"], root["core-js/modules/es6.string.iterator"], root["core-js/modules/web.dom.iterable"], root["crypto"], root["fs"], root["lodash"], root["minimatch"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_array_iterator__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_array_sort__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_function_name__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_map__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_number_constructor__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_number_is_nan__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_object_assign__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_object_to_string__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_constructor__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_replace__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_split__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_to_string__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_string_ends_with__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_string_iterator__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_web_dom_iterable__, __WEBPACK_EXTERNAL_MODULE_crypto__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash__, __WEBPACK_EXTERNAL_MODULE_minimatch__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -7616,19 +7616,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageQuery", function() { return pageQuery; });
 /* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "core-js/modules/es6.object.assign");
 /* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es6_number_constructor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.number.constructor */ "core-js/modules/es6.number.constructor");
-/* harmony import */ var core_js_modules_es6_number_constructor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_number_constructor__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es6_number_is_nan__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.number.is-nan */ "core-js/modules/es6.number.is-nan");
-/* harmony import */ var core_js_modules_es6_number_is_nan__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_number_is_nan__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var downshift__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! downshift */ "./node_modules/downshift/dist/downshift.esm.js");
-/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gatsby-link */ "./node_modules/gatsby-link/index.js");
-/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(gatsby_link__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-helmet */ "react-helmet");
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _templates_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../templates/Layout */ "./src/templates/Layout.js");
-/* harmony import */ var _utils_typography__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils/typography */ "./src/utils/typography.js");
+/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.regexp.replace */ "core-js/modules/es6.regexp.replace");
+/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_number_constructor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.number.constructor */ "core-js/modules/es6.number.constructor");
+/* harmony import */ var core_js_modules_es6_number_constructor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_number_constructor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es6_number_is_nan__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es6.number.is-nan */ "core-js/modules/es6.number.is-nan");
+/* harmony import */ var core_js_modules_es6_number_is_nan__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_number_is_nan__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var downshift__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! downshift */ "./node_modules/downshift/dist/downshift.esm.js");
+/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gatsby-link */ "./node_modules/gatsby-link/index.js");
+/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(gatsby_link__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-helmet */ "react-helmet");
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _templates_Layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../templates/Layout */ "./src/templates/Layout.js");
+/* harmony import */ var _utils_typography__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../utils/typography */ "./src/utils/typography.js");
+
 
 
 
@@ -7639,7 +7642,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var localStorage = typeof window !== 'undefined' ? window.localStorage : {
-  getItem: function getItem() {}
+  getItem: function getItem() {},
+  setItem: function setItem() {}
 };
 
 var BlogNav = function BlogNav(_ref) {
@@ -7647,18 +7651,18 @@ var BlogNav = function BlogNav(_ref) {
       title = _ref.title,
       date = _ref.date,
       spoiler = _ref.spoiler;
-  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("article", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("article", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h3", {
     className: "blog-index",
     style: {
-      marginBottom: Object(_utils_typography__WEBPACK_IMPORTED_MODULE_8__["rhythm"])(1 / 4)
+      marginBottom: Object(_utils_typography__WEBPACK_IMPORTED_MODULE_9__["rhythm"])(1 / 4)
     }
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(gatsby_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(gatsby_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
     tabIndex: -1,
     style: {
       boxShadow: 'none'
     },
     to: to
-  }, title)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("time", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", null, date)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+  }, title)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("time", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("small", null, date)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
     dangerouslySetInnerHTML: {
       __html: spoiler
     }
@@ -7671,9 +7675,9 @@ var BlogIndex = function BlogIndex(_ref2) {
       navigate = _ref2.navigate;
   var siteTitle = data.site.siteMetadata.title;
   var posts = data.allMarkdownRemark.edges;
-  var menuRef = Object(react__WEBPACK_IMPORTED_MODULE_5__["useRef"])();
-  var selectedIndex = Object(react__WEBPACK_IMPORTED_MODULE_5__["useRef"])(+localStorage.getItem('selectedIndex') || -1);
-  Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(function () {
+  var menuRef = Object(react__WEBPACK_IMPORTED_MODULE_6__["useRef"])();
+  var selectedIndex = Object(react__WEBPACK_IMPORTED_MODULE_6__["useRef"])(+localStorage.getItem('selectedIndex') || -1);
+  Object(react__WEBPACK_IMPORTED_MODULE_6__["useEffect"])(function () {
     // FIXME: 是否需要改成 context，并将 keyboard 的事件抽出来？
     var index = selectedIndex.current;
 
@@ -7684,7 +7688,7 @@ var BlogIndex = function BlogIndex(_ref2) {
     }
   }, [menuRef]);
   var lastKey = null;
-  var onKeyDownHandler = Object(react__WEBPACK_IMPORTED_MODULE_5__["useCallback"])(function (e) {
+  var onKeyDownHandler = Object(react__WEBPACK_IMPORTED_MODULE_6__["useCallback"])(function (e) {
     var key = e.key.toLowerCase();
     var index = selectedIndex.current;
 
@@ -7731,23 +7735,23 @@ var BlogIndex = function BlogIndex(_ref2) {
 
     lastKey = e;
   }, [menuRef]);
-  Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_6__["useEffect"])(function () {
     window.addEventListener('keydown', onKeyDownHandler);
     return function () {
       return window.removeEventListener('keydown', onKeyDownHandler);
     };
   }, [onKeyDownHandler]);
-  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_templates_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_templates_Layout__WEBPACK_IMPORTED_MODULE_8__["default"], {
     location: location,
     title: siteTitle
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_7___default.a, {
     title: siteTitle,
     htmlAttributes: {
       lang: 'zh-cn'
     }
-  }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("nav", {
+  }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("nav", {
     ref: menuRef
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(downshift__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(downshift__WEBPACK_IMPORTED_MODULE_4__["default"], {
     defaultIsOpen: true,
     initialIsOpen: true,
     itemToString: function itemToString(item) {
@@ -7756,7 +7760,7 @@ var BlogIndex = function BlogIndex(_ref2) {
   }, function (_ref3) {
     var getMenuProps = _ref3.getMenuProps,
         getItemProps = _ref3.getItemProps;
-    return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ol", getMenuProps({}, {
+    return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ol", getMenuProps({}, {
       suppressRefError: true
     }), posts.map(function (_ref4, index) {
       var node = _ref4.node;
@@ -7766,7 +7770,7 @@ var BlogIndex = function BlogIndex(_ref2) {
           title = _node$frontmatter$tit === void 0 ? blogUrl : _node$frontmatter$tit,
           spoiler = _node$frontmatter.spoiler,
           date = _node$frontmatter.date;
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", Object.assign({
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", Object.assign({
         tabIndex: 0
       }, getItemProps({
         key: node.fields.slug,
@@ -7779,7 +7783,7 @@ var BlogIndex = function BlogIndex(_ref2) {
             case 'enter':
             case ' ':
               localStorage.setItem('selectedIndex', index);
-              navigate(blogUrl);
+              navigate((location.pathname + blogUrl).replace(/\/{2}/g, '/'));
 
             default:
               break;
@@ -7790,7 +7794,7 @@ var BlogIndex = function BlogIndex(_ref2) {
         //     highlightedIndex === index ? 'aliceblue' : 'var(--bg)',
         // },
 
-      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(BlogNav, {
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(BlogNav, {
         to: blogUrl,
         title: title,
         date: date,
@@ -8543,6 +8547,17 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_object_to_string_
 /***/ (function(module, exports) {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_constructor__;
+
+/***/ }),
+
+/***/ "core-js/modules/es6.regexp.replace":
+/*!*****************************************************!*\
+  !*** external "core-js/modules/es6.regexp.replace" ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_replace__;
 
 /***/ }),
 
