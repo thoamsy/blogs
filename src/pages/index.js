@@ -1,7 +1,7 @@
 import Downshift from 'downshift';
 import { graphql } from 'gatsby';
 import Link from 'gatsby-link';
-import React, { useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import Helmet from 'react-helmet';
 import Layout from '../templates/Layout';
 import { rhythm } from '../utils/typography';
@@ -34,6 +34,7 @@ const BlogIndex = ({ location, data, navigate }) => {
   const posts = data.allMarkdownRemark.edges;
 
   const menuRef = useRef();
+  const selectedIndex = useRef(-1);
   useEffect(() => {
     // FIXME: 是否需要改成 context，并将 keyboard 的事件抽出来？
     const selectedIndex = +localStorage.getItem('selectedIndex');
@@ -43,6 +44,37 @@ const BlogIndex = ({ location, data, navigate }) => {
       localStorage.setItem('selectedIndex', null);
     }
   }, [menuRef]);
+
+  const onKeyPressHandler = useCallback(
+    e => {
+      const key = e.key.toLowerCase();
+      let index = selectedIndex.current;
+      switch (key) {
+        case 'down':
+        case 'j': {
+          if (index < posts.length - 1) selectedIndex.current = ++index;
+          menuRef.current.firstChild.children[index].focus();
+          break;
+        }
+        case 'up':
+        case 'k': {
+          if (index < 1) return;
+          selectedIndex.current = --index;
+          menuRef.current.firstChild.children[index].focus();
+          break;
+        }
+      }
+    },
+    [menuRef]
+  );
+
+  useEffect(() => {
+    window.addEventListener('keypress', onKeyPressHandler);
+    return () => window.removeEventListener('keypress', onKeyPressHandler);
+  }, [onKeyPressHandler]);
+
+
+  console.log(menuRef.current);
 
   return (
     <Layout location={location} title={siteTitle}>
