@@ -50,7 +50,6 @@ const BlogIndex = ({ location, data, navigate }) => {
     e => {
       const key = e.key.toLowerCase();
       let index = selectedIndex.current;
-      console.log(e)
       switch (key) {
         case 'down':
         case 'j': {
@@ -63,6 +62,9 @@ const BlogIndex = ({ location, data, navigate }) => {
           if (index < 1) return;
           selectedIndex.current = --index;
           menuRef.current.firstChild.children[index].focus();
+          if (!index) {
+            document.body.scrollIntoView({ behavior: 'smooth' });
+          }
           break;
         }
         case 'g': {
@@ -83,7 +85,6 @@ const BlogIndex = ({ location, data, navigate }) => {
     window.addEventListener('keypress', onKeyPressHandler);
     return () => window.removeEventListener('keypress', onKeyPressHandler);
   }, [onKeyPressHandler]);
-
 
   console.log(menuRef.current);
 
