@@ -7638,6 +7638,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var localStorage = typeof window !== 'undefined' ? window.localStorage : {
+  getItem: function getItem() {}
+};
 
 var BlogNav = function BlogNav(_ref) {
   var to = _ref.to,
@@ -7669,16 +7672,71 @@ var BlogIndex = function BlogIndex(_ref2) {
   var siteTitle = data.site.siteMetadata.title;
   var posts = data.allMarkdownRemark.edges;
   var menuRef = Object(react__WEBPACK_IMPORTED_MODULE_5__["useRef"])();
+  var selectedIndex = Object(react__WEBPACK_IMPORTED_MODULE_5__["useRef"])(+localStorage.getItem('selectedIndex') || -1);
   Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(function () {
     // FIXME: 是否需要改成 context，并将 keyboard 的事件抽出来？
-    var selectedIndex = +localStorage.getItem('selectedIndex');
+    var index = selectedIndex.current;
 
-    if (menuRef.current && !Number.isNaN(selectedIndex)) {
+    if (menuRef.current && !Number.isNaN(index) && index !== -1) {
       // @ts-ignore
-      menuRef.current.firstChild.children[selectedIndex].focus();
+      menuRef.current.firstChild.children[index].focus();
       localStorage.setItem('selectedIndex', null);
     }
   }, [menuRef]);
+  var lastKey = null;
+  var onKeyDownHandler = Object(react__WEBPACK_IMPORTED_MODULE_5__["useCallback"])(function (e) {
+    var key = e.key.toLowerCase();
+    var index = selectedIndex.current;
+
+    switch (key) {
+      case 'tab':
+        {
+          e.preventDefault();
+          break;
+        }
+
+      case 'arrowdown':
+      case 'j':
+        {
+          if (index < posts.length - 1) selectedIndex.current = ++index;
+          menuRef.current.firstChild.children[index].focus();
+          break;
+        }
+
+      case 'arrowup':
+      case 'k':
+        {
+          if (index < 1) return;
+          selectedIndex.current = --index;
+          menuRef.current.firstChild.children[index].focus();
+
+          if (!index) {
+            document.body.scrollIntoView();
+          }
+
+          break;
+        }
+
+      case 'g':
+        {
+          if (e.shiftKey) {
+            selectedIndex.current = index = posts.length - 1;
+          } else if (e.key === lastKey.key && e.metaKey === lastKey.metaKey) {
+            selectedIndex.current = index = 0;
+          }
+
+          menuRef.current.firstChild.children[index].focus();
+        }
+    }
+
+    lastKey = e;
+  }, [menuRef]);
+  Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(function () {
+    window.addEventListener('keydown', onKeyDownHandler);
+    return function () {
+      return window.removeEventListener('keydown', onKeyDownHandler);
+    };
+  }, [onKeyDownHandler]);
   return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_templates_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], {
     location: location,
     title: siteTitle
@@ -7713,7 +7771,7 @@ var BlogIndex = function BlogIndex(_ref2) {
       }, getItemProps({
         key: node.fields.slug,
         index: index,
-        onKeyPress: function onKeyPress(e) {
+        onKeyDown: function onKeyDown(e) {
           e.preventDefault();
           var key = e.key.toLowerCase();
 
