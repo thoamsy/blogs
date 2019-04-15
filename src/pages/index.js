@@ -45,10 +45,12 @@ const BlogIndex = ({ location, data, navigate }) => {
     }
   }, [menuRef]);
 
+  let lastKey = null;
   const onKeyPressHandler = useCallback(
     e => {
       const key = e.key.toLowerCase();
       let index = selectedIndex.current;
+      console.log(e)
       switch (key) {
         case 'down':
         case 'j': {
@@ -63,7 +65,16 @@ const BlogIndex = ({ location, data, navigate }) => {
           menuRef.current.firstChild.children[index].focus();
           break;
         }
+        case 'g': {
+          if (e.shiftKey) {
+            selectedIndex.current = index = posts.length - 1;
+          } else if (e.key === lastKey.key && e.metaKey === lastKey.metaKey) {
+            selectedIndex.current = index = 0;
+          }
+          menuRef.current.firstChild.children[index].focus();
+        }
       }
+      lastKey = e;
     },
     [menuRef]
   );
