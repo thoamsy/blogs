@@ -125,7 +125,7 @@ const BlogIndex = ({ location, data, navigate }) => {
                           case 'enter':
                           case ' ':
                             localStorage.setItem('selectedIndex', index);
-                            navigate(blogUrl);
+                            navigate((location.pathname + blogUrl).replace(/\/{2}/g, '/'));
                           default:
                             break;
                         }
