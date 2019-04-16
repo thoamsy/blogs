@@ -1,7 +1,6 @@
-# gatsby-starter-blog
+# 👤 📜 by thoamsy
 
-这是一个使用 Gatsby 构建的 blog, 基于 React 来构建。可以说是提升自己的前端
-技能的绝好机会啊, hhh
+使用 Gatsby 构建的个人博客，记录一些想法。不常更新博客，却经常更新博客的代码……
 
 # Maybe Need
 
@@ -10,4 +9,4 @@
 - [x] 🌚 基本的 dark mode
 - [x] 🧭 支持 Safari 的 dark mode
 - [ ] 🌍 支持根据经纬度自动切换 dark mode
-- [ ] ⌨️ 更好的 a11y 支持，在电脑上可以直接用键盘控制
+- [x] ⌨️ 更好的 a11y 支持，在电脑上可以直接用键盘控制
