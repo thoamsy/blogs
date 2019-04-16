@@ -41,6 +41,7 @@
     "@babel/preset-react": "^7.0.0",
     "eslint": "^5.12.0",
     "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-react-hooks": "^1.6.0",
     "gh-pages": "^2.0.1",
     "prettier": "^1.16.4"
   },

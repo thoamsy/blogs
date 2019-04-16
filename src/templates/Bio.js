@@ -32,7 +32,10 @@ const Bio = () => (
     />
     <Aside>
       <h3>
-        👤 📜 by <a href="http://github.com/thoamsy">thoamsy</a>
+        <span role="img" aria-label="personal blogs">
+          👤 📜
+        </span>{' '}
+        by <a href="http://github.com/thoamsy">thoamsy</a>
       </h3>
       <h3>Write some personal summary</h3>
     </Aside>

@@ -1,19 +1,11 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es6": true,
+  extends: 'react-app',
+  plugins: ['react-hooks'],
+  globals: {
+    graphql: false,
   },
-  "plugins": [
-    "react",
-  ],
-  "globals": {
-    "graphql": false,
+  rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "jsx": true,
-    },
-  }
-}
+};

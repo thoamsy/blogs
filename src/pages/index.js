@@ -53,7 +53,7 @@ const BlogIndex = ({ location, data, navigate }) => {
     }
   }, [menuRef]);
 
-  let lastKey = null;
+  const lastKey = useRef();
   const onKeyDownHandler = useCallback(
     e => {
       const key = e.key.toLowerCase();
@@ -82,15 +82,18 @@ const BlogIndex = ({ location, data, navigate }) => {
         case 'g': {
           if (e.shiftKey) {
             selectedIndex.current = index = posts.length - 1;
-          } else if (e.key === lastKey.key && e.metaKey === lastKey.metaKey) {
+          } else if (e.key === lastKey.current.key && e.metaKey === lastKey.current.metaKey) {
             selectedIndex.current = index = 0;
           }
           menuRef.current.firstChild.children[index].focus();
+          break;
         }
+        default:
+          break;
       }
-      lastKey = e;
+      lastKey.current = e;
     },
-    [menuRef]
+    [posts.length]
   );
 
   useEffect(() => {
@@ -126,6 +129,7 @@ const BlogIndex = ({ location, data, navigate }) => {
                           case ' ':
                             localStorage.setItem('selectedIndex', index);
                             navigate((location.pathname + blogUrl).replace(/\/{2}/g, '/'));
+                            break;
                           default:
                             break;
                         }
