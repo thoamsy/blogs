@@ -23,6 +23,7 @@ function pointerCoord(event) {
 }
 
 const Toggle = ({ onChange, ...props }) => {
+  const { className, icons: _icons, disabled, onFocus, checked, ...inputProps } = props;
   const input = useRef(null);
   const touchParams = useRef({
     moved: false,
@@ -47,10 +48,10 @@ const Toggle = ({ onChange, ...props }) => {
       }
       onChange(!checkbox.checked);
     },
-    [input, touchParams]
+    [onChange]
   );
 
-  const handleTouchStart = useCallback(
+/*   const handleTouchStart = useCallback(
     event => {
       Object.assign(touchParams.current, {
         startX: pointerCoord(event).x,
@@ -59,7 +60,7 @@ const Toggle = ({ onChange, ...props }) => {
       });
       setFocus(true);
     },
-    [touchParams]
+    [hasFocus]
   );
 
   const handleTouchMove = useCallback(
@@ -79,7 +80,7 @@ const Toggle = ({ onChange, ...props }) => {
         }
       }
     },
-    [touchParams]
+    [checked, onChange]
   );
 
   const handleTouchEnd = useCallback(
@@ -110,10 +111,10 @@ const Toggle = ({ onChange, ...props }) => {
         setFocus(false);
       }
     },
-    [touchParams]
-  );
+    [checked]
+  ); 
 
-  const handleTouchCancel = useCallback(() => {
+    const handleTouchCancel = useCallback(() => {
     const { startX, hadFocusAtTouchStart } = touchParams.current;
 
     startX != null &&
@@ -126,16 +127,16 @@ const Toggle = ({ onChange, ...props }) => {
     if (hadFocusAtTouchStart) {
       setFocus(false);
     }
-  }, [touchParams]);
+  }, [touchParams]); */
 
   const handleFocus = useCallback(
     event => {
-      props.onFocus && props.onFocus(event);
+      onFocus && onFocus(event);
 
       touchParams.current.hadFocusAtTouchStart = true;
       setFocus(true);
     },
-    [touchParams]
+    [onFocus]
   );
 
   // const handleBlur = useCallback(
@@ -157,7 +158,6 @@ const Toggle = ({ onChange, ...props }) => {
       : icons[type];
   };
 
-  const { className, icons: _icons, disabled, checked, ...inputProps } = props;
   const classes =
     'react-toggle' +
     (checked ? ' react-toggle--checked' : '') +
@@ -169,10 +169,10 @@ const Toggle = ({ onChange, ...props }) => {
     <div
       className={classes}
       onClick={handleClick}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-      onTouchCancel={handleTouchCancel}
+      // onTouchStart={handleTouchStart}
+      // onTouchMove={handleTouchMove}
+      // onTouchEnd={handleTouchEnd}
+      // onTouchCancel={handleTouchCancel}
     >
       <div className="react-toggle-track">
         <div className="react-toggle-track-check">{getIcon('checked')}</div>
