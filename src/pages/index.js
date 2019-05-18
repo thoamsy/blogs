@@ -6,14 +6,6 @@ import Helmet from 'react-helmet';
 import Layout from '../templates/Layout';
 import { rhythm } from '../utils/typography';
 
-const localStorage =
-  typeof window !== 'undefined'
-    ? window.localStorage
-    : {
-        getItem() {},
-        setItem() { },
-      };
-
 const BlogNav = ({ to, title, date, spoiler }) => (
   <article>
     <h3
@@ -37,19 +29,20 @@ const BlogNav = ({ to, title, date, spoiler }) => (
   </article>
 );
 
+// TODO: 使用自己的 useVimShortcut 重构
 const BlogIndex = ({ location, data, navigate }) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
 
   const menuRef = useRef();
-  const selectedIndex = useRef(+localStorage.getItem('selectedIndex') || -1);
+  const selectedIndex = useRef(+globalThis.localStorage.getItem('selectedIndex') || -1);
   useEffect(() => {
     // FIXME: 是否需要改成 context，并将 keyboard 的事件抽出来？
     const index = selectedIndex.current;
     if (menuRef.current && !Number.isNaN(index) && index !== -1) {
       // @ts-ignore
       menuRef.current.firstChild.children[index].focus();
-      localStorage.setItem('selectedIndex', null);
+      globalThis.localStorage.setItem('selectedIndex', null);
     }
   }, [menuRef]);
 

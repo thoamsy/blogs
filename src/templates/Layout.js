@@ -2,6 +2,8 @@ import { Link } from 'gatsby';
 import 'prismjs/themes/prism-okaidia.css';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+
+import '../globalThis';
 import { rhythm, scale } from '../utils/typography';
 import Bio from './Bio';
 import Toggle from './components/ThemeToggle';
@@ -51,7 +53,7 @@ const Layout = ({ location, title, children }) => {
       matches: cacheTheme === undefined ? media.matches : checked,
     });
     return () => media && media.removeListener(colorSchemeChanged);
-  }, []);
+  }, [cacheTheme, checked]);
 
   let rootPath = '/';
   if (typeof __PATH_PREFIX__ !== 'undefined') {
