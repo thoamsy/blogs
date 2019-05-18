@@ -16,12 +16,7 @@ const PostContainer = styled.section`
 const Layout = ({ location, children }) => {
   return (
     <TransitionGroup component={null}>
-      <CSSTransition
-        onEnter={console.log}
-        timeout={300}
-        key={location.pathname}
-        classNames="page"
-      >
+      <CSSTransition timeout={400} key={location.pathname} classNames="page">
         <PostContainer>{children}</PostContainer>
       </CSSTransition>
     </TransitionGroup>

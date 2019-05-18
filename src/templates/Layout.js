@@ -9,13 +9,6 @@ import Bio from './Bio';
 import Toggle from './components/ThemeToggle';
 import { Home, Detail } from './components/Transition';
 
-const PostContainer = styled.section`
-  color: var(--textNormal);
-  background: var(--bg);
-  transition: color 0.3s ease-out, background 0.3s ease-out;
-  min-height: 100vh;
-`;
-
 const HomeLink = styled(Link).attrs({ to: '/' })`
   box-shadow: none;
   text-decoration: none;
