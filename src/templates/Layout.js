@@ -7,6 +7,7 @@ import '../globalThis';
 import { rhythm, scale } from '../utils/typography';
 import Bio from './Bio';
 import Toggle from './components/ThemeToggle';
+import { Home, Detail } from './components/Transition';
 
 const PostContainer = styled.section`
   color: var(--textNormal);
@@ -109,20 +110,12 @@ const Layout = ({ location, title, children }) => {
   }
   const isRoot = location.pathname === rootPath;
 
+  const Container = isRoot ? Home : Detail;
   return (
-    <PostContainer>
-      <section
-        style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <BlogHeader isRoot={isRoot} title={title} location={location} />
-        {children}
-      </section>
-    </PostContainer>
+    <Container>
+      <BlogHeader isRoot={isRoot} title={title} location={location} />
+      {children}
+    </Container>
   );
 };
 

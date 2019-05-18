@@ -5,7 +5,6 @@ import React, { useCallback, useEffect, useRef } from 'react';
 import Helmet from 'react-helmet';
 
 import Layout from '../templates/Layout';
-import { Home } from '../templates/components/Transition';
 import { rhythm } from '../utils/typography';
 
 const BlogNav = ({ to, title, date, spoiler }) => (
@@ -105,66 +104,64 @@ const BlogIndex = ({ location, data, navigate }) => {
   }, []);
 
   return (
-    <Home>
-      <Layout location={location} title={siteTitle}>
-        <Helmet title={siteTitle} htmlAttributes={{ lang: 'zh-cn' }} />
-        <nav ref={menuRef}>
-          <Downshift
-            defaultIsOpen
-            initialIsOpen
-            itemToString={item => (item ? item.title : '')}
-          >
-            {({ getMenuProps, getItemProps }) => (
-              <ol {...getMenuProps({}, { suppressRefError: true })}>
-                {posts.map(({ node }, index) => {
-                  const blogUrl = node.fields.slug;
-                  const { title = blogUrl, spoiler, date } = node.frontmatter;
-                  return (
-                    <li
-                      tabIndex={0}
-                      {...getItemProps({
-                        key: node.fields.slug,
-                        index,
-                        onKeyDown(e) {
-                          e.preventDefault();
-                          const key = e.key.toLowerCase();
-                          switch (key) {
-                            case 'enter':
-                            case ' ':
-                              localStorage.setItem('selectedIndex', index);
-                              navigate(
-                                (location.pathname + blogUrl).replace(
-                                  /\/{2}/g,
-                                  '/'
-                                )
-                              );
-                              break;
-                            default:
-                              break;
-                          }
-                        },
-                        item: node.frontmatter,
-                        // style: {
-                        //   backgroundColor:
-                        //     highlightedIndex === index ? 'aliceblue' : 'var(--bg)',
-                        // },
-                      })}
-                    >
-                      <BlogNav
-                        to={blogUrl}
-                        title={title}
-                        date={date}
-                        spoiler={spoiler || node.excerpt}
-                      />
-                    </li>
-                  );
-                })}
-              </ol>
-            )}
-          </Downshift>
-        </nav>
-      </Layout>
-    </Home>
+    <Layout location={location} title={siteTitle}>
+      <Helmet title={siteTitle} htmlAttributes={{ lang: 'zh-cn' }} />
+      <nav ref={menuRef}>
+        <Downshift
+          defaultIsOpen
+          initialIsOpen
+          itemToString={item => (item ? item.title : '')}
+        >
+          {({ getMenuProps, getItemProps }) => (
+            <ol {...getMenuProps({}, { suppressRefError: true })}>
+              {posts.map(({ node }, index) => {
+                const blogUrl = node.fields.slug;
+                const { title = blogUrl, spoiler, date } = node.frontmatter;
+                return (
+                  <li
+                    tabIndex={0}
+                    {...getItemProps({
+                      key: node.fields.slug,
+                      index,
+                      onKeyDown(e) {
+                        e.preventDefault();
+                        const key = e.key.toLowerCase();
+                        switch (key) {
+                          case 'enter':
+                          case ' ':
+                            localStorage.setItem('selectedIndex', index);
+                            navigate(
+                              (location.pathname + blogUrl).replace(
+                                /\/{2}/g,
+                                '/'
+                              )
+                            );
+                            break;
+                          default:
+                            break;
+                        }
+                      },
+                      item: node.frontmatter,
+                      // style: {
+                      //   backgroundColor:
+                      //     highlightedIndex === index ? 'aliceblue' : 'var(--bg)',
+                      // },
+                    })}
+                  >
+                    <BlogNav
+                      to={blogUrl}
+                      title={title}
+                      date={date}
+                      spoiler={spoiler || node.excerpt}
+                    />
+                  </li>
+                );
+              })}
+            </ol>
+          )}
+        </Downshift>
+      </nav>
+    </Layout>
   );
 };
 export default BlogIndex;

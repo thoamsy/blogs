@@ -93,19 +93,19 @@ const PostContainer = styled.section`
 `;
 
 const Home = styled.div`
-  &.page-enter {
+  .page-enter & {
     animation: ${homeSlideIn} 0.3s forwards;
   }
-  &.page-exit {
+  .page-exit & {
     animation: ${homeSlideOut} 0.3s forwards;
   }
 `;
 
 const Detail = styled.div`
-  &.page-enter {
+  .page-enter & {
     animation: ${detailSlideIn} 0.3s forwards;
   }
-  &.page-exit {
+  .page-exit & {
     animation: ${detailSlideOut} 0.3s forwards;
   }
 `;
