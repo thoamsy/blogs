@@ -98,8 +98,8 @@ const BlogHeader = ({ location, title, isRoot }) => {
 
 const Layout = ({ location, title, children }) => {
   let rootPath = '/';
-  if (typeof globalThis.__PATH_PREFIX__ !== 'undefined') {
-    rootPath = globalThis.__PATH_PREFIX__ + `/`;
+  if (typeof __PATH_PREFIX__ !== 'undefined') {
+    rootPath = __PATH_PREFIX__ + `/`;
   }
   const isRoot = location.pathname === rootPath;
 
