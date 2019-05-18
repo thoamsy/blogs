@@ -30,6 +30,7 @@
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-helmet": "^5.2.0",
+    "react-motion": "^0.5.2",
     "react-responsive-grid": "^0.3.4",
     "react-typography": "^0.16.13",
     "styled-components": "^4.1.3",
