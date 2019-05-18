@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[😏]]></title><description><![CDATA[👤博客]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Sat, 18 May 2019 19:17:34 GMT</lastBuildDate><item><title><![CDATA[一些 Emoji 的有趣事情]]></title><description><![CDATA[本文要求系统版本大于 iOS 12.1，或者至少是 Android O。 101 大多数 Emoji 的 code 是大于 0xFFFF 的，也就说他们不位于 Unicode 的基本零平面上。在我看来，这主要的是差别是 首先 Emoji 是字体不是图片，在 Apple…]]></description><link>https://github.com/thoamsy/blogs.git/emoji/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/emoji/</guid><pubDate>Wed, 15 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本文要求系统版本大于 iOS 12.1，或者至少是 Android O。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[😏]]></title><description><![CDATA[👤博客]]></description><link>https://github.com/thoamsy/blogs.git</link><generator>RSS for Node</generator><lastBuildDate>Sat, 18 May 2019 20:09:33 GMT</lastBuildDate><item><title><![CDATA[一些 Emoji 的有趣事情]]></title><description><![CDATA[想要正常的阅读本文，要求系统版本大于 iOS 12.1，或者 Android O。 101 首先 Emoji 是字体不是图片，在 Apple 的系统里由 Apple Color Emoji…]]></description><link>https://github.com/thoamsy/blogs.git/emoji/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/emoji/</guid><pubDate>Sun, 19 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;想要正常的阅读本文，要求系统版本大于 iOS 12.1，或者 Android O。&lt;/p&gt;
 &lt;h2 id=&quot;101&quot;&gt;&lt;a href=&quot;#101&quot; aria-label=&quot;101 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;101&lt;/h2&gt;
-&lt;p&gt;大多数 Emoji 的 code 是大于 0xFFFF 的，也就说他们不位于 Unicode 的基本零平面上。在我看来，这主要的是差别是&lt;/p&gt;
 &lt;p&gt;首先 Emoji 是字体不是图片，在 Apple 的系统里由 Apple Color Emoji 字体支持。虽然内部很可能是一种位图格式（不是矢量），但是在它呈现出来的时候我们会认为它是字体。&lt;/p&gt;
 &lt;p&gt;世界 Emoji 日是每年的 &lt;strong&gt;7⃣️🈷️🔟7⃣️&lt;/strong&gt;，这是因为苹果在 2001 年发布 iCal 的日子就是这一天，而相对应的就是 日历 📅 上的日期。&lt;/p&gt;
 &lt;p&gt;最初的 471 个 Emoji 是专门为了日本用户提供的，因为日本早期的手机里就内置了 emoji，而 Apple 的目标也是兼容软银的。但是不同的厂商的 emoji 不一样，也可能不相互兼容。这样就导致不同手机在短信沟通的时候可能无法显示对方的 emoji。这样看来，Apple 也算是统一了 emoji 的市场。&lt;/p&gt;
@@ -52,11 +51,11 @@
   &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;这里有一篇文章，介绍了&lt;a href=&quot;https://blog.emojipedia.org/apple-emoji-turns-10/&quot;&gt;Emoji 十年的变化&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;肤色&quot;&gt;&lt;a href=&quot;#%E8%82%A4%E8%89%B2&quot; aria-label=&quot;肤色 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;肤色&lt;/h2&gt;
-&lt;p&gt;Emoji 或者说 unicode 其实是支持合成的，比如几个字符连起来就能成为一个新的字符，最为常见的就是肤色了。&lt;/p&gt;
-&lt;p&gt;🏻🏼🏽🏾🏿 在 unicode 7 中引入了五种肤色字符，越后面的越黑。
-这五个 emoji 的 code 分别对应 &lt;code class=&quot;language-text&quot;&gt;0x1f3fb, 0x1f3fc, 0x1f3fd, 0x1f3fe, 0x1f3ff&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;Emoji 或者说 Unicode 其实是支持合成的，比如几个字符连起来就能成为一个新的字符，最为常见的就是肤色了。&lt;/p&gt;
+&lt;p&gt;🏻🏼🏽🏾🏿 在 Unicode 7 中引入了五种肤色字符，越后面的越黑。
+这五个 emoji 的 code 分别对应 &lt;em&gt;0x1f3fb, 0x1f3fc, 0x1f3fd, 0x1f3fe, 0x1f3ff&lt;/em&gt;。&lt;/p&gt;
 &lt;p&gt;支持肤色的 emoji 和 肤色的 emoji 放在一起，就能形成一个有色人种的 emoji 。
-就比如一个黄皮肤男人 👨（0x1f468）和白色的 🏻 组合在一起，就变成了白人 👨🏻。值得一提的是，这里的默认颜色并不代表是&lt;strong&gt;黄种人&lt;/strong&gt;，而是故意找到一种不想任何人种的颜色，其实就是普通 emoji 小黄脸的颜色。&lt;/p&gt;
+就比如一个黄皮肤男人 👨&lt;sup id=&quot;fnref-1&quot;&gt;&lt;a href=&quot;#fn-1&quot; class=&quot;footnote-ref&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 和白色的 🏻 组合在一起，就变成了白人 👨🏻。值得一提的是，这里的默认颜色并不代表是&lt;strong&gt;黄种人&lt;/strong&gt;，而是故意找到一种不想任何人种的颜色，其实就是普通 emoji 小黄脸的颜色。&lt;/p&gt;
 &lt;p&gt;在 JS 中可以这样合成&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&apos;\u{1f468}&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;\u{1f3fb}&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;接着除了肤色之外，emoji 还能组合&lt;/p&gt;
@@ -65,11 +64,11 @@
 但是这里一个有意思的点是，它不仅仅支持黄皮肤的 emoji 合成，如果你尝试把 👨 改成 👨🏻 的话，也是可以得到 👨‍👩‍👧。&lt;/p&gt;
 &lt;p&gt;再举个例子，🏳️‍🌈 你猜是由哪些 emoji 组成的？🏳️ + 🌈
 那么 🏴‍☠️ 呢？🏴 + ☠️&lt;/p&gt;
-&lt;p&gt;接着，在 unicode 11 中又支持了发型，目前对应 iOS 12.1 的版本。它可以在肤色的基础上，赋予人发型。举个例子，这个 emoji：👩🏻‍🦳
-就是由一个 👩 + 🏼 + 🦳(0x1f983) 组成。
-发型一共有几种，分别是：
-Red Hair 🦰, Curly Hair 🦱, Bald 🦲,White Hair 🦳
-对应到 &lt;code class=&quot;language-text&quot;&gt;0x1f9b0—0x1f9b3&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;接着，在 Unicode 11 中又支持了发型，目前对应 iOS 12.1 的版本。它可以在肤色的基础上，赋予人发型。举个例子，这个 emoji：👩🏻‍🦳
+就是由一个 👩 + 🏼 + 🦳 &lt;em&gt;0x1f983&lt;/em&gt; 组成。
+发型一共有几种，它们是：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Red Hair 🦰, Curly Hair 🦱, Bald 🦲,White Hair 🦳&lt;/strong&gt;，
+分别对应到 &lt;em&gt;0x1f9b0—0x1f9b3&lt;/em&gt;。&lt;/p&gt;
 &lt;p&gt;所以你希望一个秃头黑人的话，就可以这样&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token string&quot;&gt;&apos;\u{1f468}\u{1f3ff}\u{200d}\u{1f9b2}&apos;&lt;/span&gt; 👨🏿‍🦲&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;来看一张全家福
@@ -119,8 +118,8 @@ Red Hair 🦰, Curly Hair 🦱, Bald 🦲,White Hair 🦳
       &lt;/picture&gt;
   &lt;/span&gt;
   &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;而且让我觉得骚的是，现在除了 人支持肤色，还有一些器官也支持了。🦵(0x1f9b5)🦶(0x1f9b6) 都能加上肤色。
-另外还有新的 emoji：🦸‍♀️ 🦸‍♂️，它是由基本的超级英雄 🦸(0x1f9b8) 加上性别符号 ♂️(&lt;code class=&quot;language-text&quot;&gt;\u{2642}\u{fe0f}&lt;/code&gt;)♀️(&lt;code class=&quot;language-text&quot;&gt;\u{2641}\u{fe0f}&lt;/code&gt;)。另外，除了超级英雄外，还有很多支持性别区分的 emoji，比如超级坏蛋 🦹。
+&lt;p&gt;而且让我觉得骚的是，现在除了 人支持肤色，还有一些器官也支持了。🦵 &lt;sup id=&quot;fnref-2&quot;&gt;&lt;a href=&quot;#fn-2&quot; class=&quot;footnote-ref&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; 🦶 &lt;sup id=&quot;fnref-3&quot;&gt;&lt;a href=&quot;#fn-3&quot; class=&quot;footnote-ref&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; 都能加上肤色。
+另外还有新的 emoji：🦸‍♀️ 🦸‍♂️，它是由基本的超级英雄 🦸 &lt;sup id=&quot;fnref-4&quot;&gt;&lt;a href=&quot;#fn-4&quot; class=&quot;footnote-ref&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; 加上性别符号 ♂️ &lt;sup id=&quot;fnref-5&quot;&gt;&lt;a href=&quot;#fn-5&quot; class=&quot;footnote-ref&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; ♀️&lt;sup id=&quot;fnref-6&quot;&gt;&lt;a href=&quot;#fn-6&quot; class=&quot;footnote-ref&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;。另外，除了超级英雄外，还有很多支持性别区分的 emoji，比如超级坏蛋 🦹。
 还有 🧙🧚🧛🧜🧝🧞🧟🧗🧘 这些都支持和性别组合。
 真的丧心病狂啊！&lt;/p&gt;
 &lt;h2 id=&quot;emoji-120&quot;&gt;&lt;a href=&quot;#emoji-120&quot; aria-label=&quot;emoji 120 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;emoji 12.0&lt;/h2&gt;
@@ -128,7 +127,36 @@ Red Hair 🦰, Curly Hair 🦱, Bald 🦲,White Hair 🦳
 &lt;p&gt;需要注意的是，握手如果是异性的话，左边的是女性右边的是男性，却没有左边是男性右边是女性的，这可能是出于对女性的尊重吧。然后再加上不同肤色的排列组合的话，就会多出 (!@#¥ 自己算吧 🌚）个看上去没上卵用的 emoji。&lt;/p&gt;
 &lt;p&gt;关于更多 Emoji 12 的介绍，可以查看&lt;a href=&quot;https://blog.emojipedia.org/230-new-emojis-in-final-list-for-2019/&quot;&gt;这篇文章&lt;/a&gt;，这里面也出现了我提到的手拉手 emoji 的集合，让世界充满爱。&lt;/p&gt;
 &lt;h2 id=&quot;值得一提&quot;&gt;&lt;a href=&quot;#%E5%80%BC%E5%BE%97%E4%B8%80%E6%8F%90&quot; aria-label=&quot;值得一提 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;值得一提&lt;/h2&gt;
-&lt;p&gt;除了 emoji 外，苹果在 iOS 11 和 iOS 12 中分别引入了 Animoji 和 Memoji，都可以通过 iMessage 来体验。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[头条的对与错]]></title><description><![CDATA[今天在听最新一期 疯投圈 ，了解关于信息过载的问题，以及如何提升信息获取的效率。 URL…]]></description><link>https://github.com/thoamsy/blogs.git/toutiao/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/toutiao/</guid><pubDate>Sun, 12 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在听最新一期&lt;a href=&quot;https://castro.fm/episode/SpvCWf&quot;&gt;疯投圈&lt;/a&gt;，了解关于信息过载的问题，以及如何提升信息获取的效率。&lt;/p&gt;
+&lt;p&gt;除了 emoji 外，苹果在 iOS 11 和 iOS 12 中分别引入了 Animoji 和 Memoji，都可以通过 iMessage 来体验。&lt;/p&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt; &lt;em&gt;0x1f468&lt;/em&gt;&lt;/p&gt;
+&lt;a href=&quot;#fnref-1&quot; class=&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;
+&lt;/li&gt;
+&lt;li id=&quot;fn-2&quot;&gt;
+&lt;p&gt; &lt;em&gt;0x1f9b5&lt;/em&gt;&lt;/p&gt;
+&lt;a href=&quot;#fnref-2&quot; class=&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;
+&lt;/li&gt;
+&lt;li id=&quot;fn-3&quot;&gt;
+&lt;p&gt; &lt;em&gt;0x1f9b6&lt;/em&gt;&lt;/p&gt;
+&lt;a href=&quot;#fnref-3&quot; class=&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;
+&lt;/li&gt;
+&lt;li id=&quot;fn-4&quot;&gt;
+&lt;p&gt; 0x1f9b8&lt;/p&gt;
+&lt;a href=&quot;#fnref-4&quot; class=&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;
+&lt;/li&gt;
+&lt;li id=&quot;fn-5&quot;&gt;
+&lt;p&gt; &lt;em&gt;0x2642 0xfe0f&lt;/em&gt;&lt;/p&gt;
+&lt;a href=&quot;#fnref-5&quot; class=&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;
+&lt;/li&gt;
+&lt;li id=&quot;fn-6&quot;&gt;
+&lt;p&gt; &lt;em&gt;0x2641 0xfe0f&lt;/em&gt;&lt;/p&gt;
+&lt;a href=&quot;#fnref-6&quot; class=&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content:encoded></item><item><title><![CDATA[头条的对与错]]></title><description><![CDATA[今天在听最新一期 疯投圈 ，了解关于信息过载的问题，以及如何提升信息获取的效率。 URL…]]></description><link>https://github.com/thoamsy/blogs.git/toutiao/</link><guid isPermaLink="false">https://github.com/thoamsy/blogs.git/toutiao/</guid><pubDate>Sun, 12 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在听最新一期&lt;a href=&quot;https://castro.fm/episode/SpvCWf&quot;&gt;疯投圈&lt;/a&gt;，了解关于信息过载的问题，以及如何提升信息获取的效率。&lt;/p&gt;
 &lt;p&gt;URL 在国内越来越罕见，今日头条，微信公众号这种中心化内容分发平台接管了大多数人获取知识的途径。&lt;/p&gt;
 &lt;p&gt;不过我们会倾向于一种认识，微信公众号属于用户主动选择，在质量上会有一定的保证，而头条则是&lt;strong&gt;被动选择&lt;/strong&gt;，它推什么用户就看什么。&lt;/p&gt;
 &lt;p&gt;久而久之，我会认为头条的用户群体属于较为低端的人群，他们没有能力去找自己想看的东西，愿意花大把时间刷刷一些低质量内容。当时我甚至认为头条是一个邪恶的公司，浪费了大量人群的时间，没有社会责任。&lt;/p&gt;
