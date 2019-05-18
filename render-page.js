@@ -9468,8 +9468,8 @@ var Layout = function Layout(_ref4) {
       children = _ref4.children;
   var rootPath = '/';
 
-  if (typeof globalThis.__PATH_PREFIX__ !== 'undefined') {
-    rootPath = globalThis.__PATH_PREFIX__ + "/";
+  if (true) {
+    rootPath = "/blogs" + "/";
   }
 
   var isRoot = location.pathname === rootPath;
