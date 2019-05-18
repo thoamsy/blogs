@@ -60,6 +60,12 @@ module.exports = {
     },
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve('./src/Layout.jsx'),
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-typography',

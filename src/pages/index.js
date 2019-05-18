@@ -3,7 +3,9 @@ import { graphql } from 'gatsby';
 import Link from 'gatsby-link';
 import React, { useCallback, useEffect, useRef } from 'react';
 import Helmet from 'react-helmet';
+
 import Layout from '../templates/Layout';
+import { Home } from '../templates/components/Transition';
 import { rhythm } from '../utils/typography';
 
 const BlogNav = ({ to, title, date, spoiler }) => (
@@ -35,7 +37,9 @@ const BlogIndex = ({ location, data, navigate }) => {
   const posts = data.allMarkdownRemark.edges;
 
   const menuRef = useRef();
-  const selectedIndex = useRef(+globalThis.localStorage.getItem('selectedIndex') || -1);
+  const selectedIndex = useRef(
+    +globalThis.localStorage.getItem('selectedIndex') || -1
+  );
   useEffect(() => {
     // FIXME: 是否需要改成 context，并将 keyboard 的事件抽出来？
     const index = selectedIndex.current;
@@ -75,7 +79,10 @@ const BlogIndex = ({ location, data, navigate }) => {
         case 'g': {
           if (e.shiftKey) {
             selectedIndex.current = index = posts.length - 1;
-          } else if (e.key === lastKey.current.key && e.metaKey === lastKey.current.metaKey) {
+          } else if (
+            e.key === lastKey.current.key &&
+            e.metaKey === lastKey.current.metaKey
+          ) {
             selectedIndex.current = index = 0;
           }
           menuRef.current.firstChild.children[index].focus();
@@ -91,63 +98,73 @@ const BlogIndex = ({ location, data, navigate }) => {
 
   useEffect(() => {
     window.addEventListener('keydown', onKeyDownHandler);
-    return () => window.removeEventListener('keydown', onKeyDownHandler);
-  }, [onKeyDownHandler]);
+    return () => {
+      window.removeEventListener('keydown', onKeyDownHandler);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <Helmet title={siteTitle} htmlAttributes={{ lang: 'zh-cn' }} />
-      <nav ref={menuRef}>
-        <Downshift
-          defaultIsOpen
-          initialIsOpen
-          itemToString={item => (item ? item.title : '')}
-        >
-          {({ getMenuProps, getItemProps }) => (
-            <ol {...getMenuProps({}, { suppressRefError: true })}>
-              {posts.map(({ node }, index) => {
-                const blogUrl = node.fields.slug;
-                const { title = blogUrl, spoiler, date } = node.frontmatter;
-                return (
-                  <li
-                    tabIndex={0}
-                    {...getItemProps({
-                      key: node.fields.slug,
-                      index,
-                      onKeyDown(e) {
-                        e.preventDefault();
-                        const key = e.key.toLowerCase();
-                        switch (key) {
-                          case 'enter':
-                          case ' ':
-                            localStorage.setItem('selectedIndex', index);
-                            navigate((location.pathname + blogUrl).replace(/\/{2}/g, '/'));
-                            break;
-                          default:
-                            break;
-                        }
-                      },
-                      item: node.frontmatter,
-                      // style: {
-                      //   backgroundColor:
-                      //     highlightedIndex === index ? 'aliceblue' : 'var(--bg)',
-                      // },
-                    })}
-                  >
-                    <BlogNav
-                      to={blogUrl}
-                      title={title}
-                      date={date}
-                      spoiler={spoiler || node.excerpt}
-                    />
-                  </li>
-                );
-              })}
-            </ol>
-          )}
-        </Downshift>
-      </nav>
-    </Layout>
+    <Home>
+      <Layout location={location} title={siteTitle}>
+        <Helmet title={siteTitle} htmlAttributes={{ lang: 'zh-cn' }} />
+        <nav ref={menuRef}>
+          <Downshift
+            defaultIsOpen
+            initialIsOpen
+            itemToString={item => (item ? item.title : '')}
+          >
+            {({ getMenuProps, getItemProps }) => (
+              <ol {...getMenuProps({}, { suppressRefError: true })}>
+                {posts.map(({ node }, index) => {
+                  const blogUrl = node.fields.slug;
+                  const { title = blogUrl, spoiler, date } = node.frontmatter;
+                  return (
+                    <li
+                      tabIndex={0}
+                      {...getItemProps({
+                        key: node.fields.slug,
+                        index,
+                        onKeyDown(e) {
+                          e.preventDefault();
+                          const key = e.key.toLowerCase();
+                          switch (key) {
+                            case 'enter':
+                            case ' ':
+                              localStorage.setItem('selectedIndex', index);
+                              navigate(
+                                (location.pathname + blogUrl).replace(
+                                  /\/{2}/g,
+                                  '/'
+                                )
+                              );
+                              break;
+                            default:
+                              break;
+                          }
+                        },
+                        item: node.frontmatter,
+                        // style: {
+                        //   backgroundColor:
+                        //     highlightedIndex === index ? 'aliceblue' : 'var(--bg)',
+                        // },
+                      })}
+                    >
+                      <BlogNav
+                        to={blogUrl}
+                        title={title}
+                        date={date}
+                        spoiler={spoiler || node.excerpt}
+                      />
+                    </li>
+                  );
+                })}
+              </ol>
+            )}
+          </Downshift>
+        </nav>
+      </Layout>
+    </Home>
   );
 };
 export default BlogIndex;

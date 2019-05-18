@@ -28,35 +28,28 @@ const Header = styled.header`
   margin-bottom: 2.625rem;
 `;
 
-const BlogTitle = ({ location, isRoot }) => {
-  let title;
-  if (isRoot) {
-    title = (
-      <h1
-        style={{
-          ...scale(1),
-          marginBottom: 0,
-          marginTop: 0,
-        }}
-      >
-        <HomeLink>{title}</HomeLink>
-      </h1>
-    );
-  } else {
-    title = (
-      <h3
-        style={{
-          fontFamily: 'sans-serif',
-          marginTop: 0,
-          marginBottom: rhythm(-1),
-        }}
-      >
-        <HomeLink>{title}</HomeLink>
-      </h3>
-    );
-  }
-
-  return title;
+const BlogTitle = ({ location, isRoot, title }) => {
+  return isRoot ? (
+    <h1
+      style={{
+        ...scale(1),
+        marginBottom: 0,
+        marginTop: 0,
+      }}
+    >
+      <HomeLink>{title}</HomeLink>
+    </h1>
+  ) : (
+    <h3
+      style={{
+        fontFamily: 'sans-serif',
+        marginTop: 0,
+        marginBottom: rhythm(-1),
+      }}
+    >
+      <HomeLink>{title}</HomeLink>
+    </h3>
+  );
 };
 
 const BlogHeader = ({ location, title, isRoot }) => {
@@ -89,7 +82,7 @@ const BlogHeader = ({ location, title, isRoot }) => {
   return (
     <>
       <Header>
-        <BlogTitle location={location} isRoot={isRoot} />
+        <BlogTitle title={title} location={location} isRoot={isRoot} />
         <Toggle
           checked={checked}
           icons={{
