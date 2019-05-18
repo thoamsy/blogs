@@ -28,9 +28,39 @@ const Header = styled.header`
   margin-bottom: 2.625rem;
 `;
 
-const THEME = 'theme';
+const BlogTitle = ({ location, isRoot }) => {
+  let title;
+  if (isRoot) {
+    title = (
+      <h1
+        style={{
+          ...scale(1),
+          marginBottom: 0,
+          marginTop: 0,
+        }}
+      >
+        <HomeLink>{title}</HomeLink>
+      </h1>
+    );
+  } else {
+    title = (
+      <h3
+        style={{
+          fontFamily: 'sans-serif',
+          marginTop: 0,
+          marginBottom: rhythm(-1),
+        }}
+      >
+        <HomeLink>{title}</HomeLink>
+      </h3>
+    );
+  }
 
-const Layout = ({ location, title, children }) => {
+  return title;
+};
+
+const BlogHeader = ({ location, title, isRoot }) => {
+  const THEME = 'theme';
   let cacheTheme;
   const [checked, setChecked] = useState(() => {
     if (typeof localStorage !== 'undefined') {
@@ -53,40 +83,39 @@ const Layout = ({ location, title, children }) => {
       matches: cacheTheme === undefined ? media.matches : checked,
     });
     return () => media && media.removeListener(colorSchemeChanged);
-  }, [cacheTheme, checked]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
+  return (
+    <>
+      <Header>
+        <BlogTitle location={location} isRoot={isRoot} />
+        <Toggle
+          checked={checked}
+          icons={{
+            checked: <span>🌚</span>,
+            unchecked: <span>🌞</span>,
+          }}
+          onChange={checked => {
+            const theme = checked ? 'dark' : 'light';
+            document.body.className = theme;
+            setChecked(checked);
+            localStorage.setItem(THEME, theme);
+          }}
+        />
+      </Header>
+      {isRoot && <Bio />}
+    </>
+  );
+};
+
+const Layout = ({ location, title, children }) => {
   let rootPath = '/';
-  if (typeof __PATH_PREFIX__ !== 'undefined') {
-    rootPath = __PATH_PREFIX__ + `/`;
+  if (typeof globalThis.__PATH_PREFIX__ !== 'undefined') {
+    rootPath = globalThis.__PATH_PREFIX__ + `/`;
   }
-
-  let header;
   const isRoot = location.pathname === rootPath;
-  if (isRoot) {
-    header = (
-      <h1
-        style={{
-          ...scale(1),
-          marginBottom: 0,
-          marginTop: 0,
-        }}
-      >
-        <HomeLink>{title}</HomeLink>
-      </h1>
-    );
-  } else {
-    header = (
-      <h3
-        style={{
-          fontFamily: 'sans-serif',
-          marginTop: 0,
-          marginBottom: rhythm(-1),
-        }}
-      >
-        <HomeLink>{title}</HomeLink>
-      </h3>
-    );
-  }
+
   return (
     <PostContainer>
       <section
@@ -97,23 +126,7 @@ const Layout = ({ location, title, children }) => {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <Header>
-          {header}
-          <Toggle
-            checked={checked}
-            icons={{
-              checked: <span>🌚</span>,
-              unchecked: <span>🌞</span>,
-            }}
-            onChange={checked => {
-              const theme = checked ? 'dark' : 'light';
-              document.body.className = theme;
-              setChecked(checked);
-              localStorage.setItem(THEME, theme);
-            }}
-          />
-        </Header>
-        {isRoot && <Bio />}
+        <BlogHeader isRoot={isRoot} title={title} location={location} />
         {children}
       </section>
     </PostContainer>
