@@ -42,13 +42,19 @@ blockquote {
   margin-left: -30px;
   margin-right: -30px;
   padding: 20px 45px 20px 26px;
+  border-left-width: 9px;
+  border-left-style: solid;
 }
 
 body:not(.dark) blockquote {
   background-color: rgba(255,229,100,0.3);
   border-left-color: #ffe564;
-  border-left-width: 9px;
-  border-left-style: solid;
+}
+
+body.dark blockquote {
+  color: rgba(255, 255, 255, 0.88);
+  background-color: hsla(0, 0%, 0%, 0.2);
+  border-left-color: palevioletred;
 }
 
 blockquote p:first-of-type:not(:last-child) {
