@@ -34,7 +34,10 @@ const BlogPostTemplate = ({
           {post.frontmatter.date}
         </time>
       </hgroup>
-      <main dangerouslySetInnerHTML={{ __html: post.html }} />
+      <main
+        style={{ fontSize: rhythm(0.7) }}
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
       <hr
         style={{
           marginBottom: rhythm(1),
