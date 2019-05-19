@@ -24,13 +24,9 @@ const Detail = styled.div`
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   .page-enter & {
     transform: translateX(100%);
-    filter: blur(5px);
   }
   .page-enter-active & {
     transform: translateX(0);
-  }
-  .page-enter-done & {
-    filter: blur(0px);
   }
   .page-exit & {
     transform: translateX(0);
