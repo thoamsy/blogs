@@ -1,63 +1,44 @@
-import styled, { keyframes } from 'styled-components';
-
-const homeSlideIn = keyframes`
-  from {
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-`;
-const homeSlideOut = keyframes`
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    visibility: hidden;
-    transform: translate3d(-100%, 0, 0);
-  }
-`;
-
-const detailSlideIn = keyframes`
-  from {
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-`;
-
-const detailSlideOut = keyframes`
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    visibility: hidden;
-    transform: translate3d(100%, 0, 0);
-  }
-`;
+import styled from 'styled-components';
 
 const Home = styled.div`
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   .page-enter & {
-    animation: ${homeSlideIn} 0.4s forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  .page-enter-active & {
+    opacity: 1;
+    transform: translateX(0);
   }
   .page-exit & {
-    animation: ${homeSlideOut} 0.4s forwards;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .page-exit-active & {
+    opacity: 0;
+    transform: translateX(-100%);
   }
 `;
 
 const Detail = styled.div`
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   .page-enter & {
-    animation: ${detailSlideIn} 0.4s forwards;
+    transform: translateX(100%);
+    filter: blur(5px);
+  }
+  .page-enter-active & {
+    transform: translateX(0);
+  }
+  .page-enter-done & {
+    filter: blur(0px);
   }
   .page-exit & {
-    animation: ${detailSlideOut} 0.4s forwards;
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .page-exit-active & {
+    transform: translateX(100%);
+    opacity: 0;
   }
 `;
 
