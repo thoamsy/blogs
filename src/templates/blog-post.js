@@ -17,7 +17,7 @@ const BlogPostTemplate = ({
       <hgroup>
         <h1
           style={{
-            color: 'var(--textTitle)',
+            color: 'var(--text-title)',
             transition: 'color 0.3s ease-out, background 0.3s ease-out',
           }}
         >

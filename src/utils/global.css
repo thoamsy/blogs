@@ -1,11 +1,9 @@
 body {
-  --blue: #007acc;
-  --pink: #ff375e;
   --bg: #ffffff;
-  --header: var(--blue);
   --text-normal: #222;
-  --textTitle: #222;
-  --textLink: var(--blue);
+  --text-title: #222;
+  --text-secondary: #444;
+  --text-link: #3b82f7;
   --hr: hsla(0, 0%, 0%, 0.2);
   --inlineCode-bg: rgba(255, 229, 100, 0.2);
   --inlineCode-text: #1a1a1a;
@@ -18,12 +16,12 @@ body.dark {
   -webkit-font-smoothing: antialiased;
 
   --bg: black;
-  --header: #ffffff;
   --text-normal: rgba(255, 255, 255, 0.88);
-  --textTitle: #ffffff;
-  --textLink: var(--pink);
+  --text-title: #ffffff;
+  --text-link: #ff375e;
   --hr: hsla(0, 0%, 100%, 0.2);
   --inlineCode-bg: hsl(222, 14%, 25%);
+  --text-secondary: darkgrey;
   --inlineCode-text: #e6e6e6;
 }
 

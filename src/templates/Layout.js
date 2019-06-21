@@ -11,7 +11,7 @@ import { Home, Detail } from './components/Transition';
 const HomeLink = styled(Link).attrs({ to: '/' })`
   box-shadow: none;
   text-decoration: none;
-  color: var(--textTitle);
+  color: var(--text-title);
 `;
 
 const Header = styled.header`
