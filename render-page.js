@@ -4282,10 +4282,10 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 /***/ }),
 
-/***/ "./node_modules/prismjs/themes/prism-okaidia.css":
-/*!*******************************************************!*\
-  !*** ./node_modules/prismjs/themes/prism-okaidia.css ***!
-  \*******************************************************/
+/***/ "./node_modules/prismjs/themes/prism-tomorrow.css":
+/*!********************************************************!*\
+  !*** ./node_modules/prismjs/themes/prism-tomorrow.css ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8946,7 +8946,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  color: var(--textNormal);\n  background: var(--bg);\n  transition: color 0.3s ease-out, background 0.3s ease-out;\n  min-height: 100vh;\n  margin: 0 auto;\n  max-width: ", ";\n  padding: ", " ", ";\n"]);
+  var data = _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0___default()(["\n  color: var(--text-normal);\n  background: var(--bg);\n  transition: color 0.3s ease-out, background 0.3s ease-out;\n  min-height: 100vh;\n  margin: 0 auto;\n  max-width: ", ";\n  padding: ", " ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -9113,11 +9113,15 @@ var BlogNav = function BlogNav(_ref) {
       boxShadow: 'none'
     },
     to: to
-  }, title)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("time", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("small", null, date)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+  }, title)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+    style: {
+      color: 'var(--text-secondary)'
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("time", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("small", null, date)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
     dangerouslySetInnerHTML: {
       __html: spoiler
     }
-  }));
+  })));
 }; // TODO: 使用自己的 useVimShortcut 重构
 
 
@@ -9343,8 +9347,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/taggedTemplateLiteralLoose */ "./node_modules/@babel/runtime/helpers/taggedTemplateLiteralLoose.js");
 /* harmony import */ var _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var prismjs_themes_prism_okaidia_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prismjs/themes/prism-okaidia.css */ "./node_modules/prismjs/themes/prism-okaidia.css");
-/* harmony import */ var prismjs_themes_prism_okaidia_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prismjs_themes_prism_okaidia_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prismjs_themes_prism_tomorrow_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prismjs/themes/prism-tomorrow.css */ "./node_modules/prismjs/themes/prism-tomorrow.css");
+/* harmony import */ var prismjs_themes_prism_tomorrow_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prismjs_themes_prism_tomorrow_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
@@ -9352,8 +9356,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _globalThis__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_globalThis__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _utils_typography__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/typography */ "./src/utils/typography.js");
 /* harmony import */ var _Bio__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Bio */ "./src/templates/Bio.js");
-/* harmony import */ var _components_ThemeToggle__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/ThemeToggle */ "./src/templates/components/ThemeToggle.jsx");
-/* harmony import */ var _components_Transition__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/Transition */ "./src/templates/components/Transition.jsx");
+/* harmony import */ var _components_Transition__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Transition */ "./src/templates/components/Transition.jsx");
 
 
 
@@ -9368,7 +9371,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1___default()(["\n  box-shadow: none;\n  text-decoration: none;\n  color: var(--textTitle);\n"]);
+  var data = _babel_runtime_helpers_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1___default()(["\n  box-shadow: none;\n  text-decoration: none;\n  color: var(--text-title);\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -9376,7 +9379,6 @@ function _templateObject() {
 
   return data;
 }
-
 
 
 
@@ -9413,31 +9415,16 @@ var BlogHeader = function BlogHeader(_ref2) {
   var location = _ref2.location,
       title = _ref2.title,
       isRoot = _ref2.isRoot;
-  var THEME = 'theme';
-  var cacheTheme;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(function () {
-    if (typeof localStorage !== 'undefined') {
-      cacheTheme = localStorage.getItem(THEME);
-      return cacheTheme === 'dark';
-    } else {
-      return false;
-    }
-  }),
-      checked = _useState[0],
-      setChecked = _useState[1];
-
   Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
     var colorSchemeChanged = function colorSchemeChanged(_ref3) {
       var matches = _ref3.matches;
       document.body.className = matches ? 'dark' : 'light';
-      setChecked(matches);
     };
 
     var media = window.matchMedia('(prefers-color-scheme: dark)');
     media && media.addListener(colorSchemeChanged);
     colorSchemeChanged({
-      matches: cacheTheme === undefined ? media.matches : checked
+      matches: media.matches
     });
     return function () {
       return media && media.removeListener(colorSchemeChanged);
@@ -9447,18 +9434,6 @@ var BlogHeader = function BlogHeader(_ref2) {
     title: title,
     location: location,
     isRoot: isRoot
-  }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_components_ThemeToggle__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    checked: checked,
-    icons: {
-      checked: react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, "\uD83C\uDF1A"),
-      unchecked: react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, "\uD83C\uDF1E")
-    },
-    onChange: function onChange(checked) {
-      var theme = checked ? 'dark' : 'light';
-      document.body.className = theme;
-      setChecked(checked);
-      localStorage.setItem(THEME, theme);
-    }
   })), isRoot && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_Bio__WEBPACK_IMPORTED_MODULE_8__["default"], null));
 };
 
@@ -9473,7 +9448,7 @@ var Layout = function Layout(_ref4) {
   }
 
   var isRoot = location.pathname === rootPath;
-  var Container = isRoot ? _components_Transition__WEBPACK_IMPORTED_MODULE_10__["Home"] : _components_Transition__WEBPACK_IMPORTED_MODULE_10__["Detail"];
+  var Container = isRoot ? _components_Transition__WEBPACK_IMPORTED_MODULE_9__["Home"] : _components_Transition__WEBPACK_IMPORTED_MODULE_9__["Detail"];
   return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Container, null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(BlogHeader, {
     isRoot: isRoot,
     title: title,
@@ -9533,7 +9508,7 @@ var BlogPostTemplate = function BlogPostTemplate(_ref) {
     title: siteTitle
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("hgroup", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
     style: {
-      color: 'var(--textTitle)',
+      color: 'var(--text-title)',
       transition: 'color 0.3s ease-out, background 0.3s ease-out'
     }
   }, post.frontmatter.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("time", {
@@ -9597,244 +9572,6 @@ var PageNavigation = function PageNavigation(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PageNavigation);
-
-/***/ }),
-
-/***/ "./src/templates/components/ThemeToggle.jsx":
-/*!**************************************************!*\
-  !*** ./src/templates/components/ThemeToggle.jsx ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "core-js/modules/es6.object.assign");
-/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js");
-/* harmony import */ var _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Toggle_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Toggle.css */ "./src/templates/components/Toggle.css");
-/* harmony import */ var _Toggle_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Toggle_css__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-var noop = function noop() {}; // Copyright 2015-present Drifty Co.
-// http://drifty.com/
-// from: https://github.com/driftyco/ionic/blob/master/src/util/dom.ts
-
-
-function pointerCoord(event) {
-  // get coordinates for either a mouse click
-  // or a touch depending on the given event
-  if (event) {
-    var changedTouches = event.changedTouches;
-
-    if (changedTouches && changedTouches.length > 0) {
-      var touch = changedTouches[0];
-      return {
-        x: touch.clientX,
-        y: touch.clientY
-      };
-    }
-
-    var pageX = event.pageX;
-
-    if (pageX !== undefined) {
-      return {
-        x: pageX,
-        y: event.pageY
-      };
-    }
-  }
-
-  return {
-    x: 0,
-    y: 0
-  };
-}
-
-var Toggle = function Toggle(_ref) {
-  var onChange = _ref.onChange,
-      props = _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1___default()(_ref, ["onChange"]);
-
-  var className = props.className,
-      _icons = props.icons,
-      disabled = props.disabled,
-      onFocus = props.onFocus,
-      checked = props.checked,
-      inputProps = _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1___default()(props, ["className", "icons", "disabled", "onFocus", "checked"]);
-
-  var input = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])(null);
-  var touchParams = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])({
-    moved: false,
-    previouslyChecked: !!(props.checked || props.defaultChecked),
-    touchMoved: false,
-    startX: null,
-    hadFocusAtTouchStart: false,
-    touchStarted: false
-  });
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-      hasFocus = _useState[0],
-      setFocus = _useState[1];
-
-  var handleClick = Object(react__WEBPACK_IMPORTED_MODULE_2__["useCallback"])(function (event) {
-    var checkbox = input.current;
-    touchParams.current.previouslyChecked = checkbox.checked;
-
-    if (event.target !== checkbox && touchParams.current.moved) {
-      event.preventDefault();
-      checkbox.focus();
-      checkbox.click();
-      return;
-    }
-
-    onChange(!checkbox.checked);
-  }, [onChange]);
-  /*   const handleTouchStart = useCallback(
-      event => {
-        Object.assign(touchParams.current, {
-          startX: pointerCoord(event).x,
-          touchStarted: true,
-          hadFocusAtTouchStart: hasFocus,
-        });
-        setFocus(true);
-      },
-      [hasFocus]
-    );
-  
-    const handleTouchMove = useCallback(
-      event => {
-        if (!touchParams.current.touchStarted) return;
-        touchParams.current.touchMoved = true;
-  
-        const { startX } = touchParams.current;
-        if (startX != null) {
-          let currentX = pointerCoord(event).x;
-          if (checked && currentX + 15 < startX) {
-            onChange(false);
-            touchParams.current.startX = currentX;
-          } else if (!checked && currentX - 15 > startX) {
-            onChange(true);
-            touchParams.current.startX = currentX;
-          }
-        }
-      },
-      [checked, onChange]
-    );
-  
-    const handleTouchEnd = useCallback(
-      event => {
-        const {
-          touchMoved,
-          startX,
-          previouslyChecked,
-          hadFocusAtTouchStart,
-        } = touchParams.current;
-        if (!touchMoved) return;
-        const checkbox = input.current;
-        event.preventDefault();
-  
-        if (startX != null) {
-          if (previouslyChecked !== checked) {
-            checkbox.click();
-          }
-  
-          Object.assign(touchParams.current, {
-            touchedStarted: false,
-            startX: null,
-            touchMoved: false,
-          });
-        }
-  
-        if (!hadFocusAtTouchStart) {
-          setFocus(false);
-        }
-      },
-      [checked]
-    ); 
-  
-      const handleTouchCancel = useCallback(() => {
-      const { startX, hadFocusAtTouchStart } = touchParams.current;
-  
-      startX != null &&
-        Object.assign(touchParams.current, {
-          touchStarted: false,
-          startX: null,
-          touchMoved: false,
-        });
-  
-      if (hadFocusAtTouchStart) {
-        setFocus(false);
-      }
-    }, [touchParams]); */
-
-  var handleFocus = Object(react__WEBPACK_IMPORTED_MODULE_2__["useCallback"])(function (event) {
-    onFocus && onFocus(event);
-    touchParams.current.hadFocusAtTouchStart = true;
-    setFocus(true);
-  }, [onFocus]); // const handleBlur = useCallback(
-  //   event => {
-  //     props.onBlur && props.onBlur(event);
-  //     touchParams.hadFocusAtTouchStart = false;
-  //     setFocus(false);
-  //   },
-  //   [touchParams]
-  // );
-
-  var getIcon = function getIcon(type) {
-    var icons = props.icons;
-
-    if (!icons) {
-      return null;
-    }
-
-    return icons[type] === undefined ? Toggle.defaultProps.icons[type] : icons[type];
-  };
-
-  var classes = 'react-toggle' + (checked ? ' react-toggle--checked' : '') + (hasFocus ? ' react-toggle--focus' : '') + (disabled ? ' react-toggle--disabled' : '') + (className ? ' ' + className : '');
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: classes,
-    onClick: handleClick // onTouchStart={handleTouchStart}
-    // onTouchMove={handleTouchMove}
-    // onTouchEnd={handleTouchEnd}
-    // onTouchCancel={handleTouchCancel}
-
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "react-toggle-track"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "react-toggle-track-check"
-  }, getIcon('checked')), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "react-toggle-track-x"
-  }, getIcon('unchecked'))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "react-toggle-thumb"
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", Object.assign({}, inputProps, {
-    checked: checked,
-    onChange: noop,
-    ref: input,
-    onFocus: handleFocus,
-    className: "react-toggle-screenreader-only",
-    type: "checkbox",
-    "aria-label": "Switch between Dark and Light mode"
-  })));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Toggle);
-
-/***/ }),
-
-/***/ "./src/templates/components/Toggle.css":
-/*!*********************************************!*\
-  !*** ./src/templates/components/Toggle.css ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// empty (null-loader)
 
 /***/ }),
 
@@ -9916,7 +9653,7 @@ __webpack_require__.r(__webpack_exports__);
 typography_theme_wordpress_2016__WEBPACK_IMPORTED_MODULE_1___default.a.overrideThemeStyles = function () {
   return {
     a: {
-      color: 'var(--textLink)'
+      color: 'var(--text-link)'
     },
     hr: {
       background: 'var(--hr)'
@@ -9929,7 +9666,7 @@ typography_theme_wordpress_2016__WEBPACK_IMPORTED_MODULE_1___default.a.overrideT
       boxShadow: 'none'
     },
     'a.anchor svg[aria-hidden="true"]': {
-      stroke: 'var(--textLink)'
+      stroke: 'var(--text-link)'
     },
     'p code': {
       fontSize: '1rem'
