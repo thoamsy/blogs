@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import 'prismjs/themes/prism-okaidia.css';
+import 'prismjs/themes/prism-tomorrow.css';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
@@ -54,7 +54,7 @@ const BlogHeader = ({ location, title, isRoot }) => {
     const media = window.matchMedia('(prefers-color-scheme: dark)');
     media && media.addListener(colorSchemeChanged);
     colorSchemeChanged({
-      matches: media.matches
+      matches: media.matches,
     });
     return () => media && media.removeListener(colorSchemeChanged);
     // eslint-disable-next-line react-hooks/exhaustive-deps
