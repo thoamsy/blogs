@@ -27,7 +27,7 @@ const BlogNav = ({ to, title, date, spoiler }) => (
         {title}
       </Link>
     </h3>
-    <div style={{ color: 'var(--header)' }}>
+    <div style={{ color: 'var(--text-normal)' }}>
       <time>
         <small>{date}</small>
       </time>
