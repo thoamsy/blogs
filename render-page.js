@@ -9503,6 +9503,10 @@ var BlogPostTemplate = function BlogPostTemplate(_ref) {
       post = _ref$data.markdownRemark,
       site = _ref$data.site;
   var siteTitle = site.siteMetadata.title;
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    var homePageTitle = '😏';
+    document.title = homePageTitle + "  " + post.frontmatter.title; // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
     location: location,
     title: siteTitle
