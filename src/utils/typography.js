@@ -4,7 +4,7 @@ import './global.css';
 
 Wordpress2016.overrideThemeStyles = () => ({
   a: {
-    color: 'var(--textLink)',
+    color: 'var(--text-link)',
   },
   hr: {
     background: 'var(--hr)',
@@ -17,7 +17,7 @@ Wordpress2016.overrideThemeStyles = () => ({
     boxShadow: 'none',
   },
   'a.anchor svg[aria-hidden="true"]': {
-    stroke: 'var(--textLink)',
+    stroke: 'var(--text-link)',
   },
   'p code': {
     fontSize: '1rem',

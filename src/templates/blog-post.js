@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { rhythm, scale } from '../utils/typography';
 import Bio from './Bio';
 import PageNavigation from './components/PageNavigation';
@@ -12,12 +12,18 @@ const BlogPostTemplate = ({
 }) => {
   const siteTitle = site.siteMetadata.title;
 
+  useEffect(() => {
+    const homePageTitle = '😏';
+    document.title = `${homePageTitle}  ${post.frontmatter.title}`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Layout location={location} title={siteTitle}>
       <hgroup>
         <h1
           style={{
-            color: 'var(--textTitle)',
+            color: 'var(--text-title)',
             transition: 'color 0.3s ease-out, background 0.3s ease-out',
           }}
         >
