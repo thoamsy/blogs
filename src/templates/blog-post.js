@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { rhythm, scale } from '../utils/typography';
 import Bio from './Bio';
 import PageNavigation from './components/PageNavigation';
@@ -11,6 +11,12 @@ const BlogPostTemplate = ({
   data: { markdownRemark: post, site },
 }) => {
   const siteTitle = site.siteMetadata.title;
+
+  useEffect(() => {
+    const homePageTitle = '😏';
+    document.title = `${homePageTitle}  ${post.frontmatter.title}`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Layout location={location} title={siteTitle}>
