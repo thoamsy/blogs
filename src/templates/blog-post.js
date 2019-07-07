@@ -31,7 +31,7 @@ const BlogPostTemplate = ({
         </h1>
         <time
           style={{
-            ...scale(-1 / 5),
+            ...scale(-1 / 4),
             display: 'block',
             marginBottom: rhythm(1),
             marginTop: rhythm(-1),
@@ -41,7 +41,7 @@ const BlogPostTemplate = ({
         </time>
       </hgroup>
       <main
-        style={{ fontSize: rhythm(0.7) }}
+        style={{ fontSize: rhythm(0.6) }}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
       <hr
