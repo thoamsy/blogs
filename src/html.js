@@ -28,20 +28,6 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            const DARK = 'dark';
-            const LIGHT = 'light';
-            if (typeof localStorage !== 'undefined') {
-              const theme = localStorage.getItem('theme');
-              window.__preferTheme = theme;
-              document.body.className = theme;
-            }
-          `,
-          }}
-        />
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import 'prismjs/themes/prism-tomorrow.css';
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import '../globalThis';
@@ -45,31 +45,6 @@ const BlogTitle = ({ location, isRoot, title }) => {
   );
 };
 
-const BlogHeader = ({ location, title, isRoot }) => {
-  useEffect(() => {
-    const colorSchemeChanged = ({ matches }) => {
-      document.body.className = matches ? 'dark' : 'light';
-    };
-
-    const media = window.matchMedia('(prefers-color-scheme: dark)');
-    media && media.addListener(colorSchemeChanged);
-    colorSchemeChanged({
-      matches: media.matches,
-    });
-    return () => media && media.removeListener(colorSchemeChanged);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  return (
-    <>
-      <Header>
-        <BlogTitle title={title} location={location} isRoot={isRoot} />
-      </Header>
-      {isRoot && <Bio />}
-    </>
-  );
-};
-
 const Layout = ({ location, title, children }) => {
   let rootPath = '/';
   if (typeof __PATH_PREFIX__ !== 'undefined') {
@@ -80,7 +55,10 @@ const Layout = ({ location, title, children }) => {
   const Container = isRoot ? Home : Detail;
   return (
     <Container>
-      <BlogHeader isRoot={isRoot} title={title} location={location} />
+      <Header>
+        <BlogTitle title={title} location={location} isRoot={isRoot} />
+      </Header>
+      {isRoot && <Bio />}
       {children}
     </Container>
   );
