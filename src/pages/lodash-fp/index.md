@@ -1,8 +1,10 @@
 ---
 title: 使用 lodash/fp
-date: '2018-04-02'
+date: 2018-04-02
 spoiler: 感受 fp 的强大
 ---
+
+NOTE: 2019-08-25 调整一些描述和格式更新，并添加 pipeline 相关。
 
 这篇文章主要是介绍 lodash 的 [fp](https://github.com/lodash/lodash/wiki/FP-Guide) 模块, 通过它的特点来让 React 的 `setState` 少写很多代码. 同样的原理也能放在 redux 的 `reducer` 上, 但是因为 lodash/fp 的缺陷, 这篇文章不会深入.
 
@@ -43,9 +45,9 @@ const rejectWithPostId = compose(update('posts'), reject, propEq('id'));
 this.setState(rejectWithPostId(postId))
 ```
 
-从表面上看, 我们已经少写了很多重复的代码. 比如之前两个代码中都会出现三次的 `posts`, 在这里只出现了一次, 而且也没有嵌套和大括号的出现, 这明显能增加代码的可读性.
+可以很直观的看到, 我们已经少写了很多重复的代码. 比如之前两个代码中都会出现三次的 `posts`, 在这里只出现了一次, 而且也没有嵌套和大括号的出现, 这明显让代码看上去更~~简洁~~优雅不繁琐。
 
-而下面那个使用 compose 的方式, 虽然看上去总代码多了, 但是进一步提高了代码的复用性.
+而下面 compose 的使用, 虽然看上去总代码多了, 但是却进一步提高了代码的维护性，让开发者明确知道这个函数代表了什么意思。
 
 ## 具体的解释在下文说明
 
@@ -73,10 +75,10 @@ this.setState((prevState) => set(prevState, 'posts[0]', 10)
 但是如果用 lodash/fp 下的 `set`
 
 ```js
-this.setState((prevState) => set('posts[0], 10, prevState))
+this.setState(prevState => set('posts[0]', 10, prevState));
 ```
 
-这里没有用到柯里化的写法, 仅仅是为了变现 set 的 Pure 和参数顺序的调整.
+它相比 lodash 的区别是，参数顺序调整和 _immutable_
 另外, 你可以用 Jest 运行下面代码, 可以确定它是纯的, 这样也就保证了 setState 的正确性
 
 ```js
@@ -90,10 +92,11 @@ test('The set function should be pure', () => {
 
 ### Rearranged Arguments
 
-最显著的一点就是, 由 /data-first/ 变成了 /data-last/.
+最显著的一点就是, 由 _data-first/_ 变成了 _data-last_.
 除了上面的 set, 还有 `map, reduce, filter` 都是这样.
-`map([1,2,3], a => a * 2)` 调整成了 `map(a => a * 2, [1,2,3])`
-这个调整目前看上去没有什么用, 等描述完柯里化后我们会继续对比
+
+`map([1, 2, 3], a => a * 2)` 调整成了 `map(a => a * 2, [1 ,2 ,3])`
+这个调整目前看上去似乎很鸡肋，甚至有点反人类之嫌, 等描述完柯里化后我们会继续对比
 
 ### Capped Iteratee Arguments
 
@@ -111,41 +114,46 @@ fp.map(parseInt)(['6', '8', '10']);
 // ➜ [6, 8, 10]
 ```
 
-但是这似乎出现了问题, 我们在 React 中需要*更新*某个数组内特定 index 的用法就用不了.
+Capped 的方式虽然让我们不会再遭遇意外的传参导致的 bug，但是这也导致 map 的能力被大大削弱。这种一刀切的方式似乎不是那么的优雅。好在 fp 中还提供了一个 `convert` 方法来用去除这个限制
 
 ```js
+const mapWithIndex = map.convert({ cap: false })
 this.setState(({ posts }) => ({
-	posts: map((post, i) => i === index ? { ...post, content: 'good' } : post, posts)
+	posts: mapWithIndex((post, i) => i === index ? { ...post, content: 'good' } : post, posts)
 });
 ```
 
-当然函数本来提升了一个方法 `convert`, 可以用来去除这个限制.
-`const mapWithIndex = map.convert({ cap: false })`
-之后再将 `map` 替换成 `mapWithIndex` 就行了.
-
-可是真的有必要这样做吗? 我们想一下, 难道 cap 仅仅只是为了减少这种 bug 吗? 在我看来还有一个原因, 我们应该使用更加 _functional_ 的方式来完成这个任务
+可是我们真的还需要依赖 map 的 index 来做这种事情么? 仔细想一下, cap 的存在不仅是为了减少意外的 bug 出现，还有一个可能就是它在鼓励开发者使用更加 _functional_ 的方式来完成这个任务。我们可以到 fp 中的 `update` 方法
 
 ```js
-this.setState(update(`posts[${index}]`, set('content', 'wow')));
+this.setState(update(`posts[${index}]`, set('content', 'good')));
 ```
 
-这样看上去就十分清晰了. 不过, 有一点需要注意. 如果我们将 `set('content', 'wow')` 替换成 `assign({ content: 'wow' })` 或者 `merge` 行不行呢?
-恩这里是不行的, 同样的, 原因在后面再解释.
-不过, lodash/fp 其实还提供了很多同名函数, `set` 的同名函数有 `assoc` 和 `assocPath`. 用法都一样, 不过在其他库中, 后面两个函数更为普遍.
-`assoc` 的用法其实就是不嵌套的 `set`, 就像上面例子那样.
-`assocPath` 则是需要深入某个路径里, 像 `set('a.b.c.d[0]')` 这种情况就应该用 `assocPath`.
-Lodash 偷了懒, 没有在实现上区别它们. 不过它提供了一个 `eslint-plugin-lodash-fp` 来提供 lint 的支持, 帮助使用者加以限制.
+那么除了 set 之外，fp 中还存在一个 assign 方法，它的作用和 `Object.assign` 类似，那么我们能把代码替换成下面这样么：
+
+```js
+this.setState(update(`posts[${index}]`, assign({ content: 'good' })));
+```
+
+事实上是不可行的，具体原因后面再展示。
+
+另外, lodash/fp 其实还提供了很多同名函数, `set` 的同名函数有 `assoc` 和 `assocPath`. 用法都一样, 不过在其他库中, 后面两个叫法更为普遍.
+
+`assoc` 用于给非嵌套的对象赋值。比如 `assoc('path', 1), assoc('hh', 2)`。对于 `posts[2]` 这种方式就应该交给
+assocPath, `assocPath(['posts', 2], 2)`
+
+但是呢，Lodash 是偷了懒, 没有在实现上区别它们. 只不过它提供了一个 `eslint-plugin-lodash-fp` 来提供 lint 的支持, 帮助使用者加以限制.
 
 ### Currying
 
 终于到了重点咯. 先来解释下柯里化吧.
-英文 /Currying/, 之所以这么叫是因为有一个数学家叫, [Haskell Curry](https://en.wikipedia.org/wiki/Haskell_Curry) , 他提出了一种化简高阶函数的方法, 所有后人就给这种方法命名为 Currying 咯. 我初学的时候, 一直没搞懂这是什么意思, 因为它的直译就是*咖喱*(那个时候, 库里还没那么火)
+英文 _Currying_, 之所以这么叫是因为有一个数学家叫, [Haskell Curry](https://en.wikipedia.org/wiki/Haskell_Curry) , 他提出了一种化简高阶函数的方法, 所有后人就给这种方法命名为 Currying 咯. 我初学的时候, 一直没搞懂这是什么意思, 因为它的直译就是*咖喱*(那个时候, 篮球巨星库里还没那么火)
 
 假设我们有一个函数, `add`. 通常的写法应该是 `add(a, 10)`, 说明我们给变量 a 加 10.
 下一次我们要给变量 b 加 10, 就 `add(b, 10)`, 如果还有变量 C……
 如果一个被柯里化过得 add, 就可以这样写 `add(a, 10) add(a)(10), add(__, 10)(a), add(__)(a)(10)`
-你可能会问这样有什么用 0.0, 而且那个 `__` 是什么意思?
-最简单的方式就是, 我们可以写出一个新的函数
+
+你可能会问这样有什么用 0.0, 而且那个 `__` 是什么意思? 这大的好处其实就是能够函数复用，并作为输入传给下一个函数
 
 ```js
 const addTen = add(10);
@@ -157,18 +165,19 @@ const addTen = add(10);
 > The placeholder argument, which defaults to `__`, may be used to fill in method arguments in a different order. Placeholders are filled by the first available arguments of the curried returned function.
 
 什么意思, 我们举过一个例子. 上面的加法改成减法, 但是目的还是一样, 将一个数减 10.
-想一想, 我们还能用 `sub(10)` 吗? 显然不行, 因为减法不是加法, 是不能交换的. 如果这样的话就会变成 10 - a 而不是 a - 10 咯.
-这个时候就可以用到 `__`, `const subTen = sub(__, 10)`, 这样的话就能满足要求咯.
+这里我们还能用 `sub(10)` 吗? 显然不行, 因为减法不是加法, 是不**满足交换律**的. 所以 sub(10) 会变成 10 - a 而不是 a - 10
+这个时候就可以用到 `__`, `const subTen = sub(__, 10)`, 它就相当于一个占位符的效果，让我们忽略这个值，去看后面的。也类似于 `flip(sub)(10)` 的效果
+
 同时, 使用占位符, 上面的代码
 
 ```js
-this.setState(update(`posts[${index}]`, set('content', 'wow')));
+this.setState(update(`posts[${index}]`, set('content', 'good')));
 ```
 
 其实可以改成
 
 ```js
-this.setState(update(`posts[${index}]`, assign(__, { content: 'wow' }))
+this.setState(update(`posts[${index}]`, assign(__, { content: 'good' }))
 ```
 
 所以之前的 `assign` 不行的原因是因为, lodash/fp 并没有调整它的顺序. 本来是后面的参数覆盖前面的参数, 这种很符合人类思考方式的习惯, 但是如果硬要交换的话, 反而就会看上去很奇怪.
@@ -177,7 +186,7 @@ this.setState(update(`posts[${index}]`, assign(__, { content: 'wow' }))
 再看一个例子. 这个代码可能有点抽象, 有点长 :）[例子来自一个 ramda 的教程](http://fr.umio.us/favoring-curry/)
 
 ```js
-const getIncompleteTaskSummaries = function(membername) {
+const getIncompleteTaskSummaries = function(memberName) {
     return fetchData()
         .then(data => get(data, 'tasks'))
         .then(tasks => filter(tasks, 'username'))
@@ -242,9 +251,19 @@ compose(
 const compose = (...fns) => fns.reduce((...args) => (a, b) => a(b(...args)));
 ```
 
+在新的 Babel 提案中，有一个 [pipeline](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator) 运算符 `|>`, 利用它可以让代码改成下面的样子而不需要另外的函数。而且相比 compose 的从右往左的顺序，可能从左往右会更加直观
+
+```js
+get('tasks')
+  |> filter('username')
+  |> reject('complete')
+  |> map(pick(['id', 'dueDate', 'title', 'priority']))
+  |> sortBy('dueDate');
+```
+
 ### No Optional Arguments
 
-最后再解释一下为什么需要固定参数? Lodash 的那些可选参数的函数全部都挂了, 为什么呢?
+最后再解释一下为什么需要固定参数? lodash 的那些可选参数的函数全部都挂了, 为什么呢?
 其实这是因为 `curry` 不支持可选参数的. JS 原生不支持柯里化, 那么我们无非就是使用一个函数来模拟这个过程.
 一个简单的 curry 方法可以写成
 
@@ -277,7 +296,7 @@ function setValue(value, index) {
 lodash/fp 其实还有很多不足, 它不过是将 lodash 里的函数改成了 fp 的形式, 所以它相比 lodash 没有任何新函数.
 比如, 它不能同时修改一个对象的多个值. 同样的也不能使用多个函数来修改一个对象的多个值.
 简单的说就是, `set` 和 `update` 都仅仅只支持修改一个参数.
-同时, 针对数组的方法也不是很多, 比如没有类似于 `insert` 的方法. 这可能是因为原生 js 有了 `splice`, lodash 也没有加强的必要.
+同时, 针对数组的方法也不是很多, 比如没有类似于 `insert` 的方法. 这让某些时候，fp 变得非常鸡肋
 
 ## Ramda
 
