@@ -1,6 +1,8 @@
 body {
   background-color: var(--bg);
   transition: color 0.3s ease-out, background 0.3s ease-out;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 @media (prefers-color-scheme: light), (prefers-color-scheme: not-all) {
@@ -37,25 +39,6 @@ body {
     background-color: hsla(20, 20%, 50%, 0.2);
     border-left-color: #ff375e;
   }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-p,
-small,
-strong,
-em,
-li {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 blockquote {
