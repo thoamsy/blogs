@@ -1,0 +1,485 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/blogs/styles.8f3582d923d67fef4e2d.css">body{background-color:var(--bg);-webkit-transition:color .3s ease-out,background .3s ease-out;transition:color .3s ease-out,background .3s ease-out;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}@media (prefers-color-scheme:light),(prefers-color-scheme:not-all){body{--bg:#fff;--text-normal:#000;--text-title:#000;--text-secondary:#3c3c43;--text-link:#007aff;--hr:rgba(0,0,0,0.2);--inlineCode-bg:rgba(255,229,100,0.2);--inlineCode-text:#1a1a1a}blockquote{background-color:rgba(255,229,100,.3);border-left-color:#ffe564}}@media (prefers-color-scheme:dark){body{--bg:#000;--text-normal:hsla(0,0%,100%,0.88);--text-title:#fff;--text-link:#ff453a;--hr:hsla(0,0%,100%,0.2);--inlineCode-bg:#373c49;--text-secondary:hsla(0,0%,100%,0.6);--inlineCode-text:#e6e6e6}blockquote{color:ivory;background-color:hsla(20,20%,50%,.2);border-left-color:#ff375e}}blockquote{margin:20px -30px 30px;padding:1.25em;border-left-width:9px;border-left-style:solid}blockquote p:first-of-type:not(:last-child){font-weight:700;color:initial;margin-top:0}blockquote p:nth-of-type(2){margin-top:0;font-size:17px}code[class*=language-],pre[class*=language-]{color:#fff;font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace}:not(pre)>code[class*=language-],pre[class*=language-]{background:#011627}pre[class*=language-]{border-radius:10px}pre[class*=language-]::selection{background:#27292a}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:hsla(0,0%,93%,.15)}:not(pre)>code[class=language-text]{border-radius:.3em;background-color:var(--inlineCode-bg)!important;color:var(--inlineCode-text);white-space:normal;padding:0 3px;word-break:break-word;font-family:Menlo,Consolas,Courier New,monospace;text-shadow:none}pre[data-line]{padding:1em 0 1em 3em;position:relative}.gatsby-highlight-code-line{background-color:#022a4b;display:block;margin-right:-1em;margin-left:-1em;padding-right:1em;padding-left:.75em;border-left:.25em solid #ffa7c4}.gatsby-highlight{overflow:auto}.gatsby-highlight pre[class*=language-]{float:left;min-width:100%}.token.attr-name{color:#addb67;font-style:italic}.token.comment{color:#637777}.token.string,.token.url{color:#addb67}.token.variable{color:#d6deeb}.token.number{color:#f78c6c}.token.builtin,.token.char,.token.constant,.token.function{color:#82aaff}.token.punctuation{color:#c792ea}.token.doctype,.token.selector{color:#c792ea;font-style:"italic"}.token.class-name{color:#ffcb8b}.token.keyword,.token.operator,.token.tag{color:#ffa7c4}.token.boolean{color:#ff5874}.token.property{color:#80cbc4}.token.namespace{color:#b2ccd6}nav>ol{list-style:none;margin-left:0}code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><meta name="generator" content="Gatsby 2.18.6"/><link rel="manifest" href="/blogs/manifest.webmanifest"/><meta name="theme-color" content="#ffffff"/><link rel="apple-touch-icon" sizes="48x48" href="/blogs/icons/icon-48x48.png?v=eaf0840ef519c22e35dbbd63756f6ce6"/><link rel="apple-touch-icon" sizes="72x72" href="/blogs/icons/icon-72x72.png?v=eaf0840ef519c22e35dbbd63756f6ce6"/><link rel="apple-touch-icon" sizes="96x96" href="/blogs/icons/icon-96x96.png?v=eaf0840ef519c22e35dbbd63756f6ce6"/><link rel="apple-touch-icon" sizes="144x144" href="/blogs/icons/icon-144x144.png?v=eaf0840ef519c22e35dbbd63756f6ce6"/><link rel="apple-touch-icon" sizes="192x192" href="/blogs/icons/icon-192x192.png?v=eaf0840ef519c22e35dbbd63756f6ce6"/><link rel="apple-touch-icon" sizes="256x256" href="/blogs/icons/icon-256x256.png?v=eaf0840ef519c22e35dbbd63756f6ce6"/><link rel="apple-touch-icon" sizes="384x384" href="/blogs/icons/icon-384x384.png?v=eaf0840ef519c22e35dbbd63756f6ce6"/><link rel="apple-touch-icon" sizes="512x512" href="/blogs/icons/icon-512x512.png?v=eaf0840ef519c22e35dbbd63756f6ce6"/><style type="text/css">.gatsby-resp-image-image{width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;color:transparent;}</style><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true"></title><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:inherit;font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);border-left-color:inherit;opacity:0.8;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:var(--hr);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:var(--text-link);text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a,h1,h2,h3,h4,h5,h6{font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;}a.gatsby-resp-image-link{box-shadow:none;}a.anchor{box-shadow:none;}a.anchor svg[aria-hidden="true"]{stroke:var(--text-link);}p code{font-size:1rem;}h1 code, h2 code, h3 code, h4 code, h5 code, h6 code{font-size:inherit;}li code{font-size:1rem;}blockquote.translation{font-size:1em;}</style><link as="script" rel="preload" href="/blogs/webpack-runtime-3f83f7d83f430ca9905a.js"/><link as="script" rel="preload" href="/blogs/commons-b30dcf9e8ea16c8b7870.js"/><link as="script" rel="preload" href="/blogs/app-ddc443515d5ff0002b6c.js"/><link as="script" rel="preload" href="/blogs/styles-e17cf6dbd604d0464632.js"/><link as="script" rel="preload" href="/blogs/component---src-templates-blog-post-js-21d15e443db951842aef.js"/><link as="fetch" rel="preload" href="/blogs/page-data/lets-a11y/page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><section class="sc-bdVaJa ichIUi"><div class="sc-bxivhb htDJCY"><header class="sc-EHOje izLLQu"><h3 style="font-family:sans-serif;margin-top:0;margin-bottom:-1.75rem"><a class="sc-ifAKCX ixOChk" href="/blogs/">😏</a></h3></header><hgroup><h1 style="color:var(--text-title);transition:color 0.3s ease-out, background 0.3s ease-out">Let&#x27;s a11y</h1><time style="font-size:0.79527rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">2019/12/02</time></hgroup><main style="font-size:1.05rem"><p>本文将会从下面 3 个点，来披露遵循 <em>a11y</em> 的重要性和优点，不多就三个点。</p>
+<ol>
+<li><em>HTML</em> 语义化</li>
+<li>合理的焦点</li>
+<li>快捷键</li>
+</ol>
+<p>关于 <code class="language-text">aria-</code> 类标签本文先不深入讨论，我们应该先慢慢地改变自己的习惯，先由 HTML 语义化更好的组织代码的层级结构。接着通过合理的焦点控制，让用户能够使用 Tab 来解放鼠标。接着再适当地注入快捷键，来进一步提升效率。而屏幕阅读器因为离我们目前还有点远，不需要为了强调 <em>a11y</em> 的纯粹性而一口吃成一胖子。</p>
+<h2 id="选择更富有含义的标签来取代-div"><a href="#%E9%80%89%E6%8B%A9%E6%9B%B4%E5%AF%8C%E6%9C%89%E5%90%AB%E4%B9%89%E7%9A%84%E6%A0%87%E7%AD%BE%E6%9D%A5%E5%8F%96%E4%BB%A3-div" aria-label="选择更富有含义的标签来取代 div permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>选择更富有含义的标签来取代 div</h2>
+<p>随着 HTML5 的面世，我们有了非常多的标签选择的权利。<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article#Examples">article</a>，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">section</a>，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">footer</a>，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">header</a>，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">main</a>，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav">nav</a>，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu">menu</a>，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">aside</a>，h1-h6 等等都似乎象征着那些<strong>冷冰冰</strong>的 div 应该被淘汰。</p>
+<p>当然，每一个标签都有它的使用场景，单纯地使用 <code class="language-text">section</code> 来替代所有的 <code class="language-text">div</code> 这并不是一个很好的使用姿势。尽管在编码之前要<strong>斟酌</strong>到底到底使用哪个标签似乎又是个让人很容易放弃的理由，与其思考<strong>几分钟</strong>用 <code class="language-text">article</code> 还是 <code class="language-text">section</code>，不如 <code class="language-text">&lt;div class=“container”&gt;</code> 来得直接。
+这确实没错，这也是前端开发者目前正在面临的困境。严重的依赖 <em>classname</em>，这让我们在 debug 的时候不得不瞪大眼睛看清它，而且也不能依赖相关工具帮我们生成更为可靠的 <em>Outline</em>。BTW，在 <em>React 16.2</em> 之前没有 <code class="language-text">Fragment</code> 存在的时候，多出了大量的 <em>bare div</em>，从而使 <em>React DevTool</em> 调试的时候非常痛苦，剥开了一个 div 又是一个，何时才能到头 🙂</p>
+<p>并不需要要求自己一开始就严格遵循规范或者所谓的<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">最佳实践</a>，本文也不会尝试说明 <code class="language-text">nav</code> 在什么时候用，为什么它比 <code class="language-text">div</code> 好多了，过于学院派只会让人讨厌。但是，有意的去调整，刻意地去练习，最终就会拥有一套自己选标签的标准。</p>
+<p>但是感觉这两段代码谁更容易阅读，我相信结果是非常明确的。
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/3ad88f24d1b986da94ab3750fa816aeb/288ff/carbon.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 232.9596412556054%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'932\'%3e%3cpath%20d=\'M51%2053c-2%204-1%20824%201%20826%201%202%2016%202%20149%202%20144%200%20147%200%20148-2l1-413-1-413c-2-3-296-3-298%200\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          data-srcset="/blogs/static/3ad88f24d1b986da94ab3750fa816aeb/ba381/carbon.webp 200w,
+/blogs/static/3ad88f24d1b986da94ab3750fa816aeb/7f61c/carbon.webp 400w,
+/blogs/static/3ad88f24d1b986da94ab3750fa816aeb/d00b9/carbon.webp 800w,
+/blogs/static/3ad88f24d1b986da94ab3750fa816aeb/7aa27/carbon.webp 892w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/webp"
+        />
+        <source
+          srcset="/blogs/static/3ad88f24d1b986da94ab3750fa816aeb/40714/carbon.png 200w,
+/blogs/static/3ad88f24d1b986da94ab3750fa816aeb/a8246/carbon.png 400w,
+/blogs/static/3ad88f24d1b986da94ab3750fa816aeb/11d19/carbon.png 800w,
+/blogs/static/3ad88f24d1b986da94ab3750fa816aeb/288ff/carbon.png 892w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image lazyload"
+          data-src="/blogs/static/3ad88f24d1b986da94ab3750fa816aeb/11d19/carbon.png"
+          alt="carbon"
+          title="carbon"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/5fb7bfa704e6d4cbf88fe0e1812a5094/288ff/good.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 265.9192825112108%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'1064\'%3e%3cpath%20d=\'M52%2052c-3%203-3%20956%200%20959%202%202%203%202%20148%202%20130%200%20146%200%20148-2l2-1V532c0-462%200-479-2-480-2-2-13-2-148-2-145%200-146%200-148%202\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          data-srcset="/blogs/static/5fb7bfa704e6d4cbf88fe0e1812a5094/ba381/good.webp 200w,
+/blogs/static/5fb7bfa704e6d4cbf88fe0e1812a5094/7f61c/good.webp 400w,
+/blogs/static/5fb7bfa704e6d4cbf88fe0e1812a5094/d00b9/good.webp 800w,
+/blogs/static/5fb7bfa704e6d4cbf88fe0e1812a5094/7aa27/good.webp 892w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/webp"
+        />
+        <source
+          srcset="/blogs/static/5fb7bfa704e6d4cbf88fe0e1812a5094/40714/good.png 200w,
+/blogs/static/5fb7bfa704e6d4cbf88fe0e1812a5094/a8246/good.png 400w,
+/blogs/static/5fb7bfa704e6d4cbf88fe0e1812a5094/11d19/good.png 800w,
+/blogs/static/5fb7bfa704e6d4cbf88fe0e1812a5094/288ff/good.png 892w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image lazyload"
+          data-src="/blogs/static/5fb7bfa704e6d4cbf88fe0e1812a5094/11d19/good.png"
+          alt="good"
+          title="good"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span></p>
+<h2 id="button，a-而不是-div"><a href="#button%EF%BC%8Ca-%E8%80%8C%E4%B8%8D%E6%98%AF-div" aria-label="button，a 而不是 div permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>button，a 而不是 div</h2>
+<p>为什么程序员喜欢用 <code class="language-text">div</code> 而不是 <code class="language-text">button</code>？因为 <code class="language-text">div</code> 没有任何 style，而 <code class="language-text">button</code> 和 <code class="language-text">a</code> 有，往往为了清理这些默认 style 你需要花额外的功夫。可是仅仅因为样式而丢弃语义，就有点类似你给一个 title 使用 <code class="language-text">&lt;p style={{fontSize: 24}}&gt;标题&lt;/p&gt;</code> 而不是直接采用 <code class="language-text">&lt;h1&gt;标题&lt;/h1&gt;</code>，因为你觉得 <code class="language-text">h1</code> 自带的 <code class="language-text">margin</code>，让你感到很心烦。
+这里我们抛开语义不谈，使用 div 还会丢失三个特性：</p>
+<ol>
+<li>按下 Tab 键获取焦点的能力</li>
+<li><em>onClick</em> 事件可以通过按下回车或者空格来触发（a 是按回车，button 两者都可以）</li>
+<li>没有 <em>disabled</em>（如果你通过 CSS 来模拟样式是不够，往往还需要 JS 来配合的）</li>
+</ol>
+<p>这样的好处不言而喻，假设一个场景，你要删除某个 item，这个时候弹出了一个 pop confirm，来问你是否<strong>确认删除</strong>。换句话说，会有两个“按钮🔘”，一个是取消，一个是确定。如果它们仅仅是 <code class="language-text">div</code> 的话，你就需要移动你的鼠标，去点击其中的取消或者删除。但是如果他们的开发者合理地选择了 <code class="language-text">button</code>，再通过自动 focus 取消按钮，这样你只需要轻松地按下空格，就可以关闭 pop 了。或者按下 Tab 将焦点切到确定，然后按下空格<strong>完成删除</strong>，在整个过程中你不需要点击鼠标。</p>
+<p>在大多数场景下，PC 用户似乎喜欢用鼠标来点，那些享受用快捷键的无非就是那些用着 <em>Vim</em> 的异类罢了。这里不讨论出现这种斯德哥尔摩综合症的本质是什么，但是请记住，<em>a11y</em> 的本质就是<strong>服务任何人</strong>。当用户意识到这个功能支持快捷键的时候，这就能为它带来幸福感。</p>
+<p>再以 macOS 常见的 <em>Dialog</em> 为例，下面是一个 Xcode 的场景。
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/bdbf47df38fe13043bebadc51d77ccd7/0f32b/F64171B0-6718-4E2A-9223-F98287466810.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46.4527027027027%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'186\'%3e%3cpath%20d=\'M39%2026c-1%202-2%204-2%2055%200%2059-1%2056%207%2056%203%200%204%200%203%201-2%200%203%204%208%206%204%201%2014%202%20141%202l142-1c8-1%2017-6%2015-7-1-1%200-1%203-1%207%200%207%203%207-56V28l-2-1c-3-3-318-3-322-1m27%2036l-11%202%201%209c1%208%202%208%202%204%200-3%200-4%202-3l4-1h3l-4%202-2%201v2l2%201c2%200%203%200%205-4s2-3%200%203c0%202%200%202%201%201l5-2c2%200%202%200%200-1l-3-1h7l1%201v-2c-2-3-3-5-1-3s3%201%201-1v-3l2-4c1-4%201-4-15-1m241%2055c0%204%203%204%204%201%201-2%201-2%201%200%200%201%201%202%2010%202h9v-3c0-3%200-4-2-4l-2%202h-4l-2-1h-2l-2%201h-8l-1-2-1%204\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          data-srcset="/blogs/static/bdbf47df38fe13043bebadc51d77ccd7/ba381/F64171B0-6718-4E2A-9223-F98287466810.webp 200w,
+/blogs/static/bdbf47df38fe13043bebadc51d77ccd7/7f61c/F64171B0-6718-4E2A-9223-F98287466810.webp 400w,
+/blogs/static/bdbf47df38fe13043bebadc51d77ccd7/d00b9/F64171B0-6718-4E2A-9223-F98287466810.webp 800w,
+/blogs/static/bdbf47df38fe13043bebadc51d77ccd7/2754d/F64171B0-6718-4E2A-9223-F98287466810.webp 1184w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/webp"
+        />
+        <source
+          srcset="/blogs/static/bdbf47df38fe13043bebadc51d77ccd7/40714/F64171B0-6718-4E2A-9223-F98287466810.png 200w,
+/blogs/static/bdbf47df38fe13043bebadc51d77ccd7/a8246/F64171B0-6718-4E2A-9223-F98287466810.png 400w,
+/blogs/static/bdbf47df38fe13043bebadc51d77ccd7/11d19/F64171B0-6718-4E2A-9223-F98287466810.png 800w,
+/blogs/static/bdbf47df38fe13043bebadc51d77ccd7/0f32b/F64171B0-6718-4E2A-9223-F98287466810.png 1184w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image lazyload"
+          data-src="/blogs/static/bdbf47df38fe13043bebadc51d77ccd7/11d19/F64171B0-6718-4E2A-9223-F98287466810.png"
+          alt="F64171B0 6718 4E2A 9223 F98287466810"
+          title="F64171B0 6718 4E2A 9223 F98287466810"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+你就能注意到，Quit 默认是被 focus 的，意味着按下空格就能直接退出，然后你可以按下 Tab 切换到 Install 去。此外 macOS 还有一个改进：你可以直接按下回车按触发 Primary Button，在这里就是我们橙色的按钮。</p>
+<p>除了 <code class="language-text">a</code> 和 <code class="language-text">button</code>，<code class="language-text">input</code>，<code class="language-text">select</code>，<code class="language-text">textarea</code> 等常见的标签也是能直接获得这些能力。参考 <a href="https://web.dev/use-semantic-html/">Use semantic HTML for easy keyboard wins</a></p>
+<h2 id="form-的问题"><a href="#form-%E7%9A%84%E9%97%AE%E9%A2%98" aria-label="form 的问题 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Form 的问题</h2>
+<p>回到 Web 中，<code class="language-text">alert</code> 和 <code class="language-text">confirm</code> 这两个方法也是支持按下回车直接确认，按下 Esc 来取消。我们可能因为这两个 API 唤起的 Dialog 过于丑陋，而忽视了它在体验上的优势。</p>
+<p>我身边的开发者很喜欢讲 Form 放在 Dialog 里，可是这也让 Form 变得非常难用。它 <strong>不支持自动 focus 第一个控件</strong>，也不支持按下回车（或者 ⌘+回车）提交，最大的慈善就是支持 Esc 关闭 Dialog 而已。想象下这种填写表单的体验是有多么的糟心吧！你要点下按钮唤起 Dialog，然后移动鼠标，再点击第一个 input（它们可能还不支持点击 label）。接着你只能祈祷，你可以一直按 Tab 来切到下一个控件而不需要继续操作鼠标，选择，并点击确认按钮。</p>
+<p>表单本应该是一个和输入强关联的操作，但是我们却要频繁地使用鼠标去导航，去中断我们的思考。如果你没有感觉到这有多让人沮丧的话，这正说明你所用到的产品没有一个人在遵循这种规则，他们一直在浪费你的时间，而这就是罪恶。说实在的，我已经受够了唤起一个搜索窗口后，你还需要去点击里面的搜索框的日子。</p>
+<p>那为什么要提到 ⌘ + 回车呢？因为如果你的表单中，存在多行文本，和 Button 的话，按回车提交就会和已有逻辑冲突了。不知道你有没有注意过，GitHub or Gitlab 的 comment 或者其他任何长文本编辑，就是支持 ⌘ + 回车提交的，这就是人文关怀！这种特殊性也意味着，我们不能仅仅通过下面这样的代码，来通吃所有的场景。</p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">onSubmit</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>submit<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+  </span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span>“button”</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>cancel<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">取消</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span>“submit”</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>submit<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">确认</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span class="token plain-text">
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span></code></pre></div>
+<p>我的建议还是写一个类似 <code class="language-text">useKeydown</code> 的 hooks，通过 这种方式来灵活的调整。</p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">const</span> keydown <span class="token operator">=</span> <span class="token function">useKeydown</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  enter<span class="token punctuation">:</span> submit<span class="token punctuation">,</span>
+  esc<span class="token punctuation">:</span> cancel<span class="token punctuation">,</span>
+  withMeta<span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">onKeyDown</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>keydown<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+  </span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span>“button”</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>cancel<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">取消</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span>“submit”</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>submit<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">确认</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span class="token plain-text">
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span></code></pre></div>
+<h2 id="button-和-a-的区别"><a href="#button-%E5%92%8C-a-%E7%9A%84%E5%8C%BA%E5%88%AB" aria-label="button 和 a 的区别 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Button 和 a 的区别</h2>
+<p>关于使用 button 还是 a，看一个常见的的场景：</p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> history<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">编辑</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">to</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>url<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">编辑</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span></code></pre></div>
+<p>单单看这两行代码，我们会毫不犹豫的选择第二个，因为<strong>它代码量少，不需要引入 history</strong>。但是在实际使用中，<code class="language-text">Link</code> 往往是不能达到要求的，因为它缺少了样式。
+所以为了保证样式，你必须写成 <code class="language-text">&lt;Link className=“byte-btn byte-btn-primary byte-btn-size-default byte-btn-shape-square&quot; to={url}&gt;编辑&lt;/Link&gt;</code></p>
+<p>在这个时候往往就会放弃使用 <code class="language-text">Link</code> 而是直接采用更加“人文关怀”的 <code class="language-text">Button</code>。</p>
+<p>Ok，DRY 是一个程序员的基本素质，所以采用 Button 似乎也更为合理。但是这样会有什么缺陷呢？
+这是你右键一个 <em>button</em> 的效果
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 506px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/c5d54eded77ab7423f284fcafd4a74fe/3afdf/89A836E3-1932-419E-9D28-F767D0992F5E.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 94.86166007905138%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'379\'%3e%3cpath%20d=\'M299%2031l-1%2011c0%202%201%202%2013%202h13l1-3%202-4c1%200%201%202-1%205-1%202%201%203%203%200h1v2l1-2c0-2%201-3%202-3l2-1%201-2%202%202%203%201c2%200%202%201%202%203%200%203%203%2010%205%209%202%200%201-3-1-3l-1-3v-5c3-3%202-4-3-4-4-1-4-1%201-1s6%201%206%203l2%202c3%200%202%202-1%202-1%200-2%200-1%201l2%202%201%201v-1l1-2%201-3c0-3%200-3%205-3s4%200-2-1l-8-1h16v5l-1%206v1l1%202-1%202v1l1%201-1%202v1l1%202h-3l-1-1c0-1-1-2-4-1l-5-1%201-1%201-4c0-4%200-4-2-2v5l-1%203c-1%203-3%202-3-1l-1-2c-2%200-2%202-2%2010v10l20-1c26%200%2024%202%2024-25%200-20%200-21-2-23s-3-2-45-2h-44v9M70%2055l-4%201c-5%200-5%202-1%202l3%201-4%201-3%202c0%202%202%201%205-1%204-3%204-3%204-1%200%201-1%202-3%202-3%201-3%201-3%205v4h14v-4c0-3%200-4%202-4s1-1-3-3l-3-2h3c4%200%204-2-1-2l-4-1-1-1-1%201m22%202c-1%202-2%204-1%207l-1%205c-2%201-2%200-2-4s0-4-2-4l-3%201%201%201c2%200%202%202%202%206l1%205%202-2%203-2%204%201h3V61h-3c-3%200-4%200-3-1l4-2h4v7c0%206%200%207-2%208-2%200-3%202-1%202%204%200%205-3%205-11v-7h-4l-4-1c0-3-1-2-3%201m28%201l-2%204%201%201c2%200%202%201%201%203-3%202-1%203%202%202h3c0%201-1%202-3%202-4%201-5%204-1%203h2l1%201%202-3%201-2v3c0%204%202%204%202%200%200-2%200-2%201%200l1%202%201-2c1-2%201-2%201%200s3%204%204%202l1-6v-4h-6c-3%200-5%200-4-1l5-1c5%200%205%200%205-3%200-2-1-3-3-3l-3-1h-2l-2%201c-2%200-2%201-2%203%200%205-1%207-3%207-1%200-1-1%201-4v-3l-1%201-1%201c-1%200-1-2%201-6l-1-1-2%204m29%204l1%201%201%204-1%204-1%201%204%201%205%201h1l1-2v-9l1-1-6-1-6%201m-86%2045l-1%203c2-1%202%200%202%202s1%203%202%203c1%201%201%201-1%202-3%201-4%203-1%203%202-1%206%200%204%201l-4%201-2%201h18l-2-1c-3-1-3-1-2-3%203-3%202-3-3-3l-4-1h4c5%200%205%200%205-3v-4h-7l-6-1h7c9%200%2011-2%202-2l-7-1c0-2-2-1-4%203m26-3c0%202-2%203-2%201s-2-1-3%201c-1%205-1%206%202%206l3%201-2%201c-3%200-3%200-3%204l1%204%201-3c0-2%201-3%202-3l1%204%201%204%201-1%202-1c2-1%202-2%202-4%200-3%200-4-2-4l-2-1%202-1%202-1-2-1-2-1%202-1%202-1-2-1-3-2h-1m-16%2030c0%201-1%202-3%202l-3%201h3c4%200%204%202%201%202s-3%200-3%204l2%206c1%202%201%202-1%203l-2%201h14l-3-1c-5-2-5-6%200-6%202%200%202%200%202-3%200-4%200-4-2-4-4%200-4-2%200-2l4-1h-4l-3-1-1-2-1%201m124%203c0%204-1%206-3%204l1-2v-1l-2-1%202-2v-1c-3%201-4%209-1%209l3%201-3%201h-3l2%203c3%202%202%204-2%204l-1%201h14l-2-2c-2%200-2%200-1-2%203-2%202-4-1-4-1%200-2%200-1-1l2-1c2%200%202-1%202-4%200-5-2-7-3-4v1c3%200%202%202%200%202v1c2%201%202%202%201%203-2%201-3-1-3-5l-1-4v4m19-3l-4%201c-5%200-5%202%200%202l5%201h-5c-4%200-6%202-4%204h1c0-1%201-2%203-2s2%200%201%202c-2%202-3%203-1%203h1l-2%202c-2%200-2%200%201%201%204%200%206%204%202%204v1c2%202%204%200%204-3%200-2%200-2%204-2%203%201%204%200%201-2-2-2-3-3-3-1%201%201-4%202-5%201l3-1%203-3h-1l-4%201c-2%200-2%200%200-1%202-2%208-2%208%200l1%201%201-2c0-3%200-3-4-3h-4l3-1c5%200%205-2%201-2l-5-1h-1m28%203c-2%204-2%205%200%205v2c-3%204-2%204%201%203%203%200%204-1%202-2v-4l2-2v4c0%205%200%205-3%207-5%201-5%202-1%202h2c0%202%202%201%203-2l1-3v3c0%205%202%205%202%201%200-2%200-2%201%200l1%202%201-2c0-2%200-2%201%200%201%205%204%203%204-3v-5h-5l-5-1%205-1c5%200%205%200%205-3l-2-3-3-1h-2c0%201-1%202-2%201l-4%202c-3%204-4%204-3%200l1-3-2%203m-159%205l-1%209v2c1%200%202-1%202-3%202-4%207-4%207-1l1%203v-3c0-2%201-2%203-2s3%200%203%202l-1%202-2%201%202%201c2%200%203-1%203-10v-9H85v8m41-1c-3%203%200%2011%204%2011%203%200%206-4%206-6%200-5-7-8-10-5m13%201c-3%203%200%2010%204%2010s7-8%204-11c-2-1-7-1-8%201m13-1v9l5%201c2-1%202%200%202%201l-4%201c-4%200-4%200-3%202h8l1-8v-7h-4l-5%201m122%203l-1%207c-1%201-1%201%203%201l5%201%201%201%201-1%201-2v-2l-1-5%201-4h-11l1%204M94%20217v15l1-3c1-4%204-4%205%200l4%203-1-3v-4c2-3%201-7-2-8h-7m33%202c0%202%200%202-2%201-4%200-6%202-6%206%200%205%202%206%206%206h4v-8l-1-8-1%203m36%205v8h4c6%200%209-4%209-9-1-5-3-6-8-7h-5v8m150%201v8l7-4%207-4-13-7-1%207m-99-3c-2%202-3%207-1%209%203%203%2010%200%2010-5s-6-8-9-4m13%200c-4%204-2%2010%203%2010s8-6%204-10c-2-2-5-3-7%200M64%20266l-1%203c-2%200-2%202-1%202v4c-2%204-1%206%201%202%201-1%201%200%201%203l1%205%201-6c0-2%200-4%201-3v-3l-1-2%202%201h13l-7-7-3%203c-2%203-2%203-4%202l-1-3-1-2c-1-1-1%200-1%201m29-1c-1%201-2%202-4%201l-4%201%202%201%204%201-4%202c-4%201-4%201-2%202%202%200%202%201%202%204v4h13v-4c0-3%200-4%202-4s1-1-2-3l-3-1%203-1%202-1-5-1c-1%201-2%200-3-1h-1m220%2060l1%207%2013-7-7-4-7-4v8m-227%204v5h14v-10H86v5m2%2017c-3%204-4%204-1%204h3c1%201%200%201-3%202l-4%202h4c5-1%205-1%205%201l-3%201-4%201%203%201h4l-3%202-4%202-1%201c0%202%204%200%207-3s8-3%208%200l-2%202-3%201h6l1-4c0-3%200-3-3-3s-4-1-5-2c-1-2-1-2%201-2l9%202-3-2c-4-1-4-1-2-3%204-2%203-4-2-4l-5-1-3%202m-25-1l-1%2010c-1%209%200%2011%202%205%200-3%201-4%202-3v5l-1%201%202%201c2-1%202-3%202-10v-9l-3-1-3%201m8%209c0%2010%201%2012%204%209h3c3%202%204%200%202-2-2-1-2-2-1-4%202-3%201-4-3-4-3%200-3-1-3-3%200-3%200-4%202-4%203%200%204%202%201%204-2%201-1%202%202%201%202-1%202-2%202-4s-1-3-5-3h-4v10m242%201l1%207%2012-7-7-5-6-3v8\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          data-srcset="/blogs/static/c5d54eded77ab7423f284fcafd4a74fe/ba381/89A836E3-1932-419E-9D28-F767D0992F5E.webp 200w,
+/blogs/static/c5d54eded77ab7423f284fcafd4a74fe/7f61c/89A836E3-1932-419E-9D28-F767D0992F5E.webp 400w,
+/blogs/static/c5d54eded77ab7423f284fcafd4a74fe/6b97b/89A836E3-1932-419E-9D28-F767D0992F5E.webp 506w"
+          sizes="(max-width: 506px) 100vw, 506px"
+          type="image/webp"
+        />
+        <source
+          srcset="/blogs/static/c5d54eded77ab7423f284fcafd4a74fe/40714/89A836E3-1932-419E-9D28-F767D0992F5E.png 200w,
+/blogs/static/c5d54eded77ab7423f284fcafd4a74fe/a8246/89A836E3-1932-419E-9D28-F767D0992F5E.png 400w,
+/blogs/static/c5d54eded77ab7423f284fcafd4a74fe/3afdf/89A836E3-1932-419E-9D28-F767D0992F5E.png 506w"
+          sizes="(max-width: 506px) 100vw, 506px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image lazyload"
+          data-src="/blogs/static/c5d54eded77ab7423f284fcafd4a74fe/3afdf/89A836E3-1932-419E-9D28-F767D0992F5E.png"
+          alt="89A836E3 1932 419E 9D28 F767D0992F5E"
+          title="89A836E3 1932 419E 9D28 F767D0992F5E"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+这是你右键一个 <em>a</em> 的效果
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 468px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/39bdb17750551865666570578c690742/45d15/49E53285-C0AA-49DA-A2AF-1A199F196B29.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 136.32478632478632%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'545\'%3e%3cpath%20d=\'M307%2013l1%2011h11c14%200%2016%200%2017-4%200-2%201-3%202-3%202%200%202%202%201%204s-1%202%201%202l2-2c0-1%200-2%202-2l2-1h-1l-1-1h-3l-5-1c-2%200-3%200-3-2s1-2%2024-2h24v33h-6c-5%200-6%200-5-1v-2l-1-1c-1%200-1-1%201-1%201-1%201-1-1-1s-3-1-3-2c-1-2-1-2-1%200%200%203-3%204-3%201l-2-2c-3%200-3-3%200-3l3-1-3-1c-2-1-2-2-2-4v-3l-1-2c0-2-1-1-1%201v6l1%2015v12h43V2h-93v11M77%2036l-2%201c-2%200-2%200-1%202v3c-2%201-1%202%202%202l2%201-2%201-2%201c-1%201%200%201%201%201%203%200%203%200%203%203l-1%204-1%201c2%202%204%200%204-4%200-3%200-4%202-4l3-1h-3c-3-1-3-3%200-3l2-1-1-1v-2c1-3%201-3-1-3l-2-1-2-1-1%201m12%200c-3%201-4%201-4%208%200%208-1%2010-2%207l-2-2%203%207c1%200%203-5%203-9%200-2%200-3%202-3l1%206c1%208%202%207%203%200l1-6c2-1%201-2-3-2-5%200-6-3%200-4l3-2h-5m45%202c-1%202-3%204-7%205-5%202-7%205-3%204h3l2%201%202%202%202%203v-2c-1-3-1-3%202-3l3-1h3c3%201%202-2-1-3-6-2-7-3-5-5%201-1%202-1%203%201l2%203v-3c0-1%200-2%202-1l1-1-3-1-3-1c0-2-2-1-3%202m46-1c0%202-1%202-4%202h-4v11l4-1h4v4l1%204%201-4v-4h5l4%201V39h-4c-4%200-5%200-5-2l-1-2-1%202m79-1l-1%201-2%201%201%201v3c-1%202-1%204%202%204l1%201-2%201-2%201%202%201%202%202c0%203%200%203-2%202s-3-2-3-6%200-5-2-5-2%200-1%201v10l-1%201h4l6%201c2%200%204%200%202-1-2%200-2-5%201-5l1-1-1-1c-2%200-2-1%200-3v-1l-2-1-1-2-1%202-1%201v-3l4-2%202-1-2-1-2-1-1-1-1%201m-112%201l5%201%204%201-4%201c-3%200-3%200-3%205l1%207%201-5v-5h11v4l1%206%201-6v-6h-3l-3-1%204-1%205-1c1-1-2-1-10-1-7%200-11%200-10%201m74%200l2%201c2%200%202%201%202%203%200%203%200%203-3%203l-3%201%203%201c4%200%204%202%200%207-2%202-2%203-1%203%202%200%204-3%205-7%202-5%207-4%207%201l1%205%201%201%201-5c0-5%200-5%203-5l2-1-3-1c-2%200-3%200-2-3%200-2%201-3%202-3l1-1-9-1-9%201M77%2068l-2%201-2%201%201%201%201%202-1%202v1l2%201%202%201-2%201c-2%200-3%200-2%201l2%201c2%200%203%205%201%207-1%201-1%201%201%201%201%200%202-1%202-4s1-4%202-4l2-1-2-1-2-1%202-1%202-1-1-1-1-2%201-2%201-1-2-1-3-1-1-1-1%201m79%201c0%202-1%202-4%202-4%201-4%201-5%205%200%205%201%208%202%206l4-1c3%200%203%200%203%204l1%204%201-4c0-4%200-4%203-4l4%201c1%201%201%200%201-4v-6l-4-1c-3%200-4%200-4-2l-1-2-1%202m65%201c-2%205-2%205%200%207v2l-1%202c2%200%202%201%202%204%200%204%200%204%202%203h17l-4-1c-6%200-7-1-7-7l-1-5c-2%200-2%201-1%202%201%202%201%208-1%209h-2l-1-2c0-2%201-3%202-3v-2c-2-1-2-1-1-2%201-2%201-2-1-2-4%200-3-2%200-3%202%200%203-2%201-2l-2-2c-1-1-1%200-2%202m36-2l-2%201-3%201%201%201%201%202c1%201%200%202-1%202s-2%200-1%201l2%201%202%201-3%201-2%201%202%201v1l1%203c2%201%202%201-1%202-4%202-1%202%203%201h6c3%202%204%201%201-1-2-2-2-6%201-6l1-1-4-1-4-1%203-1%205-1-2-1c-1%200-2-1-1-2l1-2%201-1-2-1-4-1h-1M88%2069c-3%200-3%200-3%208l-1%208-1-1-1-2-1%201%203%206c1%200%203-5%203-9%200-2%200-3%202-3l1%206c0%205%200%206%202%206l1-6%201-6%201-1-4-1c-4%200-4%200-4-2s1-3%203-3c3%200%205-2%202-2l-4%201m109%201l2%201c4%200%202%205-1%206l-3%201h2c4%200%204%203%201%207l-2%204c1%201%204-2%205-7%202-3%202-4%205-4h3v5c0%207%202%208%202%201%200-5%201-6%203-6l3-1h-3c-4%200-5-6-1-6l2-1-10-1c-6%200-9%200-8%201m-73%2010l1%209%201-1h14c1%201%201-1%201-8V70h-17v10m2-1v6h13V72h-13v7m-19-4l-5%201h-3v13h18V76h-4l-5-1h-1m-1%2025l-3%202c-2%200-2%201-2%206l-1%205-2%201%207%201%207%201-7%202-6%202c0%201%202%201%208-1%207-2%206-2%206%200l-1%201-2%201%202%201c2%200%203-2%203-5l2-5c2-3%202-5-1-2-1%201-1%201-1-3%200-5%200-5-3-5s-4%200-4-2h-2m-24%203c-2%202-2%202-1%200%200-2%200-2-3-2h-4v11l1%2010%201-2c0-2%201-3%202-3l1-5c0-5%200-6%202-6l6%201%204%201-4%201c-6%200-6%202%200%202l5%201h-6c-7%200-6%202%201%202h6v-4l-1-4c-2%200-2-1-1-3%201-1%201-1-4-2-2-1-3%200-5%202m98-1c0%202-1%202-4%202h-4v11l4-1h4v4l1%204%201-4v-4h5l4%201v-11h-4c-4%200-5%200-5-2l-1-2-1%202m79-1l-1%201-2%201%201%201v2c-2%203-1%204%201%204l2%202-2%201-2%201%202%201%202%202c0%202-1%202-2%202-2%200-3-1-3-6%200-4%200-5-2-5s-2%200-1%201v10l-1%201h13c-2%200-2%200-2-2s1-3%202-3l1-1-1-1c-3%200-2-3%200-3v-1l-2-1-1-2-1%202-1%201v-3l4-2%202-1-3-1c-1%200-2%200-1-1l-1-1-1%201m-38%201l2%201c2%200%202%201%202%203%200%203%200%203-3%203l-3%201%203%201%203%201-4%207-1%201c0%203%206-2%206-6%201-3%201-3%204-3h4v5c0%207%201%207%202%200%200-5%200-5%203-5l2-1-3-1c-2%200-3%200-2-3%200-2%201-3%202-3l1-1-9-1-9%201m-72%201l-1%209v9h18v-18l-9-1-8%201m-22%202c-3%201-3%201-3%209v8l9-1h8v-12l-4-1-4-1h-2l-3%201h-3l3-1c5-3%204-4-1-2m23%206v7h14v-13l-7-1h-7v7m-86%2043l-1%201-2%201%201%201%201%202a659%20659%200%20010%204l2%202-2%201-2%201%202%201%202%202c0%202-1%202-2%202-2%200-3-1-3-6%200-4%200-5-2-5s-2%200-1%201v10l-1%201h13c-2%200-2%200-2-2s1-3%202-3l1-1-1-1c-3%200-2-2%200-3v-1l-2-1-1-2-1%202-1%201c-2%200%201-5%203-5%203%200%204-2%201-2l-2-1-1-1-1%201m71%201l-1%202%202%202-1%201c-3%200-2%202%200%202l-1%202c-2%201-2%202-1%203l1%204c0%203%201%203%204%203l4%201v-6c0-4%200-5-2-5-1%200-2%200-1-1l2-1%202-1-1-1v-2c2-3%201-5%200-3h-3c-2-2-2-2-4%200m20%201c0%202-1%203-4%203l-4%201h3l4%201c0%204-2%208-5%2010s-3%203-2%203c3%200%207-4%208-9s2-5%205-5h4v6c0%205-1%206-3%206-3%202-3%203%200%203s5-4%205-10v-6h-5c-4%200-4-1-4-3l-1-3-1%203M52%20188c-3%204-3%206-1%204%202-1%202-1%202%202l1%204c1%201%200%201-1%202-3%201-4%203-1%203%202-1%205%200%205%201l-3%201-4%201%2010%201%2010-1-4-1h-3l2-2c3-4%203-4-3-4l-5-1h10v-8h-7l-6-1h7c10%200%2011-2%201-2l-7-1c0-1-2%200-3%202m27-1l-1%201-1-1-1-1c-1%200-3%205-2%206l1-1c0-2%204-1%204%201l-3%201-3%201%203%201%203%201-2%201c-3%200-3%200-3%205l1%204%201-3c0-3%200-4%202-4l1%204%201%204%201-4%201-4c2%200%202%203%201%205-1%201-1%202%201%202l1-5c0-3%200-4-2-4l-2-1%203-1%202-1-2-1-3-1%202-2%202-1-2-1-2-1-1-2-1%202m46%200l-1%203-2%201%202%201%201%203-1%202-2%201c0%201%201%202%202%201l1%203-1%203-2%201c0%202%204%201%204-1l1-5%201-3%201%201%201%201%201%201%202%203c2%200%202%200-1%202-4%202-2%203%202%201h9l-2-1-2-2%202-3c3-3%203-3-1-3l-4-1%204-1%203-1-1-1c-2%200-2-3-1-4%203%200%201-2-1-2l-3-1h-2l-3%201c-2%200-3%201%200%203%202%202%201%203-1%203-1%200-2%200-1%201l2%201%202%201c0%202-4%201-6-1v-5l-1-2-1-3-1%202m35%201l-1%204c-2%201-2%200-2-2l-1-2-1%203-1%203v2l1%206%201%205h4c6%200%208-1%208-4s-2-3-2%200c-1%202-2%202-5%202h-4v-5c1-7%203-8%203-2l1%204%201-4c0-3%200-5%202-5%201-1%202%204%200%206-1%201-1%201%201%201%201%200%202-1%202-5%200-5%200-5-2-5-3%201-3%201-3-2l-1-3-1%203m25%207l-1%209c-2%200-2-1-2-7l-1-7-1%207c0%205%200%207-2%208-1%201%200%201%206%201l8-1-2-1c-3%200-3%200-3-4s0-5%202-5l3-1-2-1c-3%200-3%200-3-4l-1-4-1%2010M52%20241c-3%204-3%206-1%204%202-1%202-1%202%202l1%204c1%201%200%201-1%202-3%201-4%203-1%203%202-1%205%200%205%201l-3%201-4%201%2010%201%2010-1-4-1h-3l2-2c3-4%203-4-3-4l-5-1h10v-8h-7l-6-1h7c10%200%2011-2%201-2l-7-1c0-1-2%200-3%202m27-1l-1%201-1-1-1-1c-1%200-3%205-2%206l1-1c0-2%204-1%204%201l-3%201-3%201%203%201%203%201-2%201c-3%200-3%200-3%205l1%204%201-3c0-3%200-4%202-4l1%204%201%204%201-4%201-4c2%200%202%203%201%205-1%201-1%202%201%202l1-5c0-3%200-4-2-4l-2-1%203-1%202-1-2-1-3-1%202-2%202-1-2-1-2-1-1-2-1%202m-17%2032l-3%201-3%201%203%201%203%201-3%201c-3%200-3%200-3%203s1%204%203%204%203%201%202%202h-2c-3-2-3-1-1%201l1%203c-3%200-4%202-4%203l4-1h11c1-1%200-1-2-2-5%200-5-1-4-4%200-1%201-2%203-2s2%200%202-3c0-4%200-4-2-4l-3-1%203-1%203-1-3-1-3-1-1-1-1%201m14%200l-1%209-1%209v2l2-3c1-3%202-4%204-4%203%200%203%200%203%204l1%203%201-3c0-4%200-4%203-4s3%200%203%203l-1%202-2%201%202%201c2%200%203-1%203-10v-10l-9-1-8%201m115%200l-1%205c0%204%200%204%203%204l2%201-2%201c-4%200-4%201-1%204%203%202%203%203%200%203-2%200-4%202-3%203l4-1h10c1-1%200-1-1-2-4%200-4-1-1-3%202-3%202-4-2-4-1%200-2%200-1-1l3-1c2%200%202%200%202-4%200-5%200-5-3-5-2%200-2%200-1%201l2%202-2%201v2c3%201%202%203%200%202-1-1-2-2-2-5l-1-4-1%205-1%204c-2%200-2-2-1-2v-5l1-1h-3m22%200c-5%200-6%202-1%202l4%201-4%201c-5%200-5%200-5%203l1%202%201-1c0-2%201-2%203-2%203%200%203%200%201%202-2%201-3%203%200%203l-1%201c-4%201-4%203-1%203h4v4l-1%201c0%203%204%200%204-3%201-2%201-2%204-2%204%200%204%200%203-2l-3-3v-1h-4c-3%200-3%200-2-1%202-3%209-3%209%200l1%201%201-2c0-3%200-3-4-3l-5-1%204-1%204-1-3-1h-10m45%200l-2%201c-2%200-3%201-4%207%200%207-1%207-4%208-4%202-5%203-1%203h3c0%202%202%201%203-2l1-3v3c0%205%202%205%202%201s1-3%202%201c1%201%201%201%201-1s2-3%202%200c0%202%202%203%203%202l1-6v-5h-5l-6-1%206-1c5%200%205%200%205-3s0-3-2-3l-3-1-2-1v1m-155%203c-5%206-2%2015%205%2015%204%200%207-1%208-5%200-3%200-3-4-3-2%200-4%200-3%201l2%201c3%200%203%202%200%203-6%204-11-4-6-10%202-3%204-3%207%200%202%202%203%202%203%201%200-5-8-6-12-3m17%204c-4%204-2%2011%204%2011%205%200%208-6%204-10-3-4-5-4-8-1m14%200c-2%201-3%208%200%2010%204%203%209%201%209-5%200-4-3-7-5-7l-4%202m14%200c-5%203-2%2012%204%2011%202-1%203%200%203%201-1%202-5%203-7%201-1-1-1-1-1%201%200%201%201%202%204%202%205%200%206-1%206-10%200-7%200-8-1-7h-3c-2-1-2-1-5%201m130%200l1%201c2%200%201%208-1%2010-1%201-1%201%204%201h5c0%203%201%202%203-1v-2l-1-5%201-5h-6l-6%201M84%20368l1%2010%201-3c0-5%203-5%206%200%203%204%205%203%202-1-1-3-1-3%201-5%203-5-1-9-8-9h-3v8m36-5c0%202%200%203-3%202-2%200-3%200-4%202-4%206%200%2013%206%2010h2l1%201c2-2%201-18%200-18s-2%201-2%203m39%206l1%209%204-1c12%200%2012-15%200-17h-5v9m162%201l1%208%2014-8-14-8-1%208m-160-1v6h3c5%200%206-2%206-6s-1-6-6-6h-3v6m53-2c-4%204-1%2011%204%2011%202%200%206-4%206-7%200-5-7-8-10-4m14%200c-4%204-1%2011%204%2011%202%200%206-4%206-7%200-5-7-8-10-4M52%20414l-1%203c-2%200-2%202-1%202%202%200%202%201%200%205s-2%205%201%202c1-1%201-1%201%204l1%205%201-7c0-4%200-5%201-4h1l2-2%2011-1c2%202%202%200-1-3l-4-4c0-2-1-2-5%203-2%203-4%205-5%204l1-2v-2l-1-2-1-2c-1-1-1%200-1%201m31-1c0%202-1%202-5%202-3%200-4%200-1%201%204%200%204%202%200%203l-4%202%202%201c2-1%202-1%202%204v5l7-1h7v-5c0-2%200-4%201-3l2-1-3-2-4-2%204-1%204-1h-5l-6-2h-1m-1%2053c1%202%200%202-4%202-4%201-4%201-2%202%204%201%204%203%200%203l-3%201%2011%201%2011-1-4-1c-2%200-3%200-2-1l2-2%202-1-4-1-5-1-1-2-1%201m239%2012v8l7-4%207-4-7-5-7-4v9m-245%204l1%205h7l7%201v-11H76v5m1%2020l-3%203h3c4-1%204%201%200%202l-4%202h6c4-2%205-2%209%200h6c1-1%200-1-2-2-5%200-5-1-3-4%203-2%202-3-2-3l-5-1c0-2-2-1-5%203m-27%204l-1%2011%201%203%202-5c0-2%201-3%202-3%202%200%203%205%201%206-3%200-2%202%200%202s2-1%202-10v-11h-7v7m9%204c0%209%200%2010%202%2010l3-1c1-2%201-2%204%200%202%201%203%201%200-2v-4c2-4%201-5-3-5s-4%200-4-3c0-4%200-4%203-4s4%202%201%204c-2%201-1%202%202%201l2-4c0-3%200-3-5-3h-5v11m262%200l1%208%2014-8-14-8-1%208\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          data-srcset="/blogs/static/39bdb17750551865666570578c690742/ba381/49E53285-C0AA-49DA-A2AF-1A199F196B29.webp 200w,
+/blogs/static/39bdb17750551865666570578c690742/7f61c/49E53285-C0AA-49DA-A2AF-1A199F196B29.webp 400w,
+/blogs/static/39bdb17750551865666570578c690742/0799c/49E53285-C0AA-49DA-A2AF-1A199F196B29.webp 468w"
+          sizes="(max-width: 468px) 100vw, 468px"
+          type="image/webp"
+        />
+        <source
+          srcset="/blogs/static/39bdb17750551865666570578c690742/40714/49E53285-C0AA-49DA-A2AF-1A199F196B29.png 200w,
+/blogs/static/39bdb17750551865666570578c690742/a8246/49E53285-C0AA-49DA-A2AF-1A199F196B29.png 400w,
+/blogs/static/39bdb17750551865666570578c690742/45d15/49E53285-C0AA-49DA-A2AF-1A199F196B29.png 468w"
+          sizes="(max-width: 468px) 100vw, 468px"
+          type="image/png"
+        />
+        <img
+          class="gatsby-resp-image-image lazyload"
+          data-src="/blogs/static/39bdb17750551865666570578c690742/45d15/49E53285-C0AA-49DA-A2AF-1A199F196B29.png"
+          alt="49E53285 C0AA 49DA A2AF 1A199F196B29"
+          title="49E53285 C0AA 49DA A2AF 1A199F196B29"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span></p>
+<p>区别就是：<strong>通过 a，你可以新建一个窗口来进行编辑操作</strong>。换句话说，你可以通过 ⌘ + Click 新建窗口，你可以选择任何时候在这个窗口编辑。
+同样的，想象成这如果是一个 List，你希望打开这个 List Item 的详情，我们假设这个 Item 就是你在电商网站逛的时候的商品，你看到某个图片不错，但是还想继续逛，你会怎么做？显然是新建一个标签页，<strong>稍后再看</strong>。如果一个电商站点使用 SPA 来搭建，到处都是长得像 <code class="language-text">a</code> 的 <code class="language-text">button</code>，甚至是 <code class="language-text">div</code>，你还会享受这个体验吗？
+除此之外，屏幕阅读器对于 <code class="language-text">a</code> 和 <code class="language-text">button</code> 也是不同的对待，当然这个目前不在我们的讨论范围内。</p>
+<p>既然我们已经知道了 <code class="language-text">button</code> 和 <code class="language-text">a</code> 的区别，那在使用 <code class="language-text">a</code> 的时候希望获得 <code class="language-text">button</code> 的样式，或者反过来的场景，最好的建议还是自己实现一个可复用的组件。在我的代码库中，有一个 <code class="language-text">ButtonLink</code> 就是做这样的事情：一个长得像 Button 的 Link。</p>
+<p>有没有什么通用的规则来指导使用 <code class="language-text">button</code> 还是 <code class="language-text">a</code>？我引用了 Google 工程师 <a href="https://twitter.com/rob_dodson">Rob Dodson</a> 的看法。</p>
+<blockquote>
+<p>If clicking on the element will perform an <em>action</em> on the page, use <button>.
+If clicking on the element will <em>navigate</em> the user to a new page then use <a>. This includes single page web apps that load new content and update the URL using the  <a href="https://developer.mozilla.org/en-US/docs/Web/API/History">History API</a> .</p>
+</blockquote>
+<p>BTW：其实本质是一个 button。比如 <code class="language-text">&lt;a href=“javascript:void(0)” onClick={goHome}&gt;home&lt;/a&gt;</code>，这种场景都是应该避免的。具体原因我们在后面会看到一个例子。</p>
+<h2 id="针对库作者"><a href="#%E9%92%88%E5%AF%B9%E5%BA%93%E4%BD%9C%E8%80%85" aria-label="针对库作者 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>针对库作者</h2>
+<p>3 个要点已经讲完了，普通开发者需要做的事情就是：打开 <a href="https://www.npmjs.com/package/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</a>, 刻意练习。而对于库的开发者，存在更多的不可确定性，因为他们在设计的时候会强调通用型。我们以 <a href="https://ant.design/components/tag-cn/#components-tag-demo-checkable">Tag</a> 为例，看看 antd 的实现。这里关注的问题是，它是一个可交互的控件(<code class="language-text">checked</code>)，但是 <em>DOM</em> 结构上却是一个 <code class="language-text">span</code>，也不支持 <code class="language-text">tabindex</code>。可以理解开发者如果要根据不同的 <em>props</em> 来渲染不同的标签显然大大提升了复杂度，而且可能还会引入意向不到的问题。</p>
+<p>目前最主流的库的实现是通过 <a href="https://reacttraining.com/reach-ui/menu-button#menulink-as">as</a> 或者 <a href="https://material-ui.com/api/chip/">component</a>，来制定最外层节点的节点，并且在这个组件返回 Element 的时候，最外层要求是原生。比如这里的用法就能改成：<code class="language-text">&lt;Tag checked as=“button” type=“submit”&gt;yes&lt;/Tag&gt;</code> ，从而大大提升了灵活性。
+虽然这种灵活性可能会导致组件设计时看上去很冗余，比如一个 <a href="https://material-ui.com/components/dialog">Dialog</a> 你就需要 import 5 个 components，但是在我看来它是值得的。</p>
+<p>值得一提的是，<a href="https://reacttraining.com/reach-ui/">@reachui</a> 和 <a href="https://material-ui.com/">@material-ui/core</a> 在 a11y 上做的特别好，相对来说，前者没什么样式，严格符合标准，甚至有点学术味。后者则显而易见的自带 Material UI 的风格，在动效的处理上非常生动。</p>
+<h2 id="移动端呢"><a href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%91%A2" aria-label="移动端呢 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>移动端呢</h2>
+<p>上诉言论主要是基于我数年来都是在开发 PC，而并没有去了解过移动端。如果我们不考虑屏幕阅读器，又不需要用到键盘的时候，上面强调的观点是否还需要遵循的？如果你是一个响应式 app，这是肯定的。但是如果是个纯粹的移动端站点，比如某宝呢？首先，HTML 的语义还是需要继续维护的，这关乎着开发体验。</p>
+<p>但更重要的还是 a 和 button 的使用，我们看两个例子：
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/af10c923fef9bde3d8ec5fa1b810ae36/f8602/tabao-div.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 70.29535864978904%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'281\'%3e%3cpath%20d=\'M30%2013c-5%206-5%2010-1%2014s10%204%2014%200c5-5%204-13-2-13-2%200-2%200-1%201%202%201%203%204%201%205-2%200-3%202-1%202h1v2c2%201-1%202-3%200h-4c-2%200-2-1-2-2l-1-2-1-2c0-3%201-3%204-3h4l-1-3c-2-5-3-5-7%201m157-2h-6l-2%202c-1%203-1%203-2%202h-1l-1-1v6l1%205h7c8%200%2010-1%2010-6v-3h-6c-1%201-1%201%201%201%201-1%202%200%201%203%200%204-1%204-3%200l-1-2v2c0%204-2%204-2%201l-1-4-1%203c1%204-1%204-2%200-1-3-1-3%201-3l1-1c-1-2%200-2%204-2s4%200%204-2c0-3-1-4-2-1m40-1l-4%204c-6%209%204%2020%2013%2016%2011-6%207-21-4-21l-5%201M84%2011l1%202-2-1c-1-2-7%201-7%205l-2%204-3%203%206%203%204%201c1%203%2010%200%2012-4l4-5c2-3%201-7-2-6l-5-1c-5-2-9-3-6-1m41%201l-1%208c0%207%200%207%203%208h15c2-2%202-6%201-7v-2c1-1%201-1-2-1l-2-1h2c2%200%203%200%203-2%200-3-1-3-3-3h-16m152%200l-2%202c-6%200-6%2010%200%2013%207%204%2015%201%2015-7%200-4-1-6-3-5l-2-1h2l1-1c0-1-3-2-6-1h-5m93%200l-1%205c0%205%201%206%207%2011%202%202%207%201%2010-2%203-4%204-13%202-14h-18m-144%202c-1%202%200%205%202%205%202%201%202%201%200%201l-2%202c0%203%203%205%205%203%201-2%201-2%202%200%202%202%205%200%205-3l-2-2c-2-1-2-1%200-1s3-3%202-5h-12M125%2063c-6%203-4%2013%203%2015%202%200%203%201%203%203%201%204%205%204%206%200%200-2%201-3%203-4%207-2%209-8%204-13-2-2-13-3-19-1m250%201l-3%202c-2%200-5%2013-4%2016%201%202%205%201%205-1%200-3%202-3%204-2h4c2-1%205%200%203%202l1%202c2%201%204-3%203-6a10054%2010054%200%2000-3-10l-2-2v-1l-1%201-4%201c-3%200-3%200-2-2l4-1h2c-2-2-6-1-7%201m-47%200l-5%204c-7%206-3%2016%207%2016%206%200%2010-4%2010-9v-3l-1%202c-2%204-6%205-8%202-1-2-2-2-2-1-1%201-1%201-1-1%200-1-1-2-3-2-3%200-3%203%201%204%202%201%202%201%201%202-2%200-3%200-4-2-4-4-2-5%207-6h8c2%200-1-3-5-5-5-2-4-2-5-1m-151%202c-6%203-8%2011-3%2016%204%204%2015%203%2018-1%208-9-3-20-15-15M67%2092c-3%202-3%2019%200%2022l61%201h59l3%203%202%203%203-3%204-3h64l67-1c3-3%203-20%200-22-4-3-259-3-263%200m229%2040v7h-11l-13%201c-2%200-2%201-2%206v6h26v52a704%20704%200%20010%2057%201239%201239%200%20012-116c0-4%200-4%203-4%205%200%207%200%202-1h-5l-1-7-1-7v6m-271%206l-1%201v5c-1%201%200%201%202%201%203%200%203%200%201%201-2%200-4%204-2%204v1l-1%202%203-2h3l1%202%201-3v-2l2%203%204%202-1-2v-3l-1-1v-1l2-5c0-3%200-3-5-3h-8m33%201v2c2%201%202%208%200%208v1l1%202c-1%201%201%201%203-1h4c2%202%203%202%203%200l1-1h1v-10l1-1c0-1-5-2-6-1h-3c-3-1-4-1-5%201m161-1l-3%201c-3%201-3%201-1%202l2%201-2%202c-3%203-3%203%200%203%202-1%202%200%202%203l1%203%201-1c0-2%201-2%203-2%203%200%203%200%202%201-2%201-1%202%201%202%202-1%202-2%202-6v-5h-4c-3-1-3-1%201-1%206%200%207-2%201-2l-4-1-1-1-1%201m14%201l-1%201v10c-2%202-1%203%201%202l3-1c2%200%202%200%201-1-2-2-1-4%202-4%202%200%202%201%202%203l-1%202-2%201c0%203%205%200%205-3%200-2%201-3%202-3l1-1-1-1-2-1%202-2c2-2%201-3-3-3s-6%202-1%202c1%200%202%200%201%201l-1%202-2%201-2-2-1-2-1-1-1-2-1%202m16%200v3l1%204%201%204c1%201%200%201-1%201l-2%201h14c-2-2-2-7%200-8%202-2%201-3-2-2h-3l2-1c4-2%204-3%201-3h-3l-1-1-1%201-1%202c-1%201-1%201%201%202%201%202%201%202-1%202s-2%200-2-3c1-5%200-5-3-2m24%203l-1%205v4h6c6%200%206%200%206-3l1-2v2c0%203%200%203%202%202h8v-9l-2%206v2l-1-1-1-2v-2l1-1c0-2-1-2-5-2s-4%200-4%206c0%204-2%202-3-2%200-4%200-4-4-4l-3%201m48%2026l-2%202c-1%200-7%2012-7%2015h1c4-7%208-9%208-4s2%206%202%201l2-4c2%200%206%203%206%205h1c2-3-3-13-7-14l-2-2-1-1-1%202m35-1l-1%203c-3%201-7%2010-5%2011h1l1-2h2c1-1%202%200%202%204%200%203%201%204%202%204l1-2v-5c0-3%200-3%203-1%202%201%204%203%204%205l2%204-1-5c0-6-3-12-7-13l-2-3-1-1-1%201m-122%2021c-5%203-10%208-10%2010l-1%202c-4%200-4%2013-1%2018l2%204-4%204c-4%204-6%209-6%2016%200%209%203%2013%206%206l6-14%203%203c2%202%203%203%204%202%203%200%208-6%208-8s5-1%205%201c1%203%205%206%207%206l6-3c7-7%2010-5%2014%207%201%206%203%205%204-3%201-9-4-16-12-18-3%200-3%200-3%202%201%203%200%205-5%208-8%203-10%200-3-6l7-9c3-7%203-7%202-12-4-15-18-22-29-16m-116%200l-1%203-2%203%202%201h4l2%201%202%201h-4c-5%200-7%201-2%203l2%201h-1c-2%200-2%201-2%203l-1%205c-1%201-1%201%202%201l5%202c3%202%2017%205%2020%204l1-11c0-8%200-9%202-9h3c1-2%203-2%203%200%200%201-1%202-3%202l-2%201v8c0%208%200%2011%202%208%200-1%202-1%205%201%205%202%2010%203%2010%201l1-1%201%201%204%203c8%201%208%201%208-17v-15l-16-1c-14%200-15%200-15%202%200%203-2%203-2%201s-1-3-14-3l-14%201m-57%209l-2%206c-1%205-2%206-11%2015l-6%208c0%203-1%203-6%203-7%201-8%201-8%204%200%202%203%202%2021%200%209-1%209-2%205-6-3-3-3-3-2-5%202-1%202-1%204%201l3%204c0%202%200%202%203%200l5-3c4-1%204-3%200-3-2%201-3%201-3-2l-1-2-4%202-4%202c-1-1%201-3%206-5%204-2%204-2%204-5l-1-4%207%202c8%203%2010%204%207%206s-5%2010-4%2011l17-4c2-1-2-11-4-11l-4%201-3%201%204-3c4-1%204-1%202-4-1-2-3-3-14-5l-2-1c17%202%2021%201%205-2l-11-2-3%201m55%2021l-1%209c0%207%201%208%202%209l2-2%201-1c2%200%201%203-3%205-3%201-3%208%200%208%202%200%202%201%202%202%200%202%200%202%2015%202%2013%200%2012%201%2012-7l1-8%201%205c0%2011-1%2010%208%2010h7v-9c0-13%200-14-9-14-5%200-6%201-7%202a257%20257%200%2000-2-10c0-1-27-2-29-1m-25%208h-3l-1%201-2%201-15%203-24%206c-9%201-11%201-16-1l-2%201c0%204%2014%203%2039-2l18-5c4%200%209-3%209-4h-3m73%202h3c3%201%204%203%202%203-3%200-7%2010-4%2012v4l1%203%201-2h1c1%202%202%202%206%202h5v-8l-2-10c-1-2-3-3-3%200%200%202-2%201-2-1l2-2%202-1-6-1-6%201M28%20267c-1%202-1%202-2%200l-3-1%201%202c2%201%203%203%201%202l-2%201%202%201h2v-1l1%204c0%204%200%204%204%204%203%200%203%200%202%201-2%201-2%201%201%201%202%200%203-1%203-7v-7h-3l-5-1-2%201m20%200c-2%204-3%204-4%201l-1-2-2%202v11c-1%202-1%202%201%202s3-3%202-9c0-2%200-2%201-1l2%206c0%204%200%204%204%204s6-2%204-4l-1%201-2%201c-3%200-3%200-3-3%200-2%201-3%202-3l1%201-1%201-1%201c0%202%203%200%204-2%201-3%200-4-2-6l-2-3-2%202m17%200c0%202-2%203-2%201%200-1-1-2-3-2h-3v5l1%206v2l-1%202%203-1h2l2%201-1-2-2-6v-4l-1%204-1%204v-5c0-3%200-4%202-4l1%205%201%204a192%20192%200%20016%201c2%200%201%202-1%202-1%201%200%201%201%201%202%200%203-1%203-7s0-6-2-6-3-1-3-2c-1-1-1-1-2%201m87%200c-2%201-2%201%200%202v1l-2%201%203%201c3%200%202%201-2%202-3%200-3%200-3-4%200-3-1-5-2-3l-1%201-2%204h2c1-1%201-1%201%201l-1%202-2%201%202%201%201%202%201%202%201-3c0-3%200-3%204-3%203%200%203%200%203%202l-1%203c-1%201%200%201%201%201%202%200%202-1%202-3l1-3v-2l-1-1c3%200%202-2%200-2s-2%200-1-1c2%200%203-2%201-2l-2-1-3%201m67%200c-2%204-2%205%200%203h1c-1%201%200%202%201%202%201%201%201%201-1%201-1%200-2%201-1%203%200%203%201%203%204%203s3%200%202%201c-2%201-2%201%200%201%203%200%203-1%203-8l1-5-4-1-4-1-2%201m47%200v7l-1%203c1%205%203%205%203%201l1-4%201%204c0%203%200%203%204%203%205%200%205%200%205-4v-8h-3c-1-1%200-1%201-2%202-1%202-1-2-1s-4%201-5%203l1%202%201%201c-2%202-4%201-4-1v-4c-1-2-1-2-2%200m-101%200l-3%201h3c2%200%202%200%201%201l-3%201h-1v1l1%202v3c-1%200-2%200-1%201h2l2%201-3%202c-1%200-2%200-1%201l4-1h5l3%201c1-1%201-1-1-2-3%200-3-2%200-2h2l-2-1c-2%200-3%200-3-2s1-3%202-3l1%202v1c2%200%202-4%200-5-3%200-3%200-1-1s2-1%200-1h-7m69%200c-4%200-4%204%200%205%202%200%203%201%203%202l-1%201h-3l2%201c2%200%202%201%202%202l-3%201-3%201%207%201c7%200%208%200%205-3v-2l-2-1c-3%200-2-3%201-3%204-1%204-5%201-5h-9m17%200c-4%200-4%202%200%202%201%200%202%200%201%201-2%200-2%201-2%205l-1%204-1%201%208%201c7%200%207%200%206-1-2-2-2-3-2-6%201-4%201-4-2-4-2-1-2-1%201-1%204%200%205-2%201-2h-9m48%201l-11%201v12h27v-7c0-7%201-7-16-6\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          data-srcset="/blogs/static/af10c923fef9bde3d8ec5fa1b810ae36/ba381/tabao-div.webp 200w,
+/blogs/static/af10c923fef9bde3d8ec5fa1b810ae36/7f61c/tabao-div.webp 400w,
+/blogs/static/af10c923fef9bde3d8ec5fa1b810ae36/d00b9/tabao-div.webp 800w,
+/blogs/static/af10c923fef9bde3d8ec5fa1b810ae36/81cb7/tabao-div.webp 1185w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/webp"
+        />
+        <source
+          srcset="/blogs/static/af10c923fef9bde3d8ec5fa1b810ae36/9c38a/tabao-div.jpg 200w,
+/blogs/static/af10c923fef9bde3d8ec5fa1b810ae36/28275/tabao-div.jpg 400w,
+/blogs/static/af10c923fef9bde3d8ec5fa1b810ae36/f67cc/tabao-div.jpg 800w,
+/blogs/static/af10c923fef9bde3d8ec5fa1b810ae36/f8602/tabao-div.jpg 1185w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/jpeg"
+        />
+        <img
+          class="gatsby-resp-image-image lazyload"
+          data-src="/blogs/static/af10c923fef9bde3d8ec5fa1b810ae36/f67cc/tabao-div.jpg"
+          alt="tabao div"
+          title="tabao div"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+第一张图就是典型的 div 场景，你以为它是个链接，想通过长按打开新 tab，但它们就是个文字而已。
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/blogs/static/516becb6717df8133870e2985afb905e/6eda2/jd-js.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 113.34459459459458%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'453\'%3e%3cpath%20d=\'M0%20227v226h401V0H0v227M159%2015l-4%203v312c0%208%201%2010%203%2012l2%202h221l3-2%202-3V19l-2-3-3-2-109-1c-98%200-110%200-113%202\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          data-srcset="/blogs/static/516becb6717df8133870e2985afb905e/ba381/jd-js.webp 200w,
+/blogs/static/516becb6717df8133870e2985afb905e/7f61c/jd-js.webp 400w,
+/blogs/static/516becb6717df8133870e2985afb905e/d00b9/jd-js.webp 800w,
+/blogs/static/516becb6717df8133870e2985afb905e/2754d/jd-js.webp 1184w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/webp"
+        />
+        <source
+          srcset="/blogs/static/516becb6717df8133870e2985afb905e/9c38a/jd-js.jpg 200w,
+/blogs/static/516becb6717df8133870e2985afb905e/28275/jd-js.jpg 400w,
+/blogs/static/516becb6717df8133870e2985afb905e/f67cc/jd-js.jpg 800w,
+/blogs/static/516becb6717df8133870e2985afb905e/6eda2/jd-js.jpg 1184w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/jpeg"
+        />
+        <img
+          class="gatsby-resp-image-image lazyload"
+          data-src="/blogs/static/516becb6717df8133870e2985afb905e/f67cc/jd-js.jpg"
+          alt="jd js"
+          title="jd js"
+          loading="lazy"
+        />
+      </picture>
+  </a>
+    </span>
+第二张图就更搞笑了，大大的 <code class="language-text">javascript:void(0)</code>，完全让普通消费者觉得莫名其妙。
+同样的，如果是一个长得像 <code class="language-text">button</code> 的控件，你却给它用了 <code class="language-text">a</code>，那么长按后得到的反馈也让人莫名其妙。</p>
+<p>焦点的问题其实在移动端也值得重视。你以为你点了搜索后，就能开始打字了？抱歉想多了，他们还是需要再点一次。
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.28345802161263%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'213\'%3e%3cpath%20d=\'M0%2075v74h10a780%20780%200%200048-5h270l65%205%201%2032v32h6v-49l1-106V0H0v75M7%207l2%201%201%201-1%201c-1-1-2%200-2%201l1%201v3l-1%202c1%202%202%201%203-1%200-2%200-2%201-1l3%202%204%201c3%202%205%200%206-5%200-4%200-5-2-6H7m349%2037l1%204%201%205c-1%207-5%204-4-3%201-4-1-7-3-5h-2c-1-2-4-1-4%201s0%202%201%201l1-1c1%202%200%203-2%206l-4%203-58%201h-58v32c0%2029%200%2031%202%2035%201%203%202%205%201%207l-1%203a1916%201916%200%2000109%201c1%203%208%204%2026%204%2017%200%2018-1%2020-2%201-2%201-3-1-4l-2-1s-2-1-2-3l-3-2-1-3c0-3%200-3-1-1-1%204-1%206%201%206l3%203%202%202c3%200%202%202%200%202h-33c-9-1-7-2%202-2%206%200%208%200%207-1h10c7%200%209%200%208-1l-9-1h-7l-1-13%201-12%201-2c0-2%200-2-1%200l-1-18c0-19%200-20%202-24%203-6%203-15%201-18-2-1-2-1-2%201M26%2054l-2%208c2-2%202-2%202%205l1%207%201-10c0-11%200-12%203-10v3c-3%202-2%204%200%204l2%202c0%203-1%203-3%201-1-1-1-1-1%201l1%203v3l-1%203%202-1c1-2%202-2%203-1%203%202%2014%202%2014%201l-3-2c-4%200-4%200-3-1l3-1%202-1-2-1-3-1%203-1%202-1-2-1-3-1%202-1%202-1%201-2c1-1%200-6-2-7l-3-1h-2l-2%201c-2%201-2%203%201%203l1%201h-3l-2%202%202%201h2c1%201%200%201-1%201l-2%201%202%201%202%201-2%201-2%201%202%201%202%201-2%201-3%201%202%201c2%200%203%201%203%202h-3c-3-1-3-1-2-7l-1-5c-2%200-2%200%200-3s1-5-3-5c-1%201-2%200-2-1%200-3-2-1-3%204m36-4l-5%201-5%201v6l-1%2011c-1%202-2%204-1%205%201%200%203-4%204-9%200-4%204-6%208-4%202%201%201%201-4%201l-3%201%204%201c4%200%206%202%202%204h-2l-2-2c-2-1-2-1-1%201%203%202%202%203%200%203l-2%201%202%201c4-2%207-2%207-1l-2%201-3%201%203%201c2%200%203-1%203-3%200-4%200-4%204%200l5%202c2%200%200-2-3-3v-2l2-2h-2c-3%202-3%202-4%200-3-2-2-2%202-2%203%200%204%200%204-2l2-2v-1l-2-1c0-2-1-2-3-2l-5-1h-1l-5%201-3%201h3l5%201-4%201c-5%200-5-1-5-3v-3h10l10-1-5-1-5-1-1-1-1%201m20%200c2%202%201%203-3%203-5%200-3%201%202%201%206%201%207%202%202%203-6%200-6%201-1%201%204%200%205%200%205%202l-6%201c-3%200-5%200-4%201l5%201c6%200%206%200%205%202l-6%201h-5c0%201%204%202%208%201l2%201-7%204-3%201c-1%202%206%200%209-2l3-2%204%203c5%202%208%203%208%201l-2-1-7-4%205-1c7%200%206-1-1-1-8-1-8-3%200-3s8-2%200-2c-6-1-7-2-1-2%205%200%205-2%200-3-6%200-6%200-4-1h6l5-1-7-1-1-1%201-1%201-2-3%202c-2%202-8%203-7%201%201-1-1-3-3-3v1m51%202l-1%203-1-2-1-2c-1%201-2%208-1%209l1-1c1-3%202-3%203%201l-1%203-3%202c-1%201-1%201%201%201%203-1%203-1%203%203%200%206%202%206%202%200%200-4%202-9%202-5l6%201h5v3c0%203-1%204-3%204-3%200-3%202%201%202%203%200%204-1%204-6%200-2%200-3%202-3%201%200%202%200%201-1l-2-1-1-1c0-1-2-2-2%200-1%202-10%202-10%200l-2-1c-1%201-2-2-1-4h1l1-1v-1c-2%200-2-2-2-5l-1-1-1%203m33-2l-5%201-6%201%206%201%205%201-4%201h-4l-1%204v4l4-1%205%201c0%201-2%202-5%201-10%200-6%202%206%202%2012%201%2013%200%2011-1-1-1-2-2-1-6v-5h-5l-4-1h5c8%200%208-2%201-2l-6-1-1-1-1%201m-46%205h-4v10c0%207%200%2010%201%209l1-9c0-8%200-8%203-8%202%200%202%200%202%203%201%2011%200%2012-2%2012l-1%201c4%202%205%200%206-9%200-10%200-10-6-9m119%204a636%20636%200%200133-1l-33%201m81%2011c-5%204-5%2012%200%2015%207%203%2014-1%2014-9%200-7-9-10-14-6m-83%2037c0%208%200%208%202%208%203%200%204-1%205-4l1-2%201-1%202-3c2-1%202-1%200-1-1%200-3%200-4-2l-4-3h-3v8m-206%207c-6%203-7%2010-2%2015l2%203h27c25%200%2027%200%2029-2%205-4%204-14-1-15-5-2-52-2-55-1m276%205l-3%202h43v-5h-19c-18%200-19%200-21%203M78%20156c-1%201-2%202-3%201-2-1-9%209-9%2012%200%209%2011%2014%2017%208%203-4%204-10%202-13-1-1%200-1%203-1%205%200%207-1%207-4%200-4-2-5-9-5-6%200-7%200-8%202m185%203c-9%205-5%2021%205%2021s15-9%2010-17c-2-4-10-6-15-4m53%200l-3%201c-2%200-2%200-1%201%202%200%201%202-1%202-5%202-5%2011%200%2014%206%204%2012%202%2015-4s-1-14-6-13h-3v-1h-1m-99%202c-1%203-4%204-4%202v-2l-3-1v2l3%206c1%206%201%207%208%207%208%200%209%200%2010-6%201-4%201-4-2-5l-2-3c0-3-10-2-10%200m-100%201l-2%204-3%204c-3%204-1%206%203%206l3%201c3%203%2013%201%2015-3l3-5c3-4%202-6-2-6l-4-2c-4-2-10-1-13%201m46-1v15c0%202%202%202%2010%202%209%200%209%200%209-2v-15h-19m-146%203v13l11%201c11%200%2012-1%2012-9%200-6-2-7-5-5-2%203-12%203-14%201-1-2-3-2-4-1\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          data-srcset="/blogs/static/a8ab86225aec49aa69b67623c890c32e/ba381/taobao1.webp 200w,
+/blogs/static/a8ab86225aec49aa69b67623c890c32e/7f61c/taobao1.webp 400w,
+/blogs/static/a8ab86225aec49aa69b67623c890c32e/d00b9/taobao1.webp 800w,
+/blogs/static/a8ab86225aec49aa69b67623c890c32e/92f8c/taobao1.webp 1200w,
+/blogs/static/a8ab86225aec49aa69b67623c890c32e/bf9e6/taobao1.webp 1203w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/webp"
+        />
+        <source
+          srcset="/blogs/static/a8ab86225aec49aa69b67623c890c32e/9c38a/taobao1.jpg 200w,
+/blogs/static/a8ab86225aec49aa69b67623c890c32e/28275/taobao1.jpg 400w,
+/blogs/static/a8ab86225aec49aa69b67623c890c32e/f67cc/taobao1.jpg 800w,
+/blogs/static/a8ab86225aec49aa69b67623c890c32e/6e525/taobao1.jpg 1200w,
+/blogs/static/a8ab86225aec49aa69b67623c890c32e/8aae8/taobao1.jpg 1203w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/jpeg"
+        />
+        <img
+          class="gatsby-resp-image-image lazyload"
+          data-src="/blogs/static/a8ab86225aec49aa69b67623c890c32e/f67cc/taobao1.jpg"
+          alt="taobao1"
+          title="taobao1"
+          loading="lazy"
+        />
+      </picture>
+    </span><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46.0304054054054%; position: relative; bottom: 0; left: 0; background-image: url('data:image/svg+xml,%3csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'400\'%20height=\'184\'%3e%3cpath%20d=\'M10%205C9%205%208%207%208%2015c0%209%200%209%202%209l174%201h172V15l-1-10H10m361%207v3l-1%202c-3%200%200%201%204%202%204%200%204%200%204-2v-2l1%202%202%202h3c1%202%202%200%202-4%200-3%200-4-3-4s-4%201-4%202h-1c-1-2-7-3-7-1M90%2031\'%20fill=\'%23d3d3d3\'%20fill-rule=\'evenodd\'/%3e%3c/svg%3e'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+        <source
+          data-srcset="/blogs/static/623388635ed5a2512091a862aaf61f0b/ba381/taobao2.webp 200w,
+/blogs/static/623388635ed5a2512091a862aaf61f0b/7f61c/taobao2.webp 400w,
+/blogs/static/623388635ed5a2512091a862aaf61f0b/d00b9/taobao2.webp 800w,
+/blogs/static/623388635ed5a2512091a862aaf61f0b/2754d/taobao2.webp 1184w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/webp"
+        />
+        <source
+          srcset="/blogs/static/623388635ed5a2512091a862aaf61f0b/9c38a/taobao2.jpg 200w,
+/blogs/static/623388635ed5a2512091a862aaf61f0b/28275/taobao2.jpg 400w,
+/blogs/static/623388635ed5a2512091a862aaf61f0b/f67cc/taobao2.jpg 800w,
+/blogs/static/623388635ed5a2512091a862aaf61f0b/6eda2/taobao2.jpg 1184w"
+          sizes="(max-width: 800px) 100vw, 800px"
+          type="image/jpeg"
+        />
+        <img
+          class="gatsby-resp-image-image lazyload"
+          data-src="/blogs/static/623388635ed5a2512091a862aaf61f0b/f67cc/taobao2.jpg"
+          alt="taobao2"
+          title="taobao2"
+          loading="lazy"
+        />
+      </picture>
+    </span>
+<a href="https://s.m.taobao.com/h5?search-btn=&#x26;event_submit_do_new_search_auction=1&#x26;_input_charset=utf-8&#x26;topSearch=1&#x26;atype=b&#x26;searchfrom=1&#x26;action=home%3Aredirect_app_action&#x26;from=1">登录的时候</a> 也一样，好像鼠标比键盘更便宜就应该保护键盘似的。反观 <a href="https://github.com/login">Github</a> 的<a href="https://github.com/join?source=login">注册</a>，强烈的人文关怀。</p>
+<p>所以综合来看，除了快捷键的加入需要根据平台来决定之外，其他都是必须遵守的规则。</p>
+<h2 id="总结"><a href="#%E6%80%BB%E7%BB%93" aria-label="总结 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>总结</h2>
+<p>再次重复一下 a11y 是为了<strong>服务任何人</strong>，可能你不是 <em>VIM</em> 用户，你更喜欢用鼠标点，但是这不意味着你就能抹杀另外一部分人的时间。这批人往往是专业用户，他们的评价也更能决定你这款产品的价值。</p></main><hr style="margin-bottom:1.75rem"/><footer><figure style="display:flex;align-items:center"><img src="/blogs/static/avatar-6c83ccb0db60a97539ade1fe12738717.jpg" alt="A cat named musa" style="margin-right:0.875rem;margin-bottom:0;border-radius:50%;width:3.5rem;height:3.5rem"/><aside class="sc-bwzfXH iJuWiM"><h3><span role="img" aria-label="personal blogs">👤 📜</span> <!-- -->by <a href="http://github.com/thoamsy">thoamsy</a></h3><h3>Write some personal summary</h3></aside></figure><br/><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/blogs/buy-an-iphone11/">← <!-- -->对于新 iPhone 的看法</a></li><li></li></ul></footer></div></section></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/lets-a11y/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-ddc443515d5ff0002b6c.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-5efb7b8fb8a6286e0a5c.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-21d15e443db951842aef.js"],"component---src-pages-index-js":["/component---src-pages-index-js-54123cce38cde33d9c64.js"]};/*]]>*/</script><script src="/blogs/component---src-templates-blog-post-js-21d15e443db951842aef.js" async=""></script><script src="/blogs/styles-e17cf6dbd604d0464632.js" async=""></script><script src="/blogs/app-ddc443515d5ff0002b6c.js" async=""></script><script src="/blogs/commons-b30dcf9e8ea16c8b7870.js" async=""></script><script src="/blogs/webpack-runtime-3f83f7d83f430ca9905a.js" async=""></script></body></html>
