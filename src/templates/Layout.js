@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import '../globalThis';
 import { rhythm, scale } from '../utils/typography';
 import Bio from './Bio';
+import SEO from './SEO';
 import { Home, Detail } from './components/Transition';
 
 const HomeLink = styled(Link).attrs({ to: '/' })`
@@ -55,6 +56,14 @@ const Layout = ({ location, title, children }) => {
   const Container = isRoot ? Home : Detail;
   return (
     <Container>
+      {isRoot && (
+        <SEO
+          title={title}
+          // description={spoiler}
+          // slug={pageContext.slug}
+          // image={image}
+        />
+      )}
       <Header>
         <BlogTitle title={title} location={location} isRoot={isRoot} />
       </Header>

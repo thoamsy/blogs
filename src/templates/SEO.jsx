@@ -3,7 +3,13 @@ import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
-function SEO({ image: metaImage, title, description, slug, lang = 'zh-cn' }) {
+function SEO({
+  image: metaImage,
+  title,
+  description,
+  slug = '',
+  lang = 'zh-cn',
+}) {
   return (
     <StaticQuery
       query={query}
