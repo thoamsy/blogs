@@ -5,6 +5,11 @@ export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
+        <link
+          rel="icon"
+          href="https://avatars1.githubusercontent.com/u/11444431?s=40&v=4"
+          type="image/jpg"
+        />
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
@@ -23,7 +28,7 @@ export default function HTML(props) {
           This app works best with JavaScript enabled.
         </noscript>
         <div
-          key={`body`}
+          key="body"
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
         />

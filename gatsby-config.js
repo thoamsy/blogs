@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `😏`,
-    author: 'Yang Kui',
-    description: '👤博客',
+    author: 'thoamsy',
+    description: '👤博客, 写一些总结，Web 和 iOS',
     siteUrl: 'https://github.com/thoamsy/blogs.git',
   },
   pathPrefix: '/blogs',

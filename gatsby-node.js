@@ -22,6 +22,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   }
                   frontmatter {
                     title
+                    image
                     spoiler
                   }
                 }
