@@ -1,14 +1,10 @@
 module.exports = {
+  root: true,
   extends: 'react-app',
-  plugins: ['react-hooks'],
   globals: {
     graphql: false,
   },
-  rules: {
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-  },
   globals: {
-    globalThis: true
-  }
+    globalThis: true,
+  },
 };

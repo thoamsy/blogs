@@ -12,11 +12,11 @@ const BlogPostTemplate = ({
   data: { markdownRemark: post, site },
 }) => {
   const siteTitle = site.siteMetadata.title;
-  const postTitle = post.frontmatter.title;
+  const { title: postTitle, spoiler, image } = post.frontmatter || {};
 
   useEffect(() => {
     const homePageTitle = '😏';
-    document.title = `${homePageTitle}  ${postTitle}`;
+    document.title = `${homePageTitle} ${postTitle}`;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -24,11 +24,11 @@ const BlogPostTemplate = ({
     <Layout location={location} title={siteTitle}>
       <SEO
         title={postTitle}
-        description={post.frontmatter.spoiler}
-        slug={post.frontmatter.spoiler}
-        image={post.frontmatter.image}
+        description={spoiler}
+        slug={pageContext.slug}
+        image={image}
       />
-      <hgroup>
+      <header>
         <h1
           style={{
             color: 'var(--text-title)',
@@ -47,7 +47,8 @@ const BlogPostTemplate = ({
         >
           {post.frontmatter.date}
         </time>
-      </hgroup>
+      </header>
+
       <main
         style={{ fontSize: rhythm(0.6) }}
         dangerouslySetInnerHTML={{ __html: post.html }}

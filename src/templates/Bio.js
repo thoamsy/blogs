@@ -30,6 +30,7 @@ const Bio = () => (
         height: rhythm(2),
       }}
     />
+
     <Aside>
       <h3>
         <span role="img" aria-label="personal blogs">
