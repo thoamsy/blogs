@@ -5,14 +5,14 @@ module.exports = {
     description: '👤博客, 写一些总结，Web 和 iOS',
     siteUrl: 'https://thoamsy.netlify.com',
   },
-  pathPrefix: '/blogs',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `thoamsy's blog`,
         short_name: `😏`,
-        start_url: `/blogs`,
+        start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#ffffff`,
         display: `standalone`,
