@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import React, { useEffect } from 'react';
 import { rhythm, scale } from '../utils/typography';
 import Bio from './Bio';
+import SEO from './SEO';
 import PageNavigation from './components/PageNavigation';
 import Layout from './Layout';
 
@@ -11,15 +12,22 @@ const BlogPostTemplate = ({
   data: { markdownRemark: post, site },
 }) => {
   const siteTitle = site.siteMetadata.title;
+  const postTitle = post.frontmatter.title;
 
   useEffect(() => {
     const homePageTitle = '😏';
-    document.title = `${homePageTitle}  ${post.frontmatter.title}`;
+    document.title = `${homePageTitle}  ${postTitle}`;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <Layout location={location} title={siteTitle}>
+      <SEO
+        title={postTitle}
+        description={post.frontmatter.spoiler}
+        slug={post.frontmatter.spoiler}
+        image={post.frontmatter.image}
+      />
       <hgroup>
         <h1
           style={{
@@ -74,6 +82,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         spoiler
+        image
         date(formatString: "YYYY/MM/DD")
       }
     }
