@@ -56,14 +56,7 @@ const Layout = ({ location, title, children }) => {
   const Container = isRoot ? Home : Detail;
   return (
     <Container>
-      {isRoot && (
-        <SEO
-          title={title}
-          // description={spoiler}
-          // slug={pageContext.slug}
-          // image={image}
-        />
-      )}
+      {isRoot && <SEO title="Thoamsy's Blog" />}
       <Header>
         <BlogTitle title={title} location={location} isRoot={isRoot} />
       </Header>
