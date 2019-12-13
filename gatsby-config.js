@@ -3,7 +3,7 @@ module.exports = {
     title: `😏`,
     author: 'thoamsy',
     description: '👤博客, 写一些总结，Web 和 iOS',
-    siteUrl: 'http://thoamsy.github.io/blogs/',
+    siteUrl: 'https://thoamsy.netlify.com',
   },
   pathPrefix: '/blogs',
   plugins: [
