@@ -15,30 +15,58 @@ const localStorage =
         setItem() {},
       };
 
-const BlogNav = ({ to, title, date, spoiler }) => (
-  <article>
-    <h3
-      className="blog-index"
-      style={{
-        marginBottom: rhythm(1 / 4),
-      }}
-    >
-      <Link tabIndex={-1} style={{ boxShadow: 'none' }} to={to}>
-        {title}
-      </Link>
-    </h3>
-    <div style={{ color: 'var(--text-secondary)' }}>
-      <time>
-        <small>{date}</small>
-      </time>
-      <p
-        dangerouslySetInnerHTML={{
-          __html: spoiler,
+const supportPrefetch = () => {
+  const link = document.createElement('link');
+  const relList = link.relList;
+  if (!relList || !relList.supports) return false;
+  return relList.supports('prefetch');
+};
+const BlogNav = ({ to, title, date, spoiler }) => {
+  const hadPrefetch = useRef(false);
+  return (
+    <article>
+      <h3
+        className="blog-index"
+        style={{
+          marginBottom: rhythm(1 / 4),
         }}
-      />
-    </div>
-  </article>
-);
+      >
+        <Link
+          onPointerEnter={() => {
+            if (hadPrefetch.current) {
+              return;
+            }
+            const support = supportPrefetch();
+            if (!support) {
+              hadPrefetch.current = true;
+            }
+            const link = document.createElement('link');
+            link.rel = 'prefetch';
+            link.type = 'text/html';
+            link.href = to;
+            link.onload = () => (hadPrefetch.current = true);
+            document.head.appendChild(link);
+          }}
+          tabIndex={-1}
+          style={{ boxShadow: 'none' }}
+          to={to}
+        >
+          {title}
+        </Link>
+      </h3>
+      <div style={{ color: 'var(--text-secondary)' }}>
+        <time>
+          <small>{date}</small>
+        </time>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: spoiler,
+          }}
+        />
+      </div>
+    </article>
+  );
+};
 
 // TODO: 使用自己的 useVimShortcut 重构
 const BlogIndex = ({ location, data, navigate }) => {
