@@ -1,0 +1,116 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    --label-primary: rgba(
+      0,
+      0,
+      0,
+      1
+    ); /* 用于描述主要的内容，一般用于标题，正文 */
+    --label-secondary: rgba(
+      60,
+      60,
+      67,
+      0.72
+    ); /* 用于描述次要的内容，一般用于列表项中的正文 */
+    --label-tertiary: rgba(
+      60,
+      60,
+      67,
+      0.3
+    ); /* 用于描述更加不重要的内容，比如被禁用的文本或者一些脚注 */
+    --label-quaternary: rgba(60, 60, 67, 0.18); /* 用得非常少 */
+
+    --system-fill-primary: rgba(
+      120,
+      120,
+      128,
+      0.2
+    ); /* hover 颜色，用于比较小的形状上 */
+    --system-fill-secondary: rgba(
+      120,
+      120,
+      128,
+      0.16
+    ); /* hover 颜色，用于中等大小的形状上，比如 List Item */
+    --system-fill-tertiary: rgba(
+      118,
+      118,
+      128,
+      0.12
+    ); /* hover 颜色，用于比较大的形状上，比如 Table */
+    --system-fill-quaternary: rgba(
+      116,
+      116,
+      128,
+      0.08
+    ); /* hover 颜色，用于比较大而且复杂的形状上，比如 Spin */
+
+    --system-placeholder: rgba(60, 60, 67, 0.3); /* 占位符的颜色 */
+
+    --system-background-primary: rgba(
+      255,
+      255,
+      255,
+      1
+    ); /* 作为最底层的背景色 */
+    --system-background-secondary: rgba(
+      242,
+      242,
+      247,
+      1
+    ); /* 作为 primary 之上的背景色 */
+    --system-background-tertiary: rgba(
+      255,
+      255,
+      255,
+      1
+    ); /* 作为 secondary 之上的背景色 */
+
+    --system-grouped-background-primary: rgba(
+      242,
+      242,
+      247,
+      1
+    ); /* Table，List 用这个。作为最底层的背景色 */
+    --system-grouped-background-secondary: rgba(
+      255,
+      255,
+      255,
+      1
+    ); /* Table，List 用这个。作为 primary 之上的背景色 */
+    --system-grouped-background-tertiary: rgba(
+      242,
+      242,
+      247,
+      1
+    ); /* Table，List 用这个。作为 secondary 之上的背景色 */
+
+    --separator: rgba(60, 60, 67, 0.29); /* 分隔符 */
+    --opaque-separator: rgba(198, 198, 200, 1); /* 不透明的分隔符 */
+    --link: rgba(0, 122, 255, 1);
+    --link-hover: rgba(0, 122, 255, 0.72);
+    --dark-text: rgba(0, 0, 0, 1);
+    --light-text: rgba(255, 255, 255, 0.87);
+
+    --system-red: rgba(255, 59, 48, 1);
+    --system-indigo: rgba(88, 86, 214, 1);
+    --system-orange: rgba(255, 149, 0, 1);
+    --system-yellow: rgba(255, 204, 0, 1);
+    --system-green: rgba(52, 199, 89, 1);
+    --system-green-hover: rgba(52, 199, 89, 0.6);
+    --system-teal: rgba(90, 200, 250, 1);
+    --system-blue: var(--link);
+    --system-purple: rgba(175, 82, 222, 1);
+    --system-pink: rgba(255, 45, 85, 1);
+
+    --system-gray-1: rgba(142, 142, 147, 1);
+    --system-gray-2: rgba(173, 174, 178, 1);
+    --system-gray-3: rgba(199, 199, 204, 1);
+    --system-gray-4: rgba(209, 209, 214, 1);
+    --system-gray-5: rgba(229, 229, 234, 1);
+    --system-gray-6: rgba(242, 242, 247, 1);
+  }
+}

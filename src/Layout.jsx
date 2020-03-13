@@ -5,7 +5,7 @@ import { rhythm } from './utils/typography';
 
 const PostContainer = styled.section`
   color: var(--text-normal);
-  background: var(--bg);
+  background: var(--system-background-primary);
   transition: color 0.3s ease-out, background 0.3s ease-out;
   min-height: 100vh;
   margin: 0 auto;

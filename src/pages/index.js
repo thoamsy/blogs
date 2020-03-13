@@ -178,10 +178,6 @@ const BlogIndex = ({ location, data, navigate }) => {
                         }
                       },
                       item: node.frontmatter,
-                      // style: {
-                      //   backgroundColor:
-                      //     highlightedIndex === index ? 'aliceblue' : 'var(--bg)',
-                      // },
                     })}
                   >
                     <BlogNav

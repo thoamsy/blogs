@@ -1,0 +1,48 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --label-primary: rgba(255, 255, 255, 0.87);
+    --label-secondary: rgba(235, 235, 245, 0.6);
+    --label-tertiary: rgba(235, 235, 245, 0.3);
+    --label-quaternary: rgba(235, 235, 245, 0.18);
+
+    --system-fill-primary: rgba(120, 120, 128, 0.36);
+    --system-fill-secondary: rgba(120, 120, 128, 0.32);
+    --system-fill-tertiary: rgba(118, 118, 128, 0.24);
+    --system-fill-quaternary: rgba(118, 118, 128, 0.18);
+
+    --system-background-primary: rgba(12, 12, 14, 1);
+    --system-background-secondary: rgba(28, 28, 30, 1);
+    --system-background-tertiary: rgba(44, 44, 46, 1);
+
+    --system-grouped-background-primary: rgba(12, 12, 14, 1);
+    --system-grouped-background-secondary: rgba(28, 28, 30, 1);
+    --system-grouped-background-tertiary: rgba(44, 44, 46, 1);
+
+    --link: rgba(9, 132, 255, 1);
+    --link-hover: rgba(9, 132, 255, 0.72);
+    --placeholder: rgba(235, 235, 245, 0.3);
+    --placeholder-text: rgba(235, 235, 245, 0.3);
+    --separator: rgba(84, 84, 88, 0.6);
+    --opaque-separator: rgba(56, 56, 58, 1);
+    --dark-text: rgba(0, 0, 0, 1);
+    --light-text: rgba(255, 255, 255, 0.84);
+
+    --system-red: rgba(255, 69, 58, 1);
+    --system-indigo: rgba(94, 92, 230, 1);
+    --system-orange: rgba(255, 159, 10, 1);
+    --system-yellow: rgba(255, 214, 10, 1);
+    --system-green: rgba(48, 209, 88, 1);
+    --system-green-hover: rgba(48, 209, 88, 0.6);
+    --system-teal: rgba(100, 210, 255, 1);
+    --system-blue: rgba(10, 132, 255, 1);
+    --system-purple: rgba(191, 90, 242, 1);
+    --system-pink: rgba(255, 55, 95, 1);
+
+    --system-gray-1: rgba(142, 142, 147, 1);
+    --system-gray-2: rgba(99, 99, 102, 1);
+    --system-gray-3: rgba(72, 72, 74, 1);
+    --system-gray-4: rgba(58, 58, 60, 1);
+    --system-gray-5: rgba(44, 44, 46, 1);
+    --system-gray-6: rgba(28, 28, 30, 1);
+  }
+}

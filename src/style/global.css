@@ -1,43 +1,39 @@
+@import './light.css';
+@import './dark.css';
+
 body {
-  background-color: var(--bg);
+  background-color: var(--system-background-primary);
   transition: color 0.3s ease-out, background 0.3s ease-out;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-@media (prefers-color-scheme: light), (prefers-color-scheme: not-all) {
-  body {
-    --bg: #ffffff;
-    --text-normal: black;
-    --text-title: black;
-    --text-secondary: #3c3c43;
-    --text-link: #007aff;
-    --hr: hsla(0, 0%, 0%, 0.2);
-    --inlineCode-bg: rgba(255, 229, 100, 0.2);
-    --inlineCode-text: #1a1a1a;
-  }
-  blockquote {
-    background-color: rgba(255, 229, 100, 0.3);
-    border-left-color: #ffe564;
-  }
+body {
+  --text-normal: var(--label-primary);
+  --text-title: var(--label-primary);
+  --text-secondary: var(--label-secondary);
+  --text-link: var(--link);
+  --hr: hsla(0, 0%, 0%, 0.2);
+  --inlineCode-bg: rgba(255, 229, 100, 0.2);
+  --inlineCode-text: #1a1a1a;
+}
+blockquote {
+  background-color: rgba(255, 229, 100, 0.3);
+  border-left-color: #ffe564;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    --bg: black;
-    --text-normal: rgba(255, 255, 255, 0.88);
-    --text-title: #ffffff;
-    --text-link: #ff453a;
+    --text-link: var(--system-red);
     --hr: hsla(0, 0%, 100%, 0.2);
     --inlineCode-bg: hsl(222, 14%, 25%);
-    --text-secondary: rgba(255, 255, 255, 0.6);
     --inlineCode-text: #e6e6e6;
   }
 
   blockquote {
     color: ivory;
     background-color: hsla(20, 20%, 50%, 0.2);
-    border-left-color: #ff375e;
+    border-left-color: var(--system-red);
   }
 }
 
@@ -161,7 +157,7 @@ pre[data-line] {
 }
 
 .token.attr-name {
-  color: rgb(173, 219, 103);
+  color: var(--system-green);
   font-style: italic;
 }
 
