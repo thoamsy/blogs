@@ -58,7 +58,7 @@
     "gh-pages": "^2.0.1",
     "prettier": "^1.16.4"
   },
-  "homepage": "https://thoamsy.github.io/blogs/",
+  "homepage": "https://blogs.thoamsy.now.sh",
   "keywords": [
     "gatsby"
   ],
