@@ -155,6 +155,7 @@ const BlogIndex = ({ location, data, navigate }) => {
                 const { title = blogUrl, spoiler, date } = node.frontmatter;
                 return (
                   <li
+                    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
                     tabIndex={0}
                     {...getItemProps({
                       key: node.fields.slug,

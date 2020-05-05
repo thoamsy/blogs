@@ -1,10 +1,9 @@
 module.exports = {
   root: true,
-  extends: 'react-app',
+  extends: ['react-app', 'plugin:jsx-a11y/recommended'],
   globals: {
     graphql: false,
-  },
-  globals: {
     globalThis: true,
+    __PATH_PREFIX__: false,
   },
 };

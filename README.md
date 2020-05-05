@@ -10,3 +10,4 @@
 - [x] 🧭 支持 Safari 的 dark mode
 - [x] ⌨️ 更好的 a11y 支持，在电脑上可以直接用键盘控制
 - [ ] MDX 整合，可以自定义 markdown format 后的组件样式，并只有组装特定的功能。包括 一些嵌入式 iframe
+- [ ] 一个 ESLint 插件，用来检测中英文之间有没有加空格
