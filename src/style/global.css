@@ -225,3 +225,7 @@ nav > ol {
 time {
   font-family: futura;
 }
+
+.gatsby-highlight {
+  font-size: 14px;
+}
