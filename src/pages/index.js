@@ -1,8 +1,6 @@
 import Downshift from 'downshift';
-import { graphql } from 'gatsby';
-import Link from 'gatsby-link';
+import Link from 'next/link';
 import React, { useCallback, useEffect, useRef } from 'react';
-import Helmet from 'react-helmet';
 
 import Layout from '../templates/Layout';
 import { rhythm } from '../utils/typography';
@@ -141,12 +139,11 @@ const BlogIndex = ({ location, data, navigate }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Helmet title={siteTitle} htmlAttributes={{ lang: 'zh-cn' }} />
       <nav ref={menuRef}>
         <Downshift
           defaultIsOpen
           initialIsOpen
-          itemToString={item => (item ? item.title : '')}
+          itemToString={(item) => (item ? item.title : '')}
         >
           {({ getMenuProps, getItemProps }) => (
             <ol {...getMenuProps({}, { suppressRefError: true })}>
@@ -199,27 +196,27 @@ const BlogIndex = ({ location, data, navigate }) => {
 };
 export default BlogIndex;
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "YYYY/MM/DD")
-            title
-            spoiler
-          }
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query IndexQuery {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+//       edges {
+//         node {
+//           excerpt
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             date(formatString: "YYYY/MM/DD")
+//             title
+//             spoiler
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;

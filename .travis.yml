@@ -7,8 +7,8 @@ os:
 node_js:
   - "node"
   - "lts/*"
-  - "7"
-  - "8"
+  - "13"
+  - "14"
 
 script:
   - npm install

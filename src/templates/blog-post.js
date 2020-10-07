@@ -2,7 +2,6 @@ import { graphql } from 'gatsby';
 import React, { useEffect } from 'react';
 import { rhythm, scale } from '../utils/typography';
 import Bio from './Bio';
-import SEO from './SEO';
 import PageNavigation from './components/PageNavigation';
 import Layout from './Layout';
 
@@ -22,12 +21,6 @@ const BlogPostTemplate = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
-        title={postTitle}
-        description={spoiler}
-        slug={pageContext.slug}
-        image={image}
-      />
       <header>
         <h1
           style={{

@@ -1,12 +1,11 @@
-import { Link } from 'gatsby';
 import 'prismjs/themes/prism-tomorrow.css';
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 import '../globalThis';
 import { rhythm, scale } from '../utils/typography';
 import Bio from './Bio';
-import SEO from './SEO';
 import { Home, Detail } from './components/Transition';
 
 const HomeLink = styled(Link).attrs({ to: '/' })`
@@ -56,7 +55,6 @@ const Layout = ({ location, title, children }) => {
   const Container = isRoot ? Home : Detail;
   return (
     <Container>
-      {isRoot && <SEO title="Thoamsy's Blog" />}
       <Header>
         <BlogTitle title={title} location={location} isRoot={isRoot} />
       </Header>

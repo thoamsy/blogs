@@ -3,45 +3,22 @@
   "description": "Yangkui's blog to write something",
   "version": "1.0.0",
   "author": "Thomas Yang <c6swift@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
-  },
   "resolutions": {
     "minipass": "^2.8.5",
     "sharp": "^0.23.0"
   },
   "dependencies": {
     "downshift": "^5.2.4",
-    "gatsby": "^2.1.20",
-    "gatsby-link": "^2.0.10",
-    "gatsby-plugin-feed": "^2.0.11",
-    "gatsby-plugin-google-analytics": "^2.0.15",
-    "gatsby-plugin-layout": "^1.0.15",
-    "gatsby-plugin-manifest": "^2.2.31",
-    "gatsby-plugin-offline": "^2.0.20",
-    "gatsby-plugin-react-helmet": "^3.0.3",
-    "gatsby-plugin-sharp": "^2.3.5",
-    "gatsby-plugin-typography": "2.2.2",
-    "gatsby-remark-autolink-headers": "^2.0.14",
-    "gatsby-remark-copy-linked-files": "^2.0.8",
-    "gatsby-remark-images": "^3.0.5",
-    "gatsby-remark-lazy-load": "^1.0.1",
-    "gatsby-remark-prismjs": "^3.2.0",
-    "gatsby-remark-responsive-iframe": "^2.0.7",
-    "gatsby-remark-smartypants": "^2.0.8",
-    "gatsby-source-filesystem": "^2.0.12",
-    "gatsby-transformer-remark": "^2.1.19",
-    "gatsby-transformer-sharp": "^2.3.6",
     "lazysizes": "^5.1.1",
+    "next": "^9.5.4",
     "prismjs": "^1.21.0",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-helmet": "^5.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-responsive-grid": "^0.3.4",
     "react-transition-group": "^4.0.1",
     "react-typography": "^0.16.13",
     "sharp": "^0.25.2",
-    "styled-components": "^5.0.1",
+    "styled-components": "^5.2.0",
     "typography": "^0.16.17",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
@@ -57,12 +34,9 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^4.0.0",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.16.4"
+    "prettier": "^2.1.2"
   },
   "homepage": "https://blogs.thoamsy.now.sh",
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
@@ -70,12 +44,13 @@
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "scripts": {
-    "dev": "gatsby develop",
+    "dev": "next dev",
+    "start": "next start",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
-    "build": "gatsby build",
+    "build": "next build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
