@@ -8,7 +8,7 @@ import { rhythm, scale } from '../utils/typography';
 import Bio from './Bio';
 import { Home, Detail } from './components/Transition';
 
-const HomeLink = styled(Link).attrs({ to: '/' })`
+const HomeLink = styled(Link).attrs({ href: '/' })`
   box-shadow: none;
   text-decoration: none;
   color: var(--text-title);
@@ -45,12 +45,13 @@ const BlogTitle = ({ location, isRoot, title }) => {
   );
 };
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ title, children }) => {
+  const location = globalThis.location;
   let rootPath = '/';
   if (typeof __PATH_PREFIX__ !== 'undefined') {
     rootPath = __PATH_PREFIX__ + `/`;
   }
-  const isRoot = location.pathname === rootPath;
+  const isRoot = true;;
 
   const Container = isRoot ? Home : Detail;
   return (

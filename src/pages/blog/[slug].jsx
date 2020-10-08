@@ -1,32 +1,50 @@
-import React from 'react';
+import { getPostBySlug, getAllPosts } from '../lib/api';
+import remark from 'remark';
+import html from 'remark-html';
 
-function Post({ post }) {
+async function markdownToHtml(markdown) {
+  const result = await remark().use(html).process(markdown);
+  return result.toString();
+}
+
+
+export default function Post({ post }) {
   // Render post...
 }
 
-// This function gets called at build time
-export async function getStaticPaths() {
-  // Call an external API endpoint to get posts
-  const res = await fetch('https://.../posts');
-  const posts = await res.json();
-
-  // Get the paths we want to pre-render based on posts
-  const paths = posts.map((post) => ({
-    params: { slug: post.slug },
-  }));
-
-  // We'll pre-render only these paths at build time.
-  // { fallback: false } means other routes should 404.
-  return { paths, fallback: false };
-}
-
-// This also gets called at build time
 export async function getStaticProps({ params }) {
-  const res = await fetch(`https://.../posts/${params.slug}`);
-  const post = await res.json();
+  console.log(params, 'params');
+  const post = getPostBySlug(params.slug, [
+    'title',
+    'date',
+    'slug',
+    'author',
+    'content',
+    'image',
+  ]);
+  const content = await markdownToHtml(post.content || '');
 
-  // Pass post data to the page via props
-  return { props: { post } };
+  return {
+    props: {
+      post: {
+        ...post,
+        content,
+      },
+    },
+  };
 }
 
-export default Post;
+export async function getStaticPaths() {
+  const posts = getAllPosts(['slug']);
+
+  return {
+    paths: posts.map((post) => {
+      return {
+        params: {
+          slug: post.slug,
+        },
+      };
+    }),
+    fallback: false,
+  };
+}

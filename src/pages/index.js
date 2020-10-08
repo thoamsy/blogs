@@ -1,5 +1,6 @@
 import Downshift from 'downshift';
 import Link from 'next/link';
+import { getAllPosts } from './lib/api';
 import React, { useCallback, useEffect, useRef } from 'react';
 
 import Layout from '../templates/Layout';
@@ -19,7 +20,9 @@ const supportPrefetch = () => {
   if (!relList || !relList.supports) return false;
   return relList.supports('prefetch');
 };
-const BlogNav = ({ to, title, date, spoiler }) => {
+
+const BlogNav = ({ href, title, date, spoiler }) => {
+  console.log(href, 'href')
   const hadPrefetch = useRef(false);
   return (
     <article>
@@ -41,13 +44,13 @@ const BlogNav = ({ to, title, date, spoiler }) => {
             const link = document.createElement('link');
             link.rel = 'prefetch';
             link.type = 'text/html';
-            link.href = to;
+            link.href = href;
             link.onload = () => (hadPrefetch.current = true);
             document.head.appendChild(link);
           }}
           tabIndex={-1}
           style={{ boxShadow: 'none' }}
-          to={to}
+          href={href}
         >
           {title}
         </Link>
@@ -67,9 +70,9 @@ const BlogNav = ({ to, title, date, spoiler }) => {
 };
 
 // TODO: 使用自己的 useVimShortcut 重构
-const BlogIndex = ({ location, data, navigate }) => {
-  const siteTitle = data.site.siteMetadata.title;
-  const posts = data.allMarkdownRemark.edges;
+const BlogIndex = ({ posts }) => {
+  // const siteTitle = data.site.siteMetadata.title;
+  // const posts = data.allMarkdownRemark.edges;
 
   const menuRef = useRef();
   const selectedIndex = useRef(+localStorage.getItem('selectedIndex') || -1);
@@ -137,8 +140,9 @@ const BlogIndex = ({ location, data, navigate }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout title={"test me"}>
       <nav ref={menuRef}>
         <Downshift
           defaultIsOpen
@@ -147,15 +151,15 @@ const BlogIndex = ({ location, data, navigate }) => {
         >
           {({ getMenuProps, getItemProps }) => (
             <ol {...getMenuProps({}, { suppressRefError: true })}>
-              {posts.map(({ node }, index) => {
-                const blogUrl = node.fields.slug;
-                const { title = blogUrl, spoiler, date } = node.frontmatter;
+              {posts.map((post, index) => {
+                const blogUrl = post.fields.slug;
+                const { title = blogUrl, spoiler, date } = post.frontmatter;
                 return (
                   <li
                     // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
                     tabIndex={0}
                     {...getItemProps({
-                      key: node.fields.slug,
+                      key: post.fields.slug,
                       index,
                       onKeyDown(e) {
                         e.preventDefault();
@@ -164,25 +168,25 @@ const BlogIndex = ({ location, data, navigate }) => {
                           case 'enter':
                           case ' ':
                             localStorage.setItem('selectedIndex', index);
-                            navigate(
-                              (location.pathname + blogUrl).replace(
-                                /\/{2}/g,
-                                '/'
-                              )
-                            );
+                            // navigate(
+                            //   (location.pathname + blogUrl).replace(
+                            //     /\/{2}/g,
+                            //     '/'
+                            //   )
+                            // );
                             break;
                           default:
                             break;
                         }
                       },
-                      item: node.frontmatter,
+                      item: post.frontmatter,
                     })}
                   >
                     <BlogNav
-                      to={blogUrl}
+                      href={blogUrl}
                       title={title}
                       date={date}
-                      spoiler={spoiler || node.excerpt}
+                      spoiler={spoiler || post.excerpt}
                     />
                   </li>
                 );
@@ -196,27 +200,9 @@ const BlogIndex = ({ location, data, navigate }) => {
 };
 export default BlogIndex;
 
-// export const pageQuery = graphql`
-//   query IndexQuery {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-//       edges {
-//         node {
-//           excerpt
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             date(formatString: "YYYY/MM/DD")
-//             title
-//             spoiler
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export async function getStaticProps() {
+  const posts = getAllPosts(['title', 'date', 'spoiler', 'image']);
+  return {
+    props: { posts },
+  };
+}
