@@ -5721,11 +5721,6 @@ react-transition-group@^4.0.1:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react-typography@^0.16.13:
-  version "0.16.19"
-  resolved "https://registry.npm.taobao.org/react-typography/download/react-typography-0.16.19.tgz#5736b47961dcf6b9605b6fa38d41980db2588e28"
-  integrity sha1-Vza0eWHc9rlgW2+jjUGYDbJYjig=
-
 react@^16.13.1:
   version "16.13.1"
   resolved "https://registry.npm.taobao.org/react/download/react-16.13.1.tgz?cache=0&sync_timestamp=1602081625985&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact%2Fdownload%2Freact-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
@@ -6998,6 +6993,13 @@ typography-normalize@^0.16.19:
   version "0.16.19"
   resolved "https://registry.npm.taobao.org/typography-normalize/download/typography-normalize-0.16.19.tgz#58e0cf12466870c5b27006daa051fe7307780660"
   integrity sha1-WODPEkZocMWycAbaoFH+cwd4BmA=
+
+typography-theme-github@^0.16.19:
+  version "0.16.19"
+  resolved "https://registry.npm.taobao.org/typography-theme-github/download/typography-theme-github-0.16.19.tgz#91842d3e0a92ad952adf6350ede0924d574193e8"
+  integrity sha1-kYQtPgqSrZUq32NQ7eCSTVdBk+g=
+  dependencies:
+    gray-percentage "^2.0.0"
 
 typography@^0.16.17:
   version "0.16.19"

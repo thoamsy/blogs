@@ -236,39 +236,10 @@ time {
   font-family: futura;
 }
 
-a {
-  color: var(--text-link);
-  text-decoration: none;
-}
-
-hr {
-  background: var(--hr);
-}
-a.anchor {
-  box-shadow: none;
-}
-a.anchor svg[aria-hidden="true"] {
-  stroke: var(--text-link);
-}
-p code {
-  font-size: 1rem;
-}
-
-h1 code, h2 code, h3 code, h4 code, h5 code, h6 code{
-  font-size: inherit;
-}
-li code {
-  font-size: 1rem;
-}
-blockquote {
-  color: inherit;
-  border-left-color: inherit;
-  opacity: 0.8;
-}
-blockquote.translation {
-  font-size: 1em;
-}
-
-ol {
-  list-style: none;
+.post-container {
+  color: var(--text-normal);
+  background: var(--system-background-primary);
+  transition: color 0.3s ease-out, background 0.3s ease-out;
+  min-height: 100vh;
+  margin: 0 auto;
 }

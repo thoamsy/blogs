@@ -3,21 +3,19 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import { rhythm } from '../utils/typography';
 
-const PostContainer = styled.section`
-  color: var(--text-normal);
-  background: var(--system-background-primary);
-  transition: color 0.3s ease-out, background 0.3s ease-out;
-  min-height: 100vh;
-  margin: 0 auto;
-  max-width: ${rhythm(24)};
-  padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
-`;
-
 const Layout = ({ children, pathname }) => {
   return (
     <TransitionGroup component={null}>
       <CSSTransition timeout={400} key={pathname} classNames="page">
-        <PostContainer>{children}</PostContainer>
+        <section
+          style={{
+            maxWidth: rhythm(24),
+            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          }}
+          className="post-container"
+        >
+          {children}
+        </section>
       </CSSTransition>
     </TransitionGroup>
   );

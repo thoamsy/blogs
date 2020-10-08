@@ -17,12 +17,12 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-transition-group": "^4.0.1",
-    "react-typography": "^0.16.13",
     "remark": "^12.0.1",
     "remark-html": "^13.0.1",
     "sharp": "^0.25.2",
     "styled-components": "^5.2.0",
-    "typography": "^0.16.17"
+    "typography": "^0.16.17",
+    "typography-theme-github": "^0.16.19"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.4.0",
