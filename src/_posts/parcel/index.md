@@ -61,7 +61,7 @@ class A {
 
 配置 babel 依赖于一个叫做 `.babelrc`文件, 在 VS Code 中, 如果安装了**文件图标主题**的话, 一旦创建, 会有一个特定的 logo 图标来告诉我们, 没有拼错.
 
-![](./pics/F82820D6-9363-4A17-B637-C84FE7E037CE.png)
+![](./F82820D6-9363-4A17-B637-C84FE7E037CE.png)
 配置 react 的方式, 其实十分简单. 首先需要转译 JSX, 但是 JSX 的转移又依赖于 es2015, 所以我们两个都需要转译. 我并没有多长 babel 使用经验, 反正现在有了 `presets`, 而且淘汰了 ES2015, ES2016 这些 presets, 统一使用 `env` preset, 所以 babel 的配置变成了下面这样
 
 ```json

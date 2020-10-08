@@ -1,10 +1,8 @@
 import Downshift from 'downshift';
 import Link from 'next/link';
 import { getAllPosts } from './lib/api';
-import React from 'react';
-import config from '../config';
-
-import Layout from '../templates/Layout';
+import React, { useRef } from 'react';
+import Layout from '../components/Layout';
 import { rhythm } from '../utils/typography';
 
 const BlogNav = ({ href, title, date, spoiler }) => {
@@ -38,49 +36,51 @@ const BlogNav = ({ href, title, date, spoiler }) => {
   );
 };
 
-// TODO: 使用自己的 useVimShortcut 重构
 const BlogIndex = ({ posts }) => {
+  const ref = useRef();
   return (
-    <Layout title={config.title}>
-      <Downshift
-        defaultIsOpen
-        initialIsOpen
-        itemToString={(item) => (item ? item.title : '')}
-      >
-        {({ getMenuProps, getItemProps }) => (
-          <ol {...getMenuProps({}, { suppressRefError: true })}>
-            {posts.map((post, index) => {
-              const blogUrl = post.fields.slug;
-              const { title = blogUrl, spoiler, date } = post.frontmatter;
-              return (
-                <li
-                  // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-                  tabIndex={0}
-                  {...getItemProps({
-                    key: post.fields.slug,
-                    index,
-                    item: post.frontmatter,
-                  })}
-                >
-                  <BlogNav
-                    href={blogUrl}
-                    title={title}
-                    date={date}
-                    spoiler={spoiler || post.excerpt}
-                  />
-                </li>
-              );
-            })}
-          </ol>
-        )}
-      </Downshift>
+    <Layout>
+      <nav ref={ref}>
+        <Downshift
+          defaultIsOpen
+          initialIsOpen
+          itemToString={(item) => (item ? item.title : '')}
+        >
+          {({ getMenuProps, getItemProps }) => (
+            <ol {...getMenuProps({}, { suppressRefError: true })}>
+              {posts.map((post, index) => {
+                const blogUrl = post.fields.slug;
+                const { title = blogUrl, spoiler, date } = post.frontmatter;
+                return (
+                  <li
+                    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+                    tabIndex={0}
+                    {...getItemProps({
+                      key: post.fields.slug,
+                      index,
+                      item: post.frontmatter,
+                    })}
+                  >
+                    <BlogNav
+                      href={blogUrl}
+                      title={title}
+                      date={date}
+                      spoiler={spoiler || post.excerpt}
+                    />
+                  </li>
+                );
+              })}
+            </ol>
+          )}
+        </Downshift>
+      </nav>
     </Layout>
   );
 };
 export default BlogIndex;
 
 export async function getStaticProps() {
-  const posts = getAllPosts(['title', 'date', 'spoiler', 'image']);
+  const posts = getAllPosts(['title', 'date', 'spoiler']);
   return {
     props: { posts },
   };

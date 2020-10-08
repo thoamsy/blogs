@@ -6,7 +6,8 @@ import Link from 'next/link';
 import '../globalThis';
 import { rhythm, scale } from '../utils/typography';
 import Bio from './Bio';
-import { Home, Detail } from './components/Transition';
+import { Home, Detail } from './Transition';
+import config from '../config';
 
 const HomeLink = styled(Link).attrs({ href: '/' })`
   box-shadow: none;
@@ -21,7 +22,7 @@ const Header = styled.header`
   margin-bottom: 2.625rem;
 `;
 
-const BlogTitle = ({ location, isRoot, title }) => {
+const BlogTitle = ({ isRoot }) => {
   return isRoot ? (
     <h1
       style={{
@@ -30,7 +31,7 @@ const BlogTitle = ({ location, isRoot, title }) => {
         marginTop: 0,
       }}
     >
-      <HomeLink>{title}</HomeLink>
+      <HomeLink>{config.title}</HomeLink>
     </h1>
   ) : (
     <h3
@@ -40,29 +41,33 @@ const BlogTitle = ({ location, isRoot, title }) => {
         marginBottom: rhythm(-1),
       }}
     >
-      <HomeLink>{title}</HomeLink>
+      <HomeLink>{config.title}</HomeLink>
     </h3>
   );
 };
 
-const Layout = ({ title, children }) => {
-  const location = globalThis.location;
+const Layout = ({ children }) => {
   let rootPath = '/';
   if (typeof __PATH_PREFIX__ !== 'undefined') {
     rootPath = __PATH_PREFIX__ + `/`;
   }
-  const isRoot = true;;
+  const isRoot = true;
 
   const Container = isRoot ? Home : Detail;
   return (
     <Container>
       <Header>
-        <BlogTitle title={title} location={location} isRoot={isRoot} />
+        <BlogTitle isRoot={isRoot} />
       </Header>
       {isRoot && <Bio />}
       {children}
     </Container>
   );
+};
+
+Layout.getInitialProps = async (ctx) => {
+  console.log(ctx);
+  return {};
 };
 
 export default Layout;
