@@ -18,13 +18,7 @@ export function getPostBySlug(slug, fields = []) {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  let date;
-  try {
-    date = format(parseISO('' + data.date), 'yyyy/MM/dd');
-  } catch {
-    console.log(data.date, slug);
-    date = format(Date.now(), 'yyyy/MM/dd');
-  }
+  let date = format(parseISO('' + data.date), 'yyyy/MM/dd');
 
   return {
     fields: {

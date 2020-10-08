@@ -1,6 +1,6 @@
 ---
 title: 对于 SwiftUI 的一些认识
-date: 2019-07-07
+date: '2019-07-07'
 spoiler: 在写了一些 SwiftUI 代码后的初级看法
 ---
 

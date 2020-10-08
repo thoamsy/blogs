@@ -16,15 +16,13 @@
     "prismjs": "^1.21.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-responsive-grid": "^0.3.4",
     "react-transition-group": "^4.0.1",
     "react-typography": "^0.16.13",
     "remark": "^12.0.1",
     "remark-html": "^13.0.1",
     "sharp": "^0.25.2",
     "styled-components": "^5.2.0",
-    "typography": "^0.16.17",
-    "typography-theme-wordpress-2016": "^0.15.10"
+    "typography": "^0.16.17"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.1.6",
@@ -37,25 +35,18 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^4.0.0",
-    "gh-pages": "^2.0.1",
     "prettier": "^2.1.2"
   },
   "homepage": "https://blogs.thoamsy.now.sh",
   "license": "MIT",
   "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
   "scripts": {
     "dev": "next dev",
     "start": "next start",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
-    "develop": "gatsby develop",
     "build": "next build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }

@@ -1,6 +1,6 @@
 ---
 title: 使用 lodash/fp
-date: 2018-04-02
+date: '2018-04-02'
 spoiler: 感受 fp 的强大
 ---
 

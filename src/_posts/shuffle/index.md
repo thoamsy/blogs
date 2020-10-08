@@ -1,6 +1,6 @@
 ---
 title: Shuffle 算法
-date: 2019-07-29
+date: '2019-07-29'
 spoiler: 随机算法的基本实现
 ---
 

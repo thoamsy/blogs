@@ -1,7 +1,7 @@
 ---
 title: 一些 Emoji 的有趣事情
 spoiler: 🌈
-date: 2019-05-19
+date: '2019-05-19'
 ---
 
 想要正常的阅读本文，要求系统版本大于 iOS 12.1，或者 Android O。

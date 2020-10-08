@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { rhythm } from '../utils/typography';
-// import profilePic from './avatar.jpg';
 
 const Aside = styled.aside`
   display: flex;
@@ -20,8 +19,8 @@ const Bio = () => (
     }}
   >
     <img
-      // src={profilePic}
-      alt={`A cat named musa`}
+      src="/avatar.jpg"
+      alt={`A cat named 猫の先生`}
       style={{
         marginRight: rhythm(1 / 2),
         marginBottom: 0,

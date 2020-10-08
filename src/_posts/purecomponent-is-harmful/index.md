@@ -1,6 +1,6 @@
 ---
 title: PureComponent Considered Harmful
-date: 2018-05-21
+date: '2018-05-21'
 spoiler: 不要让所有的组件都是 PureComponent 或者 memo
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: React Lazy 的实现原理
-date: 2018-12-23T00:20Z
+date: '2018-12-23T00:20Z'
 spoiler: 简单讨论一下 React.lazy 内部实现
 ---
 

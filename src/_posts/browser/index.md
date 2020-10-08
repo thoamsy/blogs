@@ -1,6 +1,6 @@
 ---
 title: Inside look at modern web browser（翻译）
-date: 2018-10-05
+date: '2018-10-05'
 spoiler: 谷歌搬砖
 ---
 

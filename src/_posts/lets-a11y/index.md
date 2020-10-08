@@ -1,6 +1,6 @@
 ---
 title: Let's a11y
-date: 2019-12-02
+date: '2019-12-02'
 spoiler: a11y 才是决定你产品品质的关键
 image: https://images.unsplash.com/photo-1576210117723-cd06449a467d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80
 ---

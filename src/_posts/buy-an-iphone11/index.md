@@ -1,6 +1,6 @@
 ---
 title: 对于新 iPhone 的看法
-date: 2019-09-20
+date: '2019-09-20'
 spoiler: 大哥换个肾？
 ---
 
