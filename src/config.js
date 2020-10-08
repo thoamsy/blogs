@@ -1,11 +1,11 @@
 export default {
-  title: 'Starter Blog',
+  title: '😏',
   author: {
-    name: 'Lee Robinson',
-    summary: 'who loves Next.js.',
+    name: 'thoamsy',
+    summary: '👤 博客, 写一些总结，Web 和 iOS',
   },
-  description: 'A starter blog converting Gatsby -> Next.',
+  description: '👤博客, 写一些总结，Web 和 iOS',
   social: {
-    twitter: 'leeerob',
+    twitter: 'thoamsyt',
   },
 };
