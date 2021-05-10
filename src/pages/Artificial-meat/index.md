@@ -5,6 +5,8 @@ image: https://secure-res.craft.do/v1/kUtrJoj18jUh2H2nEyfjrxcKFFRWFfbd3wWTAupS9T
 spoiler: 本文尝试介绍一些人造肉的基本概念，为什么会出现人造肉，人造肉解决了为什么问题，人造肉目前的前景如何
 ---
 
+![](https://secure-res.craft.do/v1/kUtrJoj18jUh2H2nEyfjrxcKFFRWFfbd3wWTAupS9TpYQKoH8FjWLwyLJzGr45ZHVrMs6eiPe3VHfJpjUi51myw7Asy1mowKPktFneTfMuo3CGJdkjEGuZMF2vB6mzN3oUpqw5RvQP9yL1Mo8KXa8ABjo)
+
 ### 现代工业下肉类面对的挑战
 
 肉本身没有任何问题，我们喜欢它的口感，也离不开它的蕴含的营养物质。有研究表明，人类之所以能从智人演化而来，一个重要的原因就是开始吃肉，从而让脑容量变大。
